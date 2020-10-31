@@ -1,0 +1,2751 @@
+1
+00:00:06,400 --> 00:00:08,704
+Welcome to lecture 14
+
+2
+00:00:08,960 --> 00:00:11,776
+Today's lecture is about variational methods
+
+3
+00:00:13,056 --> 00:00:18,176
+We've been talked about methods for dealing with complication probability distributions we made have
+
+4
+00:00:18,432 --> 00:00:23,808
+Nasty probability distributions because we are doing inference and a posterior distribution is nasty
+
+5
+00:00:24,320 --> 00:00:29,440
+We may also have nasty probability distributions for other reasons maybe we work on physics
+
+6
+00:00:29,952 --> 00:00:30,720
+And
+
+7
+00:00:30,976 --> 00:00:33,280
+In the lectures we've discussed Monte Carlo methods
+
+8
+00:00:33,792 --> 00:00:39,936
+And now go to the methods which are two possible ways of dealing with nasty but someone
+
+9
+00:00:40,192 --> 00:00:41,216
+Tractable distributions
+
+10
+00:00:42,752 --> 00:00:48,896
+His the overview of all the chapters in The Textbook that we've been looking at for the election so far
+
+11
+00:00:49,664 --> 00:00:55,808
+I should emphasize that there's some additional reading I'd encourage you to do is very short chapter on laplace's method
+
+12
+00:00:56,064 --> 00:01:02,208
+Which is another way of dealing with nasty distributions while you approximate the nasty distribution
+
+13
+00:01:02,464 --> 00:01:03,488
+Does a piece of reading for you
+
+14
+00:01:03,744 --> 00:01:09,888
+And from time to time I will refer to icing models as a good idea to have Radley chapter on icing bottles as well
+
+15
+00:01:10,144 --> 00:01:11,168
+Turn off the central
+
+16
+00:01:12,960 --> 00:01:17,056
+Websites for the book and for the course
+
+17
+00:01:18,080 --> 00:01:24,224
+And the other variational message looks like this assumption just as in Monte Carlo methods
+
+18
+00:01:24,480 --> 00:01:26,528
+There's a nasty red distribution
+
+19
+00:01:26,784 --> 00:01:27,552
+Kulfi
+
+20
+00:01:28,064 --> 00:01:28,832
+And
+
+21
+00:01:30,112 --> 00:01:33,440
+It's something that we can compute within a normalizing constant
+
+22
+00:01:33,696 --> 00:01:39,072
+Search for me to the -3 of X and we are able to compute e of x
+
+23
+00:01:39,584 --> 00:01:45,728
+And in very committed our assumption is the T-Rex is a fairly simple function but not quite simple
+
+24
+00:01:45,984 --> 00:01:52,128
+Enough for us to be able to actually answer the questions of Interest which all things like expected values of functions on the
+
+25
+00:01:53,408 --> 00:01:59,552
+Thought the idea of variational method well we introduced a simpler green distribution the record
+
+26
+00:02:00,576 --> 00:02:06,720
+And we parametrize that simply distribution in some way so Q is intended to be
+
+27
+00:02:06,976 --> 00:02:11,328
+Simple enough that we can evaluate expectations on interesting things on the Q
+
+28
+00:02:12,608 --> 00:02:18,752
+We make it adjustable and then we adjust the parameters of Q so that it is as close as possible by some
+
+29
+00:02:19,008 --> 00:02:21,568
+Metric to pee so we just leave promises
+
+30
+00:02:21,824 --> 00:02:22,336
+Pizza
+
+31
+00:02:22,592 --> 00:02:24,896
+To get the best approximation
+
+32
+00:02:25,152 --> 00:02:28,480
+And a very important question is going to be how do we Define best
+
+33
+00:02:28,736 --> 00:02:31,040
+Once we found that best approximation
+
+34
+00:02:31,296 --> 00:02:34,112
+Wilco Optimus Prime and his he just off
+
+35
+00:02:34,624 --> 00:02:35,904
+Then we can
+
+36
+00:02:36,160 --> 00:02:42,304
+Approximate the expected value of a function fire that we are interested in by the expected value
+
+37
+00:02:43,328 --> 00:02:49,472
+Right. See the big picture you can think of this is getting away from introducing random numbers it would
+
+38
+00:02:49,728 --> 00:02:55,872
+Message reset Opie's difficult but let's use some random numbers and some clever ideas and jump around index
+
+39
+00:02:56,128 --> 00:03:02,272
+Space in some way and you might have thought why do I need to have extra random numbers in addition to
+
+40
+00:03:02,528 --> 00:03:08,672
+To the date of that I've gathered for my infant's problem it doesn't seem logical to need
+
+41
+00:03:08,928 --> 00:03:09,696
+Random numbers to
+
+42
+00:03:10,208 --> 00:03:11,744
+Answer my inference question
+
+43
+00:03:12,000 --> 00:03:18,144
+Answer variational method or an approach that says yes actually need random numbers
+
+44
+00:03:18,400 --> 00:03:19,424
+You can do this instead
+
+45
+00:03:19,680 --> 00:03:20,192
+Well
+
+46
+00:03:21,472 --> 00:03:25,056
+Whether it works well is is an open question
+
+47
+00:03:25,312 --> 00:03:26,592
+How we do this
+
+48
+00:03:27,872 --> 00:03:31,456
+So we need an objective function that measures how close Q is to pee
+
+49
+00:03:31,712 --> 00:03:32,480
+And
+
+50
+00:03:33,248 --> 00:03:37,856
+This various ideas for how to measure closeness of distributions to each other
+
+51
+00:03:38,112 --> 00:03:38,624
+And
+
+52
+00:03:38,880 --> 00:03:45,024
+To that we have already come across the cool white lie blood divergences between p and Q which you can ride
+
+53
+00:03:45,280 --> 00:03:49,376
+Like two different ways right so you can have the average on the Q of log2 of a p
+
+54
+00:03:49,632 --> 00:03:55,776
+Vlog beer with you and these are both measures of distance between p and Q
+
+55
+00:03:56,800 --> 00:03:58,080
+That have the property that when
+
+56
+00:03:58,336 --> 00:04:00,896
+Pnqi equal becomes I-30
+
+57
+00:04:01,152 --> 00:04:06,784
+And it can't get any smaller than that minimized if you cannot sleep perfectly matched
+
+58
+00:04:11,136 --> 00:04:17,280
+No we must remember that the extra talking about is a very high dimensional thing so these sums of x
+
+59
+00:04:17,536 --> 00:04:18,559
+That we have hair
+
+60
+00:04:18,815 --> 00:04:24,959
+Not necessarily easy to do I'm able to go we already agreed that P is difficult we come
+
+61
+00:04:25,471 --> 00:04:26,495
+Accurately
+
+62
+00:04:26,751 --> 00:04:28,031
+Represent averages
+
+63
+00:04:28,287 --> 00:04:34,431
+I'm for example for somebody who acts of 5x * 10x is a difficult thing so why should we think that we can
+
+64
+00:04:34,687 --> 00:04:35,967
+Can do anything with these
+
+65
+00:04:36,223 --> 00:04:38,271
+These K else
+
+66
+00:04:38,783 --> 00:04:41,599
+Before I
+
+67
+00:04:41,855 --> 00:04:47,999
+Continue with that thought let's just look at an example so you understand how these Kayo's work
+
+68
+00:04:48,255 --> 00:04:54,399
+A very very simple nasty read distribution which is non-uniform it's got a photo
+
+69
+00:04:54,655 --> 00:04:55,935
+Probability
+
+70
+00:04:56,191 --> 00:04:56,703
+4
+
+71
+00:04:56,959 --> 00:04:57,983
+Discrete functions
+
+72
+00:04:58,239 --> 00:05:04,383
+I'm in a spaceship and Q is a simpler distribution which is uniform across wrong
+
+73
+00:05:04,639 --> 00:05:05,663
+Opal prices
+
+74
+00:05:05,919 --> 00:05:06,687
+I would like you to
+
+75
+00:05:07,199 --> 00:05:09,247
+Quickly work out and discuss with each other
+
+76
+00:05:10,015 --> 00:05:11,039
+What's the
+
+77
+00:05:11,295 --> 00:05:13,087
+Kuba Kuba Divergence
+
+78
+00:05:13,343 --> 00:05:19,487
+Each way around so if you workout first one and the second one which of them is biggest and roughly how big are they
+
+79
+00:05:19,743 --> 00:05:20,255
+Please
+
+80
+00:05:20,511 --> 00:05:21,535
+Talk to you later.
+
+81
+00:05:25,375 --> 00:05:26,911
+Okay
+
+82
+00:05:27,167 --> 00:05:30,751
+Let's have some votes ISO On the Border
+
+83
+00:05:31,263 --> 00:05:34,335
+QP first and then PQ second
+
+84
+00:05:34,847 --> 00:05:35,359
+So
+
+85
+00:05:35,615 --> 00:05:38,431
+Let's have votes for which one is bigger
+
+86
+00:05:38,687 --> 00:05:41,247
+Is the first one bigger or is it smaller
+
+87
+00:05:41,503 --> 00:05:44,831
+Or do you not know if I swear I don't know I haven't had enough time
+
+88
+00:05:45,343 --> 00:05:46,111
+Okay
+
+89
+00:05:46,367 --> 00:05:50,207
+Votes for the first one is bigger than the second
+
+90
+00:05:50,463 --> 00:05:56,607
+Lots of folks that voted for its Moore ok
+
+91
+00:05:56,863 --> 00:05:58,911
+That is correct Sir William
+
+92
+00:06:00,959 --> 00:06:04,543
+I'll bring them in Delaware around for no particular reason healthy
+
+93
+00:06:05,823 --> 00:06:06,335
+Distance
+
+94
+00:06:06,591 --> 00:06:07,871
+Measure this way around
+
+95
+00:06:08,383 --> 00:06:10,943
+Is about log 4/3
+
+96
+00:06:12,223 --> 00:06:18,367
+Whereas if you have q on the outside Q goes in Columbus in and puts foot of its probability Macon
+
+97
+00:06:18,623 --> 00:06:24,767
+Play swipeys has no way that's Tonya Tonya probability and it gets strongly penalized for there in that
+
+98
+00:06:25,023 --> 00:06:25,791
+So
+
+99
+00:06:26,047 --> 00:06:27,839
+When you talk up
+
+100
+00:06:36,799 --> 00:06:42,943
+When you talk to your lucky repeat you got this one over at Salon which is very large
+
+101
+00:06:43,455 --> 00:06:44,223
+And
+
+102
+00:06:46,271 --> 00:06:52,415
+Bad news if you like if this is your measure of closeness and not says cute
+
+103
+00:06:52,671 --> 00:06:53,951
+Here is a very long way from p
+
+104
+00:06:55,999 --> 00:07:00,095
+I'll put quotes on that kiss is it bad news
+
+105
+00:07:00,607 --> 00:07:02,143
+Depends on what we're trying to do
+
+106
+00:07:02,399 --> 00:07:02,911
+But
+
+107
+00:07:04,191 --> 00:07:06,239
+At least big
+
+108
+00:07:06,495 --> 00:07:10,847
+So something to be aware of if we use this source of objective function
+
+109
+00:07:13,151 --> 00:07:15,711
+Is if p is a complicated thing
+
+110
+00:07:15,967 --> 00:07:16,479
+Sorry
+
+111
+00:07:17,759 --> 00:07:18,527
+Complicated
+
+112
+00:07:18,783 --> 00:07:22,623
+Thing that in some places goes to zero and if we approximated by
+
+113
+00:07:24,415 --> 00:07:25,439
+A green thing
+
+114
+00:07:25,695 --> 00:07:28,255
+That is none 0 in places where p
+
+115
+00:07:29,023 --> 00:07:32,095
+Is actually zero or very very close to zero
+
+116
+00:07:32,607 --> 00:07:34,911
+This will be deemed a bad approximation
+
+117
+00:07:35,167 --> 00:07:36,959
+You got a very strong penalty
+
+118
+00:07:37,215 --> 00:07:39,775
+So if we optimize this
+
+119
+00:07:40,031 --> 00:07:41,311
+Objective function
+
+120
+00:07:41,567 --> 00:07:44,383
+The sort of thing you might expect to have happened
+
+121
+00:07:45,663 --> 00:07:49,759
+In this case would be that the green thing says I mustn't put a foot wrong
+
+122
+00:07:51,039 --> 00:07:52,319
+I'll make sure
+
+123
+00:07:53,599 --> 00:07:57,695
+Put any mass in places where p is 0 so you'll end up with a proximation that look
+
+124
+00:07:57,951 --> 00:07:58,975
+Like this
+
+125
+00:07:59,231 --> 00:08:01,023
+That's the sort of thing that happens
+
+126
+00:08:01,279 --> 00:08:02,559
+If you use
+
+127
+00:08:02,815 --> 00:08:04,095
+Some cute
+
+128
+00:08:04,607 --> 00:08:05,119
+Slug
+
+129
+00:08:05,375 --> 00:08:06,911
+2 / 30
+
+130
+00:08:09,471 --> 00:08:14,079
+On the other hand if you use something with Q as your objective function
+
+131
+00:08:14,847 --> 00:08:15,359
+Then
+
+132
+00:08:16,383 --> 00:08:21,247
+It's the other way around that you don't want to make the mistake of
+
+133
+00:08:21,759 --> 00:08:22,783
+Failing to put
+
+134
+00:08:23,039 --> 00:08:26,623
+Mass in the place where I pee has got Max and so if you use
+
+135
+00:08:27,391 --> 00:08:29,183
+This objective
+
+136
+00:08:29,951 --> 00:08:31,999
+Assuming you could compute it
+
+137
+00:08:34,559 --> 00:08:36,607
+This would lead to you
+
+138
+00:08:40,447 --> 00:08:46,591
+Taking a message of solution like this and maybe approximating it was something extremely broilers to make sure you kept it a little
+
+139
+00:08:47,871 --> 00:08:49,663
+Little blips
+
+140
+00:08:51,455 --> 00:08:52,223
+Okay
+
+141
+00:08:52,735 --> 00:08:56,575
+So it's good to understand injective functions we're talking about
+
+142
+00:08:59,391 --> 00:09:00,159
+No
+
+143
+00:09:03,231 --> 00:09:04,255
+The first one
+
+144
+00:09:04,511 --> 00:09:06,303
+Summerfield p over Q
+
+145
+00:09:06,559 --> 00:09:07,327
+Involves
+
+146
+00:09:07,583 --> 00:09:08,351
+Plumbing
+
+147
+00:09:09,887 --> 00:09:11,679
+Immoderately nasty thing
+
+148
+00:09:12,191 --> 00:09:15,519
+Under anesthesia distribution pay let's just rewrite it
+
+149
+00:09:16,799 --> 00:09:17,823
+With color
+
+150
+00:09:18,591 --> 00:09:20,895
+I have a stomach relaxer p
+
+151
+00:09:21,919 --> 00:09:22,943
+Log
+
+152
+00:09:24,223 --> 00:09:25,503
+Kiev
+
+153
+00:09:29,599 --> 00:09:35,743
+I'm giving that finding the expected value of a function on the pee is difficult it seems very unlikely that we
+
+154
+00:09:35,999 --> 00:09:39,071
+Going to be able to find the expected value of this function on the p
+
+155
+00:09:39,583 --> 00:09:42,911
+All right so even if we want to evaluate this one
+
+156
+00:09:43,167 --> 00:09:45,727
+It's for real song
+
+157
+00:09:46,239 --> 00:09:48,031
+We won't be able to evaluation
+
+158
+00:09:49,311 --> 00:09:51,359
+So let's give up on that straight away
+
+159
+00:09:51,615 --> 00:09:56,223
+And look at the other one so if we look at dkl
+
+160
+00:09:56,479 --> 00:10:02,623
+This involves the sum of q log Q
+
+161
+00:10:02,879 --> 00:10:09,023
+All of which is nice is nice and is under our control and then we have the one little bit of nastiness the red bit
+
+162
+00:10:09,279 --> 00:10:11,071
+His hair
+
+163
+00:10:11,839 --> 00:10:12,863
+And everything else is
+
+164
+00:10:13,119 --> 00:10:14,399
+Green or white
+
+165
+00:10:18,751 --> 00:10:19,775
+We could
+
+166
+00:10:20,287 --> 00:10:22,591
+Write this as
+
+167
+00:10:23,871 --> 00:10:25,919
+Assam / X
+
+168
+00:10:26,687 --> 00:10:30,271
+Qfx support during this time
+
+169
+00:10:31,295 --> 00:10:32,575
+Times the energy
+
+170
+00:10:35,903 --> 00:10:41,023
+Using the definition of t e of X is 8 - DMX
+
+171
+00:10:41,279 --> 00:10:44,607
+On that where that is an interesting number that we don't know
+
+172
+00:10:45,375 --> 00:10:48,447
+So if pulled out the E from here
+
+173
+00:10:49,215 --> 00:10:51,775
+What else do we have will have a zed please
+
+174
+00:10:53,823 --> 00:10:54,847
+Service log
+
+175
+00:10:55,359 --> 00:10:56,383
+They say of
+
+176
+00:10:56,639 --> 00:10:58,175
+Red LED
+
+177
+00:10:59,199 --> 00:11:02,527
+And then what leftover is the entropy of Q
+
+178
+00:11:02,783 --> 00:11:06,879
+Which alkyl HQ off apps
+
+179
+00:11:07,647 --> 00:11:09,183
+I can give as a greeting
+
+180
+00:11:09,951 --> 00:11:10,719
+Tinge
+
+181
+00:11:12,511 --> 00:11:18,655
+So is this hopeless as well is it impossible to evaluate this well this is the average
+
+182
+00:11:18,911 --> 00:11:20,703
+Of a function under Q
+
+183
+00:11:20,959 --> 00:11:26,335
+And maybe that is on maybe we can do it it's easy but
+
+184
+00:11:27,871 --> 00:11:28,383
+Brunch
+
+185
+00:11:28,639 --> 00:11:29,663
+So maybe that's okay
+
+186
+00:11:31,711 --> 00:11:33,503
+Best we would love to know
+
+187
+00:11:34,015 --> 00:11:39,135
+But from the point of view of adjusting to try and make this thing as small as possible
+
+188
+00:11:39,391 --> 00:11:43,487
+Play Slugs at adjust a constant it doesn't have any Q dependents so
+
+189
+00:11:43,743 --> 00:11:45,791
+We don't know this but it doesn't matter
+
+190
+00:11:48,351 --> 00:11:49,119
+In fact
+
+191
+00:11:49,375 --> 00:11:55,519
+Love I need is it not mess up but maybe by minimizing this thing we might be able to find out what it is
+
+192
+00:11:56,287 --> 00:12:02,431
+I'm finally this thing isn't I'll agreeing it's the entropy of a distribution q that we can control on weekends
+
+193
+00:12:02,687 --> 00:12:06,015
+Who is allowed to have the following form only
+
+194
+00:12:06,271 --> 00:12:09,343
+I maybe we can constrain Q so that we can about the right this
+
+195
+00:12:09,599 --> 00:12:10,879
+So for the green cake tonight
+
+196
+00:12:11,391 --> 00:12:14,975
+So this objective function out all of the two I've listed
+
+197
+00:12:15,487 --> 00:12:18,047
+It's promising maybe we can evaluate it
+
+198
+00:12:20,607 --> 00:12:23,423
+And if we rearrange it's on the board
+
+199
+00:12:24,959 --> 00:12:27,775
+And focus on the two tons of ticks
+
+200
+00:12:28,031 --> 00:12:29,567
+So this one here
+
+201
+00:12:30,591 --> 00:12:32,127
+And this one here
+
+202
+00:12:34,943 --> 00:12:41,087
+We can define an objective function that's made up of those two and that's what I put on the computer screen
+
+203
+00:12:41,343 --> 00:12:42,623
+Variation free energy
+
+204
+00:12:42,879 --> 00:12:44,927
+It depends on the adjustable parameters
+
+205
+00:12:45,439 --> 00:12:51,071
+Do and it by definition is the average of
+
+206
+00:12:51,583 --> 00:12:54,399
+The interesting energy function on the Keurig
+
+207
+00:12:55,679 --> 00:12:56,703
+Minus
+
+208
+00:12:57,215 --> 00:12:58,495
+Sub-Q locator
+
+209
+00:13:00,543 --> 00:13:03,359
+The entropy
+
+210
+00:13:05,151 --> 00:13:08,479
+All cute and the fisa defendants in hair is
+
+211
+00:13:09,503 --> 00:13:11,807
+This distribution Q
+
+212
+00:13:12,575 --> 00:13:15,391
+Depends on Peter Peter is a description of
+
+213
+00:13:15,647 --> 00:13:16,671
+How are you justice
+
+214
+00:13:17,951 --> 00:13:22,303
+Right on this thing has a name it's called variational free energy
+
+215
+00:13:29,727 --> 00:13:31,775
+And because of where this came from
+
+216
+00:13:32,287 --> 00:13:34,335
+And because of the fact that this thing here
+
+217
+00:13:35,359 --> 00:13:36,639
+Is
+
+218
+00:13:37,151 --> 00:13:38,175
+Positive
+
+219
+00:13:39,455 --> 00:13:41,503
+It is a true statement.
+
+220
+00:13:42,015 --> 00:13:43,807
+Astalavista
+
+221
+00:13:45,599 --> 00:13:47,647
+Is love a bounded by
+
+222
+00:13:47,903 --> 00:13:50,207
+- log Zed
+
+223
+00:13:53,535 --> 00:13:58,655
+So if we succeed in minimizing the variational free energy we will have also minimized
+
+224
+00:13:59,167 --> 00:14:05,311
+The KL between q and P and the objective function that pops out of that minimisation if we can evaluate the variational friends
+
+225
+00:14:05,567 --> 00:14:11,455
+Is abound unlock said so will for free be getting something interesting
+
+226
+00:14:11,711 --> 00:14:12,223
+Out
+
+227
+00:14:12,735 --> 00:14:14,015
+Okay
+
+228
+00:14:14,783 --> 00:14:19,135
+So the variational method to talk to you about today
+
+229
+00:14:19,647 --> 00:14:25,535
+Are entirely based on this objective functions there are other variation methods as well but that's all I'm going to say
+
+230
+00:14:25,791 --> 00:14:26,559
+Do today
+
+231
+00:14:30,143 --> 00:14:33,727
+So let's look at some examples now so you can see how this works
+
+232
+00:14:33,983 --> 00:14:36,799
+Can we evaluate its variation free energy
+
+233
+00:14:37,055 --> 00:14:41,151
+Well for some problems for some red energy
+
+234
+00:14:41,663 --> 00:14:47,295
+The answer is yes you can as long as you can straighten cue to have an appropriately simple form
+
+235
+00:14:47,551 --> 00:14:49,855
+So let's go through two examples
+
+236
+00:14:53,439 --> 00:14:58,559
+The first example dude is the good old gaussian distribution
+
+237
+00:14:59,071 --> 00:15:00,863
+Inference aveiro
+
+238
+00:15:06,751 --> 00:15:09,055
+So hopefully you remember this distribution
+
+239
+00:15:09,567 --> 00:15:10,335
+End
+
+240
+00:15:10,847 --> 00:15:13,151
+All discussions of inference problem
+
+241
+00:15:24,671 --> 00:15:30,815
+So the assumption is that there's a normal distribution with parameters muessigmann Squad
+
+242
+00:15:31,071 --> 00:15:34,399
+Indata X
+
+243
+00:15:41,823 --> 00:15:44,127
+We don't want to infer new and sigma
+
+244
+00:15:46,175 --> 00:15:48,223
+So the red distribution
+
+245
+00:15:51,295 --> 00:15:53,343
+Is the inference of
+
+246
+00:15:53,599 --> 00:15:56,159
+And the variance
+
+247
+00:15:56,671 --> 00:15:58,975
+And we look at that before
+
+248
+00:16:02,047 --> 00:16:05,119
+And if this is the new actress and if this is the sigma
+
+249
+00:16:05,631 --> 00:16:06,655
+Square taxes
+
+250
+00:16:06,911 --> 00:16:10,239
+What the nasty read distribution looks like
+
+251
+00:16:12,287 --> 00:16:13,823
+It's something right like that
+
+252
+00:16:14,335 --> 00:16:19,199
+A distribution that has the property that any slice through it in this direction
+
+253
+00:16:19,711 --> 00:16:22,015
+Is a normal distribution
+
+254
+00:16:28,159 --> 00:16:29,695
+Sorry I didn't realize very well
+
+255
+00:16:30,975 --> 00:16:37,119
+And all of those I'll send it on the same place in spite of what it looks like the rules sent it on Xbox
+
+256
+00:16:37,375 --> 00:16:38,655
+Sample me
+
+257
+00:16:38,911 --> 00:16:40,191
+So
+
+258
+00:16:42,239 --> 00:16:43,519
+My sweetheart
+
+259
+00:16:55,295 --> 00:16:59,135
+Okay so we'll three slices through normal distributions
+
+260
+00:17:00,159 --> 00:17:05,535
+I'm slices in this direction are gamma distributions
+
+261
+00:17:11,167 --> 00:17:11,935
+The
+
+262
+00:17:12,703 --> 00:17:14,495
+Maximum of the posterior
+
+263
+00:17:17,055 --> 00:17:19,615
+Under the assumptions that we had earlier in the course
+
+264
+00:17:19,871 --> 00:17:22,431
+Is out of place called
+
+265
+00:17:24,223 --> 00:17:25,503
+Sigma is
+
+266
+00:17:26,015 --> 00:17:29,087
+SEPTA Sigma an Instagram button on your calculator
+
+267
+00:17:29,599 --> 00:17:33,695
+However if we marginalized over all of these gamma distribution
+
+268
+00:17:34,207 --> 00:17:36,511
+The projection of all of those onto
+
+269
+00:17:37,023 --> 00:17:37,791
+The taxes
+
+270
+00:17:39,583 --> 00:17:41,375
+Is a gamma distribution
+
+271
+00:17:41,631 --> 00:17:42,655
+That has a peak
+
+272
+00:17:44,191 --> 00:17:46,239
+Larger value of Sigma
+
+273
+00:17:46,495 --> 00:17:49,311
+Cold like my last one
+
+274
+00:17:50,847 --> 00:17:53,663
+Okay so this is a very simple distribution
+
+275
+00:17:54,431 --> 00:17:55,199
+And
+
+276
+00:17:55,711 --> 00:17:57,247
+We're going to Pretend We're
+
+277
+00:17:57,503 --> 00:18:03,647
+Challenge Enough by it that we want the variational method so what we will not do is introduce
+
+278
+00:18:03,903 --> 00:18:05,695
+Severe reaction approximation
+
+279
+00:18:05,951 --> 00:18:06,975
+Where the
+
+280
+00:18:07,231 --> 00:18:13,119
+In fruits which is a partner Distribution on the UNC glad Haven today
+
+281
+00:18:13,631 --> 00:18:17,215
+It's going to be approximated by a similar distribution to
+
+282
+00:18:17,727 --> 00:18:21,823
+How much we want to constrain it what form so we can spray it have
+
+283
+00:18:22,335 --> 00:18:28,479
+Well I'm going to constrain it very little indeed I'm just going to constrain it to be
+
+284
+00:18:28,735 --> 00:18:34,879
+Separable distribution a function of Mew a function
+
+285
+00:18:35,903 --> 00:18:37,439
+About the constraints apply
+
+286
+00:18:38,463 --> 00:18:42,303
+And then we can ask the question now if we write down a little
+
+287
+00:18:42,559 --> 00:18:44,863
+I minimize it what happens
+
+288
+00:18:51,519 --> 00:18:53,055
+Suck his what happens
+
+289
+00:19:09,183 --> 00:19:12,255
+We have temporarily lost on display
+
+290
+00:19:15,839 --> 00:19:20,191
+So that's the red distribution that's an accurate account Roblox I love it
+
+291
+00:19:20,447 --> 00:19:20,959
+And
+
+292
+00:19:21,215 --> 00:19:26,335
+If you don't kick off with any distribution to of this separable form
+
+293
+00:19:27,871 --> 00:19:31,199
+And then you say let's alternately update
+
+294
+00:19:31,455 --> 00:19:32,735
+Bermuda pendant
+
+295
+00:19:32,991 --> 00:19:33,759
+Function
+
+296
+00:19:34,015 --> 00:19:35,807
+And then the sigma dependent function
+
+297
+00:19:36,063 --> 00:19:42,207
+Ultimately update them and see what happens the answer is straight away when you optimize the music
+
+298
+00:19:42,463 --> 00:19:46,047
+Kind of warm the new dependent thing says I want to be a gaussian please
+
+299
+00:19:47,071 --> 00:19:48,095
+And
+
+300
+00:19:48,863 --> 00:19:55,007
+So you can do that and then if you update the sigma dependent one it'll say I want to be a gamma distribution
+
+301
+00:19:55,263 --> 00:19:55,775
+Place
+
+302
+00:19:56,287 --> 00:20:02,431
+Americans Aspen you depending on what you want to do now and it says of course I want to be a gas yet but he will
+
+303
+00:20:02,687 --> 00:20:03,711
+Changes Prime
+
+304
+00:20:03,967 --> 00:20:08,063
+And then you ask what you want to do so we can do this.
+
+305
+00:20:08,575 --> 00:20:13,183
+Alternating update approach to the optimization of that what I'm doing is
+
+306
+00:20:13,439 --> 00:20:14,463
+Optimizing
+
+307
+00:20:14,719 --> 00:20:20,863
+Acquittal the variation free energy with respect to the distribution and then with aesthetically Sigma and then
+
+308
+00:20:21,119 --> 00:20:22,655
+Ultimatum this right
+
+309
+00:20:22,911 --> 00:20:24,703
+And when you run that to convergence
+
+310
+00:20:25,215 --> 00:20:26,239
+You end up with
+
+311
+00:20:26,495 --> 00:20:29,055
+Optimize Q distribution that isn't normal
+
+312
+00:20:29,823 --> 00:20:32,383
+And an uprising a distribution that is a gamma
+
+313
+00:20:35,199 --> 00:20:36,991
+Optimized distribution
+
+314
+00:20:37,247 --> 00:20:43,135
+Open Mew isn't normal distribution send it on Xbox of course what else could it possibly be
+
+315
+00:20:43,391 --> 00:20:49,023
+But it went isn't the same as this slice through hair it's a bit faster
+
+316
+00:20:50,047 --> 00:20:53,375
+Optimize distribution for Sigma
+
+317
+00:20:54,399 --> 00:20:58,239
+Doesn't have its maximum that cigarette it's a cigarette
+
+318
+00:20:59,775 --> 00:21:01,311
+So this is the case where are we
+
+319
+00:21:01,567 --> 00:21:07,711
+Constrain the distribution to be wrong in a fairly simple way making it separable is a fairly standard
+
+320
+00:21:08,735 --> 00:21:11,807
+And then you end up with built-in ice distribution
+
+321
+00:21:12,063 --> 00:21:15,391
+Having DeSoto properties. We kind of want
+
+322
+00:21:15,903 --> 00:21:22,048
+It's not the case if you marginalize out knew that you got the correct posterior the true posterior
+
+323
+00:21:22,304 --> 00:21:26,912
+Mu student distribution is a mixture of all of those calcium soap
+
+324
+00:21:27,168 --> 00:21:29,216
+We haven't magically
+
+325
+00:21:29,472 --> 00:21:35,616
+Go around the fundamental problem the truth is it is a slightly nasty mixture of gases
+
+326
+00:21:37,664 --> 00:21:38,432
+Nevertheless
+
+327
+00:21:38,688 --> 00:21:44,832
+It's got the right sort of properties so if you ask what what's it mean what's its characteristic with
+
+328
+00:21:45,088 --> 00:21:46,880
+It's got the right contrast it with
+
+329
+00:21:48,672 --> 00:21:51,744
+Okay so that was example number one any questions about
+
+330
+00:21:52,000 --> 00:21:52,768
+But let
+
+331
+00:21:58,912 --> 00:22:04,032
+Example number two is the spin system which we've discussed on and off
+
+332
+00:22:04,288 --> 00:22:05,312
+In the past
+
+333
+00:22:06,336 --> 00:22:07,104
+So
+
+334
+00:22:07,360 --> 00:22:09,408
+Aspen system has couplings
+
+335
+00:22:10,944 --> 00:22:14,272
+J between the spins which a binary variables
+
+336
+00:22:15,040 --> 00:22:16,064
+Find
+
+337
+00:22:16,320 --> 00:22:21,696
+Open systems display all sorts of exciting properties
+
+338
+00:22:30,144 --> 00:22:31,936
+7sd red distribution
+
+339
+00:22:33,728 --> 00:22:34,752
+Is
+
+340
+00:22:36,288 --> 00:22:39,360
+Activate reminders
+
+341
+00:22:39,616 --> 00:22:42,688
+Reset science and energy
+
+342
+00:22:43,712 --> 00:22:45,248
+Naan bread
+
+343
+00:22:45,504 --> 00:22:48,832
+Notice the addition because we doing physics
+
+344
+00:22:49,088 --> 00:22:52,672
+All the temperature promise I will a coldness brown with a betta
+
+345
+00:22:52,928 --> 00:22:55,232
+Which multiplies the energy upstairs
+
+346
+00:22:56,256 --> 00:22:57,024
+And
+
+347
+00:22:57,280 --> 00:22:59,840
+It makes the Zedge Visa dependents
+
+348
+00:23:00,096 --> 00:23:02,656
+The way the free energy response to that
+
+349
+00:23:02,912 --> 00:23:04,448
+Is we shoving
+
+350
+00:23:05,728 --> 00:23:08,288
+Ibiza hair
+
+351
+00:23:08,544 --> 00:23:11,104
+And then the free energy depends both on theater
+
+352
+00:23:11,616 --> 00:23:12,896
+And pizza
+
+353
+00:23:13,920 --> 00:23:17,504
+Okay and then the free energy is always abandoned on
+
+354
+00:23:17,760 --> 00:23:23,904
+Zelda Peterson I can pick any betta and do the virtual free energy minimization for that
+
+355
+00:23:24,160 --> 00:23:24,928
+Particular problem
+
+356
+00:23:25,952 --> 00:23:26,720
+Okay
+
+357
+00:23:27,232 --> 00:23:33,376
+And the spring system is energy of X is mine
+
+358
+00:23:33,632 --> 00:23:37,472
+Some Avril pettus pins
+
+359
+00:23:37,728 --> 00:23:41,312
+XM xn
+
+360
+00:23:41,824 --> 00:23:42,848
+Weighted by
+
+361
+00:23:43,104 --> 00:23:44,640
+Jmn
+
+362
+00:23:45,152 --> 00:23:48,992
+And then the maybe local Fields applying for each of the things
+
+363
+00:23:49,248 --> 00:23:52,064
+Libras and The Exodus live in
+
+364
+00:23:52,576 --> 00:23:55,648
+-1 + 1
+
+365
+00:23:55,904 --> 00:23:59,488
+The power and so the ex lives on the corners of a
+
+366
+00:23:59,744 --> 00:24:00,512
+Hypercube
+
+367
+00:24:00,768 --> 00:24:06,656
+And the reason this is a nasty problem is because of this system had the fact that
+
+368
+00:24:06,912 --> 00:24:11,776
+That all couplings between pass pints is what makes it a nasty red thing
+
+369
+00:24:12,288 --> 00:24:18,432
+If only it were the case that we didn't have these coupling tons then it would be a simple distribution
+
+370
+00:24:18,688 --> 00:24:24,832
+Dinasty this just says the energy is a sum of x one free Spin and that means when you
+
+371
+00:24:25,088 --> 00:24:28,416
+How to be independent from each other if we only had this time
+
+372
+00:24:28,672 --> 00:24:32,256
+Play wouldn't it be nice if the distribution look like that
+
+373
+00:24:32,512 --> 00:24:36,864
+Not much like saying well let's go ahead and declare our proximation distribution
+
+374
+00:24:37,120 --> 00:24:39,936
+Doobie simple let's declare it have the form
+
+375
+00:24:40,192 --> 00:24:46,336
+Cube root of x is a normalized version of Eataly
+
+376
+00:24:46,592 --> 00:24:48,640
+Come over and a and
+
+377
+00:24:49,664 --> 00:24:50,944
+Xn
+
+378
+00:24:53,248 --> 00:24:59,392
+So now in this approximation distribution each of the spins has just got its own personal applied field that favors
+
+379
+00:24:59,648 --> 00:25:00,928
+Being up or down depending on me
+
+380
+00:25:01,440 --> 00:25:02,720
+Sign of a n
+
+381
+00:25:02,976 --> 00:25:06,048
+So this is a distribution and very easy to work with
+
+382
+00:25:06,560 --> 00:25:12,704
+Just emphasize that is separable I can write this is a product from 1 to end all of an individual
+
+383
+00:25:12,960 --> 00:25:15,776
+Distribution for the nth spin alone
+
+384
+00:25:20,128 --> 00:25:24,480
+Just like a moment ago we said let's pretend the distribution of mu and sigma squared
+
+385
+00:25:24,736 --> 00:25:26,784
+Get support to make it by separable
+
+386
+00:25:27,040 --> 00:25:28,320
+A product of distributions
+
+387
+00:25:28,576 --> 00:25:32,160
+So the parameters in this case all these ANS this is
+
+388
+00:25:32,416 --> 00:25:36,000
+The thing I was generally calling feature is the set of all of these
+
+389
+00:25:36,256 --> 00:25:37,280
+Hey ants
+
+390
+00:25:41,632 --> 00:25:45,472
+And just write this one of the weight
+
+391
+00:25:47,776 --> 00:25:51,872
+This is Ethan Ethan
+
+392
+00:25:53,664 --> 00:25:58,016
+Suck because it's a separable distribution it's easy to evaluate its entropy
+
+393
+00:25:58,272 --> 00:26:00,320
+And it's not
+
+394
+00:26:00,576 --> 00:26:02,368
+AAA office but we can
+
+395
+00:26:02,624 --> 00:26:07,488
+Easily evaluate the expected value of the energy even though the energy couplings in it
+
+396
+00:26:08,768 --> 00:26:10,304
+Let's go to the screen now to
+
+397
+00:26:10,560 --> 00:26:11,584
+Talk through this
+
+398
+00:26:11,840 --> 00:26:16,960
+The screen shows the approximate distribution in green on the second equation
+
+399
+00:26:18,496 --> 00:26:24,128
+What's that equation right side Beach astrallana colors old green and red so we can keep track of what what
+
+400
+00:26:24,384 --> 00:26:25,152
+And you see
+
+401
+00:26:25,408 --> 00:26:31,040
+We're going to simple entropy that's just the enthalpy of acceptable distribution so that right-hand green time is easy
+
+402
+00:26:31,296 --> 00:26:34,368
+Barely nastiness comes in the from the Reds terms
+
+403
+00:26:34,624 --> 00:26:37,696
+Why we look at the average value of the couplings
+
+404
+00:26:38,976 --> 00:26:40,512
+Under the distribution Q
+
+405
+00:26:41,024 --> 00:26:42,304
+So we not go down
+
+406
+00:26:42,560 --> 00:26:46,400
+To the next equation in parentheses who got the expected value of the energy
+
+407
+00:26:47,680 --> 00:26:48,192
+And
+
+408
+00:26:50,240 --> 00:26:51,520
+To get the coupling
+
+409
+00:26:52,032 --> 00:26:57,408
+Tums contribution we just need to know that some over Willamette Dental of jmn times
+
+410
+00:26:57,664 --> 00:26:59,456
+The average value of x Bar M
+
+411
+00:26:59,712 --> 00:27:01,504
+Average value of x Bar n
+
+412
+00:27:01,760 --> 00:27:03,552
+Because two is separable
+
+413
+00:27:04,064 --> 00:27:04,832
+That
+
+414
+00:27:05,344 --> 00:27:07,136
+Simpleset is true
+
+415
+00:27:07,648 --> 00:27:12,768
+So now all you need to know to evaluate the energy is well what's the mean value if each of the spins
+
+416
+00:27:13,280 --> 00:27:14,048
+On the Q
+
+417
+00:27:15,072 --> 00:27:15,584
+Right
+
+418
+00:27:15,840 --> 00:27:16,608
+American
+
+419
+00:27:16,864 --> 00:27:23,008
+Pop-up all of your ends grad contributions reach of it
+
+420
+00:27:24,800 --> 00:27:27,360
+So we can evaluate the variational free energy
+
+421
+00:27:27,872 --> 00:27:34,016
+And when you look at this and you say how do I adjust it with respect to fisa remember these are here is the second
+
+422
+00:27:34,528 --> 00:27:36,064
+Biases a
+
+423
+00:27:36,320 --> 00:27:37,600
+For the individual spins
+
+424
+00:27:38,112 --> 00:27:44,256
+And what effect do those have will they change what the probability of a spin being up
+
+425
+00:27:44,512 --> 00:27:49,120
+Which changes the mean value of that Spencer Q in hair
+
+426
+00:27:49,376 --> 00:27:55,520
+Is my name for the probability of one of those things being up the end spending up and X bar and
+
+427
+00:27:55,776 --> 00:27:57,312
+Is the mean value of the spin
+
+428
+00:27:57,568 --> 00:28:00,128
+They are truly related to each other
+
+429
+00:28:00,384 --> 00:28:02,688
+Strong and rough
+
+430
+00:28:03,456 --> 00:28:04,736
+So
+
+431
+00:28:09,088 --> 00:28:09,856
+Is
+
+432
+00:28:10,368 --> 00:28:12,416
+Cure for being a mistake plus one
+
+433
+00:28:12,928 --> 00:28:15,232
+His cue for being in the State minus 1
+
+434
+00:28:17,024 --> 00:28:17,536
+And
+
+435
+00:28:17,792 --> 00:28:19,072
+X
+
+436
+00:28:21,632 --> 00:28:24,192
+Is just the sum of Q + 1
+
+437
+00:28:25,728 --> 00:28:29,056
++ -1 * 3 - 1
+
+438
+00:28:30,336 --> 00:28:33,152
+So xbar is linearly related to
+
+439
+00:28:33,408 --> 00:28:33,920
+The Q
+
+440
+00:28:38,016 --> 00:28:40,064
+Florida gun packing right pieces
+
+441
+00:28:40,576 --> 00:28:42,112
+Minus
+
+442
+00:28:42,624 --> 00:28:46,208
+Which is
+
+443
+00:28:46,720 --> 00:28:48,768
+Too cute
+
+444
+00:28:49,024 --> 00:28:50,048
+French
+
+445
+00:28:57,472 --> 00:28:58,240
+Okay
+
+446
+00:28:59,520 --> 00:29:05,664
+So the adjustable promises are a 4q or Xbox
+
+447
+00:29:05,920 --> 00:29:12,064
+Ways of describing what we're going to do just if you minimize with respect to that set of an adjustable thing
+
+448
+00:29:12,320 --> 00:29:14,880
+The end degrees of freedom The Cure
+
+449
+00:29:15,136 --> 00:29:21,280
+You find that the optimum satisfies these two equations which you can again sold by its rating them
+
+450
+00:29:21,792 --> 00:29:23,328
+The first equation says
+
+451
+00:29:23,584 --> 00:29:29,728
+That you can work out a by looking at all the main states of your neighbors so if you are the
+
+452
+00:29:29,984 --> 00:29:31,264
+Spin
+
+453
+00:29:31,520 --> 00:29:32,544
+You going to look
+
+454
+00:29:33,824 --> 00:29:39,968
+All your neighbors stations I want to assure you you talk a lot and that tells you what you
+
+455
+00:29:40,224 --> 00:29:41,248
+Will a should be
+
+456
+00:29:42,272 --> 00:29:46,880
+And then your a is related to your Xbox through Xbox stench of a
+
+457
+00:29:49,696 --> 00:29:53,536
+Yet another relationship I could have written down as of this time
+
+458
+00:29:55,072 --> 00:29:58,912
+Ham comes from having an Easter + 1 + 8 + -1
+
+459
+00:29:59,424 --> 00:30:00,960
+Consciousness comes from
+
+460
+00:30:01,728 --> 00:30:03,008
+Okay
+
+461
+00:30:04,544 --> 00:30:10,688
+So I didn't want to Labour through the derivation of this on on the board it's all in the book if you want to
+
+462
+00:30:10,944 --> 00:30:13,248
+Look at it will Catholic
+
+463
+00:30:13,760 --> 00:30:15,040
+What Gabriel message
+
+464
+00:30:15,552 --> 00:30:21,184
+We can take a recently Nestea distribution that has properties
+
+465
+00:30:21,440 --> 00:30:23,744
+We can approximated by separable distribution
+
+466
+00:30:24,000 --> 00:30:28,608
+Then we can minimize the variation free energy update equations look like this
+
+467
+00:30:29,120 --> 00:30:32,448
+Your local average field
+
+468
+00:30:32,704 --> 00:30:38,848
+From your neighbors and set yourself into a state that spits out your your average response to that
+
+469
+00:30:39,104 --> 00:30:39,872
+Applied trailer
+
+470
+00:30:40,384 --> 00:30:43,456
+When you got oil spins to do that
+
+471
+00:30:43,968 --> 00:30:45,248
+And
+
+472
+00:30:46,016 --> 00:30:52,160
+If you it's right those equations you got to a minimum of the reaction free energy let's do this no
+
+473
+00:30:52,416 --> 00:30:54,720
+An example of a tooth pain
+
+474
+00:30:54,976 --> 00:30:55,744
+System
+
+475
+00:30:56,000 --> 00:30:58,816
+So on the board I'll just talk through
+
+476
+00:30:59,584 --> 00:31:01,376
+I was to spend systemworks
+
+477
+00:31:21,856 --> 00:31:23,648
+Okay
+
+478
+00:31:24,160 --> 00:31:26,976
+So here is the incredibly nasty distribution
+
+479
+00:31:27,232 --> 00:31:31,328
+The spin system has two spins X1 and X2
+
+480
+00:31:31,584 --> 00:31:34,912
+I need two of them is a mistake + -1
+
+481
+00:31:38,496 --> 00:31:40,544
+The energy is minus
+
+482
+00:31:40,800 --> 00:31:41,312
+X1
+
+483
+00:31:41,568 --> 00:31:43,360
+X x x
+
+484
+00:31:43,872 --> 00:31:44,384
+All right
+
+485
+00:31:45,152 --> 00:31:45,664
+That's it
+
+486
+00:31:46,688 --> 00:31:52,832
+The connection to what we've just been doing is it's the spin system with just two spins x y and x 2
+
+487
+00:31:53,088 --> 00:31:57,696
+I know a couple with a coupling of strength J that is equal to 1
+
+488
+00:31:58,464 --> 00:32:01,024
+Prince princesses don't get much simpler than this
+
+489
+00:32:03,072 --> 00:32:05,376
+Sobe variational free energy
+
+490
+00:32:07,424 --> 00:32:13,568
+Repeating the derivation we're just being through so that General pay civilians men's is Vita X
+
+491
+00:32:13,824 --> 00:32:16,896
+X1 X2
+
+492
+00:32:17,152 --> 00:32:23,296
+- 151 - Santa Fe
+
+493
+00:32:23,552 --> 00:32:25,856
+To Tunisia entropies base
+
+494
+00:32:28,928 --> 00:32:29,952
+Okay
+
+495
+00:32:31,488 --> 00:32:37,632
+What's the equation what does this actually look like let's just drawer it's a space with X1 being - 1
+
+496
+00:32:37,888 --> 00:32:39,680
+Next to being
+
+497
+00:32:39,936 --> 00:32:45,824
+- 101 the real distribution assuming J is positive
+
+498
+00:32:46,848 --> 00:32:52,992
+Favors them both being in the same state with each other so the real distribution red
+
+499
+00:32:53,248 --> 00:32:54,272
+Has
+
+500
+00:32:54,784 --> 00:32:56,320
+Maybe a bit more mass
+
+501
+00:32:57,088 --> 00:33:00,928
++ 1 + 1 + -1 - 1
+
+502
+00:33:01,184 --> 00:33:05,536
+On the elf Agonist that's the real distribution is nasty and complicated
+
+503
+00:33:06,560 --> 00:33:07,328
+Umbrella
+
+504
+00:33:07,840 --> 00:33:11,168
+Coping with this terrible complexity of this nasty thing
+
+505
+00:33:11,424 --> 00:33:17,568
+Which athlete in treats just requires two numbers to describe it how much must have and how much is that
+
+506
+00:33:17,824 --> 00:33:23,968
+Approximation distribution by green thing and the green thing says oh I want to separate
+
+507
+00:33:24,224 --> 00:33:28,576
+Approximation please song going to have a Q Wang
+
+508
+00:33:28,832 --> 00:33:30,624
+That puts a mask on
+
+509
+00:33:31,392 --> 00:33:35,744
+SMS on maybe a few to the put some nice on here
+
+510
+00:33:36,000 --> 00:33:38,816
+I'm here I'm just too adjustable promises which is
+
+511
+00:33:39,072 --> 00:33:42,656
+What's the bias of q1 and Q2
+
+512
+00:33:52,896 --> 00:33:59,040
+And if you multiply together Accu distribution. For example could put more weight on plus one
+
+513
+00:33:59,552 --> 00:34:00,576
+But each of them
+
+514
+00:34:00,832 --> 00:34:06,720
+Came up by those two with by each other then the Q distribution you'll end up with will put most of its mass on this corner
+
+515
+00:34:06,976 --> 00:34:10,816
+A very small amount on this corner and a middling amount on this one
+
+516
+00:34:13,376 --> 00:34:14,144
+You with me
+
+517
+00:34:15,680 --> 00:34:20,032
+And with free to wander around in to Wong
+
+518
+00:34:20,288 --> 00:34:22,592
+Cuties face
+
+519
+00:34:23,616 --> 00:34:26,688
+Wacky Wong is say the value of this thing
+
+520
+00:34:26,944 --> 00:34:33,088
+How much mass is getting on + 1/2 + Q2 is how much mass does the Second Spin
+
+521
+00:34:33,344 --> 00:34:35,136
+It's being in the first one
+
+522
+00:34:35,392 --> 00:34:40,256
+And as we wander around in q1 and Q2 weekend flaws
+
+523
+00:34:42,048 --> 00:34:43,328
+The variation of free energy
+
+524
+00:34:43,840 --> 00:34:45,120
+And I will now
+
+525
+00:34:45,632 --> 00:34:46,912
+Do that for you
+
+526
+00:34:50,240 --> 00:34:53,568
+And I'm doing this as we bury betta so
+
+527
+00:34:53,824 --> 00:34:55,104
+The sequence of plots
+
+528
+00:34:57,408 --> 00:35:00,736
+Starting with b to very small which means high temperature
+
+529
+00:35:01,504 --> 00:35:05,856
+I'm going to Lodge between is very cold temperatures
+
+530
+00:35:06,112 --> 00:35:10,976
+Dog got to a vehicle temperature betta is now to
+
+531
+00:35:11,232 --> 00:35:14,816
+And you can see what the free energy looks like and the answer is
+
+532
+00:35:15,328 --> 00:35:16,608
+That it's got
+
+533
+00:35:17,120 --> 00:35:18,144
+Two Minima
+
+534
+00:35:18,400 --> 00:35:24,544
+These two axes are q1 Q2 I'm going exactly the same function twice over but different views into the clinic
+
+535
+00:35:24,800 --> 00:35:29,920
+Monkeys with the Contours projected onto the base on the right hand side
+
+536
+00:35:30,432 --> 00:35:31,968
+So hopefully can see what's going off
+
+537
+00:35:34,016 --> 00:35:34,784
+Suck
+
+538
+00:35:35,040 --> 00:35:36,320
+What's happening
+
+539
+00:35:38,880 --> 00:35:40,416
+Jaivita which means
+
+540
+00:35:41,184 --> 00:35:43,744
+High coldness or low temperature
+
+541
+00:35:51,680 --> 00:35:53,984
+The free energy
+
+542
+00:35:54,240 --> 00:35:56,544
+Adult Minnie Mouse
+
+543
+00:35:56,800 --> 00:35:57,824
+Hair
+
+544
+00:35:58,080 --> 00:35:58,848
+Pentair
+
+545
+00:36:00,896 --> 00:36:03,200
+So that's when the teacher is to
+
+546
+00:36:04,992 --> 00:36:07,296
+At The Other Extreme
+
+547
+00:36:08,320 --> 00:36:09,600
+Let's go back again
+
+548
+00:36:09,856 --> 00:36:11,392
+Lights on please
+
+549
+00:36:14,976 --> 00:36:18,560
+I'm halfway here and I'll grab it further
+
+550
+00:36:20,608 --> 00:36:26,752
+Cut his the high temperature and the things so they can beat it down to four
+
+551
+00:36:27,008 --> 00:36:28,544
+I receive that
+
+552
+00:36:29,568 --> 00:36:31,616
+The minimum of Today Show free energy
+
+553
+00:36:33,152 --> 00:36:33,920
+Its hair
+
+554
+00:36:35,200 --> 00:36:36,224
+All right
+
+555
+00:36:36,480 --> 00:36:40,064
+And as we go between those two extremes
+
+556
+00:36:42,112 --> 00:36:46,208
+SeaTac going from Mill Point Pool
+
+557
+00:36:46,464 --> 00:36:50,048
+Optive to there's a place where a transition
+
+558
+00:36:50,304 --> 00:36:52,864
+Happens in
+
+559
+00:36:53,120 --> 00:36:53,888
+Looks like
+
+560
+00:36:54,400 --> 00:36:58,496
+Ready 3 2 1
+
+561
+00:36:59,520 --> 00:37:01,824
+Well that's aggravate Contour Abyss
+
+562
+00:37:02,848 --> 00:37:04,640
+Alright one more time
+
+563
+00:37:06,944 --> 00:37:08,480
+Don't say it again
+
+564
+00:37:08,992 --> 00:37:15,136
+Sorry start with a single minimum and then beats are equals one the Figure 8
+
+565
+00:37:15,392 --> 00:37:16,160
+We have to minimize
+
+566
+00:37:17,696 --> 00:37:19,488
+All right coming back down
+
+567
+00:37:20,000 --> 00:37:23,840
+As a figure of 8 and it vanishes Vera Beecher equals 1
+
+568
+00:37:24,352 --> 00:37:25,376
+Okay
+
+569
+00:37:25,632 --> 00:37:31,776
+So if I summarize where the minima by showing the value of both
+
+570
+00:37:32,032 --> 00:37:33,568
+Q1 and Q2
+
+571
+00:37:34,080 --> 00:37:40,224
+On this access and I'll put a star on it
+
+572
+00:37:40,480 --> 00:37:41,248
+At 3
+
+573
+00:37:41,760 --> 00:37:42,784
+High temperature
+
+574
+00:37:43,296 --> 00:37:44,320
+The optimum
+
+575
+00:37:45,344 --> 00:37:45,856
+Is
+
+576
+00:37:47,136 --> 00:37:47,904
+At
+
+577
+00:37:48,160 --> 00:37:52,000
+Do you want Auntie to both equal to 1/2
+
+578
+00:37:56,096 --> 00:37:58,912
+And then the transition happens when Beach was one
+
+579
+00:37:59,680 --> 00:38:00,704
+I got his pop
+
+580
+00:38:03,264 --> 00:38:08,384
+And then we have something like this have a choice you can go either way to the top or the bottom left
+
+581
+00:38:08,896 --> 00:38:09,408
+Minimum
+
+582
+00:38:13,760 --> 00:38:16,320
+What do you think of that
+
+583
+00:38:19,904 --> 00:38:21,184
+Some people
+
+584
+00:38:21,696 --> 00:38:25,536
+Get distracted by the concept of
+
+585
+00:38:25,792 --> 00:38:27,072
+Chinese transitions
+
+586
+00:38:27,584 --> 00:38:33,728
+And whenever they see a bifurcation a transition from Vallejo
+
+587
+00:38:33,984 --> 00:38:35,264
+And I think that's a
+
+588
+00:38:35,520 --> 00:38:38,848
+Mistaken way of responding to the world
+
+589
+00:38:39,104 --> 00:38:44,736
+The truth is we're trying to approximate this red distribution as we change the temperature
+
+590
+00:38:45,248 --> 00:38:47,808
+Between very high temperatures
+
+591
+00:38:49,600 --> 00:38:55,744
+At high temperatures the distribution looks like this and you can hardly see
+
+592
+00:38:56,768 --> 00:39:00,864
+That these two guys have a little bit
+
+593
+00:39:01,632 --> 00:39:04,192
+And a very low temperatures
+
+594
+00:39:04,704 --> 00:39:07,008
+You end up with a well that looks like this
+
+595
+00:39:07,520 --> 00:39:12,640
+With all the masks on the diagonal and vertical
+
+596
+00:39:13,408 --> 00:39:14,432
+I thought you go
+
+597
+00:39:14,688 --> 00:39:19,808
+Through different bodies of Beka from this world of high temperature today supposed low temperature
+
+598
+00:39:20,320 --> 00:39:26,464
+The true red system doesn't have a phase transition it just its distribution just changes from being missed
+
+599
+00:39:26,720 --> 00:39:28,768
+Is completely continuous
+
+600
+00:39:29,280 --> 00:39:32,096
+And the fact that this approximation that we've introduced
+
+601
+00:39:32,352 --> 00:39:34,912
+Has a transition it has a bifurcation
+
+602
+00:39:35,424 --> 00:39:41,568
+Shouldn't I think vehicles for excitement is I always not wonderful that it's not a phase transition is no
+
+603
+00:39:41,824 --> 00:39:43,872
+Bifurcation
+
+604
+00:39:44,384 --> 00:39:48,736
+And it happens to happen at a temperature of wall which might look a bit like this
+
+605
+00:39:49,248 --> 00:39:51,040
+What is a transition
+
+606
+00:39:52,064 --> 00:39:52,832
+From
+
+607
+00:39:53,600 --> 00:39:59,744
+Insisting on the approximation distributions it look a bit like this by saying while I'm just going to buy a uniform
+
+608
+00:40:01,792 --> 00:40:07,936
+And then once you get above that point then it goes but it says I'm going to approximation distribution that looks rather like this
+
+609
+00:40:08,192 --> 00:40:13,824
+By that distribution that puts almost over Macon hair and little bit on hair little bit on hair
+
+610
+00:40:14,080 --> 00:40:15,360
+I'm almost nothing at all
+
+611
+00:40:18,176 --> 00:40:24,320
+So I feel fairly sanguine about whether this is a useful approximation or not it's mathematically
+
+612
+00:40:24,576 --> 00:40:29,696
+Nice and it's good to be familiar with it because it's something crops up a lot
+
+613
+00:40:30,464 --> 00:40:36,608
+But I'd like to emphasise but real system and read it doesn't have a phase transition and this transition that the green system has
+
+614
+00:40:36,864 --> 00:40:38,144
+Compass point hair
+
+615
+00:40:38,400 --> 00:40:41,472
+Yes it's a bifurcation
+
+616
+00:40:45,056 --> 00:40:51,200
+But it's not a phase transition a phase transition is a much more interesting phenomenon where the various
+
+617
+00:40:51,456 --> 00:40:56,320
+The energy diverges and all sorts of exciting phenomena occur
+
+618
+00:40:58,112 --> 00:41:01,696
+Now we could go through another example which is
+
+619
+00:41:02,208 --> 00:41:06,048
+This pain system with a coupling between lots of Neighbors
+
+620
+00:41:07,584 --> 00:41:09,376
+And if a couple and girl identical
+
+621
+00:41:10,144 --> 00:41:16,288
+If they're all equal to say plus one between Aspen and its neighbors and it has been said the same number of Neighbors
+
+622
+00:41:16,544 --> 00:41:19,360
+Then actually reaches down the entire calculation hair
+
+623
+00:41:19,616 --> 00:41:25,760
+It comes out exactly the same there any change would be if you've got to neighbors then you put a 2in hair if you don't fool Neighbors
+
+624
+00:41:26,016 --> 00:41:32,160
+The factory floor in half of this whole calculation we're just going through that we're just telling you what
+
+625
+00:41:32,416 --> 00:41:34,976
+What will happen first system with n spins as well
+
+626
+00:41:37,792 --> 00:41:43,936
+I'm missing that just emphasize it the real in the real world
+
+627
+00:41:44,192 --> 00:41:49,056
+Welchol available in the world of systems with lots and lots of things were then spins
+
+628
+00:41:49,312 --> 00:41:55,455
+Wet and is very large you can get phase Transitions and the ising model for example is a cyst
+
+629
+00:41:55,711 --> 00:41:58,015
+Where are you couple to go full Neighbors
+
+630
+00:41:58,271 --> 00:42:01,855
+And the icing mobile as we saw the last time does have a phase transition
+
+631
+00:42:05,695 --> 00:42:11,839
+This is what happens when you use the variational method to approximate it I just emphasized the what has happened was not
+
+632
+00:42:12,095 --> 00:42:18,239
+And it didn't happen because the underlying system had a face from the very should be very skeptical about people who say oh look at my
+
+633
+00:42:18,495 --> 00:42:24,127
+Variational method applied to the ice T-Mobile and look at how the phase transition because it hasn't
+
+634
+00:42:24,383 --> 00:42:25,919
+Okay
+
+635
+00:42:27,455 --> 00:42:31,295
+Why am I saying a list well I think there's a
+
+636
+00:42:31,807 --> 00:42:34,367
+This Methodist variational method
+
+637
+00:42:34,879 --> 00:42:41,023
+It's quite widely used to name and this is a question for a physicist
+
+638
+00:42:41,279 --> 00:42:47,423
+In the audience in these equations before
+
+639
+00:42:47,679 --> 00:42:51,519
+Down again the equations that I drive for the general spin system
+
+640
+00:42:51,775 --> 00:42:57,919
+And what we've gone through here is a special case where all the days are equal to a single number
+
+641
+00:42:58,687 --> 00:43:02,783
+Have you seen these equations before and what was it called yes
+
+642
+00:43:04,319 --> 00:43:10,463
+It's cold mean field Theory with all the mean field approximation
+
+643
+00:43:11,487 --> 00:43:17,631
+And often when it's derived people I'm not clear on the derivation it's just well let's do this
+
+644
+00:43:17,887 --> 00:43:24,031
+Take the mean of this if your luck it may be well explain but
+
+645
+00:43:24,287 --> 00:43:26,591
+The first time I encountered mean field Theory
+
+646
+00:43:26,847 --> 00:43:32,991
+It just seemed like a a sequence of arbitrary
+
+647
+00:43:33,247 --> 00:43:34,527
+Approximation
+
+648
+00:43:34,783 --> 00:43:40,927
+It also goes by various other names at sometime Schuylkill device Theory at least in the Cambridge
+
+649
+00:43:41,183 --> 00:43:42,463
+Thermodynamics course
+
+650
+00:43:42,975 --> 00:43:49,119
+And occasionally you may have people calling about talk about the fireman trick Caswell
+
+651
+00:43:49,375 --> 00:43:52,959
+All the fun run
+
+652
+00:43:53,471 --> 00:43:55,519
+Approximation
+
+653
+00:43:56,799 --> 00:44:01,919
+So these are all names for the same thing and what I've shown your hair is
+
+654
+00:44:02,175 --> 00:44:04,479
+Derivation of mean field Theory
+
+655
+00:44:04,735 --> 00:44:07,295
+By writing down a variational free energy
+
+656
+00:44:07,551 --> 00:44:10,367
+And then minimizing it
+
+657
+00:44:10,623 --> 00:44:16,767
+I like this way of deriving mean field Theory because it's very clear what the objective function is it clear what you're doing
+
+658
+00:44:17,023 --> 00:44:22,655
+And it don't motivate other generalizations so just to finish this little 7
+
+659
+00:44:23,935 --> 00:44:26,239
+Why do I like
+
+660
+00:44:32,639 --> 00:44:35,711
+The variational free energy review
+
+661
+00:44:36,479 --> 00:44:39,807
+All Mint Hill Perry
+
+662
+00:44:41,855 --> 00:44:43,135
+I love it
+
+663
+00:44:43,647 --> 00:44:49,279
+Because it's going to clear objective function from which you can derive
+
+664
+00:44:50,559 --> 00:44:52,095
+The equations
+
+665
+00:44:56,959 --> 00:45:03,103
+So that's nice cuz maybe you need to memorize less you just memorize objective function and everything can be
+
+666
+00:45:05,151 --> 00:45:09,247
+It is generalizable you could in principle shoes
+
+667
+00:45:10,527 --> 00:45:14,879
+More complex approximating distributions cute
+
+668
+00:45:15,903 --> 00:45:17,695
+And then you could
+
+669
+00:45:17,951 --> 00:45:19,231
+Generalize your
+
+670
+00:45:20,511 --> 00:45:23,071
+Flash on message
+
+671
+00:45:24,607 --> 00:45:27,167
+As long as you can evaluate and optimize
+
+672
+00:45:27,679 --> 00:45:28,191
+Petrol
+
+673
+00:45:29,471 --> 00:45:35,615
+And the third reason for loving this beauty is it shows that when you do mean field Theory you are actually getting a biome
+
+674
+00:45:35,871 --> 00:45:36,639
+On that
+
+675
+00:45:38,431 --> 00:45:41,503
+That shows that these mean field methods
+
+676
+00:45:44,319 --> 00:45:45,855
+Give
+
+677
+00:45:46,111 --> 00:45:47,135
+Abound
+
+678
+00:45:47,647 --> 00:45:51,487
+I'm glad which is an interesting thing to be able to compute
+
+679
+00:45:54,303 --> 00:45:56,095
+Okay that's
+
+680
+00:45:57,887 --> 00:46:00,191
+Mean field Theory not variational methods
+
+681
+00:46:00,703 --> 00:46:04,287
+And that is the end of the lecture
+
+682
+00:46:04,543 --> 00:46:10,175
+My plan is the next lecture will be an introduction to neural networks
+
+683
+00:46:10,943 --> 00:46:12,991
+And then
+
+684
+00:46:13,247 --> 00:46:19,391
+Will probably spend to lectures on neural networks and maybe the second lecture also wrap up for a little discussion of State
+
+685
+00:46:19,647 --> 00:46:21,439
+Erich fend coats
+
+686
+00:46:21,951 --> 00:46:23,487
+All there any questions on
+
+687
+00:46:23,743 --> 00:46:24,511
+Dyslexia
+
+688
+00:46:27,327 --> 00:46:29,119
+Okay thanks so much

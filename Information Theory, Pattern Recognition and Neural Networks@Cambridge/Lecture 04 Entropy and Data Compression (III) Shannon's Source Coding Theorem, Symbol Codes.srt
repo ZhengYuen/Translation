@@ -1,0 +1,3143 @@
+1
+00:00:04,096 --> 00:00:05,376
+Thank you all for coming
+
+2
+00:00:05,632 --> 00:00:09,472
+Let me recap what we did last time
+
+3
+00:00:09,728 --> 00:00:14,336
+We've started talking about sore skirting Alternatives data compression
+
+4
+00:00:15,360 --> 00:00:17,664
+We've been looking at toy examples
+
+5
+00:00:17,920 --> 00:00:24,064
+One example of a redundant file for us to say something is mainly zeros with just a few ones
+
+6
+00:00:24,320 --> 00:00:27,392
+Scattered at random are we cool at the bent coin
+
+7
+00:00:27,904 --> 00:00:31,744
+How should we can compress a file like that
+
+8
+00:00:32,256 --> 00:00:38,400
+Well when we think about compression to claims with examining Shannon's assertions that
+
+9
+00:00:38,656 --> 00:00:40,192
+If you take log
+
+10
+00:00:40,448 --> 00:00:41,216
+Bass tooth
+
+11
+00:00:41,472 --> 00:00:45,056
+Of 1 over the probability of an outcome that tells you
+
+12
+00:00:45,312 --> 00:00:51,456
+, information content that outcome has Galt how long the message or to be associate
+
+13
+00:00:51,712 --> 00:00:55,552
+Chicken piccata outcome in bits as well as the ideal message length
+
+14
+00:00:56,576 --> 00:01:02,720
+The entropy which is the average of the Shannon information content is claimed to be the right way to measure average information
+
+15
+00:01:02,976 --> 00:01:03,488
+Content
+
+16
+00:01:03,744 --> 00:01:05,024
+And
+
+17
+00:01:05,280 --> 00:01:11,424
+The third is session that we've got time that we have sort of proof last time is the source coating Theron which says that
+
+18
+00:01:11,680 --> 00:01:17,568
+If you got a very long string around comes from a random Source identically distributed
+
+19
+00:01:17,824 --> 00:01:22,688
+Then those outcomes can be compressed into roughly end times the entropy bits
+
+20
+00:01:23,200 --> 00:01:29,344
+So we sort of proof that last time we did this proof by counting the
+
+21
+00:01:29,600 --> 00:01:32,672
+Typical said we didn't have to do a general proof that's in the book
+
+22
+00:01:32,928 --> 00:01:36,512
+But what we did was we looked at a special case of the bent coin
+
+23
+00:01:36,768 --> 00:01:40,864
+Where are you I'll sit and times and get mainly zeros in a few ones
+
+24
+00:01:41,376 --> 00:01:47,520
+And that we all know what the typical sat is you expect to get roughly if it was
+
+25
+00:01:47,776 --> 00:01:53,920
+I've been calling me to buy September 7th at 10% and the typical set of strings is old
+
+26
+00:01:54,176 --> 00:02:00,320
+Things that have roughly 10% 107 general what the typical set means
+
+27
+00:02:00,576 --> 00:02:03,136
+Define concept
+
+28
+00:02:03,392 --> 00:02:04,160
+Is
+
+29
+00:02:04,416 --> 00:02:10,048
+If you got the string of an independent outcomes from a source that string
+
+30
+00:02:10,304 --> 00:02:12,608
+Is very likely to be in a typical set
+
+31
+00:02:12,864 --> 00:02:17,216
+Typical set elements all have roughly the same probability as each other
+
+32
+00:02:17,472 --> 00:02:17,984
+And
+
+33
+00:02:18,240 --> 00:02:20,544
+There are two to the end times and repeat
+
+34
+00:02:20,800 --> 00:02:21,312
+All of them
+
+35
+00:02:21,568 --> 00:02:27,712
+So the rough proof of the source coding thermostat to each of these guys the number
+
+36
+00:02:27,968 --> 00:02:34,112
+Names of your meat has two Phantoms the entropy so the length of all the names Weeknd X the entropy
+
+37
+00:02:34,368 --> 00:02:40,512
+The old got roughly the same probability of each other which must that will be to the minus and times
+
+38
+00:02:41,024 --> 00:02:42,560
+The
+
+39
+00:02:42,816 --> 00:02:48,960
+Very rough outline of the proof of the souls cutting tempura General Tso
+
+40
+00:02:49,216 --> 00:02:54,592
+And we did it for the bent coin looking at a long string of and
+
+41
+00:02:55,104 --> 00:03:01,248
+Outcomes and the way we found ourselves at the proof was reimagined playing the band Korn lost
+
+42
+00:03:01,504 --> 00:03:07,648
+We wanted to win the lottery for the mafia boss how much of his money did we need to spend which tickets
+
+43
+00:03:07,904 --> 00:03:14,048
+It would be by we found a big sack full of tickets and then we imagined writing a new name
+
+44
+00:03:14,304 --> 00:03:20,448
+Increase ticket on the robust of a ticket we counted the number of tickets in the bag and had to to the end times the entropy
+
+45
+00:03:20,704 --> 00:03:26,848
+So that's what we did last time I was out proof of the source coding theorem at least for the band coin
+
+46
+00:03:36,064 --> 00:03:41,184
+When I said the number of tickets in the bag is 2 to the end times end
+
+47
+00:03:41,440 --> 00:03:44,768
+2 to the Anton phanpy plus a little bit
+
+48
+00:03:45,024 --> 00:03:51,168
+And that little bit is to the fluctuations around the the mean of the typical number
+
+49
+00:03:51,424 --> 00:03:57,568
+Of Wands those fluctuations goes √ and where and is the length of the
+
+50
+00:03:57,824 --> 00:04:03,968
+The strength they get relatively small compared to the main term and H2
+
+51
+00:04:04,224 --> 00:04:10,368
+And his just a picture reminding you want to go see him distribution looks like and you can get the probability
+
+52
+00:04:10,624 --> 00:04:12,672
+State Farm down
+
+53
+00:04:12,928 --> 00:04:19,071
+As small as you like the probability of failure as small as you like just by adding a few extra √ Anton's
+
+54
+00:04:19,327 --> 00:04:21,375
+A few extra standard deviations
+
+55
+00:04:22,143 --> 00:04:23,423
+To your typical fast
+
+56
+00:04:24,703 --> 00:04:30,847
+All right so that was a ridiculous way to do compression with an older very large bean bag full of tickets
+
+57
+00:04:31,103 --> 00:04:37,247
+What you wrote things on the two signs off that was out compression on done compression algorithm
+
+58
+00:04:37,503 --> 00:04:38,783
+We're going to discuss
+
+59
+00:04:39,039 --> 00:04:39,807
+Practical
+
+60
+00:04:40,063 --> 00:04:43,647
+Data compression how would we compress a bent coin
+
+61
+00:04:44,415 --> 00:04:49,791
+Practically well that's actually a home of exercise I sent for you so I'd like you to work on that
+
+62
+00:04:50,047 --> 00:04:56,191
+But we'll carry on working on other approaches to related problems I'm going to talk today about
+
+63
+00:04:56,447 --> 00:05:01,055
+A method of being data compression code symbol codes
+
+64
+00:05:01,823 --> 00:05:06,943
+I'm out here with symbol code is it something you could apply for example to English
+
+65
+00:05:07,199 --> 00:05:13,343
+Or to any language that involves an alphabet of characters West some characters
+
+66
+00:05:13,599 --> 00:05:14,879
+Probable than others
+
+67
+00:05:15,135 --> 00:05:21,279
+And to make life especially simple to start with I'm going to pretend that the probability distribution for every character
+
+68
+00:05:21,535 --> 00:05:24,863
+The same every time I'm that we know that distribution
+
+69
+00:05:25,119 --> 00:05:31,263
+And will usually assume that it's non-uniform distribution could look like his
+
+70
+00:05:31,519 --> 00:05:37,663
+Alphabet of 26 + 27 + oil and a probability distribution
+
+71
+00:05:37,919 --> 00:05:44,063
+Overdose nicotine space is the most probable time to ETA oan
+
+72
+00:05:44,319 --> 00:05:50,463
+RSI HDL will that sort of stuff this is like an English language distribution
+
+73
+00:05:51,487 --> 00:05:53,791
+And the task now is
+
+74
+00:05:54,047 --> 00:05:54,815
+To give
+
+75
+00:05:55,071 --> 00:05:58,143
+A code word to each of these
+
+76
+00:05:58,655 --> 00:06:01,471
+Symbols in the alphabet which which of these
+
+77
+00:06:01,727 --> 00:06:07,871
+Elements of the alphabet example of binary
+
+78
+00:06:08,127 --> 00:06:14,271
+And we've given a yacoba at four zeros and we can set the code of 11012
+
+79
+00:06:14,527 --> 00:06:16,831
+Walnuts basically 01
+
+80
+00:06:17,343 --> 00:06:23,487
+The last example of a code and the way you use a symbol code is you take the source file
+
+81
+00:06:23,743 --> 00:06:27,839
+Replace it by the corresponding codewords in order concatenated
+
+82
+00:06:28,095 --> 00:06:34,239
+With no punctuation at all so the receiver won't be able to see where the boundaries between the code webs
+
+83
+00:06:36,799 --> 00:06:39,103
+Sir
+
+84
+00:06:44,479 --> 00:06:47,039
+A symbol code is going to be a map
+
+85
+00:06:48,575 --> 00:06:50,879
+From each symbol
+
+86
+00:06:54,207 --> 00:06:55,999
+Acts in your alphabet
+
+87
+00:06:56,767 --> 00:07:02,655
+To will collect see all apps and see if x is a binary string
+
+88
+00:07:08,543 --> 00:07:14,687
+That's consejeria can be of any length and set notation
+
+89
+00:07:15,967 --> 00:07:22,111
+01 IS300 Wong set with a plus mean
+
+90
+00:07:22,367 --> 00:07:26,975
+The strings of any length made up of zeros and ones
+
+91
+00:07:28,511 --> 00:07:32,351
+Not may be familiar to those of you who hang out with computer scientists
+
+92
+00:07:32,863 --> 00:07:36,447
+Let me give you another example 01
+
+93
+00:07:37,215 --> 00:07:43,103
+^ 2 is the same as the set of strings
+
+94
+00:07:43,359 --> 00:07:47,711
+I'm going to walk like I said that's just a little bit of station
+
+95
+00:07:48,223 --> 00:07:50,015
+Assemble code is
+
+96
+00:07:50,271 --> 00:07:54,367
+A map from symbols to find restrings and then
+
+97
+00:07:54,879 --> 00:07:57,695
+The way sample code works is we encode
+
+98
+00:08:00,511 --> 00:08:03,071
+String of outcomes X1 X2 X3
+
+99
+00:08:03,327 --> 00:08:09,215
+Send biking caffeinating without punctuation
+
+100
+00:08:12,031 --> 00:08:16,639
+Tacoma glass racks wall
+
+101
+00:08:16,895 --> 00:08:20,735
+Makoto
+
+102
+00:08:21,247 --> 00:08:22,527
+Sorry
+
+103
+00:08:26,623 --> 00:08:29,183
+I'll just give you the example
+
+104
+00:08:30,463 --> 00:08:31,999
+If we gave
+
+105
+00:08:32,255 --> 00:08:33,791
+A recorder
+
+106
+00:08:34,559 --> 00:08:35,071
+1
+
+107
+00:08:35,839 --> 00:08:37,631
+See the code
+
+108
+00:08:37,887 --> 00:08:41,215
+I'm c1011 then
+
+109
+00:08:41,471 --> 00:08:47,615
+The file containing c a b b with zinc coated as long as ra1100
+
+110
+00:08:49,919 --> 00:08:51,199
+Sarah
+
+111
+00:08:52,223 --> 00:08:52,991
+Okay
+
+112
+00:08:53,247 --> 00:08:59,391
+That's a very simple idea but not many tickets are head round assemble Coast understand them theoretically
+
+113
+00:08:59,647 --> 00:09:05,791
+And understanding practically and these are quite important that quite widely used especially in
+
+114
+00:09:06,047 --> 00:09:07,327
+History
+
+115
+00:09:11,935 --> 00:09:16,031
+So the questions you want to ask today all the theoretical question
+
+116
+00:09:16,287 --> 00:09:21,407
+How well might a symbol code before
+
+117
+00:09:27,551 --> 00:09:33,695
+I'm over on fizzle biting here is maybe the answer will have something to do with
+
+118
+00:09:33,951 --> 00:09:36,767
+With the entropy and Shannon information content
+
+119
+00:09:37,023 --> 00:09:40,351
+And I would again reinforce the claims we being
+
+120
+00:09:40,607 --> 00:09:41,119
+Assessing
+
+121
+00:09:41,375 --> 00:09:47,519
+Question is hey stuff. I just want to know how to make a good one how do you make
+
+122
+00:09:47,775 --> 00:09:49,311
+Good symbol codes
+
+123
+00:09:53,407 --> 00:09:55,967
+Let me say good or optimal
+
+124
+00:09:56,735 --> 00:09:59,551
+We need to Define what we mean by
+
+125
+00:10:03,135 --> 00:10:06,207
+So let's do that
+
+126
+00:10:08,511 --> 00:10:09,535
+Suck
+
+127
+00:10:10,303 --> 00:10:15,167
+What do you mean by optional well after compression a short expected
+
+128
+00:10:15,423 --> 00:10:21,311
+Like stomach so we'll use that was our main objective function so that maybe others
+
+129
+00:10:21,823 --> 00:10:24,383
+Define the expected length
+
+130
+00:10:24,639 --> 00:10:25,663
+All
+
+131
+00:10:25,919 --> 00:10:27,455
+Barcode
+
+132
+00:10:27,967 --> 00:10:28,991
+See
+
+133
+00:10:29,503 --> 00:10:31,551
+For an ensemble
+
+134
+00:10:32,319 --> 00:10:38,463
+Axe The Ensemble being the alphabet with all its probability
+
+135
+00:10:40,767 --> 00:10:46,911
+Will Define it to be LLC and X is some over all the elements in
+
+136
+00:10:47,167 --> 00:10:48,191
+Alphabet
+
+137
+00:10:48,447 --> 00:10:50,495
+I'm applying for the city of
+
+138
+00:10:50,751 --> 00:10:52,287
+The outcome
+
+139
+00:10:52,543 --> 00:10:58,687
+By the links that you have assigned with l i is the length in
+
+140
+00:10:58,943 --> 00:11:00,479
+Solve
+
+141
+00:11:03,039 --> 00:11:05,343
+The codes that you've assigned to the eye
+
+142
+00:11:06,367 --> 00:11:11,231
+I don't think nothing profound defining expected length
+
+143
+00:11:11,487 --> 00:11:14,303
+And it's probably a good idea to immediately
+
+144
+00:11:14,559 --> 00:11:15,839
+Here's an example
+
+145
+00:11:27,871 --> 00:11:34,015
+Alphabet alphabets going to be
+
+146
+00:11:35,039 --> 00:11:37,855
+And let's have a probability distribution
+
+147
+00:11:40,159 --> 00:11:44,511
+Quota 1818
+
+148
+00:11:44,767 --> 00:11:50,911
+This is a toy property distribution with uneven probabilities
+
+149
+00:11:51,167 --> 00:11:53,727
+I think we might want to know about this
+
+150
+00:11:53,983 --> 00:12:00,127
+I'm so humble is what is it
+
+151
+00:12:00,383 --> 00:12:04,479
+2 + 1/8 * 3 + 8
+
+152
+00:12:04,735 --> 00:12:05,759
+X
+
+153
+00:12:06,271 --> 00:12:07,039
+3
+
+154
+00:12:07,295 --> 00:12:13,183
+Phase 1 2 3 and 3 being respectively the logs base to office this
+
+155
+00:12:15,999 --> 00:12:22,143
+Cannot is one of the
+
+156
+00:12:23,935 --> 00:12:24,959
+So
+
+157
+00:12:26,751 --> 00:12:32,895
+Let's give ourselves a symbol code and then try and make it better and we need
+
+158
+00:12:33,151 --> 00:12:36,735
+Depend on what the rules of the game are actually done trying to be half
+
+159
+00:12:39,039 --> 00:12:43,647
+So what do we want let's let's defiantly
+
+160
+00:12:43,903 --> 00:12:45,439
+The rules
+
+161
+00:12:47,999 --> 00:12:50,047
+First and then look at some examples
+
+162
+00:12:53,375 --> 00:12:59,519
+Restoril is it had better work when someone codes of this and then someone else and decodes the better get back
+
+163
+00:12:59,775 --> 00:13:03,615
+What we first put must be
+
+164
+00:13:05,919 --> 00:13:10,015
+We wanted to decode correctly
+
+165
+00:13:11,807 --> 00:13:17,951
+We wanted to guarantee to decode correctly not just have a 99.9%
+
+166
+00:13:18,207 --> 00:13:21,535
+Fight Goods in a slightly silly approach of last time
+
+167
+00:13:22,047 --> 00:13:24,863
+We wanted to always decode correctly
+
+168
+00:13:28,703 --> 00:13:34,591
+Let's just run around the rules and then I'll say a bit more precisely what we what we mean by 5's
+
+169
+00:13:34,847 --> 00:13:40,479
+Ideally we'd like it to be easy to decode as well so we don't want to have
+
+170
+00:13:40,735 --> 00:13:42,527
+The recipient having test
+
+171
+00:13:42,783 --> 00:13:48,927
+Spend hours staring at the code book trying to figure out where the punctuation where the missing punctuation
+
+172
+00:13:49,183 --> 00:13:52,255
+In the in this receive string
+
+173
+00:13:53,535 --> 00:13:56,607
+So easy to decode would be nice to have
+
+174
+00:13:57,119 --> 00:14:03,263
+But it's not essential if if we can get a big win on this final objective which is
+
+175
+00:14:05,823 --> 00:14:07,103
+Small owl
+
+176
+00:14:10,687 --> 00:14:11,455
+Okay
+
+177
+00:14:11,711 --> 00:14:17,599
+Let's just be precise about what we mean by it's gone to the code right we want the code to be
+
+178
+00:14:17,855 --> 00:14:22,719
+Uniquely decodable
+
+179
+00:14:23,999 --> 00:14:30,143
+So when you receive an encoded string there should be no ambiguity about what was sent
+
+180
+00:14:30,399 --> 00:14:30,911
+Stop
+
+181
+00:14:31,679 --> 00:14:32,703
+4
+
+182
+00:14:33,727 --> 00:14:34,495
+Annie
+
+183
+00:14:34,751 --> 00:14:37,311
+String X
+
+184
+00:14:37,823 --> 00:14:40,383
+And any other string why
+
+185
+00:14:41,151 --> 00:14:42,431
+Such that
+
+186
+00:14:43,199 --> 00:14:45,503
+X is not the same as why
+
+187
+00:14:46,783 --> 00:14:48,575
+We want the encoding
+
+188
+00:14:48,831 --> 00:14:51,391
+All facts not equal
+
+189
+00:14:51,647 --> 00:14:52,927
+Man cutting
+
+190
+00:14:53,183 --> 00:14:54,207
+Have life
+
+191
+00:14:54,719 --> 00:14:57,279
+That's the definition of unique dakotabilities
+
+192
+00:15:06,239 --> 00:15:07,263
+Okay
+
+193
+00:15:10,591 --> 00:15:13,663
+Just to check my no texting is clear
+
+194
+00:15:13,919 --> 00:15:20,063
+City of AI is the way we encode a particular element of the alphabet and then you have see all the
+
+195
+00:15:20,319 --> 00:15:26,463
+Spring-like acts that just a concatenation of X1 X2
+
+196
+00:15:26,719 --> 00:15:31,583
+Overloading the symbol C to me neither
+
+197
+00:15:31,839 --> 00:15:36,191
+The way that you encode a single symbol or it could be the encoding of an entire string
+
+198
+00:15:36,959 --> 00:15:41,567
+Alright okay let's define
+
+199
+00:15:42,079 --> 00:15:48,223
+Some symbol codes and have a think about these objectives what does it mean to say
+
+200
+00:15:48,479 --> 00:15:52,575
+What does that imply how do we catch a small expected length
+
+201
+00:15:53,087 --> 00:15:55,647
+Is this a good start for English
+
+202
+00:15:55,903 --> 00:15:58,463
+Could it be my best is it uniquely decodable
+
+203
+00:15:59,743 --> 00:16:05,887
+Let's look at these simple example s Define a code code C1 and it's code
+
+204
+00:16:06,143 --> 00:16:07,167
+Weather going to be
+
+205
+00:16:07,423 --> 00:16:09,471
+1 and 3 zeros
+
+206
+00:16:09,983 --> 00:16:11,519
+Is there a 100
+
+207
+00:16:12,543 --> 00:16:14,335
+0010
+
+208
+00:16:16,127 --> 00:16:17,919
+Please Arizona
+
+209
+00:16:18,175 --> 00:16:24,319
+Not deliberately made them oil for characters long cuz now we know the recipient will be able to put the punctuation
+
+210
+00:16:24,575 --> 00:16:30,719
+Expected length
+
+211
+00:16:30,975 --> 00:16:34,815
+Expected length
+
+212
+00:16:37,119 --> 00:16:38,911
+All right
+
+213
+00:16:39,167 --> 00:16:42,495
+Can we improve on this is this is this the best
+
+214
+00:16:43,007 --> 00:16:43,775
+Possible
+
+215
+00:16:44,031 --> 00:16:46,079
+Code for this
+
+216
+00:16:46,335 --> 00:16:47,615
+Ensemble
+
+217
+00:16:47,871 --> 00:16:49,151
+Any suggestions
+
+218
+00:16:56,831 --> 00:17:01,951
+Should we get rid of some of those arrows
+
+219
+00:17:02,975 --> 00:17:03,743
+Would that work
+
+220
+00:17:06,815 --> 00:17:08,607
+Who have been shot today
+
+221
+00:17:10,399 --> 00:17:13,727
+Get rid of the trailing zeros brilliant thank you
+
+222
+00:17:13,983 --> 00:17:18,079
+Okay so we remove all the trailing zeros
+
+223
+00:17:21,919 --> 00:17:28,063
+Then the recipient will still be able to figure out where the punctuation marks or to be
+
+224
+00:17:28,319 --> 00:17:32,159
+Because I can just look for the Wang Wang comes at the end of any code what
+
+225
+00:17:32,927 --> 00:17:39,071
+Right but it's still sell punctuating and it's easy to decode cuz it just read along to the Head
+
+226
+00:17:39,327 --> 00:17:45,471
+It must have been a sea or whatever whenever I have got to
+
+227
+00:17:45,727 --> 00:17:51,871
+Expected length of this while I would do that for you in advance its 1.875
+
+228
+00:17:52,127 --> 00:17:54,175
+1 + 7/8
+
+229
+00:17:56,991 --> 00:17:59,551
+That's a nice idea
+
+230
+00:18:03,647 --> 00:18:07,487
+Can we get the expected length on a shorter how about
+
+231
+00:18:07,743 --> 00:18:11,071
+How about this one how about
+
+232
+00:18:12,607 --> 00:18:13,119
+That code
+
+233
+00:18:17,215 --> 00:18:19,519
+What the expected length of this song
+
+234
+00:18:22,591 --> 00:18:24,127
+It's like you like this one
+
+235
+00:18:24,383 --> 00:18:25,151
+Okay
+
+236
+00:18:25,407 --> 00:18:26,943
+Is eating edible
+
+237
+00:18:27,967 --> 00:18:29,759
+Maybe not because
+
+238
+00:18:30,015 --> 00:18:36,159
+Even very short strings may have the same encodings each other is not negotiable
+
+239
+00:18:36,415 --> 00:18:39,743
+The goal is to get the expected length very short
+
+240
+00:18:42,559 --> 00:18:44,863
+Oso
+
+241
+00:18:45,375 --> 00:18:48,447
+Can we do any better than than this one well
+
+242
+00:18:49,983 --> 00:18:56,127
+How about this we need to have have a bit more like they're going to be a bit different from each other
+
+243
+00:18:56,383 --> 00:19:00,991
+That's one of the road tax deduction from the rule 800
+
+244
+00:19:01,247 --> 00:19:02,527
+Photos must be different
+
+245
+00:19:09,183 --> 00:19:11,743
+And that's the consequence of
+
+246
+00:19:11,999 --> 00:19:13,279
+You need to go to Boise
+
+247
+00:19:14,303 --> 00:19:20,447
+Different 0 1 0
+
+248
+00:19:20,959 --> 00:19:23,007
++ 1/0
+
+249
+00:19:25,823 --> 00:19:27,103
+The
+
+250
+00:19:27,615 --> 00:19:32,479
+Expected length of this is one on 5/8
+
+251
+00:19:35,295 --> 00:19:40,415
+Expected length is there's a chance of a ha of
+
+252
+00:19:41,695 --> 00:19:47,839
+Akula for this 808
+
+253
+00:19:48,095 --> 00:19:51,935
+Where do they come from expected length is
+
+254
+00:19:52,447 --> 00:19:55,263
+There's a half chance of getting a length of 1
+
+255
+00:19:55,519 --> 00:19:58,847
+Lacrosse chance of Atlanta 2
+
+256
+00:19:59,103 --> 00:20:04,479
+Plus I want a chance of 3 + 1/8 chance of
+
+257
+00:20:04,735 --> 00:20:05,503
+Food
+
+258
+00:20:05,759 --> 00:20:07,551
+And then I added that it up
+
+259
+00:20:08,063 --> 00:20:08,831
+All right
+
+260
+00:20:09,599 --> 00:20:13,951
+What's the average length of a given that the lynx are going to be
+
+261
+00:20:14,719 --> 00:20:15,743
+Length
+
+262
+00:20:15,999 --> 00:20:18,047
+I want to free
+
+263
+00:20:18,815 --> 00:20:19,583
+Huntik
+
+264
+00:20:23,423 --> 00:20:23,935
+Questions
+
+265
+00:20:25,215 --> 00:20:28,543
+So what do you think of this guy
+
+266
+00:20:29,055 --> 00:20:31,103
+Encode something
+
+267
+00:20:31,359 --> 00:20:33,407
+Chauffeur expected length
+
+268
+00:20:35,199 --> 00:20:37,247
+Example who flipped out so far
+
+269
+00:20:41,855 --> 00:20:45,439
+Batman code something with it c a a b
+
+270
+00:20:45,951 --> 00:20:47,743
+Encoded with
+
+271
+00:20:48,767 --> 00:20:50,815
+Code number 3
+
+272
+00:20:57,215 --> 00:21:01,311
+My man Courvoisier baby we dance
+
+273
+00:21:03,103 --> 00:21:04,895
+Guam
+
+274
+00:21:07,455 --> 00:21:07,967
+Wang
+
+275
+00:21:08,991 --> 00:21:09,503
+Mom
+
+276
+00:21:17,952 --> 00:21:20,000
+So is C4
+
+277
+00:21:20,512 --> 00:21:21,792
+Easy to decode
+
+278
+00:21:22,560 --> 00:21:24,096
+Is it uniquely decodable
+
+279
+00:21:27,936 --> 00:21:34,080
+What we're trying to do here is so sale close to the wind we want to make or Cobra the shortest possible
+
+280
+00:21:34,336 --> 00:21:36,384
+We don't want to close
+
+281
+00:21:36,640 --> 00:21:39,200
+Have problems of unique dakotabilities
+
+282
+00:21:39,456 --> 00:21:39,968
+What's up
+
+283
+00:21:41,248 --> 00:21:42,784
+Is this uniquely decodable
+
+284
+00:21:43,808 --> 00:21:47,136
+I could stare hard at this and I'm trying to figure out
+
+285
+00:21:47,648 --> 00:21:53,792
+Is this a mother interpretation so you read along a 01 how could you get zero
+
+286
+00:21:54,048 --> 00:22:00,192
+Has to be a c doesn't say so thank God
+
+287
+00:22:00,448 --> 00:22:03,008
+This one
+
+288
+00:22:03,264 --> 00:22:03,776
+Bong
+
+289
+00:22:04,032 --> 00:22:10,176
+There a what could be that I was thinking I'll look in the code book Maybe
+
+290
+00:22:10,432 --> 00:22:13,760
+Who looked at it could be an A and an a
+
+291
+00:22:14,528 --> 00:22:16,576
+And then
+
+292
+00:22:16,832 --> 00:22:17,344
+Baby
+
+293
+00:22:18,368 --> 00:22:19,904
+But it could have been
+
+294
+00:22:22,464 --> 00:22:24,768
+Maybe it was a
+
+295
+00:22:25,024 --> 00:22:26,560
+Hey Ya
+
+296
+00:22:27,328 --> 00:22:30,656
+And the one is there a d
+
+297
+00:22:31,168 --> 00:22:32,704
+Mendoza's zero
+
+298
+00:22:32,960 --> 00:22:34,752
+From somewhere
+
+299
+00:22:35,520 --> 00:22:40,384
+So it's difficult to decode cuz I am not quite sure it is especially if we haven't
+
+300
+00:22:40,896 --> 00:22:42,432
+Reached the end yet
+
+301
+00:22:43,200 --> 00:22:44,480
+Don't play what's going on
+
+302
+00:22:44,992 --> 00:22:48,320
+Can anyone give us a proof
+
+303
+00:22:48,576 --> 00:22:51,904
+Preferred mini find two strings that have exactly the same
+
+304
+00:22:52,928 --> 00:22:55,488
+BC I got so if you
+
+305
+00:22:55,744 --> 00:22:56,768
+Encode
+
+306
+00:22:57,536 --> 00:22:58,816
+DC
+
+307
+00:22:59,072 --> 00:23:02,656
+That gives u0103
+
+308
+00:23:03,168 --> 00:23:05,472
+DC-10
+
+309
+00:23:05,728 --> 00:23:09,312
+010 ik and
+
+310
+00:23:09,824 --> 00:23:12,896
+It had got another string that also includes house
+
+311
+00:23:15,712 --> 00:23:18,528
+A b c d e f
+
+312
+00:23:18,784 --> 00:23:19,552
+1
+
+313
+00:23:20,576 --> 00:23:21,600
+00
+
+314
+00:23:22,368 --> 00:23:26,720
+Well I'm there at 12 okay sorry if you're cool with x
+
+315
+00:23:26,976 --> 00:23:33,120
+And that's why the difference between encoding
+
+316
+00:23:33,376 --> 00:23:36,960
+This is useless no bootable
+
+317
+00:23:38,240 --> 00:23:40,288
+So what's going on
+
+318
+00:23:41,312 --> 00:23:43,360
+Let's get ourselves one more example
+
+319
+00:23:45,152 --> 00:23:46,432
+She finds
+
+320
+00:23:47,456 --> 00:23:48,736
+His C5
+
+321
+00:23:50,784 --> 00:23:52,064
+00
+
+322
+00:23:52,576 --> 00:23:53,600
+Is there a long
+
+323
+00:23:53,856 --> 00:23:55,392
+1 0
+
+324
+00:23:56,416 --> 00:23:57,184
+On what
+
+325
+00:23:58,976 --> 00:24:03,328
+Expected length of this is
+
+326
+00:24:03,840 --> 00:24:05,120
+Sarah Lancaster
+
+327
+00:24:06,656 --> 00:24:09,984
+So that's not as good as this one
+
+328
+00:24:18,176 --> 00:24:19,712
+I found it to be a few more
+
+329
+00:24:22,272 --> 00:24:24,320
+So don't go any further ideas
+
+330
+00:24:24,576 --> 00:24:26,112
+Any ways we can improve yeah
+
+331
+00:24:32,256 --> 00:24:33,280
+Haha
+
+332
+00:24:33,536 --> 00:24:36,864
+So you're suggesting take C2
+
+333
+00:24:37,120 --> 00:24:40,704
+And treat the last word so I got C6
+
+334
+00:24:40,960 --> 00:24:43,264
+Using wang Vera Wang
+
+335
+00:24:43,520 --> 00:24:49,664
+Is there a Vera Wang but you're saying you don't actually need that final punctuation time won't you sing
+
+336
+00:24:49,920 --> 00:24:50,944
+3 zeros
+
+337
+00:24:51,200 --> 00:24:53,760
+If you're using C2 you know a woman is coming next
+
+338
+00:24:54,528 --> 00:24:55,552
+They can get rid of it
+
+339
+00:24:58,368 --> 00:25:02,464
+Write a text of the length of 1 2 3 on 3
+
+340
+00:25:04,512 --> 00:25:06,048
+Which incidentally
+
+341
+00:25:07,584 --> 00:25:11,936
+All the same as the Shannon information contents let's go Shi
+
+342
+00:25:13,216 --> 00:25:16,032
+One bit two bits leave it simply this
+
+343
+00:25:20,896 --> 00:25:22,432
+So expected length
+
+344
+00:25:22,944 --> 00:25:28,576
+Which is average of blank is going to be the same as the average of the contents
+
+345
+00:25:30,624 --> 00:25:33,696
+Class 1 and 3/4 which is Santa Fe
+
+346
+00:25:35,744 --> 00:25:41,632
+Right that's a fun idea we got a symbol code who's expected length is the entropy
+
+347
+00:25:41,888 --> 00:25:44,960
+If we encode c a a b
+
+348
+00:25:45,472 --> 00:25:46,240
+This
+
+349
+00:25:46,752 --> 00:25:48,544
+Then we got
+
+350
+00:25:48,800 --> 00:25:50,336
+Girls hair long
+
+351
+00:25:50,592 --> 00:25:51,360
+Wall
+
+352
+00:25:52,128 --> 00:25:52,640
+Guam
+
+353
+00:25:53,408 --> 00:25:54,944
+01
+
+354
+00:26:00,576 --> 00:26:03,136
+Interesting thing to notice that this
+
+355
+00:26:03,392 --> 00:26:08,256
+Set a Cota has lots of zeros in a few Wong to make it any better
+
+356
+00:26:12,352 --> 00:26:14,144
+Visit unit 2 decodable
+
+357
+00:26:14,912 --> 00:26:17,984
+Can I don't give an argument why it must be you need to be to go to bowl
+
+358
+00:26:19,008 --> 00:26:20,544
+What's up already set at
+
+359
+00:26:23,872 --> 00:26:29,504
+You're being shy how the receiver can read along
+
+360
+00:26:30,016 --> 00:26:32,832
+And look at the code code book
+
+361
+00:26:33,344 --> 00:26:36,160
+Once they reach the end of
+
+362
+00:26:36,416 --> 00:26:42,560
+About as well as in the cookbook nothing else would have happened you can reach you can't get through
+
+363
+00:26:42,816 --> 00:26:47,936
+A different code word on the way to the Cobra the are actually fixing off
+
+364
+00:26:48,192 --> 00:26:51,520
+No code way to the prefix of any other
+
+365
+00:26:51,776 --> 00:26:52,544
+Code word
+
+366
+00:26:52,800 --> 00:26:58,944
+So this code this is a prefix
+
+367
+00:26:59,200 --> 00:27:00,480
+Code is the
+
+368
+00:27:04,064 --> 00:27:06,624
+Name against this no
+
+369
+00:27:06,880 --> 00:27:08,416
+Code realize
+
+370
+00:27:09,952 --> 00:27:11,744
+Is a prefix of a Nyala
+
+371
+00:27:18,912 --> 00:27:20,448
+We don't have to use
+
+372
+00:27:20,704 --> 00:27:23,520
+Prefix codes but it makes them easy to decode
+
+373
+00:27:23,776 --> 00:27:29,920
+Another property of a prefix code is you can arrange the code Woods in a tree
+
+374
+00:27:30,176 --> 00:27:36,320
+The branches in the tree of the decision is the next Doctor going to be a 0 or 1 and
+
+375
+00:27:36,576 --> 00:27:42,720
+Each step in the tree really keep going or you stopped because you found a code word so in this one
+
+376
+00:27:42,976 --> 00:27:47,840
+Go down to one branch and you start when you found the code with a which is
+
+377
+00:27:50,656 --> 00:27:56,544
+Go this way 0.10 followed by 1 then you can be
+
+378
+00:27:56,800 --> 00:28:00,640
+Which is included with Vera Wang
+
+379
+00:28:00,896 --> 00:28:06,528
+The symbols we soar as we went along those branches we keep going down here
+
+380
+00:28:07,040 --> 00:28:08,064
+Chrissy
+
+381
+00:28:08,320 --> 00:28:09,344
+This is d
+
+382
+00:28:15,488 --> 00:28:16,512
+All right
+
+383
+00:28:18,048 --> 00:28:19,840
+I'm going to give you just one
+
+384
+00:28:20,096 --> 00:28:23,680
+Call code enforcement board
+
+385
+00:28:24,448 --> 00:28:26,496
+What's protection
+
+386
+00:28:26,752 --> 00:28:28,288
+Whatever
+
+387
+00:28:34,176 --> 00:28:35,200
+Let me Define
+
+388
+00:28:35,712 --> 00:28:37,248
+Another code C7
+
+389
+00:28:43,392 --> 00:28:47,232
+It look like a swamp 10100
+
+390
+00:28:47,488 --> 00:28:49,024
+000
+
+391
+00:28:49,280 --> 00:28:51,584
+I've deliberately chosen this one
+
+392
+00:28:51,840 --> 00:28:57,984
+Because it's not a prefix for a is a prefix
+
+393
+00:28:58,240 --> 00:28:59,776
+4B and 4C
+
+394
+00:29:00,288 --> 00:29:00,800
+Right
+
+395
+00:29:08,224 --> 00:29:12,832
+That's not a prefix code which means it may be a bit of a headache to decode
+
+396
+00:29:15,136 --> 00:29:21,280
+If you receive a Wong and you know some more stuff is coming and he was Evil Zero what was going on
+
+397
+00:29:21,536 --> 00:29:26,144
+Play the Beav we stopped to eat another zero you still there
+
+398
+00:29:27,680 --> 00:29:31,776
+I still don't know what's going on
+
+399
+00:29:32,288 --> 00:29:38,176
+Maybe when a woman comes along then maybe you can figure out whether the first and goal was and I a b or c
+
+400
+00:29:39,456 --> 00:29:39,968
+Okay
+
+401
+00:29:40,224 --> 00:29:45,088
+So we don't like this cuz it's not the code
+
+402
+00:29:45,344 --> 00:29:48,416
+Is it actually you need to decodable
+
+403
+00:29:49,440 --> 00:29:50,464
+Yes why
+
+404
+00:29:56,352 --> 00:30:02,496
+Okay so if you reverse these full code words they all the same as the code was a C6
+
+405
+00:30:02,752 --> 00:30:04,032
+Is uniquely decodable
+
+406
+00:30:04,288 --> 00:30:10,432
+If this one will not uniquely decodable that would mean it has got to code Words which
+
+407
+00:30:10,688 --> 00:30:16,832
+Sorry to strings x and y whose encodings are identical to each other
+
+408
+00:30:18,624 --> 00:30:19,392
+Hand
+
+409
+00:30:19,648 --> 00:30:21,696
+You would have found yourself a pair of
+
+410
+00:30:22,208 --> 00:30:22,976
+Strings
+
+411
+00:30:23,232 --> 00:30:25,536
+What type of sign code would I wear for this code
+
+412
+00:30:25,792 --> 00:30:30,400
+And we know that's impossible because this one is uniquely decodable
+
+413
+00:30:31,424 --> 00:30:33,728
+But we don't like it cuz it's not the prefix code
+
+414
+00:30:35,008 --> 00:30:37,056
+This is
+
+415
+00:30:37,312 --> 00:30:39,616
+Edible
+
+416
+00:30:40,384 --> 00:30:45,504
+Rut so one of the ideas with floating now is easy to the code
+
+417
+00:30:47,040 --> 00:30:50,112
+Could mean for example that we'd like a prefix code please
+
+418
+00:30:50,368 --> 00:30:53,696
+But we really do want small expected length
+
+419
+00:31:06,496 --> 00:31:10,592
+Let me suggest that I did now about how we get small expected length
+
+420
+00:31:16,224 --> 00:31:21,088
+We found a coat hair which was speculating could be the best you can do
+
+421
+00:31:21,344 --> 00:31:23,392
+For this Ensemble with a symbol code
+
+422
+00:31:23,648 --> 00:31:29,792
+Because I already heard some serums about not being able to do better than that
+
+423
+00:31:30,304 --> 00:31:32,608
+And it has the property
+
+424
+00:31:33,120 --> 00:31:39,264
+Here's a key intuition about symbol codes and is over all of their commercial property
+
+425
+00:31:39,520 --> 00:31:43,872
+Short code words to the probable outcomes and longer code words
+
+426
+00:31:44,384 --> 00:31:47,200
+To the last probable once that's what it's all about
+
+427
+00:31:48,736 --> 00:31:54,624
+I'm not supposable guess about how we might get the smallest possible
+
+428
+00:31:54,880 --> 00:31:55,904
+Expected life
+
+429
+00:31:56,160 --> 00:32:00,512
+We could say hello you give me a list of them and I'll give
+
+430
+00:32:00,768 --> 00:32:03,840
+The shortest possible code word
+
+431
+00:32:04,096 --> 00:32:07,680
+Handle and steadily longer covert as we go down the list
+
+432
+00:32:07,936 --> 00:32:11,008
+How to chat to your neighbor and see what you think of that idea
+
+433
+00:32:14,592 --> 00:32:19,200
+Stop suggested and I did the right spirit is giving short
+
+434
+00:32:19,712 --> 00:32:20,736
+Code words
+
+435
+00:32:22,272 --> 00:32:24,064
+The probable outcomes
+
+436
+00:32:24,832 --> 00:32:26,880
+Some long ones the last purple ones
+
+437
+00:32:27,392 --> 00:32:29,184
+Is that going to work or can anyone
+
+438
+00:32:29,440 --> 00:32:30,976
+Criticize that for us
+
+439
+00:32:35,072 --> 00:32:38,400
+If you got a huge number symbols fan watch
+
+440
+00:32:39,424 --> 00:32:40,704
+It might not be good
+
+441
+00:32:40,960 --> 00:32:41,984
+It's definitely not good
+
+442
+00:32:44,032 --> 00:32:45,824
+Probably not okay
+
+443
+00:32:46,336 --> 00:32:49,664
+I might agree with you
+
+444
+00:32:50,176 --> 00:32:54,528
+Let me give you some backup for your intuition there
+
+445
+00:32:55,296 --> 00:32:57,600
+We found a case where this
+
+446
+00:32:57,856 --> 00:33:04,000
+Proposed algorithm is getting us to the interface that would be too critical of it but maybe we can find a counterexample
+
+447
+00:33:04,256 --> 00:33:10,400
+It doesn't it doesn't work it doesn't need to be among stuff example
+
+448
+00:33:10,656 --> 00:33:16,800
+Can give the mole a probability of a quota except just to make life interesting will add Absalom
+
+449
+00:33:17,312 --> 00:33:23,456
+One of them and I that Sloan Iowa to Towanda subtract Epsilon able to from this one
+
+450
+00:33:23,712 --> 00:33:26,784
+A billion
+
+451
+00:33:27,296 --> 00:33:30,112
+Feather all essentially they will have a probability of 1/4
+
+452
+00:33:30,880 --> 00:33:31,392
+All right
+
+453
+00:33:31,904 --> 00:33:33,696
+And now we apply this
+
+454
+00:33:33,952 --> 00:33:37,280
+Suggested algorithm end up with
+
+455
+00:33:38,048 --> 00:33:38,816
+And the rest
+
+456
+00:33:39,072 --> 00:33:40,096
+C6
+
+457
+00:33:40,352 --> 00:33:41,120
+All right
+
+458
+00:33:42,144 --> 00:33:44,448
+So is that a new probability distribution
+
+459
+00:33:44,704 --> 00:33:50,592
+When you use code 6 which is proposed planets other than expected length
+
+460
+00:33:50,848 --> 00:33:51,872
+Fat is
+
+461
+00:33:52,384 --> 00:33:55,200
+The length of a 1/2
+
+462
+00:33:55,456 --> 00:33:58,272
+Three-on-three is the last one in the list
+
+463
+00:33:58,528 --> 00:34:04,672
+And the average of those since the Rolex the Pro Bowl
+
+464
+00:34:04,928 --> 00:34:09,536
+9/4 riches to
+
+465
+00:34:09,792 --> 00:34:14,400
+And 1/4 bits is that the optimal symbol code
+
+466
+00:34:15,424 --> 00:34:17,728
+How are you better how
+
+467
+00:34:22,848 --> 00:34:25,920
+Dc5 and expected length will be to
+
+468
+00:34:27,200 --> 00:34:28,736
+QED
+
+469
+00:34:30,528 --> 00:34:31,552
+Suck
+
+470
+00:34:36,416 --> 00:34:40,512
+But the length of C5
+
+471
+00:34:40,768 --> 00:34:42,560
+Repeat
+
+472
+00:34:44,096 --> 00:34:44,864
+Right
+
+473
+00:34:45,120 --> 00:34:51,264
+So we can just use that simple rulers got the right Spirit we need to identify some so
+
+474
+00:34:51,520 --> 00:34:52,544
+The trade-off of
+
+475
+00:34:53,056 --> 00:34:54,592
+When do you give
+
+476
+00:34:55,104 --> 00:35:01,248
+Short code words to the most purple guy recognizing
+
+477
+00:35:01,504 --> 00:35:05,088
+But when we decide to not give him or length two words
+
+478
+00:35:05,600 --> 00:35:09,440
+If one of them. Select one then some others longer
+
+479
+00:35:09,952 --> 00:35:16,096
+But like when you put a glove glove for the watering squeeze of your the fingers
+
+480
+00:35:16,352 --> 00:35:21,216
+The other ones have to get together some sort of conserved quantity looking in there
+
+481
+00:35:24,288 --> 00:35:30,432
+And that can conserve has to do with unique dakotabilities if we allowed ourselves to shorts and some of
+
+482
+00:35:30,688 --> 00:35:36,832
+The words and didn't like the others longer it looks like we lose unique unique dakotabilities
+
+483
+00:35:37,344 --> 00:35:40,928
+I've lost bored as well that's why I missed
+
+484
+00:35:42,464 --> 00:35:48,608
+I think the time has come for me to reveal how this rubber glove work
+
+485
+00:35:48,864 --> 00:35:52,192
+The constraint of you need to coat ability
+
+486
+00:35:52,704 --> 00:35:53,472
+What's
+
+487
+00:35:54,496 --> 00:35:58,336
+Siletz rifle through a way of thinking about this
+
+488
+00:36:01,152 --> 00:36:01,920
+If
+
+489
+00:36:02,432 --> 00:36:07,808
+I only use code words of a particular length how many of them can I have
+
+490
+00:36:08,064 --> 00:36:08,576
+Well
+
+491
+00:36:10,112 --> 00:36:11,648
+If all my code was
+
+492
+00:36:12,928 --> 00:36:14,208
+Have length
+
+493
+00:36:22,912 --> 00:36:23,424
+Al
+
+494
+00:36:23,680 --> 00:36:24,960
+2 then
+
+495
+00:36:25,216 --> 00:36:26,496
+I can have
+
+496
+00:36:26,752 --> 00:36:27,520
+411
+
+497
+00:36:27,776 --> 00:36:31,104
+Evo my CO2 at a blank free I can have a h
+
+498
+00:36:32,128 --> 00:36:38,272
+Schumacher sc11 can have two today
+
+499
+00:36:38,528 --> 00:36:39,296
+Open
+
+500
+00:36:41,600 --> 00:36:46,208
+That I was changing the size of the alphabet and noticing that I have long words
+
+501
+00:36:46,464 --> 00:36:49,536
+I can have more of an exponentially more often
+
+502
+00:36:52,608 --> 00:36:53,376
+And
+
+503
+00:36:54,144 --> 00:37:00,288
+Here is the idea that raps this up and is consistent with everything we've seen so far
+
+504
+00:37:00,544 --> 00:37:03,104
+You can think of each code word
+
+505
+00:37:05,920 --> 00:37:08,480
+At some length l
+
+506
+00:37:09,504 --> 00:37:12,320
+Have a Costless course
+
+507
+00:37:14,624 --> 00:37:16,160
+To Salina South
+
+508
+00:37:17,184 --> 00:37:21,024
+I'm overdoing it's going to the symbol coating supermarket
+
+509
+00:37:24,608 --> 00:37:29,984
+Are all the different styles of a supermarket you can pick any code with you want
+
+510
+00:37:30,240 --> 00:37:33,312
+Is the entire set of all conceivable coconuts
+
+511
+00:37:34,336 --> 00:37:37,408
+Annie's choice because it might not be uniquely decodable
+
+512
+00:37:37,920 --> 00:37:44,064
+And I've arranged to denial for a child has which of the same length
+
+513
+00:37:44,320 --> 00:37:48,928
+Choices and the size of the package for each cobras in heading how much it'll cost you
+
+514
+00:37:49,696 --> 00:37:55,840
+So you can budget of one which is in light of the supermarket you can buy
+
+515
+00:37:56,096 --> 00:38:02,240
+These two cobras if you want to sit on the wall and then you're done you can't add any more code words of any length because they'd be
+
+516
+00:38:05,056 --> 00:38:06,592
+Or you can have these people
+
+517
+00:38:07,360 --> 00:38:08,640
+Y8
+
+518
+00:38:08,896 --> 00:38:12,224
+We've seen a bunch of things you can also have
+
+519
+00:38:12,480 --> 00:38:14,784
+You can pay those thought I was code number one
+
+520
+00:38:16,064 --> 00:38:22,208
+And you haven't exceeded your budget and that's uniquely decodable the fact that you haven't exceeded your but it doesn't guarantee the
+
+521
+00:38:22,464 --> 00:38:24,256
+It's uniquely decodable
+
+522
+00:38:24,512 --> 00:38:30,656
+Definitely if you go over your budget of Wong then it wouldn't be uniquely decodable so what we
+
+523
+00:38:30,912 --> 00:38:32,704
+Is the following assertion
+
+524
+00:38:33,216 --> 00:38:36,544
+That's right
+
+525
+00:38:38,592 --> 00:38:41,664
+If a code is uniquely decodable
+
+526
+00:38:42,944 --> 00:38:43,968
+Then
+
+527
+00:38:45,504 --> 00:38:51,648
+The Constable code words has to be less than your budget some of us Ally must be less than or equal to
+
+528
+00:38:51,904 --> 00:38:54,976
+Wall these are the costs of goods
+
+529
+00:38:55,232 --> 00:38:56,256
+That's your budget
+
+530
+00:38:57,024 --> 00:39:00,352
+I miss is called the crafting equality
+
+531
+00:39:00,608 --> 00:39:02,912
+And it's true
+
+532
+00:39:05,216 --> 00:39:08,800
+Haven't proved it I just told you it and the proof is in the book
+
+533
+00:39:09,056 --> 00:39:11,104
+So if you're interested in a proof
+
+534
+00:39:11,616 --> 00:39:13,152
+It's in the textbook
+
+535
+00:39:13,664 --> 00:39:19,808
+So this is what you didn't dakotabilities implies you got to stay within your budget
+
+536
+00:39:20,832 --> 00:39:24,416
+So that was code Wong and we have some other ideas
+
+537
+00:39:24,672 --> 00:39:26,976
+It was code number five
+
+538
+00:39:29,024 --> 00:39:30,816
+That was the selection that we made
+
+539
+00:39:31,072 --> 00:39:31,584
+With
+
+540
+00:39:31,840 --> 00:39:32,608
+Code
+
+541
+00:39:33,888 --> 00:39:34,656
+Play I want it
+
+542
+00:39:38,240 --> 00:39:39,264
+CO2
+
+543
+00:39:40,032 --> 00:39:44,896
+Re-stuffing of everybody but it didn't quite you that the whole budget cuts on noticed we could
+
+544
+00:39:45,408 --> 00:39:48,736
+Make a change instead of buying the there is everyone
+
+545
+00:39:49,248 --> 00:39:50,272
+Code Red Rock.
+
+546
+00:39:50,528 --> 00:39:56,672
+We could love find a Woman by The 000 next door instead I'm not made the expected like shorter which is good
+
+547
+00:39:56,928 --> 00:40:03,072
+And then we looked at this guy was my silly idea
+
+548
+00:40:03,328 --> 00:40:06,912
+Sorry I buy that 100 * 1
+
+549
+00:40:07,168 --> 00:40:08,448
+Budget
+
+550
+00:40:09,984 --> 00:40:16,128
+And it was a great Labor to find a proof it went that it didn't work and have to think about strength
+
+551
+00:40:19,712 --> 00:40:25,856
+No point even trying this thing it's violated Unity decodable
+
+552
+00:40:27,136 --> 00:40:32,512
+All right in blue that we have the optimal code
+
+553
+00:40:33,280 --> 00:40:35,072
+And here is
+
+554
+00:40:36,608 --> 00:40:42,752
+C7 which I want golf which is why we reverse told him so this is also uniquely decodable
+
+555
+00:40:43,008 --> 00:40:49,152
+The difference between the prefix code in blue which is little sense with walkthrough
+
+556
+00:40:49,408 --> 00:40:52,480
+Buying code with that you wouldn't confuse with each other
+
+557
+00:40:52,736 --> 00:40:55,552
+Flatout facility back to front one
+
+558
+00:40:56,576 --> 00:41:02,720
+C61 10100 which are prefixes of each other and their own
+
+559
+00:41:03,744 --> 00:41:05,792
+Y coordinates in this in this picture
+
+560
+00:41:06,816 --> 00:41:07,584
+All right
+
+561
+00:41:07,840 --> 00:41:10,656
+So that's the question coffee and
+
+562
+00:41:10,912 --> 00:41:12,960
+A code that
+
+563
+00:41:13,472 --> 00:41:16,800
+Step right up to the budget that uses the full budget
+
+564
+00:41:18,336 --> 00:41:20,128
+We will call a complete
+
+565
+00:41:20,896 --> 00:41:21,408
+Code
+
+566
+00:41:34,464 --> 00:41:39,584
+I complete code is one that has sum of 2 - lite2
+
+567
+00:41:39,840 --> 00:41:41,120
+Wow
+
+568
+00:41:42,400 --> 00:41:48,544
+If you haven't chosen yourself a complete code the advice is you can probably go back to the supermarket makes me switches
+
+569
+00:41:48,800 --> 00:41:50,080
+I got yourself shorter
+
+570
+00:41:50,336 --> 00:41:53,407
+Code there's a bit silly not to use a complete card
+
+571
+00:41:54,687 --> 00:41:55,711
+All right
+
+572
+00:41:55,967 --> 00:42:00,575
+I love you too easy to decode codes off prefix codes
+
+573
+00:42:02,111 --> 00:42:03,647
+So
+
+574
+00:42:08,255 --> 00:42:12,607
+Let's address the Practical question
+
+575
+00:42:12,863 --> 00:42:14,143
+Very first practice
+
+576
+00:42:14,399 --> 00:42:16,959
+Next 5 minutes
+
+577
+00:42:17,727 --> 00:42:21,055
+The theoretical question is how well can we do
+
+578
+00:42:21,311 --> 00:42:22,079
+With
+
+579
+00:42:23,359 --> 00:42:24,895
+Symbol codes
+
+580
+00:42:25,151 --> 00:42:27,199
+So if I give you any ensemble
+
+581
+00:42:27,455 --> 00:42:31,807
+Axe and if you come up with the best symbol code by whatever method
+
+582
+00:42:32,063 --> 00:42:34,367
+How small can expected length
+
+583
+00:42:37,183 --> 00:42:41,791
+Are the definition of expected length is Samurai GI
+
+584
+00:42:42,047 --> 00:42:42,815
+L i
+
+585
+00:42:47,167 --> 00:42:49,727
+We're not going to show that whatever you do
+
+586
+00:42:49,983 --> 00:42:55,615
+Where the symbol code you can't beat the entropy I'm willing to identify what you need to do in order to get
+
+587
+00:42:56,127 --> 00:43:00,223
+Close to the edge people all the way to the entropy of
+
+588
+00:43:00,479 --> 00:43:03,551
+Figure out what these expected length should be
+
+589
+00:43:03,807 --> 00:43:06,879
+Like me to give us a clue
+
+590
+00:43:07,391 --> 00:43:08,927
+Define
+
+591
+00:43:10,975 --> 00:43:12,255
+The ideal
+
+592
+00:43:13,279 --> 00:43:14,559
+Length
+
+593
+00:43:15,327 --> 00:43:20,447
+Spokeo glad to be one of the prophecy
+
+594
+00:43:21,983 --> 00:43:22,751
+I'm going to
+
+595
+00:43:23,007 --> 00:43:26,847
+Introduce a definition
+
+596
+00:43:27,103 --> 00:43:33,247
+So I say let's assume the civil code or to be using those
+
+597
+00:43:33,503 --> 00:43:36,319
+Making a definition and then we'll end up with a proof
+
+598
+00:43:40,927 --> 00:43:42,719
+What's the ideal length
+
+599
+00:43:43,999 --> 00:43:45,791
+Now if you rearrange this
+
+600
+00:43:46,303 --> 00:43:49,375
+And if you imagine that someone has picked
+
+601
+00:43:50,655 --> 00:43:56,799
+Some light L I may or may not be the ideal length you can use those simile to Define
+
+602
+00:43:57,823 --> 00:43:59,871
+Some implicit probabilities
+
+603
+00:44:00,383 --> 00:44:01,663
+So which those
+
+604
+00:44:02,175 --> 00:44:05,247
+Chosen lights would be the ideal length
+
+605
+00:44:05,759 --> 00:44:11,903
+But thanks though we've defined our relationship to relax and probabilities in this way and I'm going to pull the implicit problem
+
+606
+00:44:18,303 --> 00:44:24,191
+Implicit probiotic you that you can get from whatever lengths you have come up with
+
+607
+00:44:25,727 --> 00:44:27,775
+Will B22 - l i
+
+608
+00:44:29,055 --> 00:44:30,079
+Except
+
+609
+00:44:30,335 --> 00:44:36,479
+You maybe didn't choose a complete code so maybe the sum of all of these isn't warm which would be
+
+610
+00:44:36,735 --> 00:44:41,855
+So I'm going to / the appropriate Zedd
+
+611
+00:44:42,111 --> 00:44:43,647
+Where
+
+612
+00:44:44,671 --> 00:44:45,951
+That is
+
+613
+00:44:46,207 --> 00:44:48,511
+Sum of 2 to the - Al
+
+614
+00:44:50,815 --> 00:44:55,167
+Which will be worn if it is a complete code one if you've made a sensible
+
+615
+00:44:55,423 --> 00:44:56,959
+A trip to the supermarket
+
+616
+00:44:58,751 --> 00:45:00,287
+But it could be smaller than wall
+
+617
+00:45:05,151 --> 00:45:06,943
+Note
+
+618
+00:45:08,479 --> 00:45:14,367
+That will be less than or equal to 1 for any
+
+619
+00:45:15,391 --> 00:45:17,951
+And that equals 1/4 a complete code
+
+620
+00:45:24,351 --> 00:45:25,375
+Right
+
+621
+00:45:26,655 --> 00:45:27,935
+What does that mean
+
+622
+00:45:28,447 --> 00:45:34,591
+Well it means lii the links that you chosen a low base to war mode
+
+623
+00:45:34,847 --> 00:45:38,431
+Qi - locations vent
+
+624
+00:45:40,991 --> 00:45:44,319
+I know I can plug this into out
+
+625
+00:45:44,575 --> 00:45:48,415
+Sal is summer i p i
+
+626
+00:45:48,671 --> 00:45:50,463
+Where's. Lovelace tooth
+
+627
+00:45:50,719 --> 00:45:53,023
+Wonton qi
+
+628
+00:45:53,279 --> 00:45:56,351
+Minus log base 2 of
+
+629
+00:45:56,863 --> 00:45:58,143
+Then
+
+630
+00:46:01,215 --> 00:46:04,287
+Sorry my board hygiene isn't very good today
+
+631
+00:46:13,503 --> 00:46:17,343
+Okay wouldn't it be great if it said some of P log 1 / p
+
+632
+00:46:18,623 --> 00:46:24,767
+So let's do that sound like log base 2
+
+633
+00:46:25,023 --> 00:46:31,167
+That's not true anymore so we need to add on the appropriate things that is true
+
+634
+00:46:31,423 --> 00:46:36,799
+Log p over Q
+
+635
+00:46:37,055 --> 00:46:40,639
+Looking at the end some of Pi is warm so we can
+
+636
+00:46:40,895 --> 00:46:41,919
+Suck the dog
+
+637
+00:46:42,175 --> 00:46:43,711
+That out of a summation
+
+638
+00:46:44,735 --> 00:46:45,759
+Right
+
+639
+00:46:46,015 --> 00:46:47,039
+We've got somewhere
+
+640
+00:46:47,295 --> 00:46:50,111
+If you pick any symbol code to Tool
+
+641
+00:46:50,367 --> 00:46:54,463
+Then it's expected length will equal the entry
+
+642
+00:46:54,719 --> 00:46:55,999
+Plus something
+
+643
+00:46:56,767 --> 00:46:57,791
+Plus something else
+
+644
+00:46:58,815 --> 00:47:04,959
+Let's give it a name for colace kullback leibler Divergence between p and Q
+
+645
+00:47:06,751 --> 00:47:08,031
+And
+
+646
+00:47:09,055 --> 00:47:10,079
+His little theorem
+
+647
+00:47:12,383 --> 00:47:17,503
+Some of the log P / 222 distribution of p and Q
+
+648
+00:47:17,759 --> 00:47:22,623
+Is Greg Hunter
+
+649
+00:47:25,439 --> 00:47:29,279
+And it's one of the most important inequalities of information Theory
+
+650
+00:47:29,535 --> 00:47:32,607
+With the quality
+
+651
+00:47:34,911 --> 00:47:37,215
+Only
+
+652
+00:47:37,471 --> 00:47:39,519
+2 is equal to
+
+653
+00:47:41,311 --> 00:47:43,615
+I love that we already know
+
+654
+00:47:44,127 --> 00:47:49,503
+Is less is less than or equal to 1/2 lug that
+
+655
+00:47:50,015 --> 00:47:56,159
+Is less than or equal to zero and minus logs that is greater than or equal to 0 with a quality
+
+656
+00:47:58,719 --> 00:48:02,047
+Only if the code
+
+657
+00:48:03,839 --> 00:48:04,351
+Is
+
+658
+00:48:05,119 --> 00:48:05,887
+Completes
+
+659
+00:48:06,655 --> 00:48:12,543
+Straighten wrinkled if the code is uniquely decodable
+
+660
+00:48:12,799 --> 00:48:14,591
+With equality only if it's complete
+
+661
+00:48:15,103 --> 00:48:16,127
+So this is true
+
+662
+00:48:16,383 --> 00:48:17,407
+For any code
+
+663
+00:48:17,663 --> 00:48:18,943
+For any symbol code
+
+664
+00:48:19,711 --> 00:48:25,855
+So what we have just proved is that the expected length
+
+665
+00:48:26,111 --> 00:48:32,255
+Not the best we've shown what you need to do in or
+
+666
+00:48:32,511 --> 00:48:38,655
+Go to to get to the entropy you need your PT equal York you so you should be using
+
+667
+00:48:38,911 --> 00:48:40,191
+Implicit probabilities
+
+668
+00:48:40,447 --> 00:48:43,007
+Equal to probability
+
+669
+00:48:43,263 --> 00:48:46,335
+So your length should be the information content
+
+670
+00:48:47,615 --> 00:48:49,151
+So you got a quality
+
+671
+00:48:51,711 --> 00:48:53,503
+The lengths you're using
+
+672
+00:48:55,295 --> 00:48:56,831
+Persona in formation Campana
+
+673
+00:48:58,367 --> 00:49:00,415
+And you got the complete code
+
+674
+00:49:03,231 --> 00:49:05,279
+Which will happen for free when you do that
+
+675
+00:49:05,535 --> 00:49:06,815
+Okay
+
+676
+00:49:07,071 --> 00:49:13,215
+So what are we done we still have proved a source coding theorem for symbol codes we're showing that you should be
+
+677
+00:49:13,471 --> 00:49:19,615
+Using the Shannon information code contents to set to code websites if you want to get to the end of pee and then you will get
+
+678
+00:49:19,871 --> 00:49:21,151
+And you can't get any further
+
+679
+00:49:21,663 --> 00:49:24,223
+Hey that was the
+
+680
+00:49:24,991 --> 00:49:27,295
+Theoretical bottom line for symbol codes
+
+681
+00:49:29,855 --> 00:49:35,999
+So the ideal code links information contents
+
+682
+00:49:36,255 --> 00:49:42,399
+He's like the probabilities we have to English base 2 of them
+
+683
+00:49:43,167 --> 00:49:49,311
+So in practice for any real probability distribution typically contacts
+
+684
+00:49:49,567 --> 00:49:51,103
+We got exactly to the entropy
+
+685
+00:49:52,383 --> 00:49:58,527
+So there's a missing result which is well how close can you get
+
+686
+00:49:58,783 --> 00:50:02,111
+And his fiance
+
+687
+00:50:05,183 --> 00:50:08,255
+And I'm not going to prove this put it in the textbook
+
+688
+00:50:11,327 --> 00:50:17,471
+If these ideal length l i * which all the time and information
+
+689
+00:50:18,495 --> 00:50:21,055
+Not integers
+
+690
+00:50:22,591 --> 00:50:24,127
+How close can you get
+
+691
+00:50:25,151 --> 00:50:28,991
+Answer well you can still always cat
+
+692
+00:50:29,503 --> 00:50:34,367
+Within one bit
+
+693
+00:50:36,927 --> 00:50:37,695
+Avanta p
+
+694
+00:50:37,951 --> 00:50:39,231
+So
+
+695
+00:50:39,743 --> 00:50:41,535
+There exists
+
+696
+00:50:41,791 --> 00:50:43,583
+Optimal single code
+
+697
+00:50:48,447 --> 00:50:49,727
+For which
+
+698
+00:50:52,799 --> 00:50:53,311
+Pacific
+
+699
+00:50:53,567 --> 00:50:54,847
+So I can get with it one bit
+
+700
+00:50:55,359 --> 00:50:56,639
+Which sounds pretty good
+
+701
+00:50:57,151 --> 00:50:58,687
+Come back next week
+
+702
+00:50:58,943 --> 00:51:05,087
+To hear whether this is good enough or whether in fact we still want to do better
+
+703
+00:51:13,023 --> 00:51:19,167
+So that's very what about practice wouldn't it be great to be able to just take a probability distribution
+
+704
+00:51:19,423 --> 00:51:25,055
+Optimal symbol code for that property distribution
+
+705
+00:51:25,823 --> 00:51:27,359
+Let me tell you how to do this
+
+706
+00:51:28,639 --> 00:51:32,479
+How to make optimal symbol codes
+
+707
+00:51:40,415 --> 00:51:43,231
+I'm looking to prove it you can read the book
+
+708
+00:51:46,303 --> 00:51:52,191
+The method for making multiple symbol codes cuz I will show you his cold the Huffman algorithm
+
+709
+00:51:53,215 --> 00:51:54,495
+Highness very elegant
+
+710
+00:51:55,007 --> 00:52:01,151
+And it's not completely obvious why it should actually be off the mold and why it should get you any of the optimal
+
+711
+00:52:01,407 --> 00:52:03,967
+The ideal Shannon information count
+
+712
+00:52:04,223 --> 00:52:05,503
+Content
+
+713
+00:52:06,527 --> 00:52:08,063
+Codelynx
+
+714
+00:52:08,575 --> 00:52:10,623
+So is a summary of how it works
+
+715
+00:52:11,135 --> 00:52:17,279
+Remember how prefix code could be related to a binary tree is Bill that binary tree
+
+716
+00:52:18,303 --> 00:52:23,423
+Starting from the leaves we're going to start from the smallest most remote
+
+717
+00:52:23,679 --> 00:52:27,519
+Leaves build a binary tree
+
+718
+00:52:29,055 --> 00:52:30,591
+Stopping
+
+719
+00:52:32,127 --> 00:52:33,151
+From
+
+720
+00:52:37,247 --> 00:52:38,527
+Farthest
+
+721
+00:52:41,599 --> 00:52:42,623
+Leaves of the tree
+
+722
+00:52:43,135 --> 00:52:46,975
+And that's essentially the album let me show you what I mean
+
+723
+00:52:47,231 --> 00:52:50,559
+I'll see you with an example that's usually the easiest way
+
+724
+00:52:52,863 --> 00:52:53,887
+Let me
+
+725
+00:52:57,215 --> 00:52:59,775
+Invent a probability distribution
+
+726
+00:53:06,175 --> 00:53:11,551
+My cat hair is a 6 element probability event
+
+727
+00:53:13,599 --> 00:53:15,135
+And his
+
+728
+00:53:15,391 --> 00:53:17,183
+Statement of the algorithm
+
+729
+00:53:17,439 --> 00:53:18,463
+Combine
+
+730
+00:53:19,743 --> 00:53:20,511
+The
+
+731
+00:53:20,767 --> 00:53:22,303
+Two symbols
+
+732
+00:53:23,839 --> 00:53:25,631
+With smallest probability
+
+733
+00:53:32,543 --> 00:53:34,591
+Into a new single symbol
+
+734
+00:53:35,359 --> 00:53:35,871
+Android
+
+735
+00:53:36,383 --> 00:53:37,151
+Alabama
+
+736
+00:53:41,503 --> 00:53:47,647
+Okay so we look at our list of probabilities and we say these are the two smallest so we will combine them Define
+
+737
+00:53:47,903 --> 00:53:53,023
+A little bit of a binary tree we combine them 0.21
+
+738
+00:53:53,279 --> 00:53:59,423
+Inari repeat on the set of five
+
+739
+00:53:59,679 --> 00:54:02,239
+We got 0.2
+
+740
+00:54:02,495 --> 00:54:03,007
+Fife
+
+741
+00:54:04,031 --> 00:54:10,175
+Now we have to be foolproof smallest witch
+
+742
+00:54:10,687 --> 00:54:13,247
+14 + 521
+
+743
+00:54:13,759 --> 00:54:14,783
+Recombine them
+
+744
+00:54:16,063 --> 00:54:18,111
+We got zero point
+
+745
+00:54:18,879 --> 00:54:19,391
+3
+
+746
+00:54:20,415 --> 00:54:21,183
+5
+
+747
+00:54:23,231 --> 00:54:23,999
+I was the
+
+748
+00:54:24,255 --> 00:54:28,351
+First iteration of a second iteration of a Nation
+
+749
+00:54:29,631 --> 00:54:30,399
+And then
+
+750
+00:54:31,423 --> 00:54:32,191
+We've got
+
+751
+00:54:36,287 --> 00:54:39,359
+25 and 35 smaller than 40
+
+752
+00:54:39,615 --> 00:54:43,455
+So I can buy them at 0.6 in the fourth step
+
+753
+00:54:44,223 --> 00:54:47,551
+Then we can buy mace at 1
+
+754
+00:54:47,807 --> 00:54:49,599
+How about tonight
+
+755
+00:54:51,903 --> 00:54:58,047
+And now we've made a binary tree and so we have made prefix code because we can just slap label 0 1 0 1
+
+756
+00:54:58,303 --> 00:55:00,863
+Anyway you like Vera Wang 01
+
+757
+00:55:01,119 --> 00:55:02,143
+Sarawak
+
+758
+00:55:02,911 --> 00:55:06,751
+And that defines a code words reading from the root back out
+
+759
+00:55:07,007 --> 00:55:13,151
+The leaves just as an example 100 to the code word you'll get to this one is
+
+760
+00:55:13,407 --> 00:55:14,431
+100
+
+761
+00:55:14,687 --> 00:55:15,455
+Unfeeling
+
+762
+00:55:15,711 --> 00:55:16,223
+Feliz
+
+763
+00:55:19,039 --> 00:55:20,063
+Optimal
+
+764
+00:55:21,087 --> 00:55:22,367
+Cool
+
+765
+00:55:22,623 --> 00:55:23,647
+Suck
+
+766
+00:55:24,415 --> 00:55:25,695
+Let me
+
+767
+00:55:25,951 --> 00:55:28,255
+Summarize what we've said
+
+768
+00:55:30,047 --> 00:55:32,095
+Reviews gets in equality
+
+769
+00:55:33,887 --> 00:55:36,191
+We talked about unique dakotabilities
+
+770
+00:55:36,447 --> 00:55:39,007
+We've introduced the idea of prefix codes
+
+771
+00:55:39,775 --> 00:55:45,919
+Binary trees and symbol codes that are really all about building nice binary trees
+
+772
+00:55:46,687 --> 00:55:49,759
+Whenever you get a code but does a TV entropy
+
+773
+00:55:50,015 --> 00:55:54,623
+The code links are equipped with information contents that's the ideal code length
+
+774
+00:55:55,135 --> 00:55:59,743
+And with a symbol code you can always get within one bit of entropy
+
+775
+00:55:59,999 --> 00:56:02,815
+And you can do that with the Huffman algorithm
+
+776
+00:56:04,351 --> 00:56:07,423
+Here are the results we stated without proof the book has
+
+777
+00:56:07,679 --> 00:56:08,959
+Proofs of photos
+
+778
+00:56:09,215 --> 00:56:09,983
+Results
+
+779
+00:56:11,775 --> 00:56:17,151
+I've got a few more slides just to keep things moving with some
+
+780
+00:56:17,407 --> 00:56:23,551
+Things you can be doing for next time I already encouraged you to do a project
+
+781
+00:56:23,807 --> 00:56:29,951
+Namely invent a compressor and on compressor resourceful 10000 prevent coin
+
+782
+00:56:30,207 --> 00:56:31,743
+Whose probability of warm is
+
+783
+00:56:31,999 --> 00:56:38,143
+.01 Implement and estimate how it works and the screen is God's mother
+
+784
+00:56:38,399 --> 00:56:40,447
+Recommended exercises and recommended
+
+785
+00:56:40,959 --> 00:56:41,727
+Reading
+
+786
+00:56:42,495 --> 00:56:44,799
+Thanks for coming see you next week

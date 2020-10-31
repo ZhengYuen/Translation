@@ -1,0 +1,2659 @@
+1
+00:00:06,144 --> 00:00:12,288
+Coming last time we discussed reliable communication over unreliable channels
+
+2
+00:00:14,336 --> 00:00:18,944
+I know I did want that we were taking noisy channels and imagining
+
+3
+00:00:19,200 --> 00:00:25,344
+Fixing up those unreliable channels by putting in and coding system in front of a decoding system
+
+4
+00:00:25,600 --> 00:00:27,392
+After the channel
+
+5
+00:00:27,648 --> 00:00:29,696
+And
+
+6
+00:00:29,952 --> 00:00:31,232
+We discussed
+
+7
+00:00:32,000 --> 00:00:38,144
+A toy example of a noisy Channel 92 binary symmetric Channel which flips a fraction f
+
+8
+00:00:38,400 --> 00:00:44,544
+And we discussed a couple of simple ways of encoding a couple of simple ways of adding redundancy
+
+9
+00:00:44,800 --> 00:00:50,944
+Maybe repetition codes on Van the 7400 code which is a more sophisticated way
+
+10
+00:00:51,200 --> 00:00:52,224
+Finding redundancy
+
+11
+00:00:52,736 --> 00:00:58,880
+And we discussed how to decode both and so the ideas Demco deciding redundancy and then
+
+12
+00:00:59,136 --> 00:01:04,000
+Dakota is using inference to try and figure out what happened and cleanup fiera's
+
+13
+00:01:08,608 --> 00:01:14,752
+Allergies to to result that we will prove in due course which is adding one of the most room
+
+14
+00:01:15,008 --> 00:01:21,152
+Century maybe Shannon's noisy Channel coding theorem which says that
+
+15
+00:01:21,408 --> 00:01:27,552
+If you add redundancy in a cunning way you don't actually need to add very much redundancy
+
+16
+00:01:27,808 --> 00:01:33,440
+To be able to achieve arbitrarily low-probability Avera so for the
+
+17
+00:01:33,696 --> 00:01:39,840
+Funniest metric channel that slipping 10% of the bits the boundary between achievable and nanachi food places
+
+18
+00:01:40,096 --> 00:01:46,240
+I'm on this diagram of right and final error probability
+
+19
+00:01:46,496 --> 00:01:52,640
+Great see the capacity which is about 0.53 I'm not saying you only need two
+
+20
+00:01:52,896 --> 00:01:57,248
+Use a rate 1/2 kojo need to 100% redundancy
+
+21
+00:01:57,504 --> 00:02:03,648
+And then you can have a smaller probability that you want so that's amazing I will prove it in a few
+
+22
+00:02:03,904 --> 00:02:05,184
+Adjust time
+
+23
+00:02:05,440 --> 00:02:11,328
+The first let's discuss where this fits into the the big picture
+
+24
+00:02:16,192 --> 00:02:22,336
+Real data sources are usually redundant themselves so this picture that I
+
+25
+00:02:22,592 --> 00:02:26,176
+Richard you last time we take this awesome we add some redundancy
+
+26
+00:02:26,688 --> 00:02:32,064
+May not be quite the right thing to do if the source we started with already have some redundancy
+
+27
+00:02:32,320 --> 00:02:38,464
+Sorry for example in English text if what we're compressing is English vowels and consonants
+
+28
+00:02:38,720 --> 00:02:44,864
+With particular frequency to talk on text dependent or not something that we could learn about and exploit
+
+29
+00:02:46,144 --> 00:02:52,288
+And let me show you an example of this here's a piece of English with Progressive
+
+30
+00:02:52,544 --> 00:02:58,688
+Simply increasing fractions of a raised and volunteer projects could help us
+
+31
+00:02:58,944 --> 00:03:05,088
+Read this and if anyone can read it successfully so we can cope with severe Asia
+
+32
+00:03:05,344 --> 00:03:11,488
+Evidence of the original text had redundancy in it so some Jane Austen
+
+33
+00:03:11,744 --> 00:03:14,048
+Navigate reading it for us
+
+34
+00:03:17,888 --> 00:03:20,960
+Condom shopping
+
+35
+00:03:23,264 --> 00:03:29,408
+Musicians Unite
+
+36
+00:03:31,712 --> 00:03:36,320
+Nearly 20 years in the world with very little
+
+37
+00:03:39,392 --> 00:03:43,488
+She was the youngest of the two daughters of a
+
+38
+00:03:44,512 --> 00:03:47,584
+Most affectionate Belgian father and head
+
+39
+00:03:52,704 --> 00:03:54,240
+Mistress of this house
+
+40
+00:03:54,496 --> 00:03:57,824
+Very early.
+
+41
+00:03:58,592 --> 00:04:01,920
+Her mother had died too long ago for her
+
+42
+00:04:02,176 --> 00:04:02,944
+Do you have
+
+43
+00:04:04,224 --> 00:04:10,368
+Decimated thank you so
+
+44
+00:04:10,624 --> 00:04:16,768
+Raise your rates go up to that about one-third of the Conchas are racing this row so
+
+45
+00:04:17,024 --> 00:04:23,167
+Very early. Her mother had died too long ago for her to have more than on
+
+46
+00:04:23,423 --> 00:04:28,031
+Indistinct remembrance of her caresses
+
+47
+00:04:28,287 --> 00:04:31,103
+Aunt
+
+48
+00:04:31,871 --> 00:04:38,015
+And I was getting a bit hot is an illustration just using a human expert
+
+49
+00:04:38,271 --> 00:04:44,415
+The redundancy that you can cope with some arrays it's a rule English text has redundancy so how did
+
+50
+00:04:44,671 --> 00:04:47,487
+Fit in the the big picture
+
+51
+00:04:49,791 --> 00:04:51,071
+Oops
+
+52
+00:04:53,119 --> 00:04:55,679
+Here's the correct decoding
+
+53
+00:04:56,447 --> 00:04:57,471
+Oh well then
+
+54
+00:05:01,055 --> 00:05:03,615
+The big picture
+
+55
+00:05:03,871 --> 00:05:10,015
+In a standard Communication System what we want to do is exploit that redundancies already exists
+
+56
+00:05:10,271 --> 00:05:16,415
+In a real sore and get rid of it and shrink the file so we can press it first and making ID
+
+57
+00:05:16,671 --> 00:05:22,815
+He lies to us that we can then put into the channel coding method that we're discussing last time I had the right sort of her.
+
+58
+00:05:23,071 --> 00:05:27,167
+Tennessee for the channel and coda
+
+59
+00:05:27,679 --> 00:05:33,823
+I thought we discussed last time but we're going to wrap that whole thing inside a compressor and then an uncompressed
+
+60
+00:05:35,359 --> 00:05:41,503
+So going to provide data compression and will spend a few lectures on this topic the conventional way of
+
+61
+00:05:41,759 --> 00:05:47,903
+Doing things it's not essential that you have to do Channel coding those are upside down
+
+62
+00:05:48,159 --> 00:05:54,303
+Ignore ignore it should say
+
+63
+00:05:54,559 --> 00:06:00,703
+Swift coding
+
+64
+00:06:06,591 --> 00:06:09,151
+So how about compressor
+
+65
+00:06:09,407 --> 00:06:14,783
+Uncompressed
+
+66
+00:06:15,295 --> 00:06:21,439
+And then we'll have the channel code Bianco.
+
+67
+00:06:21,695 --> 00:06:27,839
+That's designed. The rights of redundancy telecommunicator to the noisy Channel
+
+68
+00:06:29,119 --> 00:06:35,007
+Atlanta how to decode up a channel as long as that does a perfect job then
+
+69
+00:06:35,519 --> 00:06:41,663
+Which have what's coming out of
+
+70
+00:06:42,943 --> 00:06:44,735
+So that's the game plan
+
+71
+00:06:46,527 --> 00:06:52,671
+So we call list so coding or data compression and we want to understand how to do that
+
+72
+00:06:58,303 --> 00:07:00,607
+In order to discuss compression
+
+73
+00:07:00,863 --> 00:07:07,007
+It may be helpful to think about idealized sources of redundant
+
+74
+00:07:07,263 --> 00:07:13,407
+Data so I can think about confessing things at the idealized and simple and the fish
+
+75
+00:07:13,663 --> 00:07:17,247
+Best example and go to talk about is the bent coin
+
+76
+00:07:22,623 --> 00:07:28,767
+And been calling is going to have an outcome and who can forget looked around comes
+
+77
+00:07:29,023 --> 00:07:35,167
+The outcome lived in an alphabet and the alphabet has to
+
+78
+00:07:35,423 --> 00:07:41,567
+Characters in it wonderful Tales Uncle Ted's and the probabilities
+
+79
+00:07:44,639 --> 00:07:47,967
+All those two outcomes
+
+80
+00:07:48,479 --> 00:07:52,575
+Nuggets in San Mateo and a 10% chance
+
+81
+00:07:52,831 --> 00:07:53,599
+Of a hat
+
+82
+00:07:55,391 --> 00:08:01,535
+And my notation is alcool a random variable
+
+83
+00:08:01,791 --> 00:08:03,071
+X
+
+84
+00:08:03,327 --> 00:08:09,471
+On the provisional actiontiles is 0.9 the notation I use in the
+
+85
+00:08:09,727 --> 00:08:10,495
+Facebook
+
+86
+00:08:11,007 --> 00:08:14,591
+4 random variables
+
+87
+00:08:14,847 --> 00:08:20,991
+Answer the question we want to ask about this redundant source is redundant because
+
+88
+00:08:21,247 --> 00:08:27,391
+We want to understand better if we get
+
+89
+00:08:27,647 --> 00:08:31,999
+File made up of say 1000 outcomes from this source
+
+90
+00:08:32,255 --> 00:08:34,559
+So we talked about going to passing times
+
+91
+00:08:34,815 --> 00:08:37,887
+How much information
+
+92
+00:08:38,143 --> 00:08:42,495
+Does that string of outcomes half and
+
+93
+00:08:43,007 --> 00:08:46,079
+How should we go about compressing that string of outcomes
+
+94
+00:08:46,335 --> 00:08:48,127
+And finally
+
+95
+00:08:48,639 --> 00:08:53,247
+What is the smallest possible compressed file size that we should be aiming for
+
+96
+00:08:53,759 --> 00:08:59,391
+I would like to answer this question for any
+
+97
+00:08:59,647 --> 00:09:05,791
+Random variable is just a simple example in general I'll use this notation
+
+98
+00:09:06,047 --> 00:09:12,191
+I'm on some bull which will have a capital f x
+
+99
+00:09:12,447 --> 00:09:18,591
+Three things it's a random variable and alphabet on the pole roof
+
+100
+00:09:18,847 --> 00:09:19,359
+Fusion
+
+101
+00:09:20,895 --> 00:09:27,039
+A random variable which I'll share with a load
+
+102
+00:09:27,295 --> 00:09:28,063
+Pace weather
+
+103
+00:09:28,319 --> 00:09:34,463
+A set of possible outcomes
+
+104
+00:09:42,655 --> 00:09:48,799
+Electrical the alphabet A1 A2 A3
+
+105
+00:09:49,055 --> 00:09:55,199
+Hey I will rise the number of the alphabet
+
+106
+00:09:55,711 --> 00:10:01,855
+A set of probabilities
+
+107
+00:10:08,511 --> 00:10:14,655
+B complex made up of P1 P2
+
+108
+00:10:14,911 --> 00:10:21,055
+K i
+
+109
+00:10:24,127 --> 00:10:30,271
+The probability that X is a
+
+110
+00:10:30,527 --> 00:10:36,671
+I understand the perversities have the properties of them
+
+111
+00:10:38,207 --> 00:10:42,047
+And the Republic was there a
+
+112
+00:10:43,839 --> 00:10:44,863
+So that's
+
+113
+00:10:45,119 --> 00:10:50,751
+A general sort of random outcomes in which the band coin is one example
+
+114
+00:10:51,007 --> 00:10:52,799
+And
+
+115
+00:10:53,055 --> 00:10:54,847
+We're going to discuss
+
+116
+00:10:55,359 --> 00:10:58,687
+I've been calling and some other examples
+
+117
+00:10:58,943 --> 00:11:04,575
+And as we discussed the motor to examine explain this is Shannon's claim
+
+118
+00:11:04,831 --> 00:11:10,975
+That's the right way to measure information content and the right way
+
+119
+00:11:11,231 --> 00:11:17,375
+To say how much should we expect to go to compress things is as follows
+
+120
+00:11:17,631 --> 00:11:23,775
+We're going to define a thing called the Shannon information content
+
+121
+00:11:24,031 --> 00:11:30,175
+The sound information compound open outcome
+
+122
+00:11:37,855 --> 00:11:42,207
+They're all talk about just a single outcome for this General ensemble
+
+123
+00:11:42,463 --> 00:11:48,607
+Why we get the random variable and send that to be the son information content
+
+124
+00:11:48,863 --> 00:11:55,007
+Is it tolls
+
+125
+00:11:55,263 --> 00:12:01,407
+To run over the probability
+
+126
+00:12:01,663 --> 00:12:07,039
+And we measure that in bits
+
+127
+00:12:07,295 --> 00:12:13,439
+Okay love will never fade Simon says that's the right way
+
+128
+00:12:13,695 --> 00:12:19,839
+Dementia information content when something happens you can say I have gained wrist motion
+
+129
+00:12:20,095 --> 00:12:26,239
+Summation that measure of information content by looking at the probability
+
+130
+00:12:26,495 --> 00:12:32,639
+Log 1 over it what does that look like so if you tell me what the probability of your
+
+131
+00:12:32,895 --> 00:12:39,039
+The outcome was P Shannon is same
+
+132
+00:12:39,295 --> 00:12:45,439
+Is biggest for the really improbable outcomes
+
+133
+00:12:45,695 --> 00:12:51,839
+I'm small list the things that was sitting about in fact if something was definitely going to happen if a
+
+134
+00:12:52,095 --> 00:12:58,239
+Zero information content if it has a probability of 1/2
+
+135
+00:12:59,519 --> 00:13:03,615
+Information content of one b****
+
+136
+00:13:04,383 --> 00:13:09,759
+If something happens that has a progressive 0.9
+
+137
+00:13:10,271 --> 00:13:16,159
+Like for example getting a tail from a coin
+
+138
+00:13:16,927 --> 00:13:18,207
+Fat Scott
+
+139
+00:13:23,327 --> 00:13:29,471
+That's kind of information content of Love vase to 107.9 which is now
+
+140
+00:13:29,727 --> 00:13:35,871
+Northpoint 15 so Shannon says whenever you got a telephone event calling you've gained 15
+
+141
+00:13:36,127 --> 00:13:42,271
+Hundreds events
+
+142
+00:13:44,319 --> 00:13:50,463
+We got Love by to want over there
+
+143
+00:13:52,255 --> 00:13:54,815
+Bits which is 3.3
+
+144
+00:13:55,327 --> 00:13:56,351
+Fix
+
+145
+00:13:59,679 --> 00:14:05,823
+Okay so he says every had everyone in this file on the screen
+
+146
+00:14:06,079 --> 00:14:08,895
+Three and a bit bits of information content
+
+147
+00:14:10,943 --> 00:14:17,087
+So he's cleaning this is the right way to measure information content it's the compressed file
+
+148
+00:14:17,343 --> 00:14:22,719
+Length that we should aspire to someone we invent compression systems
+
+149
+00:14:22,975 --> 00:14:24,511
+H
+
+150
+00:14:24,767 --> 00:14:30,911
+All facts is
+
+151
+00:14:31,167 --> 00:14:32,191
+Chicken breast
+
+152
+00:14:32,447 --> 00:14:38,591
+Find the lengths to which we should aspire
+
+153
+00:14:50,623 --> 00:14:56,767
+Okay so that Shannon's playing and I'll carry on Cooling
+
+154
+00:14:57,023 --> 00:15:03,167
+The Shannon information content until you're convinced of that and then I'll stop
+
+155
+00:15:03,423 --> 00:15:09,567
+I noticed the information content because it really is the right way to measure
+
+156
+00:15:09,823 --> 00:15:11,359
+Information
+
+157
+00:15:11,615 --> 00:15:17,759
+Okay let's not give ourselves
+
+158
+00:15:18,015 --> 00:15:21,343
+What should we do
+
+159
+00:15:23,391 --> 00:15:27,231
+Let's just make some observations about the
+
+160
+00:15:27,999 --> 00:15:30,047
+Shannon information content
+
+161
+00:15:32,863 --> 00:15:34,143
+Notice
+
+162
+00:15:34,655 --> 00:15:38,495
+Front wall
+
+163
+00:15:38,751 --> 00:15:44,895
+The Shannon information content is additive
+
+164
+00:15:45,151 --> 00:15:48,223
+For independent random variables
+
+165
+00:15:48,479 --> 00:15:54,623
+Okay
+
+166
+00:15:56,159 --> 00:15:57,951
+At your asking
+
+167
+00:15:58,207 --> 00:16:04,351
+What do I mean by this okay this was really short on for an outcome so I put it on
+
+168
+00:16:04,607 --> 00:16:10,751
+Clash of the said H equals something
+
+169
+00:16:11,007 --> 00:16:17,151
+I'll try and be fairly familiar with notation but if you get two broke down in
+
+170
+00:16:17,407 --> 00:16:23,551
+Innovation that it's no fun anymore so I hope that will clear enough without being too
+
+171
+00:16:23,807 --> 00:16:27,647
+Okay suck
+
+172
+00:16:30,719 --> 00:16:35,839
+This mission content information content is additive for independent random variables
+
+173
+00:16:36,095 --> 00:16:42,239
+For example if I ask why
+
+174
+00:16:42,495 --> 00:16:48,639
+Come from a single girl is a pair of random variables x y
+
+175
+00:16:48,895 --> 00:16:55,039
+What's the probability distribution for X Y is p of x x t r y
+
+176
+00:16:55,295 --> 00:17:01,439
+For all apps on Weinbach the definition of independent
+
+177
+00:17:14,495 --> 00:17:20,639
+Temperature Townsend content of the Ryman
+
+178
+00:17:20,895 --> 00:17:27,039
+Umberto's take your own particular values and I'll use a short time until age of X and Y that means the outcome
+
+179
+00:17:27,295 --> 00:17:33,439
+Whatever exes and why being whatever it is is love ways to want over the phone
+
+180
+00:17:33,695 --> 00:17:35,999
+Palessi
+
+181
+00:17:36,767 --> 00:17:37,535
+Hope
+
+182
+00:17:37,791 --> 00:17:43,935
+Outcome which is low base 2
+
+183
+00:17:44,191 --> 00:17:50,335
+Plus no pictures by substituting
+
+184
+00:17:50,847 --> 00:17:56,223
+Independent property in half and using the way loved what
+
+185
+00:17:56,735 --> 00:17:57,759
+A cat
+
+186
+00:17:58,015 --> 00:18:04,159
+So for example if I get time I've been calling on.
+
+187
+00:18:04,415 --> 00:18:09,791
+That acts and if Y is open the door and find out if it's raining or not
+
+188
+00:18:10,047 --> 00:18:15,423
+And I tell you the past that's why I tell you stay to be calling on whether it's raining
+
+189
+00:18:16,447 --> 00:18:22,591
+32 variables that you probably believe are independent on this so it makes sense that the amount of information
+
+190
+00:18:22,847 --> 00:18:26,687
+And I'm getting you if I tell you that I'm single famously
+
+191
+00:18:26,943 --> 00:18:28,735
+Title. It's not raining
+
+192
+00:18:29,759 --> 00:18:35,903
+Is the same as the information you would have got it separately I told you about one random variable and the other one
+
+193
+00:18:36,159 --> 00:18:42,303
+Bible which already skipped over that
+
+194
+00:18:42,559 --> 00:18:48,703
+Is that the information content Shannon information content is biggest for improbable outcomes
+
+195
+00:19:08,927 --> 00:19:11,231
+Okay let's not Define
+
+196
+00:19:11,487 --> 00:19:16,607
+Another quantity
+
+197
+00:19:18,143 --> 00:19:24,287
+You have improved this is the right way to measure information yet we'll get some examples in about 1
+
+198
+00:19:24,543 --> 00:19:27,359
+But let's just assume it is
+
+199
+00:19:27,871 --> 00:19:34,015
+I'm looking for him then to find another another quantity which is going to be
+
+200
+00:19:34,271 --> 00:19:40,415
+Pickled the entropy this is a property of neon
+
+201
+00:19:40,671 --> 00:19:46,815
+What is the average Shannon
+
+202
+00:19:47,071 --> 00:19:48,863
+Information content
+
+203
+00:19:56,543 --> 00:20:02,687
+I'm going to like it like this Consul h x
+
+204
+00:20:02,943 --> 00:20:09,087
+We got it by summing over all possible values of the random variable x p of x
+
+205
+00:20:09,343 --> 00:20:13,695
+Log base 2 x
+
+206
+00:20:13,951 --> 00:20:20,095
+And like the X Nation content with cool the units is measured in
+
+207
+00:20:20,351 --> 00:20:21,375
+Bits
+
+208
+00:20:21,887 --> 00:20:24,191
+Okay
+
+209
+00:20:26,751 --> 00:20:28,543
+So
+
+210
+00:20:30,079 --> 00:20:36,223
+Let's have a think about an example to think about these assertions that this is a good. Goodbye
+
+211
+00:20:36,479 --> 00:20:42,623
+These qualities are sensible connotation let's look
+
+212
+00:20:43,903 --> 00:20:49,535
+Dwayne from which I gave you last time to think about and
+
+213
+00:20:49,791 --> 00:20:52,095
+Let's think about
+
+214
+00:20:52,863 --> 00:20:59,007
+Strategies for solving the waiting problem so please turn to your neighbor now
+
+215
+00:20:59,263 --> 00:21:03,615
+Have a chat about your solutions to the weighing problem
+
+216
+00:21:08,735 --> 00:21:14,879
+Okay so the goal is given
+
+217
+00:21:15,135 --> 00:21:21,280
+12 one of which is known to be a heavy or light
+
+218
+00:21:21,536 --> 00:21:27,680
+Can use this balance as few times as possible and guarantee that we're going to find the old Bull and others have you alive
+
+219
+00:21:27,936 --> 00:21:34,080
+So who's got a strategy that will do.
+
+220
+00:21:34,336 --> 00:21:39,456
+Solving this problem
+
+221
+00:21:39,968 --> 00:21:46,112
+I want you to answer this question my methods needs at most how many Wayans have
+
+222
+00:21:46,368 --> 00:21:52,512
+I think about your method if you are sure that after you use the balance seven times then definitely you will have
+
+223
+00:21:52,768 --> 00:21:58,912
+Guarantee you would have identified double then please answer 7 Etc
+
+224
+00:21:59,168 --> 00:22:05,312
+Hands up if your method is at most 15 or bigger number of Wayne okay
+
+225
+00:22:05,568 --> 00:22:06,592
+Both
+
+226
+00:22:06,848 --> 00:22:08,384
+11
+
+227
+00:22:09,152 --> 00:22:10,432
+10
+
+228
+00:22:10,688 --> 00:22:11,968
+9
+
+229
+00:22:12,736 --> 00:22:16,064
+Hey Brother 7
+
+230
+00:22:16,320 --> 00:22:18,880
+I Can't Go For That
+
+231
+00:22:19,136 --> 00:22:20,672
+6
+
+232
+00:22:21,440 --> 00:22:22,464
+5
+
+233
+00:22:24,768 --> 00:22:30,912
+904
+
+234
+00:22:31,168 --> 00:22:31,680
+3
+
+235
+00:22:36,544 --> 00:22:40,640
+Apologies we had a technical glitch at this point the number of people who could
+
+236
+00:22:41,152 --> 00:22:41,664
+Do
+
+237
+00:22:41,920 --> 00:22:44,736
+Displaying problem in three rings
+
+238
+00:22:44,992 --> 00:22:46,528
+Was three
+
+239
+00:22:47,040 --> 00:22:53,184
+Well then moved onto was I asked everyone what that strategy was for the first weighing
+
+240
+00:22:54,208 --> 00:23:00,352
+And choices are that you can weigh six against six leaving none of the balls on the table
+
+241
+00:23:00,608 --> 00:23:03,936
+One-person show started first playing
+
+242
+00:23:04,192 --> 00:23:08,544
+Or you can have five against five leaving two on the table that wasn't
+
+243
+00:23:09,056 --> 00:23:15,200
+Said you could wait full bolt against for leaving for on the table 20 people chose
+
+244
+00:23:15,968 --> 00:23:20,576
+Both of you can have three against 306 on the table one person shows that
+
+245
+00:23:21,088 --> 00:23:25,696
+Two against two leaving tables on the table for One Bowl against one
+
+246
+00:23:25,952 --> 00:23:28,256
+Ben 10 balls on the table
+
+247
+00:23:31,072 --> 00:23:34,912
+How to identify the possible options as the first playing
+
+248
+00:23:35,168 --> 00:23:39,520
+I didn't ask the question what would be today
+
+249
+00:23:39,776 --> 00:23:41,824
+If you want to get the most information
+
+250
+00:23:42,080 --> 00:23:44,384
+On average how have your first wedding
+
+251
+00:23:44,640 --> 00:23:47,200
+Maybe you should put take the first weighing
+
+252
+00:23:47,712 --> 00:23:51,552
+Search for the outcome of that way has the biggest possible entropy
+
+253
+00:23:51,808 --> 00:23:57,952
+I'm up we're about to do now is go through each of those six possible cases and work out what the entropy
+
+254
+00:23:58,208 --> 00:24:00,256
+Is the outcome
+
+255
+00:24:00,512 --> 00:24:01,792
+If you choose
+
+256
+00:24:02,048 --> 00:24:03,840
+Two example way
+
+257
+00:24:04,096 --> 00:24:07,168
+Six against six masopust Casino Disco
+
+258
+00:24:11,520 --> 00:24:16,640
+Let's backtrack and let's imagine that we weigh six against six
+
+259
+00:24:17,152 --> 00:24:20,992
+Then the possible outcomes when weighing six against six
+
+260
+00:24:22,272 --> 00:24:23,296
+Rest
+
+261
+00:24:23,552 --> 00:24:24,832
+Best
+
+262
+00:24:26,368 --> 00:24:27,136
+Miss
+
+263
+00:24:29,952 --> 00:24:34,560
+So that's an alphabet probabilities of these three outcomes anyone
+
+264
+00:24:36,096 --> 00:24:37,632
+Hasta Raha
+
+265
+00:24:38,656 --> 00:24:39,424
+Okay
+
+266
+00:24:40,448 --> 00:24:44,032
+I'm up the entropy of that provoking distribution
+
+267
+00:24:44,288 --> 00:24:50,432
+Entropy is Anthony Omaha and you get warm
+
+268
+00:24:54,272 --> 00:24:56,064
+Let's make a little nicer that somewhere
+
+269
+00:24:56,320 --> 00:24:58,880
+If we do six against six
+
+270
+00:24:59,136 --> 00:25:01,952
+Then the first outcome is this
+
+271
+00:25:03,232 --> 00:25:04,000
+Wonlex
+
+272
+00:25:05,024 --> 00:25:05,792
+Okay
+
+273
+00:25:06,048 --> 00:25:08,608
+5ft 5 wasn't very popular
+
+274
+00:25:09,376 --> 00:25:12,704
+But if we hadn't gone with five against five
+
+275
+00:25:15,776 --> 00:25:20,128
+Then what's the probability that it would have balance
+
+276
+00:25:21,664 --> 00:25:25,248
+552 on the table
+
+277
+00:25:28,832 --> 00:25:30,368
+What's the probability that have come
+
+278
+00:25:33,184 --> 00:25:33,952
+1:6
+
+279
+00:25:34,976 --> 00:25:36,768
+One sec y16
+
+280
+00:25:45,216 --> 00:25:46,496
+Okay so
+
+281
+00:25:46,752 --> 00:25:52,896
+It will balance if one of these balls on the table is field goal and got two of the Bulls out of a total of 12
+
+282
+00:25:53,152 --> 00:25:56,992
+2/12 * which is 1/6
+
+283
+00:25:58,272 --> 00:26:02,880
+And by symmetry the remaining probability the shed out there any 10:12
+
+284
+00:26:03,392 --> 00:26:06,464
+His equally between ac512
+
+285
+00:26:06,720 --> 00:26:08,768
+Red high tops
+
+286
+00:26:09,792 --> 00:26:13,376
+Find the entropy of the outcome in this case
+
+287
+00:26:14,144 --> 00:26:15,680
+If we write five against five
+
+288
+00:26:16,192 --> 00:26:22,336
+I have worked out for you in advance is 1.48 bits
+
+289
+00:26:23,104 --> 00:26:24,896
+Curious that no one went for that
+
+290
+00:26:25,920 --> 00:26:27,456
+But
+
+291
+00:26:27,712 --> 00:26:31,552
+What else could we do well we could weigh four against four
+
+292
+00:26:31,808 --> 00:26:33,344
+If we weigh
+
+293
+00:26:33,856 --> 00:26:35,648
+4 against 4
+
+294
+00:26:36,928 --> 00:26:40,768
+Then what's the probability that it will balance
+
+295
+00:26:42,048 --> 00:26:42,816
+Somewhere else
+
+296
+00:26:48,448 --> 00:26:54,592
+15 McCants for 12 because of a balance if one of the four bowls on the table
+
+297
+00:26:54,848 --> 00:26:56,640
+Table is the audible
+
+298
+00:26:56,896 --> 00:27:01,760
+An intervening 8/12 to split
+
+299
+00:27:03,040 --> 00:27:05,856
+Okay so full vs 4
+
+300
+00:27:06,368 --> 00:27:09,440
+Gives you the entropy all
+
+301
+00:27:09,952 --> 00:27:16,096
+Which is log base 2 or 3 which is 1.5
+
+302
+00:27:16,352 --> 00:27:16,864
+5/8
+
+303
+00:27:19,680 --> 00:27:21,984
+If we were a three against three
+
+304
+00:27:25,312 --> 00:27:27,872
+Then what's the probability that
+
+305
+00:27:28,128 --> 00:27:29,664
+Left 6 on the table
+
+306
+00:27:30,432 --> 00:27:32,992
+What's the preventative Sr cam
+
+307
+00:27:34,016 --> 00:27:34,784
+Huh
+
+308
+00:27:35,040 --> 00:27:38,624
+Okay I'm sorry I must be across a chance of each of these
+
+309
+00:27:38,880 --> 00:27:41,184
+When you work out the entropy
+
+310
+00:27:41,440 --> 00:27:45,792
+You got 1/2 * 2 + 1/2 * 1
+
+311
+00:27:46,048 --> 00:27:49,632
+Which is 1.5
+
+312
+00:27:52,960 --> 00:27:59,104
+I'm so let me fill in the remaining for girls easy way to get to the Indians be as 1.25
+
+313
+00:27:59,360 --> 00:28:04,224
+Life bits if you a 1 against Plum and Sparrow 0.8
+
+314
+00:28:04,480 --> 00:28:04,992
+2
+
+315
+00:28:06,272 --> 00:28:09,088
+So something you could have done
+
+316
+00:28:10,368 --> 00:28:14,720
+If we believed in Shannon was just pay for these different possible
+
+317
+00:28:14,976 --> 00:28:16,256
+Take
+
+318
+00:28:16,768 --> 00:28:21,632
+Let's just go with the one that maximizes the information content and that would have sent us to
+
+319
+00:28:22,144 --> 00:28:23,424
+Best choice rich
+
+320
+00:28:23,680 --> 00:28:25,216
+Maybe after some Court
+
+321
+00:28:25,472 --> 00:28:27,008
+Many of you have
+
+322
+00:28:27,264 --> 00:28:28,288
+Erotica
+
+323
+00:28:29,824 --> 00:28:30,592
+Good
+
+324
+00:28:30,848 --> 00:28:33,920
+Alright let's go ahead and go with that choice
+
+325
+00:28:35,200 --> 00:28:40,832
+And so we've got some balls now which we could say I'll probably like supposed to be like those who like
+
+326
+00:28:41,344 --> 00:28:45,440
+Dfsr come here cuz
+
+327
+00:28:47,488 --> 00:28:50,560
+What should we call lease
+
+328
+00:28:50,816 --> 00:28:52,864
+He's a good Bulls G
+
+329
+00:28:54,144 --> 00:28:54,656
+Okay
+
+330
+00:28:55,424 --> 00:28:56,448
+So
+
+331
+00:28:56,704 --> 00:29:01,568
+That's one possible thing that could happen the Buffalo out, assuming away four against four
+
+332
+00:29:02,848 --> 00:29:04,128
+Left side goes up
+
+333
+00:29:04,384 --> 00:29:05,920
+Right side goes down
+
+334
+00:29:06,432 --> 00:29:09,248
+I will go full bolt on the table which mean I know a good bull
+
+335
+00:29:10,016 --> 00:29:15,904
+So if you'd like to make a suggestion let's go bunch of suggestions of what we would do next if this
+
+336
+00:29:16,160 --> 00:29:16,672
+Hair
+
+337
+00:29:16,928 --> 00:29:19,744
+Webbie outcome of a CNA
+
+338
+00:29:21,024 --> 00:29:21,792
+And
+
+339
+00:29:24,608 --> 00:29:26,912
+Let's get some suggestions what we do next
+
+340
+00:30:02,752 --> 00:30:03,776
+Okay
+
+341
+00:30:04,032 --> 00:30:05,824
+He'd like to suggest
+
+342
+00:30:06,080 --> 00:30:06,592
+Something
+
+343
+00:30:07,360 --> 00:30:07,872
+Golf
+
+344
+00:30:15,552 --> 00:30:18,112
+We're a walk against the other group
+
+345
+00:30:19,392 --> 00:30:20,160
+Okay
+
+346
+00:30:23,232 --> 00:30:26,816
+Okay so you could wave full Goods against
+
+347
+00:30:27,584 --> 00:30:30,656
+The fool possibly lights
+
+348
+00:30:37,056 --> 00:30:39,360
+Okay so Justin number 2
+
+349
+00:30:40,896 --> 00:30:43,712
+Tell tell me again what's your suggestion now
+
+350
+00:30:45,760 --> 00:30:47,040
+Okay
+
+351
+00:30:54,720 --> 00:31:00,864
+Okay let's not leave to get to all the reasoning we're going to have to work with that that's a nice suggestion about any other suggestion
+
+352
+00:31:01,120 --> 00:31:03,168
+Think about it
+
+353
+00:31:03,680 --> 00:31:05,984
+Probabilities in due course
+
+354
+00:31:07,008 --> 00:31:07,520
+Yeah
+
+355
+00:31:11,872 --> 00:31:13,152
+How many
+
+356
+00:31:23,136 --> 00:31:24,160
+201 lights
+
+357
+00:31:25,184 --> 00:31:26,720
+I'm outside and then
+
+358
+00:31:30,560 --> 00:31:33,120
+BMO Harris Android
+
+359
+00:31:33,632 --> 00:31:34,656
+A light okay
+
+360
+00:31:36,704 --> 00:31:42,848
+Right side in this case we're leaving on the table I possibly light and full possibly heavy dudes
+
+361
+00:31:43,616 --> 00:31:46,944
+Here you'll suggesting leaving both lights on the table
+
+362
+00:31:47,200 --> 00:31:48,224
+How long will it be
+
+363
+00:31:48,480 --> 00:31:49,248
+The goods
+
+364
+00:31:50,528 --> 00:31:51,808
+Okay
+
+365
+00:31:52,320 --> 00:31:58,208
+That's a nice suggestion let's now have I think about me and think about the possible
+
+366
+00:31:58,464 --> 00:32:00,768
+Things that could happen
+
+367
+00:32:01,024 --> 00:32:01,792
+Suck
+
+368
+00:32:03,328 --> 00:32:06,656
+If we were together this strategy as a second way
+
+369
+00:32:06,912 --> 00:32:10,240
+All the goods on one side and all the puppy light on the other
+
+370
+00:32:10,496 --> 00:32:11,264
+Then
+
+371
+00:32:11,520 --> 00:32:12,544
+What could happen
+
+372
+00:32:16,128 --> 00:32:17,664
+Could it look like that
+
+373
+00:32:18,176 --> 00:32:18,944
+Could that happen
+
+374
+00:32:19,712 --> 00:32:21,504
+Could the right hand side go down
+
+375
+00:32:27,392 --> 00:32:28,160
+No
+
+376
+00:32:28,672 --> 00:32:29,440
+Why not
+
+377
+00:32:40,448 --> 00:32:42,752
+So these ones are all possible allies
+
+378
+00:32:44,032 --> 00:32:47,360
+Are there any way that's like your go down giving it the left hand
+
+379
+00:32:47,616 --> 00:32:49,152
+Bulldog good is it
+
+380
+00:32:49,408 --> 00:32:50,432
+One of these people is
+
+381
+00:32:50,688 --> 00:32:53,248
+Noble I'm heavy but we already know that snow
+
+382
+00:32:53,760 --> 00:32:56,576
+Possible pizza guys can only be available at the light
+
+383
+00:32:56,832 --> 00:32:58,624
+This has probability 0
+
+384
+00:33:01,952 --> 00:33:03,488
+Is it possible they could balance
+
+385
+00:33:06,048 --> 00:33:06,816
+Hernia
+
+386
+00:33:07,840 --> 00:33:10,144
+It's one of the heavy heavy guys
+
+387
+00:33:10,400 --> 00:33:12,192
+What the probability of that being the case
+
+388
+00:33:12,960 --> 00:33:14,240
+Haha okay
+
+389
+00:33:14,496 --> 00:33:16,288
+What's the probability of
+
+390
+00:33:17,568 --> 00:33:18,848
+What happening
+
+391
+00:33:19,616 --> 00:33:21,152
+Haha
+
+392
+00:33:22,176 --> 00:33:22,688
+Okay
+
+393
+00:33:22,944 --> 00:33:27,808
+So that the probability distribution whose entropy is wrong with it
+
+394
+00:33:29,088 --> 00:33:31,904
+Okay let's talk through this one app
+
+395
+00:33:47,264 --> 00:33:48,032
+Okay
+
+396
+00:33:48,544 --> 00:33:54,688
+It's an isometric situation isn't it let's talk about the symmetric outcome
+
+397
+00:33:54,944 --> 00:33:56,224
+Havit balancing
+
+398
+00:34:04,416 --> 00:34:05,696
+Dakota
+
+399
+00:34:05,952 --> 00:34:08,000
+What you ate
+
+400
+00:34:08,256 --> 00:34:12,096
+Because if you'll believe on these two then it will balance
+
+401
+00:34:13,632 --> 00:34:14,656
+Okay
+
+402
+00:34:15,680 --> 00:34:20,288
+So by 7 treat the remaining probability has to be
+
+403
+00:34:20,544 --> 00:34:23,104
+Split between the oven.
+
+404
+00:34:23,360 --> 00:34:24,128
+Create
+
+405
+00:34:24,384 --> 00:34:25,664
+3x
+
+406
+00:34:26,944 --> 00:34:27,968
+For example
+
+407
+00:34:28,736 --> 00:34:30,016
+This could happen
+
+408
+00:34:32,064 --> 00:34:33,600
+This guy is y'all bull
+
+409
+00:34:33,856 --> 00:34:35,904
+Under the light of the normal
+
+410
+00:34:37,952 --> 00:34:39,744
+If one of the either of those is
+
+411
+00:34:40,000 --> 00:34:40,768
+Pitbull
+
+412
+00:34:41,536 --> 00:34:42,304
+And the heavy
+
+413
+00:34:43,072 --> 00:34:43,840
+Hi-Tech
+
+414
+00:34:44,864 --> 00:34:46,144
+So that's another
+
+415
+00:34:47,424 --> 00:34:51,776
+Possible action and its Provo distribution
+
+416
+00:34:54,080 --> 00:34:55,104
+We could
+
+417
+00:34:55,616 --> 00:34:57,152
+Y33 lights
+
+418
+00:34:58,944 --> 00:35:02,784
+What's the probability that this will
+
+419
+00:35:07,648 --> 00:35:08,672
+Balance
+
+420
+00:35:13,280 --> 00:35:15,072
+Phyllite
+
+421
+00:35:15,328 --> 00:35:17,888
+They cost us 550 old balls
+
+422
+00:35:18,656 --> 00:35:22,752
+Nobody left on the table and if any of them is killed or and it's kind of balance
+
+423
+00:35:23,264 --> 00:35:25,568
+What's the probability that
+
+424
+00:35:26,080 --> 00:35:27,616
+It will do
+
+425
+00:35:28,896 --> 00:35:29,408
+Vest
+
+426
+00:35:30,944 --> 00:35:32,992
+Turn on left and right
+
+427
+00:35:41,184 --> 00:35:44,768
+What's half of 5/8
+
+428
+00:35:45,024 --> 00:35:48,608
+I got is 3/8 and 0 is the probability of getting this
+
+429
+00:35:49,632 --> 00:35:50,656
+How to come here
+
+430
+00:35:51,168 --> 00:35:56,032
+Big house there's no way that the guys could be heavier than the good
+
+431
+00:35:56,288 --> 00:35:56,800
+Guys
+
+432
+00:35:57,824 --> 00:36:02,688
+Right so did a whole bunch of personal things we can do and every one of them is leading to a different
+
+433
+00:36:02,944 --> 00:36:04,224
+Probability distribution
+
+434
+00:36:04,736 --> 00:36:06,784
+His Wang prolifics mission
+
+435
+00:36:07,040 --> 00:36:08,320
+Head and
+
+436
+00:36:10,112 --> 00:36:16,000
+I miss long as I don't repeat that is actually a little bit less than one bit
+
+437
+00:36:21,888 --> 00:36:23,168
+This one has an entropy
+
+438
+00:36:23,424 --> 00:36:26,240
+Bigger than wombats
+
+439
+00:36:27,264 --> 00:36:29,312
+And I wonder if I can
+
+440
+00:36:30,592 --> 00:36:31,360
+What it is
+
+441
+00:36:35,456 --> 00:36:37,504
+I've mislaid the actual value or it
+
+442
+00:36:37,760 --> 00:36:39,808
+But it's actually a little bit bigger
+
+443
+00:36:40,064 --> 00:36:42,112
+Find 1.5
+
+444
+00:36:43,904 --> 00:36:44,672
+Fitz
+
+445
+00:36:46,208 --> 00:36:48,000
+Do you have any other suggestions of
+
+446
+00:36:48,512 --> 00:36:53,632
+Possible things you could do at this stage given that this was with us out come up with
+
+447
+00:36:54,144 --> 00:36:55,168
+Any other suggestions
+
+448
+00:36:56,448 --> 00:36:56,960
+Yeah
+
+449
+00:37:00,800 --> 00:37:04,128
+OK Google
+
+450
+00:37:05,152 --> 00:37:06,688
+Against
+
+451
+00:37:07,712 --> 00:37:08,992
+Three like I'm heavy
+
+452
+00:37:10,784 --> 00:37:12,064
+Set
+
+453
+00:37:14,624 --> 00:37:17,184
+That could balance it could
+
+454
+00:37:17,696 --> 00:37:20,256
+That way I could guy
+
+455
+00:37:22,048 --> 00:37:23,072
+This way
+
+456
+00:37:25,376 --> 00:37:31,008
+Right we left on the table a life dude on three possibly heavy duty
+
+457
+00:37:32,288 --> 00:37:35,104
+So what's the probability that it's going to balance
+
+458
+00:37:43,552 --> 00:37:44,064
+Temperature
+
+459
+00:37:45,088 --> 00:37:50,976
+Because if any of these full possibly old guys is the other guy and it's going to be
+
+460
+00:37:51,744 --> 00:37:52,512
+All right
+
+461
+00:37:53,024 --> 00:37:54,816
+What's the probability
+
+462
+00:37:55,072 --> 00:37:57,632
+That is all day
+
+463
+00:37:59,680 --> 00:38:01,472
+The right hand side down
+
+464
+00:38:02,752 --> 00:38:04,544
+Landslide on left side up
+
+465
+00:38:06,080 --> 00:38:07,104
+1/8
+
+466
+00:38:07,616 --> 00:38:09,408
+Because the only way that could happen
+
+467
+00:38:09,664 --> 00:38:11,456
+Is it available is this
+
+468
+00:38:11,968 --> 00:38:13,248
+Ridiculizar put in
+
+469
+00:38:13,760 --> 00:38:15,808
+3/8
+
+470
+00:38:16,576 --> 00:38:18,880
+But as yet another
+
+471
+00:38:24,000 --> 00:38:25,536
+Do you think this is.
+
+472
+00:38:27,328 --> 00:38:28,864
+The biggest entropy sofa
+
+473
+00:38:30,144 --> 00:38:31,168
+Will these options
+
+474
+00:38:31,680 --> 00:38:32,448
+So we can just
+
+475
+00:38:32,704 --> 00:38:36,032
+Imagine trusting Shannon if I give you
+
+476
+00:38:36,288 --> 00:38:39,616
+An alphabet of size I
+
+477
+00:38:42,176 --> 00:38:47,808
+And I asked you do you want me to up to Pi you got a free choice
+
+478
+00:38:48,832 --> 00:38:50,624
+All those probabilities
+
+479
+00:38:53,440 --> 00:38:56,000
+And your goal is to maximize
+
+480
+00:38:56,256 --> 00:38:57,280
+Hfx
+
+481
+00:38:58,304 --> 00:38:59,328
+What
+
+482
+00:38:59,584 --> 00:39:01,376
+Rudy Maxa
+
+483
+00:39:01,888 --> 00:39:03,680
+Maximizes
+
+484
+00:39:04,960 --> 00:39:08,032
+Banfi
+
+485
+00:39:10,080 --> 00:39:11,104
+I'll talk to you later
+
+486
+00:39:17,760 --> 00:39:18,528
+Okay
+
+487
+00:39:19,040 --> 00:39:20,576
+That's what math problem
+
+488
+00:39:20,832 --> 00:39:24,672
+What's the answer how do you maximize sum of p i
+
+489
+00:39:25,184 --> 00:39:30,304
+Log base 2 of Pi with respect to the probability that Caffey
+
+490
+00:39:31,328 --> 00:39:32,352
+What to do with B
+
+491
+00:39:39,264 --> 00:39:39,776
+Goats
+
+492
+00:39:41,568 --> 00:39:45,408
+Uniform place at all of the vehicle to Wong over
+
+493
+00:39:46,176 --> 00:39:46,944
+Hi
+
+494
+00:39:47,712 --> 00:39:49,504
+Okay so if I give you
+
+495
+00:39:50,016 --> 00:39:51,040
+Some cake
+
+496
+00:39:52,064 --> 00:39:52,832
+And I say
+
+497
+00:39:53,088 --> 00:39:56,672
+This cake consists of eight pieces
+
+498
+00:39:58,464 --> 00:40:00,768
+I need three children
+
+499
+00:40:03,328 --> 00:40:09,472
+And you've got to share out the cake as bad as a brother become between the three children
+
+500
+00:40:09,728 --> 00:40:10,752
+Cut up the pieces
+
+501
+00:40:13,568 --> 00:40:17,920
+What's the best way to do that you give zero
+
+502
+00:40:18,432 --> 00:40:24,576
+Tuan Child full pieces of Honor for $20 which is what we'll be doing here
+
+503
+00:40:25,856 --> 00:40:31,232
+Yeah well that's the rule if you do have to give all the cake to children
+
+504
+00:40:31,744 --> 00:40:32,512
+So
+
+505
+00:40:32,768 --> 00:40:36,608
+Is that the most beautiful way of showing the cake I know
+
+506
+00:40:37,120 --> 00:40:40,704
+3 to 3.
+
+507
+00:40:40,960 --> 00:40:42,496
+Looking quite beautiful isn't it
+
+508
+00:40:45,568 --> 00:40:49,408
+Long peaceful on 403 for Nova
+
+509
+00:40:50,432 --> 00:40:54,016
+Unknown suggested a strategy but it's a very common
+
+510
+00:40:54,528 --> 00:40:59,648
+Things for people to suggest that you weigh something against something that gives rise to the probabilities
+
+511
+00:40:59,904 --> 00:41:04,768
+42828 sets of 8
+
+512
+00:41:05,280 --> 00:41:07,840
+Popular thing to do and my guess would be
+
+513
+00:41:09,888 --> 00:41:12,960
+Quite a few of you who chose for Against full
+
+514
+00:41:13,216 --> 00:41:14,752
+How's your first way
+
+515
+00:41:15,264 --> 00:41:17,568
+Maybe you'll next that had
+
+516
+00:41:18,080 --> 00:41:19,872
+Hey choice of Wang
+
+517
+00:41:20,384 --> 00:41:22,176
+That she gives rise to this soda distribution
+
+518
+00:41:22,688 --> 00:41:23,712
+Should I give an example
+
+519
+00:41:23,968 --> 00:41:24,736
+What's an example
+
+520
+00:41:24,992 --> 00:41:28,064
+Maybe I should have asked for another all the tests just something
+
+521
+00:41:28,832 --> 00:41:30,880
+Someone suggested we just see if it was
+
+522
+00:41:31,136 --> 00:41:35,488
+Hhll
+
+523
+00:41:37,280 --> 00:41:39,328
+2 inches on one side to alchemilla
+
+524
+00:41:39,840 --> 00:41:43,168
+Brilliant
+
+525
+00:41:44,448 --> 00:41:45,216
+Santana
+
+526
+00:41:50,848 --> 00:41:51,360
+Okay
+
+527
+00:41:53,151 --> 00:41:55,967
+I'm going to slightly change your suggestion actually
+
+528
+00:41:56,991 --> 00:42:03,135
+Cuz I think if we put old we have even once I know the puppy lights on the other side then one outcome definitely
+
+529
+00:42:03,391 --> 00:42:08,255
+Lang leav if I do it
+
+530
+00:42:08,511 --> 00:42:12,351
+All right I'm like 2 inches in 2 hours on the table so balancing
+
+531
+00:42:12,607 --> 00:42:14,143
+Has a probability of
+
+532
+00:42:14,399 --> 00:42:15,423
+All right
+
+533
+00:42:16,447 --> 00:42:19,007
+And then by symmetry fill the time comes
+
+534
+00:42:19,263 --> 00:42:25,407
+Have a problem tablecloth reach full
+
+535
+00:42:25,663 --> 00:42:28,223
+I'm too for another that's very fair isn't it
+
+536
+00:42:28,479 --> 00:42:32,831
+How can I activate 1.5 bits
+
+537
+00:42:37,695 --> 00:42:39,231
+His Bonita ID
+
+538
+00:42:39,487 --> 00:42:40,767
+How about we trust Shannon
+
+539
+00:42:41,023 --> 00:42:47,167
+I wish I'd not going to do that because that has uniform and Channing says he should go for a uniform probability distribution
+
+540
+00:42:47,423 --> 00:42:52,031
+I think this is short-circuiting having to think huh you just say let's use the entropy
+
+541
+00:42:54,591 --> 00:42:55,359
+Do this
+
+542
+00:42:56,895 --> 00:43:01,247
+So do anyway that maximizes the entropy
+
+543
+00:43:01,759 --> 00:43:04,063
+This one doesn't perfectly maximize the entropy
+
+544
+00:43:04,319 --> 00:43:09,439
+Cuz you can't exactly got a uniform distribution when things come in 8
+
+545
+00:43:10,975 --> 00:43:12,767
+Personifies
+
+546
+00:43:13,023 --> 00:43:13,791
+Right
+
+547
+00:43:14,303 --> 00:43:19,679
+And if you do go ahead and do that and then use the same method your next wedding
+
+548
+00:43:19,935 --> 00:43:24,031
+Pick an action that still gives you
+
+549
+00:43:24,287 --> 00:43:26,591
+The most possible expected information
+
+550
+00:43:26,847 --> 00:43:28,383
+He'll be done in three ways
+
+551
+00:43:30,431 --> 00:43:31,711
+Side
+
+552
+00:43:32,223 --> 00:43:35,551
+This is our first success of using
+
+553
+00:43:36,063 --> 00:43:37,343
+Shannon's Hardware
+
+554
+00:43:38,111 --> 00:43:44,255
+I want prove it to you but feel free to go ahead and find you can find break it and put bandage on it for this
+
+555
+00:43:45,535 --> 00:43:50,911
+If you want you can go to this this post have you doing this
+
+556
+00:43:51,423 --> 00:43:55,007
+What you find is Shannon will get you that in three ways
+
+557
+00:43:55,519 --> 00:43:56,031
+All right
+
+558
+00:43:56,287 --> 00:43:57,311
+Christian death
+
+559
+00:44:04,223 --> 00:44:06,015
+Hi
+
+560
+00:44:14,207 --> 00:44:17,023
+Good sir the comment is
+
+561
+00:44:17,535 --> 00:44:23,679
+You could imagine a world in which you could do an experiment that tells you all about the colors of the bulls and that's irrelevant
+
+562
+00:44:23,935 --> 00:44:26,495
+Finding which one is the the the heavy one
+
+563
+00:44:26,751 --> 00:44:28,799
+And so this tragedy
+
+564
+00:44:29,055 --> 00:44:31,103
+Isn't necessarily going to work
+
+565
+00:44:31,359 --> 00:44:37,503
+Because in not so the world race I hope choose the option that gives you met some information content what you going to do
+
+566
+00:44:37,759 --> 00:44:41,599
+Grab one of those old televisions and switch it on instead of whole black and white stuff
+
+567
+00:44:41,855 --> 00:44:47,999
+Is Eagle Eye on the screen because I have a lot of information, so you're right it's going to be relevant information
+
+568
+00:44:48,255 --> 00:44:54,399
+I didn't this particular case the only information you can generate is relevant information
+
+569
+00:44:54,655 --> 00:44:55,167
+We were lucky
+
+570
+00:44:56,191 --> 00:44:56,703
+So
+
+571
+00:44:56,959 --> 00:44:57,727
+Yes
+
+572
+00:44:57,983 --> 00:45:03,615
+This is a strategy for solving problem puzzles like this
+
+573
+00:45:03,871 --> 00:45:08,735
+You really do need information about what's relevant and that's the real
+
+574
+00:45:08,991 --> 00:45:09,759
+Real message
+
+575
+00:45:10,015 --> 00:45:12,575
+Okay any other questions yes
+
+576
+00:45:38,175 --> 00:45:44,319
+Okay that's a very good question so you could imagine choosing a first weighing that shining says brilliant
+
+577
+00:45:44,575 --> 00:45:49,695
+You got lots of information from that but it got you into some sort of dead-end so have a greedy strategy
+
+578
+00:45:49,951 --> 00:45:53,791
+That isn't the best overall strategy because your first choice
+
+579
+00:45:54,047 --> 00:45:57,375
+May it be nice and informative but then you're stuck
+
+580
+00:45:57,887 --> 00:46:01,215
+Yes very just puzzles with I like that so
+
+581
+00:46:01,471 --> 00:46:07,615
+I'm not telling you to always use a greedy specialty I'm not saying always make your first measurement
+
+582
+00:46:07,871 --> 00:46:11,455
+It's just an interesting
+
+583
+00:46:11,711 --> 00:46:15,039
+This puzzle I got you that a three-ring
+
+584
+00:46:15,551 --> 00:46:20,159
+So a beautiful thing about information theory is it can make your life much easier just have
+
+585
+00:46:20,415 --> 00:46:23,999
+A well-defined objective function that can be a very helpful guide
+
+586
+00:46:24,255 --> 00:46:26,047
+Do what you do me right
+
+587
+00:46:26,303 --> 00:46:30,399
+In general problems like this can have difficulties if you go through a greedy
+
+588
+00:46:30,911 --> 00:46:31,423
+Strategy
+
+589
+00:46:31,679 --> 00:46:32,959
+So do take care
+
+590
+00:46:34,239 --> 00:46:36,031
+All right I never questions
+
+591
+00:46:38,335 --> 00:46:39,359
+Sorry
+
+592
+00:46:42,175 --> 00:46:45,759
+Let's now go back to our idealized
+
+593
+00:46:46,015 --> 00:46:47,551
+Source that we
+
+594
+00:46:48,063 --> 00:46:50,879
+Talked about at the beginning of coin
+
+595
+00:46:51,391 --> 00:46:53,183
+The Bank coin comes up heads
+
+596
+00:46:53,439 --> 00:46:54,463
+10% of the time
+
+597
+00:46:54,975 --> 00:46:56,767
+Entails 90% of the time
+
+598
+00:46:57,535 --> 00:46:58,047
+And
+
+599
+00:46:58,303 --> 00:47:00,095
+I'm going to give you a
+
+600
+00:47:00,351 --> 00:47:02,399
+Possible to think about
+
+601
+00:47:03,935 --> 00:47:04,959
+But next time
+
+602
+00:47:06,239 --> 00:47:07,007
+So
+
+603
+00:47:08,031 --> 00:47:13,919
+I could have been declining Lottery on his way to Ben Cohen Lottery which is rather like the national lottery
+
+604
+00:47:15,455 --> 00:47:19,039
+About to get the winning ticket instead of using a little Bulls
+
+605
+00:47:19,551 --> 00:47:25,183
+Android symbol that we just take a single been calling on we talk that a thousand times
+
+606
+00:47:26,975 --> 00:47:32,095
+So the outcome of that thousand long sequence of Tulsa is is a string
+
+607
+00:47:32,351 --> 00:47:35,423
+X1 X2 upto XN
+
+608
+00:47:36,447 --> 00:47:41,567
+I'm sorry as an example of a possible outcomes at my house earlier ones or
+
+609
+00:47:42,079 --> 00:47:48,223
+Know before they draw that out come by tossing the coin you kind of go to the
+
+610
+00:47:48,479 --> 00:47:49,247
+Lottery
+
+611
+00:47:49,503 --> 00:47:51,295
+Hot and buy tickets
+
+612
+00:47:51,551 --> 00:47:56,415
+An H Ticket available to you each ticket is a great long string of
+
+613
+00:47:56,671 --> 00:47:58,463
+Zeros and ones ordered
+
+614
+00:47:59,231 --> 00:48:02,559
+Okay so you can buy the old zeros ticket if you want
+
+615
+00:48:02,815 --> 00:48:05,375
+You can buy any of the truth The Impossible tickets
+
+616
+00:48:07,423 --> 00:48:11,519
+One once I want has decided tickets that buying
+
+617
+00:48:12,543 --> 00:48:14,591
+If you own the tickets
+
+618
+00:48:14,847 --> 00:48:20,479
+Has x on it where X is the outcome that actually happened then with a million times a billion times
+
+619
+00:48:20,735 --> 00:48:21,759
+Inflation
+
+620
+00:48:22,783 --> 00:48:23,807
+You got a million pounds
+
+621
+00:48:24,063 --> 00:48:30,207
+And anyone who has that ticket gets a billion times right so it's not sad you don't need to worry about sharing with
+
+622
+00:48:30,463 --> 00:48:30,975
+A lot of people
+
+623
+00:48:31,487 --> 00:48:32,511
+Sup
+
+624
+00:48:34,559 --> 00:48:37,887
+The question of why you think about the next time is
+
+625
+00:48:38,655 --> 00:48:44,799
+If a mafia boss said haha we are going to take advantage of this Lottery we're going to ensure that we get a large amount of
+
+626
+00:48:45,055 --> 00:48:46,335
+We're going to get a billion times
+
+627
+00:48:46,847 --> 00:48:49,407
+I will give you Matthew funds
+
+628
+00:48:49,663 --> 00:48:52,479
+You must go in by 11 tickets
+
+629
+00:48:52,735 --> 00:48:54,015
+To ensure that we win a billion
+
+630
+00:48:54,783 --> 00:48:55,551
+Which
+
+631
+00:48:55,807 --> 00:48:56,575
+Tickets
+
+632
+00:48:56,831 --> 00:49:00,927
+Would you buy so the rule from a Mafia Boss is
+
+633
+00:49:01,183 --> 00:49:02,975
+I have a 99% chance
+
+634
+00:49:03,231 --> 00:49:03,999
+Of winning
+
+635
+00:49:04,511 --> 00:49:05,279
+The lottery
+
+636
+00:49:05,535 --> 00:49:08,863
+A minimizing talk to the mafia boss cuz you don't want to rip it off
+
+637
+00:49:09,119 --> 00:49:11,935
+Which tickets would you buy from the ticket
+
+638
+00:49:12,191 --> 00:49:12,703
+Selling
+
+639
+00:49:12,959 --> 00:49:13,471
+Hot
+
+640
+00:49:13,983 --> 00:49:18,079
+Take that question one way ticket to buy your lunch at 9% chance of winning
+
+641
+00:49:18,335 --> 00:49:21,919
+And secondly how many tickets would you then have board
+
+642
+00:49:22,431 --> 00:49:27,295
+Alright please express your answer in the form 2 to the power something
+
+643
+00:49:28,063 --> 00:49:32,415
+So that's a task for you to do before the next lecture
+
+644
+00:49:33,695 --> 00:49:34,463
+And
+
+645
+00:49:37,279 --> 00:49:40,863
+I'd also like to mention purple homework you could be doing if
+
+646
+00:49:41,119 --> 00:49:47,263
+This world a course for real with your Visions on the game since I thought I would be recommending the following exercise
+
+647
+00:49:47,519 --> 00:49:49,567
+I hope you'll find them fun
+
+648
+00:49:50,079 --> 00:49:56,223
+The first exercise we would do for supervision is please invent your own error-correcting code for the
+
+649
+00:49:56,479 --> 00:49:59,551
+Binary symmetric Channel this is going back to the previous left turn now
+
+650
+00:49:59,807 --> 00:50:01,599
+Remember the binary symmetric Channel
+
+651
+00:50:01,855 --> 00:50:05,439
+Which looked at representing codes we looked at the Hamming code
+
+652
+00:50:05,695 --> 00:50:07,487
+I'd like you to invent
+
+653
+00:50:07,999 --> 00:50:11,327
+Another code for the binary symmetric Channel
+
+654
+00:50:11,583 --> 00:50:14,655
+And invented decoding algorithm for your code
+
+655
+00:50:15,423 --> 00:50:18,495
+And estimate the probability of era of the decoding
+
+656
+00:50:18,751 --> 00:50:20,543
+Encoding system that you define that
+
+657
+00:50:21,823 --> 00:50:24,383
+And if you don't like the binary symmetric Channel
+
+658
+00:50:24,639 --> 00:50:30,783
+Feel free to invent your own channel and invent a code for that channel make a problem and be creative
+
+659
+00:50:31,039 --> 00:50:31,807
+Come up with some solutions
+
+660
+00:50:32,575 --> 00:50:37,439
+I'm in the book there some more exercises wish you might want to do which I listed up that
+
+661
+00:50:37,695 --> 00:50:42,559
+I'm finally I'd like you to read no honey chapter one which was last week's lecture notes
+
+662
+00:50:42,815 --> 00:50:44,863
+But chapters 2 and full
+
+663
+00:50:46,399 --> 00:50:51,519
+Next time we'll look at a few more examples and we will try and RAM home
+
+664
+00:50:51,775 --> 00:50:57,919
+The View that the Shannon information content really is the right way to measure information content
+
+665
+00:50:58,943 --> 00:51:00,479
+Thanks for coming see you next week

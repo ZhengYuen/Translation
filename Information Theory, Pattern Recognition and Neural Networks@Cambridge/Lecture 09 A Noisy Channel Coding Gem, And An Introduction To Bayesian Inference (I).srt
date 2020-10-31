@@ -1,0 +1,3263 @@
+1
+00:00:06,400 --> 00:00:12,544
+Okay welcome to lecture number 9 today on main topic is going to be inference inference
+
+2
+00:00:12,800 --> 00:00:16,128
+Parameters for example you do a science experiment
+
+3
+00:00:16,384 --> 00:00:18,432
+And you want to infer the promises
+
+4
+00:00:18,688 --> 00:00:19,968
+Put on the LIE
+
+5
+00:00:20,224 --> 00:00:22,016
+Happy data you've got
+
+6
+00:00:22,272 --> 00:00:24,320
+But before we do that I want to
+
+7
+00:00:24,576 --> 00:00:29,184
+Point to a little gem of information Siri
+
+8
+00:00:29,440 --> 00:00:31,232
+You may not have noticed
+
+9
+00:00:32,000 --> 00:00:35,072
+I'd like us to start by thinking about
+
+10
+00:00:36,352 --> 00:00:38,144
+The binary Erasure Channel
+
+11
+00:00:38,400 --> 00:00:44,544
+What we did in the last couple of lectures was re-established Shannon's noisy Channel coding theorem that says
+
+12
+00:00:44,800 --> 00:00:48,896
+Any channel you can work out his capacity by maximizing Mutual information
+
+13
+00:00:49,152 --> 00:00:55,296
+And then it possible to make an encode and decode of it communicate reliably over.
+
+14
+00:00:55,552 --> 00:00:56,064
+Channel
+
+15
+00:00:57,600 --> 00:01:03,744
+Reliably meaning you can get the error probability as close as you like to zero but you can always communication anyway
+
+16
+00:01:04,000 --> 00:01:05,536
+Right up to the capacity
+
+17
+00:01:06,048 --> 00:01:09,632
+What's the capacity of the binary AirAsia
+
+18
+00:01:09,888 --> 00:01:11,168
+Channel please
+
+19
+00:01:11,424 --> 00:01:12,960
+Have a quick chat to your neighbor
+
+20
+00:01:14,240 --> 00:01:15,008
+Here's a question
+
+21
+00:01:15,264 --> 00:01:18,336
+And I'll go sold it over here in just one minute
+
+22
+00:01:23,712 --> 00:01:28,064
+So there's only two ways you can solve these questions
+
+23
+00:01:28,320 --> 00:01:32,160
+You can either work out the mutual information this way around
+
+24
+00:01:33,440 --> 00:01:34,464
+Or
+
+25
+00:01:34,720 --> 00:01:36,768
+People around
+
+26
+00:01:42,400 --> 00:01:44,704
+And often one way is easier than the other
+
+27
+00:01:46,752 --> 00:01:48,032
+So let's do this
+
+28
+00:01:48,544 --> 00:01:51,360
+Binary Erasure Channel both ways round
+
+29
+00:01:51,616 --> 00:01:53,408
+I'll generalize a little bit
+
+30
+00:01:53,664 --> 00:01:55,456
+So that we're putting in
+
+31
+00:01:55,968 --> 00:02:02,112
+P0 and P1 because I'll pretend we don't know that the optimal optimal input distribution
+
+32
+00:02:02,368 --> 00:02:03,648
+Coolest have to be symmetric
+
+33
+00:02:04,928 --> 00:02:09,280
+And I'll call these probabilities
+
+34
+00:02:11,072 --> 00:02:16,192
+If we do it this way the first time is binary entropy of Tino's
+
+35
+00:02:16,704 --> 00:02:22,848
+And then the second time we need to think through all the different ways that could happen not quite a lot of what we need to think
+
+36
+00:02:23,104 --> 00:02:23,872
+Free things
+
+37
+00:02:24,128 --> 00:02:28,480
+Figure out how probable they are then look at what the entropy of x given Y is
+
+38
+00:02:28,736 --> 00:02:33,856
+That's quite a lot of work except almost all of it is easy if you got a zero you know that
+
+39
+00:02:34,112 --> 00:02:35,904
+Input was a zero so
+
+40
+00:02:36,928 --> 00:02:38,464
+There's no entry in that case
+
+41
+00:02:39,488 --> 00:02:41,280
+Simulate if apple is a Wong
+
+42
+00:02:42,048 --> 00:02:48,192
+Send input doesn't have any entropy anymore it's only if the? Comes out which happens with Provera
+
+43
+00:02:49,216 --> 00:02:51,008
+By hooker by crook
+
+44
+00:02:51,776 --> 00:02:56,896
+Then you still don't know what the input was any information at all about football
+
+45
+00:02:57,152 --> 00:02:59,712
+Posterior distribution of Empire is still
+
+46
+00:02:59,968 --> 00:03:01,504
+The same as it was when we started
+
+47
+00:03:01,760 --> 00:03:05,088
+So
+
+48
+00:03:06,368 --> 00:03:07,392
+Which is
+
+49
+00:03:07,904 --> 00:03:09,440
+Take 15 off
+
+50
+00:03:09,696 --> 00:03:11,232
+-1 -
+
+51
+00:03:11,744 --> 00:03:14,816
+Maximize that with respect to Pinos
+
+52
+00:03:15,328 --> 00:03:17,120
+You end up with Pinot equals 1/2
+
+53
+00:03:17,376 --> 00:03:19,424
+If you want X
+
+54
+00:03:23,776 --> 00:03:24,288
+Okay
+
+55
+00:03:25,568 --> 00:03:30,688
+So usually doing it this way around is a bit hard cuz you have to think about lots of
+
+56
+00:03:30,944 --> 00:03:36,064
+Inferences but in this case those three inferences were fairly easy so this was a nice route
+
+57
+00:03:36,576 --> 00:03:37,344
+For solving this
+
+58
+00:03:38,624 --> 00:03:44,768
+Open early we could have worked out the entropy of why that means you need to work out the identity of the probability
+
+59
+00:03:45,024 --> 00:03:46,560
+Why
+
+60
+00:03:46,816 --> 00:03:51,936
+Being zero why being?
+
+61
+00:03:52,192 --> 00:03:53,984
+And why she ain't
+
+62
+00:03:54,240 --> 00:03:57,568
+One and you could lavoris a workout those three
+
+63
+00:03:58,080 --> 00:04:01,152
+Numbers the probability of getting a 0 out
+
+64
+00:04:01,408 --> 00:04:02,432
+Is
+
+65
+00:04:03,712 --> 00:04:07,808
+0 *
+
+66
+00:04:08,320 --> 00:04:09,856
+One nice ass
+
+67
+00:04:10,368 --> 00:04:16,512
+Etc so you could work out those three numbers then you have a big massive stuff to put into the entropy company
+
+68
+00:04:16,768 --> 00:04:21,119
+3 *
+
+69
+00:04:21,375 --> 00:04:23,423
+So that looks like a turbo to work
+
+70
+00:04:23,935 --> 00:04:26,495
+Then secondly we want the ad field why
+
+71
+00:04:26,751 --> 00:04:27,775
+Given X
+
+72
+00:04:28,287 --> 00:04:31,871
+That's easier because if you condition on a particular
+
+73
+00:04:32,383 --> 00:04:33,407
+X coming in
+
+74
+00:04:33,663 --> 00:04:39,807
+Then the entry why is was just a choice between 0 or?? And the entropy of that distribution
+
+75
+00:04:40,063 --> 00:04:46,207
+Is the same either way around it's just H2O that was an easy thing this is looking horrendous but I want
+
+76
+00:04:46,463 --> 00:04:47,487
+To introduce you
+
+77
+00:04:47,743 --> 00:04:53,887
+To a little of property of entropy which recover decomposability
+
+78
+00:04:57,471 --> 00:05:00,799
+This is not virgin sorry we're getting to the gym in a moment
+
+79
+00:05:01,567 --> 00:05:03,615
+I think a possibility
+
+80
+00:05:03,871 --> 00:05:08,479
+You can if you want work out the entropy of a distribution over several
+
+81
+00:05:08,735 --> 00:05:10,271
+Characters in alphabet
+
+82
+00:05:12,063 --> 00:05:12,575
+Fight
+
+83
+00:05:12,831 --> 00:05:18,975
+Imagining that you learned the character in a sequence of steps and add up how much xp you get on average at 8
+
+84
+00:05:19,231 --> 00:05:19,999
+Each of those steps
+
+85
+00:05:20,511 --> 00:05:22,815
+You could imagine finding out
+
+86
+00:05:23,071 --> 00:05:23,839
+Is
+
+87
+00:05:24,095 --> 00:05:26,655
+The character that came out a? Or not
+
+88
+00:05:27,167 --> 00:05:28,191
+I'm Reno
+
+89
+00:05:28,447 --> 00:05:31,519
+That the fraction of question marks coming out is always f
+
+90
+00:05:31,775 --> 00:05:33,823
+Doesn't matter what input distribution you vote for
+
+91
+00:05:35,615 --> 00:05:37,151
+We can say first
+
+92
+00:05:37,919 --> 00:05:39,199
+What's the?
+
+93
+00:05:39,455 --> 00:05:40,223
+And then
+
+94
+00:05:40,991 --> 00:05:42,271
+If not
+
+95
+00:05:42,527 --> 00:05:43,807
+What was it
+
+96
+00:05:46,111 --> 00:05:46,879
+And
+
+97
+00:05:47,135 --> 00:05:49,183
+Then and fee of Y
+
+98
+00:05:49,439 --> 00:05:54,559
+Is the sum of the amount event for you guys to teach with her stepfather first you got the entropy
+
+99
+00:05:54,815 --> 00:05:56,607
+Ask
+
+100
+00:05:56,863 --> 00:05:59,167
+Stefania is a? Or something else
+
+101
+00:06:00,703 --> 00:06:01,727
+Then
+
+102
+00:06:03,007 --> 00:06:06,079
+With probability 1 - at it's something else
+
+103
+00:06:06,591 --> 00:06:08,383
+And then you got the entropy
+
+104
+00:06:08,895 --> 00:06:13,759
+Of finding out whether it's a zero or one given that you know that it's not a?
+
+105
+00:06:14,015 --> 00:06:18,367
+The probability of 0 or 1 if you know it's not a? That's coming out
+
+106
+00:06:18,623 --> 00:06:21,183
+Is just the same as Pinot who he wants the same
+
+107
+00:06:21,439 --> 00:06:24,511
+Bryce Sheffer to the entry of that is
+
+108
+00:06:25,279 --> 00:06:26,559
+H-2a peanut
+
+109
+00:06:28,351 --> 00:06:30,399
+Okay sorry that
+
+110
+00:06:30,655 --> 00:06:33,727
+In the textbook as well if you want to read up on
+
+111
+00:06:33,983 --> 00:06:35,519
+Clarify what I just told you
+
+112
+00:06:35,775 --> 00:06:40,639
+You can make life easy for yourself by being smart about high computer interface
+
+113
+00:06:40,895 --> 00:06:44,223
+So this was looking hairy but it's not too hairy when we did it that way
+
+114
+00:06:44,735 --> 00:06:49,087
+Answer the answer comes out to be useful information is equal to
+
+115
+00:06:49,343 --> 00:06:51,135
+This wall switch is HVAC
+
+116
+00:06:51,391 --> 00:06:54,207
+Prefer
+
+117
+00:06:54,463 --> 00:06:55,999
++ 1 - at
+
+118
+00:06:56,255 --> 00:06:58,559
+Translate Filipino
+
+119
+00:06:59,583 --> 00:07:02,143
+Minus this thing which is a true that
+
+120
+00:07:02,399 --> 00:07:05,727
+We have a grand cancellation of H20
+
+121
+00:07:06,239 --> 00:07:11,103
+I molested by myself h2p note as we had before when you maximize at the capacity
+
+122
+00:07:14,431 --> 00:07:14,943
+Is
+
+123
+00:07:15,199 --> 00:07:16,223
+Who am I
+
+124
+00:07:18,015 --> 00:07:24,159
+What time does the capacity I want to go back to this diagram everything we talked about
+
+125
+00:07:24,415 --> 00:07:28,255
+Annoy Channel coding said let them out then we go to noisy Channel
+
+126
+00:07:28,511 --> 00:07:31,583
+I'm going to slap a clever and coder on the front
+
+127
+00:07:31,839 --> 00:07:36,191
+Looking to add a clip of Dakota that does inference during the input balls
+
+128
+00:07:36,959 --> 00:07:41,823
+How fast can we communicate
+
+129
+00:07:42,079 --> 00:07:45,919
+For this particular channel the answer is you can communicate at a rate
+
+130
+00:07:48,223 --> 00:07:52,063
+One- at Paris
+
+131
+00:07:52,831 --> 00:07:53,855
+That's achievable
+
+132
+00:07:55,391 --> 00:07:56,159
+Nah
+
+133
+00:07:57,695 --> 00:08:01,535
+Imagine that we had introduced a completely different topic
+
+134
+00:08:01,791 --> 00:08:02,559
+Cooled
+
+135
+00:08:03,327 --> 00:08:09,471
+Noisy Channel coding with feedback so I'm going to change Instagram now I'm going to mention the completely different diagram
+
+136
+00:08:09,983 --> 00:08:12,031
+Where everything that comes out of the channel
+
+137
+00:08:12,799 --> 00:08:13,823
+Get back
+
+138
+00:08:14,079 --> 00:08:15,359
+And is available
+
+139
+00:08:17,151 --> 00:08:18,175
+To the encoder
+
+140
+00:08:18,687 --> 00:08:20,223
+Why are the different diagram
+
+141
+00:08:20,735 --> 00:08:23,039
+He's got an extra communication link
+
+142
+00:08:23,551 --> 00:08:27,647
+Back from the end of the channel to the encoder exactly what's going on
+
+143
+00:08:28,159 --> 00:08:29,695
+So if the encoder
+
+144
+00:08:29,951 --> 00:08:30,719
+Send
+
+145
+00:08:30,975 --> 00:08:35,327
+For example 10010
+
+146
+00:08:37,119 --> 00:08:39,423
+And what comes after the channel Mike
+
+147
+00:08:39,679 --> 00:08:40,191
+Happy
+
+148
+00:08:40,447 --> 00:08:41,727
+?
+
+149
+00:08:41,983 --> 00:08:43,519
+There's a rug?
+
+150
+00:08:43,775 --> 00:08:44,287
+Is there a
+
+151
+00:08:44,799 --> 00:08:46,079
+11?
+
+152
+00:08:48,383 --> 00:08:49,407
+No
+
+153
+00:08:50,175 --> 00:08:56,319
+What's the answer to the question how fast can you communicate over this channel given that you've got feedback available
+
+154
+00:08:56,575 --> 00:08:58,111
+Am I completely change the game right
+
+155
+00:08:58,879 --> 00:09:05,023
+Because the sort of encoding trait you could not use is you could just say while I'm going to listen to my output
+
+156
+00:09:05,279 --> 00:09:06,303
+?
+
+157
+00:09:06,559 --> 00:09:08,863
+I will retransmit it was just lost
+
+158
+00:09:09,119 --> 00:09:11,167
+Cuz I know that I didn't receive anything
+
+159
+00:09:11,679 --> 00:09:13,215
+So I'll just Ricans match
+
+160
+00:09:13,471 --> 00:09:14,239
+So you wouldn't
+
+161
+00:09:14,495 --> 00:09:15,263
+Use
+
+162
+00:09:16,031 --> 00:09:17,055
+First story
+
+163
+00:09:17,311 --> 00:09:22,431
+If you had the? You're trying to send one
+
+164
+00:09:22,687 --> 00:09:24,479
+What you would send would be
+
+165
+00:09:27,039 --> 00:09:27,551
+So
+
+166
+00:09:27,807 --> 00:09:28,831
+This is original
+
+167
+00:09:29,343 --> 00:09:30,111
+Sure
+
+168
+00:09:31,647 --> 00:09:33,439
+And then your transmission
+
+169
+00:09:35,999 --> 00:09:39,839
+Would be assuming that a question mark happened at the fourth
+
+170
+00:09:43,423 --> 00:09:44,703
+What were you trying to make
+
+171
+00:09:44,959 --> 00:09:45,983
+You would transmit
+
+172
+00:09:46,495 --> 00:09:52,639
+100 again because?
+
+173
+00:09:52,895 --> 00:09:53,663
+And then
+
+174
+00:09:55,199 --> 00:09:58,015
+Okay I think that the next one is a Wong
+
+175
+00:09:58,527 --> 00:09:59,295
+So that gets
+
+176
+00:09:59,551 --> 00:10:01,599
+Lost is not a?
+
+177
+00:10:02,367 --> 00:10:03,647
+Insight transmit again
+
+178
+00:10:04,671 --> 00:10:07,231
+Satan would just clear the manager at on the bus
+
+179
+00:10:08,255 --> 00:10:09,535
+Okay you keep on
+
+180
+00:10:10,815 --> 00:10:13,375
+Transmission symbol until it is correctly received
+
+181
+00:10:15,167 --> 00:10:20,031
+What's the rate you're going to be able to achieve with that clever scheme is making use of this feedback
+
+182
+00:10:20,287 --> 00:10:22,079
+Habitats your neighbor
+
+183
+00:10:27,199 --> 00:10:27,967
+Anyone
+
+184
+00:10:28,223 --> 00:10:30,783
+What rate can you communicate.
+
+185
+00:10:31,295 --> 00:10:33,087
+If you ain't used to the red tape I think
+
+186
+00:10:34,623 --> 00:10:35,391
+On average
+
+187
+00:10:43,071 --> 00:10:43,839
+So
+
+188
+00:10:45,375 --> 00:10:51,519
+If you just imagine how much of the time you spend successfully communicating it's whenever the wrong? You have
+
+189
+00:10:51,775 --> 00:10:52,287
+Channel
+
+190
+00:10:52,799 --> 00:10:53,823
+That was a?
+
+191
+00:10:54,335 --> 00:10:54,847
+Coming out
+
+192
+00:10:55,103 --> 00:10:57,407
+You want a cheap and reliable communication atoll
+
+193
+00:10:58,431 --> 00:11:00,735
+And the fraction of time?
+
+194
+00:11:01,503 --> 00:11:06,111
+So the rate at which all communicating using the steam link is
+
+195
+00:11:09,951 --> 00:11:11,743
+Any questions anyone
+
+196
+00:11:12,511 --> 00:11:13,535
+Not clear on this
+
+197
+00:11:17,375 --> 00:11:18,655
+Yes so
+
+198
+00:11:19,679 --> 00:11:25,823
+When are the possible question marks in a row you just keep on retransmitting until what comes after the channel is nothing
+
+199
+00:11:26,079 --> 00:11:26,591
+?
+
+200
+00:11:28,383 --> 00:11:29,663
+Retransmitting
+
+201
+00:11:30,687 --> 00:11:34,527
+Doesn't affect this argument the argument is if this is time
+
+202
+00:11:35,039 --> 00:11:36,319
+But if you send
+
+203
+00:11:36,831 --> 00:11:38,879
+Symbols on the some of them
+
+204
+00:11:39,135 --> 00:11:40,671
+Got time to the question marks
+
+205
+00:11:43,743 --> 00:11:48,095
+Then you're going to be successful in communicating in all of these
+
+206
+00:11:50,399 --> 00:11:52,191
+Vincent's hair
+
+207
+00:11:53,471 --> 00:11:55,519
+Whether or not?
+
+208
+00:11:58,591 --> 00:12:01,663
+Every time does not a? You will have thought the next bit across
+
+209
+00:12:02,431 --> 00:12:03,455
+Does not relevant
+
+210
+00:12:03,711 --> 00:12:09,855
+Whether the? Cluster together every time there is any? The next bit will humping
+
+211
+00:12:10,111 --> 00:12:10,623
+Next one in the file
+
+212
+00:12:11,647 --> 00:12:12,415
+All right
+
+213
+00:12:14,719 --> 00:12:18,815
+When you see back you all communication on averages race 1 -
+
+214
+00:12:19,327 --> 00:12:21,119
+Woman's that Bit Spur
+
+215
+00:12:21,375 --> 00:12:22,655
+Units of time
+
+216
+00:12:23,167 --> 00:12:24,191
+Use of the channel
+
+217
+00:12:25,471 --> 00:12:27,263
+Oh my goodness that's the time
+
+218
+00:12:29,823 --> 00:12:35,967
+So we added feedback which made life much easier for us but it hasn't actually increase the rate at which we can
+
+219
+00:12:36,223 --> 00:12:39,807
+Communicate
+
+220
+00:12:40,575 --> 00:12:42,623
+And Shawna is saying
+
+221
+00:12:43,135 --> 00:12:49,279
+Should we redo all of information Theory to include feedback I'm answer is no
+
+222
+00:12:49,791 --> 00:12:55,935
+You don't need feedback just use around them code just use a really small writing to make an appropriate
+
+223
+00:12:56,191 --> 00:12:59,775
+Dakota and you don't need to buy feedback doesn't actually help you communicate
+
+224
+00:13:00,031 --> 00:13:00,799
+Antipasto
+
+225
+00:13:01,055 --> 00:13:02,591
+So that's a gym for me
+
+226
+00:13:07,967 --> 00:13:11,295
+And there are araiza correcting codeschool Fountain codes
+
+227
+00:13:11,551 --> 00:13:13,087
+Cuz a lot of you to communicate
+
+228
+00:13:13,343 --> 00:13:17,183
+Almost at the capacity of Arabia channels and finding codes are
+
+229
+00:13:17,439 --> 00:13:18,975
+In chapter 50 of
+
+230
+00:13:19,231 --> 00:13:19,999
+The textbook
+
+231
+00:13:21,279 --> 00:13:22,559
+Any questions
+
+232
+00:13:31,007 --> 00:13:35,359
+Okay question is what if you had errors in the feedback Channel sometimes
+
+233
+00:13:35,615 --> 00:13:36,639
+Then what would you do
+
+234
+00:13:36,895 --> 00:13:43,039
+Enchanted looks like I'm not going to use a feedback anyway cuz he's not helping so it could make things with us if
+
+235
+00:13:43,295 --> 00:13:45,343
+You trusted the feedback and it wasn't trustworthy
+
+236
+00:13:45,599 --> 00:13:46,623
+We don't need it
+
+237
+00:13:49,183 --> 00:13:49,951
+Okay
+
+238
+00:13:51,487 --> 00:13:52,767
+On Riverside
+
+239
+00:13:53,791 --> 00:13:55,839
+Let's not talk about inference
+
+240
+00:13:56,095 --> 00:13:57,375
+And I'm going to
+
+241
+00:13:57,631 --> 00:13:59,423
+In this lecture look at
+
+242
+00:13:59,935 --> 00:14:00,959
+A very simple
+
+243
+00:14:01,471 --> 00:14:02,751
+Inference problem
+
+244
+00:14:03,263 --> 00:14:05,823
+People often work with gasoline distribution
+
+245
+00:14:06,079 --> 00:14:12,223
+We'll look at the gasoline distribution for this lecture but I will rapidly moves on to other morning
+
+246
+00:14:12,479 --> 00:14:14,015
+Distribution
+
+247
+00:14:14,271 --> 00:14:15,807
+For gas station
+
+248
+00:14:16,063 --> 00:14:21,439
+It doesn't really change your life to say I now I'm going to learn how to do in France right because
+
+249
+00:14:21,951 --> 00:14:24,767
+The extended methods of dealing with thousands are already fine
+
+250
+00:14:25,023 --> 00:14:27,071
+But I'm going to talk to you
+
+251
+00:14:27,327 --> 00:14:33,215
+In the next lecture but when you look at other problems apart from inferring the mean and standard deviation of the Galaxy
+
+252
+00:14:33,471 --> 00:14:39,103
+It can transform your life when you learn how to actually do things right instead of using ad hoc Curry's
+
+253
+00:14:42,175 --> 00:14:42,943
+Stop
+
+254
+00:14:44,223 --> 00:14:46,271
+The general topic were discussing now
+
+255
+00:14:46,783 --> 00:14:48,575
+Is inference
+
+256
+00:14:49,087 --> 00:14:52,415
+Amazon motivations you might have for doing inference
+
+257
+00:14:52,671 --> 00:14:55,231
+Maybe we'll doing
+
+258
+00:14:55,487 --> 00:14:57,023
+Cosmology
+
+259
+00:14:57,279 --> 00:15:02,399
+Android unknown cosmological parameters used some nice big expensive
+
+260
+00:15:02,655 --> 00:15:03,935
+Telescopes and
+
+261
+00:15:04,191 --> 00:15:05,471
+Stop lights and things
+
+262
+00:15:05,727 --> 00:15:10,591
+And those underlying political private has like Hubble constant in the matzav
+
+263
+00:15:10,847 --> 00:15:16,991
+Dark matter in this month give rise to Cosmic microwave background radiation fluctuations
+
+264
+00:15:18,527 --> 00:15:22,111
+And you measure those measurements
+
+265
+00:15:23,135 --> 00:15:25,439
+Open imperfect noisy measurements
+
+266
+00:15:26,719 --> 00:15:29,535
+I may be upset stupid IV as well
+
+267
+00:15:31,583 --> 00:15:36,703
+Oops I should have gone half that cools by the same as long as a new measure
+
+268
+00:15:38,495 --> 00:15:40,031
+Properties of a supernova
+
+269
+00:15:40,287 --> 00:15:43,103
+And then having made over those measurements
+
+270
+00:15:46,943 --> 00:15:49,759
+We want to infer okay what do we believe about
+
+271
+00:15:50,527 --> 00:15:53,087
+Infer
+
+272
+00:15:56,415 --> 00:16:00,511
+Is another motivation maybe you still use email
+
+273
+00:16:00,767 --> 00:16:05,887
+And when you receive emails is email wrong email to insightful
+
+274
+00:16:06,143 --> 00:16:12,031
+There is an underlying variable that you might care about which is actually a piece of spam or not
+
+275
+00:16:13,567 --> 00:16:17,407
+This is a variable cold-weather this particular item is spam
+
+276
+00:16:17,919 --> 00:16:21,759
+9022 email
+
+277
+00:16:22,015 --> 00:16:23,807
+And to save your time
+
+278
+00:16:24,319 --> 00:16:28,159
+How to save the OS infinite amounts of time
+
+279
+00:16:28,415 --> 00:16:32,255
+Delete this time yourself you'd like to have an automated method of just looking at the email
+
+280
+00:16:32,511 --> 00:16:33,535
+And inferring
+
+281
+00:16:33,791 --> 00:16:36,351
+This spam variable
+
+282
+00:16:41,471 --> 00:16:43,519
+So you might want to spam filter
+
+283
+00:16:44,287 --> 00:16:46,591
+What's the matter examples
+
+284
+00:16:47,103 --> 00:16:48,895
+We might be wanting to do
+
+285
+00:16:49,151 --> 00:16:50,431
+Image recognition
+
+286
+00:16:50,943 --> 00:16:52,223
+Speech recognition
+
+287
+00:16:52,735 --> 00:16:54,271
+Character recognition
+
+288
+00:17:01,183 --> 00:17:02,207
+Image Direct
+
+289
+00:17:02,463 --> 00:17:03,743
+Speech Rec
+
+290
+00:17:08,095 --> 00:17:09,119
+Character
+
+291
+00:17:09,375 --> 00:17:12,191
+Recognition printed or handwritten
+
+292
+00:17:12,447 --> 00:17:13,471
+Characters
+
+293
+00:17:15,519 --> 00:17:17,567
+On the general pattern is
+
+294
+00:17:18,591 --> 00:17:21,407
+Does something on the left hand side which is the underlying
+
+295
+00:17:21,663 --> 00:17:27,807
+Message I think we care about and what comes out on the right is sensitive data that depends on that we want to turn the air around
+
+296
+00:17:28,063 --> 00:17:29,343
+And then further thing
+
+297
+00:17:29,855 --> 00:17:32,415
+On the left hand side on the line cordless
+
+298
+00:17:34,719 --> 00:17:35,743
+Okay
+
+299
+00:17:36,767 --> 00:17:38,815
+Just getting back to spawn example
+
+300
+00:17:39,071 --> 00:17:42,655
+DeSoto way you might imagine handling spam
+
+301
+00:17:42,911 --> 00:17:44,447
+As you might imagine
+
+302
+00:17:45,215 --> 00:17:51,359
+Females living in a Face-Off email and real emails to you that you do want to read
+
+303
+00:17:51,615 --> 00:17:53,663
+My thoughts before Linda cluster
+
+304
+00:17:53,919 --> 00:17:54,943
+Emails about
+
+305
+00:17:55,199 --> 00:17:57,247
+Wind power emails about
+
+306
+00:17:58,783 --> 00:18:00,063
+Bayesian inference
+
+307
+00:18:01,343 --> 00:18:07,487
+Emails about spam clusters
+
+308
+00:18:07,743 --> 00:18:10,047
+And I need to golf spam about
+
+309
+00:18:10,815 --> 00:18:15,167
+Russian lessons nigerians and insightful
+
+310
+00:18:16,447 --> 00:18:18,239
+Different colors of pills
+
+311
+00:18:18,751 --> 00:18:19,775
+And we want to
+
+312
+00:18:20,799 --> 00:18:21,823
+Infer
+
+313
+00:18:22,079 --> 00:18:23,615
+These clusters and
+
+314
+00:18:25,407 --> 00:18:26,943
+Reliably identify
+
+315
+00:18:27,199 --> 00:18:29,503
+The stuff in the Clusters that we do care about
+
+316
+00:18:30,015 --> 00:18:33,855
+So you think of spam as maybe being clustering problem and string
+
+317
+00:18:34,111 --> 00:18:36,671
+I'm next time all the time after
+
+318
+00:18:39,999 --> 00:18:42,815
+Kevin Hogan
+
+319
+00:18:45,119 --> 00:18:46,655
+And given how prevalent
+
+320
+00:18:47,679 --> 00:18:49,983
+Videos of dancing distributions is
+
+321
+00:18:50,239 --> 00:18:53,055
+Let's chat a little bit of a problem
+
+322
+00:18:53,567 --> 00:18:57,663
+Where what going on is that the mean and the standard deviation
+
+323
+00:18:57,919 --> 00:18:59,711
+An outcrop some data
+
+324
+00:18:59,967 --> 00:19:01,247
+X1
+
+325
+00:19:02,015 --> 00:19:03,039
+Through
+
+326
+00:19:03,295 --> 00:19:05,087
+At 10
+
+327
+00:19:05,599 --> 00:19:08,415
+My notation that I'll try and use consistently
+
+328
+00:19:08,671 --> 00:19:11,999
+Is in general ends going to be the amount of data we get
+
+329
+00:19:12,255 --> 00:19:18,399
+Little and is always going to run from warm to end whenever you see a suffix you can usually info it goes up to
+
+330
+00:19:18,655 --> 00:19:19,423
+Without me saying
+
+331
+00:19:19,679 --> 00:19:22,495
+Also animals and try to use the same
+
+332
+00:19:22,751 --> 00:19:23,263
+Latha
+
+333
+00:19:23,519 --> 00:19:24,543
+Fairly consistently
+
+334
+00:19:26,591 --> 00:19:27,103
+All right
+
+335
+00:19:27,359 --> 00:19:33,503
+And this is a gaussian distribution started to be completely explicit P of X and given you an Sigma
+
+336
+00:19:33,759 --> 00:19:38,623
+1 / square root of 2
+
+337
+00:19:38,879 --> 00:19:41,951
+8 - x - news
+
+338
+00:19:42,719 --> 00:19:43,999
+Scrap OVA
+
+339
+00:19:44,511 --> 00:19:46,815
+Two Sigma squared
+
+340
+00:19:48,607 --> 00:19:49,119
+Hummus
+
+341
+00:19:49,375 --> 00:19:55,007
+And the test is we want to infer and sigma
+
+342
+00:19:55,775 --> 00:19:56,799
+Kevin
+
+343
+00:19:58,079 --> 00:19:58,847
+Are they tough
+
+344
+00:19:59,359 --> 00:20:00,895
+Right
+
+345
+00:20:02,431 --> 00:20:03,455
+Let's do that
+
+346
+00:20:14,719 --> 00:20:16,767
+So let's walk through
+
+347
+00:20:17,023 --> 00:20:19,327
+The world looking in
+
+348
+00:20:19,839 --> 00:20:25,215
+And it's good to always distinguish Two Worlds one is hypoxia space where parameters live
+
+349
+00:20:25,983 --> 00:20:32,127
+And another is the weather Wednesday to lift and in this case confusingly they both look kind of similar to each other
+
+350
+00:20:32,383 --> 00:20:38,015
+Because the unknown mean could be anywhere on the real line and the day to come on the real line
+
+351
+00:20:38,271 --> 00:20:38,783
+But
+
+352
+00:20:39,039 --> 00:20:45,183
+I'll try to keep track of when we talk about a date axis label acts and when are we talkin about
+
+353
+00:20:45,695 --> 00:20:48,511
+A hypothesis actress that might be labeled mute
+
+354
+00:20:49,535 --> 00:20:55,679
+All of the data points come along the stage right
+
+355
+00:20:55,935 --> 00:20:56,447
+Stigma
+
+356
+00:20:56,703 --> 00:20:59,775
+I mentioned to her as well the one way of telling the difference
+
+357
+00:21:00,031 --> 00:21:06,175
+Is sometimes will show of you I just found the cigarettes at 62 dimensions
+
+358
+00:21:06,431 --> 00:21:10,783
+Is a one-dimensional picture and it shows
+
+359
+00:21:11,039 --> 00:21:16,159
+Poor 6 possible different settings of Mew and sigma
+
+360
+00:21:16,416 --> 00:21:22,560
+All of which happen to have the same but he was Sigma the prediction about the data would be so Visa
+
+361
+00:21:22,816 --> 00:21:24,096
+Send it down c&n citiz
+
+362
+00:21:24,352 --> 00:21:25,376
+But different values
+
+363
+00:21:25,632 --> 00:21:26,912
+Of Mew and sigma
+
+364
+00:21:27,424 --> 00:21:28,704
+Diesel half and half
+
+365
+00:21:29,216 --> 00:21:30,240
+Different
+
+366
+00:21:30,496 --> 00:21:33,056
+And the same better Sigma named Eliza Griswold
+
+367
+00:21:33,824 --> 00:21:35,616
+Okay next
+
+368
+00:21:37,408 --> 00:21:41,504
+Here are another six possible hypotheses about
+
+369
+00:21:41,760 --> 00:21:42,528
+Where
+
+370
+00:21:43,296 --> 00:21:44,832
+The news all happen to be the same
+
+371
+00:21:45,088 --> 00:21:47,648
+On the standard deviations vary from .5
+
+372
+00:21:47,904 --> 00:21:48,672
+Up to
+
+373
+00:21:48,928 --> 00:21:53,536
+So what did I do that I just stumbled around in the hypothesis space
+
+374
+00:21:54,048 --> 00:22:00,192
+And showed you one two three four five six points in this two-dimensional space here
+
+375
+00:22:00,448 --> 00:22:03,008
+Maybe I'll quickly get rid of Vegas Facebook
+
+376
+00:22:04,288 --> 00:22:06,592
+So I showed you six
+
+377
+00:22:07,104 --> 00:22:07,616
+9
+
+378
+00:22:08,896 --> 00:22:09,920
+6 hypotheses
+
+379
+00:22:11,456 --> 00:22:17,088
+Like this in data space
+
+380
+00:22:17,344 --> 00:22:22,720
+What each of those products or any particular one of these makes its own production in the database
+
+381
+00:22:22,976 --> 00:22:23,744
+Which looks
+
+382
+00:22:25,792 --> 00:22:29,120
+Besides that's what I'd expect today to be like if I am true
+
+383
+00:22:30,656 --> 00:22:33,216
+Okay here are
+
+384
+00:22:33,472 --> 00:22:38,592
+Another different from each other
+
+385
+00:22:39,360 --> 00:22:42,432
+And you and sigma slice each one of them are shown it
+
+386
+00:22:42,688 --> 00:22:43,200
+Predictions
+
+387
+00:22:43,712 --> 00:22:44,224
+And
+
+388
+00:22:44,736 --> 00:22:45,504
+Thai Spice
+
+389
+00:22:46,784 --> 00:22:47,552
+Okay
+
+390
+00:22:49,600 --> 00:22:51,136
+How to do inference
+
+391
+00:22:51,648 --> 00:22:53,440
+Mew and sigma
+
+392
+00:22:53,696 --> 00:22:57,024
+This is the correct way to do inference you get your data
+
+393
+00:22:57,280 --> 00:22:59,072
+Hey I'm telling you want to go 5
+
+394
+00:22:59,328 --> 00:23:00,352
+Datapoints
+
+395
+00:23:00,608 --> 00:23:02,400
+Which will arrive at these horizontal
+
+396
+00:23:02,656 --> 00:23:04,192
+Coordinates Hannah I just slept
+
+397
+00:23:04,448 --> 00:23:05,216
+Above
+
+398
+00:23:06,496 --> 00:23:07,008
+The line
+
+399
+00:23:08,032 --> 00:23:09,824
+Coventry Y coordinates
+
+400
+00:23:10,848 --> 00:23:12,384
+Right
+
+401
+00:23:12,896 --> 00:23:14,944
+What does Bayes theorem say you should do
+
+402
+00:23:15,456 --> 00:23:17,504
+Well you should update
+
+403
+00:23:18,016 --> 00:23:19,296
+Your beliefs
+
+404
+00:23:20,064 --> 00:23:24,672
+About me at Sigma in proportion to how well each of those bodies of Mew and sigma
+
+405
+00:23:24,928 --> 00:23:26,720
+Predicted
+
+406
+00:23:35,424 --> 00:23:39,776
+FaceTime says how provolone
+
+407
+00:23:40,800 --> 00:23:42,592
+Is
+
+408
+00:23:42,848 --> 00:23:45,152
+How well they predicting today Utah
+
+409
+00:23:46,688 --> 00:23:49,760
+X how profitable
+
+410
+00:23:50,016 --> 00:23:51,296
+Before you.
+
+411
+00:23:51,808 --> 00:23:54,368
+Normalize
+
+412
+00:23:57,184 --> 00:24:00,768
+Mets normalizing constant is
+
+413
+00:24:02,304 --> 00:24:03,584
+Integral
+
+414
+00:24:05,376 --> 00:24:06,656
+Simi
+
+415
+00:24:07,936 --> 00:24:08,704
+Two Sigma
+
+416
+00:24:09,472 --> 00:24:10,752
+Hope to stop sex
+
+417
+00:24:20,992 --> 00:24:22,016
+No
+
+418
+00:24:24,064 --> 00:24:24,832
+I'm taking
+
+419
+00:24:25,088 --> 00:24:30,976
+For the next few lectures quite a Hardline position that I think when does a well posed question does the correct answer to it
+
+420
+00:24:31,232 --> 00:24:35,584
+And this is in contrast to the way I love people think about statistical inference
+
+421
+00:24:35,840 --> 00:24:41,984
+Does another way of doing inference why there's lots of ways of answering those questions and I think that's extraordinary
+
+422
+00:24:42,240 --> 00:24:43,776
+Thing to believe I think there is
+
+423
+00:24:44,288 --> 00:24:46,336
+A correct way of answering Lopez problems
+
+424
+00:24:46,592 --> 00:24:49,664
+I don't think infants should be an exception from it
+
+425
+00:24:50,432 --> 00:24:53,248
+Something to make real explicit is that
+
+426
+00:24:54,016 --> 00:24:57,088
+Only difference is depend on the assumptions
+
+427
+00:24:58,112 --> 00:25:04,256
+Some people sometimes you don't have to make assumptions
+
+428
+00:25:09,888 --> 00:25:11,424
+But how could it be otherwise
+
+429
+00:25:11,680 --> 00:25:14,496
+So every one of these things is conditioned on H
+
+430
+00:25:19,104 --> 00:25:25,248
+HSV assumption that the data come from a gaussian distribution and it's whatever
+
+431
+00:25:25,504 --> 00:25:28,576
+If you want to make about what we believe me to take my might be
+
+432
+00:25:28,832 --> 00:25:29,600
+Beforehand
+
+433
+00:25:29,856 --> 00:25:32,928
+And I think it's on the schedule that you do have to make a
+
+434
+00:25:33,184 --> 00:25:33,952
+Photos options
+
+435
+00:25:35,232 --> 00:25:36,000
+All right
+
+436
+00:25:37,536 --> 00:25:39,072
+What does it actually look like
+
+437
+00:25:39,328 --> 00:25:43,680
+Well this is saying how well did you predict the date this is the
+
+438
+00:25:43,936 --> 00:25:44,704
+The meat of it
+
+439
+00:25:44,960 --> 00:25:47,520
+Y'all sleep if we haven't got any particular
+
+440
+00:25:47,776 --> 00:25:52,896
+Strong interesting prior knowledge about me to take my dependent
+
+441
+00:25:53,920 --> 00:25:55,200
+On-base arm says
+
+442
+00:25:55,456 --> 00:25:59,808
+You don't need to know how well they were predicting things that didn't happen
+
+443
+00:26:00,064 --> 00:26:05,440
+Tile probabilities on not relevant is no such thing as tails in the correct way of doing in Prince
+
+444
+00:26:06,208 --> 00:26:08,512
+All you need to do is look at the values
+
+445
+00:26:09,024 --> 00:26:09,792
+Oh
+
+446
+00:26:10,304 --> 00:26:16,448
+The predictive densities the 5-day two values that have actually occurred so if we wanted to compare
+
+447
+00:26:16,704 --> 00:26:22,848
+Just the six hypotheses that I've identified on the screen the rainbow
+
+448
+00:26:23,104 --> 00:26:28,224
+Six different colors the only numbers you need to know to answer that question
+
+449
+00:26:28,480 --> 00:26:34,624
+The number is highlighted by the point at which the probability density assigned to the
+
+450
+00:26:34,880 --> 00:26:36,160
+Six different hypotheses
+
+451
+00:26:36,416 --> 00:26:38,976
+Of course the full-face hypotheses is
+
+452
+00:26:39,232 --> 00:26:42,560
+The Infinite Space the whole book value
+
+453
+00:26:44,096 --> 00:26:47,168
+But if we just wanted to keep a V6 that's what you need to know
+
+454
+00:26:47,424 --> 00:26:51,008
+What you do with them while you want to come out and you multiply them together because
+
+455
+00:26:51,264 --> 00:26:55,360
+The probability if you're coming independently
+
+456
+00:26:55,616 --> 00:27:00,480
+This is just a product from 1 to end
+
+457
+00:27:00,736 --> 00:27:05,344
+All vaccines given mean and sigma
+
+458
+00:27:05,600 --> 00:27:06,880
+Which we already wrote down
+
+459
+00:27:07,904 --> 00:27:10,720
+Overhead door just need to multiply two numbers together
+
+460
+00:27:11,232 --> 00:27:14,816
+And that gives us a lot to his riches how well you predicted
+
+461
+00:27:15,072 --> 00:27:16,096
+What happened
+
+462
+00:27:17,376 --> 00:27:18,144
+Okay
+
+463
+00:27:18,912 --> 00:27:22,496
+So those numbers are always relevant to the inference
+
+464
+00:27:24,800 --> 00:27:27,616
+So what does that look like what does one of those numbers look like
+
+465
+00:27:27,872 --> 00:27:28,896
+I'm going to
+
+466
+00:27:29,152 --> 00:27:31,712
+Reduce the size of a Titus at down from 5
+
+467
+00:27:31,968 --> 00:27:32,992
+To just warm
+
+468
+00:27:34,016 --> 00:27:40,160
+And now I'm going to wonder around the hypothesis-based muessigmann looking at what happens
+
+469
+00:27:40,416 --> 00:27:40,928
+2
+
+470
+00:27:41,184 --> 00:27:43,488
+The value of P of x n
+
+471
+00:27:44,256 --> 00:27:47,328
+Given to you and sigma as we wander around and you and signifies
+
+472
+00:27:47,584 --> 00:27:48,608
+This is what it looks like
+
+473
+00:27:48,864 --> 00:27:52,448
+So I'm going to slide across at Six Sigma
+
+474
+00:27:52,704 --> 00:27:54,752
+And then different values of Six Sigma
+
+475
+00:27:55,008 --> 00:27:56,800
+Total for his example
+
+476
+00:27:57,312 --> 00:27:59,360
+Here's a value of Mew and sigma
+
+477
+00:27:59,616 --> 00:28:04,480
+And a grown little spiked hair whose length is the same as the height
+
+478
+00:28:04,736 --> 00:28:05,248
+From
+
+479
+00:28:05,504 --> 00:28:07,808
+The y-axis to the yellow Cafe
+
+480
+00:28:08,064 --> 00:28:08,832
+All right
+
+481
+00:28:09,600 --> 00:28:13,440
+I'm going to wander around adding spikes
+
+482
+00:28:16,512 --> 00:28:19,840
+I'm hopefully you can see the eclipse in lines that show
+
+483
+00:28:20,096 --> 00:28:26,240
+How high is the orange star wars about the y-axis for each of those possible values of
+
+484
+00:28:26,752 --> 00:28:32,896
+And it's not very surprising that what that looks like is it going to be in with the same width as the standard deviation we just picked
+
+485
+00:28:33,152 --> 00:28:37,248
+1.2 as I told all three of those Levi's let's switch to another body or Sigma
+
+486
+00:28:37,504 --> 00:28:42,368
+It's the small things
+
+487
+00:28:42,624 --> 00:28:44,160
+Shutting how well
+
+488
+00:28:44,416 --> 00:28:50,560
+Today's predicted the same day tomorrow
+
+489
+00:28:50,816 --> 00:28:52,864
+Repeat Sargon even firespike
+
+490
+00:28:53,120 --> 00:28:54,144
+Adam purple
+
+491
+00:28:59,008 --> 00:29:00,544
+We can make a surface plot
+
+492
+00:29:00,800 --> 00:29:02,080
+I want some of those look like
+
+493
+00:29:02,848 --> 00:29:03,872
+And here they are
+
+494
+00:29:04,128 --> 00:29:09,248
+Any particular value Sigma it looks like a bump that goes up and down
+
+495
+00:29:10,272 --> 00:29:12,320
+As you come to smaller and smaller values
+
+496
+00:29:12,576 --> 00:29:15,136
+The high for that guy seems getting higher and higher
+
+497
+00:29:15,392 --> 00:29:19,488
+So the console port is actually a slightly scary looking thing there
+
+498
+00:29:22,048 --> 00:29:23,584
+Sofra Singleton
+
+499
+00:29:23,840 --> 00:29:25,120
+Stupid my wifey
+
+500
+00:29:38,176 --> 00:29:39,200
+Acanto fluff
+
+501
+00:29:40,480 --> 00:29:42,272
+Has consoles
+
+502
+00:29:46,624 --> 00:29:50,208
+It look something like that with these two hypotheses
+
+503
+00:29:50,720 --> 00:29:55,584
+Tan have extremely small Weiser signal that just happened to nail the
+
+504
+00:29:55,840 --> 00:29:56,608
+Really precisely
+
+505
+00:29:57,120 --> 00:29:58,400
+So that's the likelihood function
+
+506
+00:29:58,912 --> 00:30:01,728
+In the case of 1 datapoint showing how well
+
+507
+00:30:01,984 --> 00:30:03,776
+Every purple Valley from U and sigma
+
+508
+00:30:04,032 --> 00:30:04,800
+Predicted
+
+509
+00:30:05,312 --> 00:30:06,336
+Hot what happened
+
+510
+00:30:07,104 --> 00:30:07,872
+Okay
+
+511
+00:30:09,920 --> 00:30:16,064
+Let's repeat that and I will multiply together five of those things are going to look at the product of five of these functions if you
+
+512
+00:30:16,320 --> 00:30:20,928
+How's your wonder and immune Sigma space and it's for these fine face points
+
+513
+00:30:21,440 --> 00:30:23,232
+When you take
+
+514
+00:30:23,744 --> 00:30:25,536
+The five numbers showing there
+
+515
+00:30:26,304 --> 00:30:27,840
+And multiply them all together
+
+516
+00:30:28,608 --> 00:30:31,936
+The product is this little orange stick shown on the right hand side
+
+517
+00:30:33,728 --> 00:30:39,872
+Very small number phone number
+
+518
+00:30:40,128 --> 00:30:41,152
+Lance Morgan
+
+519
+00:30:42,432 --> 00:30:46,528
+Change Sigma to a small value
+
+520
+00:30:46,784 --> 00:30:48,320
+And it went up and came down
+
+521
+00:30:48,576 --> 00:30:54,208
+And pick up my multiplying lcdc please scan the Crossville multiplying things with our galaxy and functions
+
+522
+00:30:54,464 --> 00:31:00,608
+With each other either the galaxy of the scented on different values the product of a rose is still a gaussian integer
+
+523
+00:31:00,864 --> 00:31:03,168
+Replacing at
+
+524
+00:31:03,936 --> 00:31:08,288
+And that woman has to be higher this one with Sigma as we went across to look at
+
+525
+00:31:08,544 --> 00:31:10,336
+Values of singer equals no .6
+
+526
+00:31:10,848 --> 00:31:12,128
+We got a high peak
+
+527
+00:31:12,384 --> 00:31:14,176
+95 signal point five
+
+528
+00:31:14,432 --> 00:31:17,248
+Purple we find out we can even hire a peek
+
+529
+00:31:17,504 --> 00:31:19,552
+And I forgot to an even small about your semen
+
+530
+00:31:20,320 --> 00:31:21,600
+Roughly a quarter
+
+531
+00:31:22,112 --> 00:31:24,928
+Not when you multiply together these five
+
+532
+00:31:25,440 --> 00:31:26,464
+Purple numbers
+
+533
+00:31:27,744 --> 00:31:29,536
+Some of them are quite close to zero
+
+534
+00:31:29,792 --> 00:31:34,144
+And so we're not doing quite so well anymore so I made the Redskin that
+
+535
+00:31:34,400 --> 00:31:35,680
+Iris pahatsi
+
+536
+00:31:35,936 --> 00:31:38,496
+Redskin the highest 8.2 isn't as high as
+
+537
+00:31:39,264 --> 00:31:40,288
+Mr. purple
+
+538
+00:31:40,544 --> 00:31:41,568
+Okay
+
+539
+00:31:42,080 --> 00:31:43,616
+Suck what has happened
+
+540
+00:31:45,664 --> 00:31:48,992
+Now if we do a contour plot of the products
+
+541
+00:31:49,504 --> 00:31:52,064
+This was for just one like
+
+542
+00:31:52,320 --> 00:31:58,464
+How to make a Funko Pop
+
+543
+00:31:58,720 --> 00:32:02,560
+Steven Yeun
+
+544
+00:32:02,816 --> 00:32:04,096
+It looks like this
+
+545
+00:32:04,352 --> 00:32:05,376
+It looks
+
+546
+00:32:09,984 --> 00:32:11,008
+A bit like that
+
+547
+00:32:11,776 --> 00:32:16,128
+Oodles and it doesn't have a scary bizarre place where are Infinities happen
+
+548
+00:32:16,384 --> 00:32:17,408
+Tyme hair anymore
+
+549
+00:32:18,944 --> 00:32:19,712
+All right
+
+550
+00:32:19,968 --> 00:32:26,112
+And we can ask the question what is the best type of this in the sense of the highest
+
+551
+00:32:26,368 --> 00:32:27,392
+Likelihood
+
+552
+00:32:28,160 --> 00:32:30,208
+So this point
+
+553
+00:32:30,464 --> 00:32:35,072
+Nothing's got any special status at all this is not an essential thing to
+
+554
+00:32:36,608 --> 00:32:40,704
+The focus song but people sometimes
+
+555
+00:32:40,960 --> 00:32:46,080
+You can go find the menu and the sigma
+
+556
+00:32:46,336 --> 00:32:49,152
+When does a simple homework exercise to work out the formula
+
+557
+00:32:49,408 --> 00:32:50,432
+So that if you want
+
+558
+00:32:51,456 --> 00:32:52,224
+And
+
+559
+00:32:52,480 --> 00:32:58,624
+The night seemed like no promises Usher and after the stages at the green line
+
+560
+00:32:58,880 --> 00:33:02,464
+Density looks like when you sent me when signature
+
+561
+00:33:03,232 --> 00:33:03,744
+Right
+
+562
+00:33:04,000 --> 00:33:04,512
+So
+
+563
+00:33:05,024 --> 00:33:07,840
+Want to go to like a good you can if you want to go and find
+
+564
+00:33:08,352 --> 00:33:11,680
+The promises that have the biggest value of the function
+
+565
+00:33:12,192 --> 00:33:13,984
+Positive that's not
+
+566
+00:33:14,240 --> 00:33:19,616
+Fundamental the fundamental thing you want to do when you're doing inference is you want to know the whole Buster distribution
+
+567
+00:33:20,384 --> 00:33:21,152
+Not just
+
+568
+00:33:21,664 --> 00:33:24,480
+Professional music music system
+
+569
+00:33:26,016 --> 00:33:28,576
+All right so that's the maximum like it promise
+
+570
+00:33:29,856 --> 00:33:34,208
+Going back to the entire like a function this is what it looks like when we spin it round
+
+571
+00:33:36,512 --> 00:33:38,560
+South China on the bottom
+
+572
+00:33:38,816 --> 00:33:40,096
+Uppababy
+
+573
+00:33:40,352 --> 00:33:42,400
+A log scale surface
+
+574
+00:33:44,192 --> 00:33:44,960
+Right
+
+575
+00:33:45,984 --> 00:33:52,128
+So if you do the homework exercise and you work out what the maximum likelihood value of
+
+576
+00:33:52,384 --> 00:33:53,664
+Mu and sigma is
+
+577
+00:33:54,432 --> 00:33:57,248
+You may not be surprised to find that
+
+578
+00:33:57,504 --> 00:33:59,808
+Mew maximum likelihood
+
+579
+00:34:00,064 --> 00:34:01,088
+Is
+
+580
+00:34:01,600 --> 00:34:02,880
+Xbox
+
+581
+00:34:03,392 --> 00:34:05,440
+Hannity does you slide across to any
+
+582
+00:34:05,952 --> 00:34:07,232
+Possible values Sigma
+
+583
+00:34:07,488 --> 00:34:08,512
+The maximum
+
+584
+00:34:08,768 --> 00:34:13,632
+Value of the likelihood there any slicing volume Sigma is
+
+585
+00:34:13,888 --> 00:34:16,192
+Xbox being by definition
+
+586
+00:34:16,448 --> 00:34:18,240
+Iran
+
+587
+00:34:18,496 --> 00:34:20,800
+Xn
+
+588
+00:34:21,824 --> 00:34:27,968
+I'm not something you can derive wouldn't have to guess let's think of an estimate from you you just write down the light YouTube
+
+589
+00:34:28,224 --> 00:34:30,016
+Function is a simple homework exercise
+
+590
+00:34:30,272 --> 00:34:31,040
+Define
+
+591
+00:34:31,296 --> 00:34:37,440
+The maximum of that function is at this location in contrast the standard statistics when think that
+
+592
+00:34:37,696 --> 00:34:43,840
+Difficult and you need to make S Tomatoes you end up scratching
+
+593
+00:34:44,096 --> 00:34:46,144
+Hair the likely function
+
+594
+00:34:46,656 --> 00:34:50,496
+Is a way of coming out with estimate is if you want to point a point value
+
+595
+00:34:51,520 --> 00:34:54,080
+What about Sigma well
+
+596
+00:34:54,592 --> 00:34:59,456
+The maximum likelihood value Sigma is what you get when you press the stigma and button on your calculator
+
+597
+00:35:01,248 --> 00:35:02,016
+So
+
+598
+00:35:02,528 --> 00:35:08,672
+Your calculator has two Sigma buttons you shoved in the day turn to a live load calculator
+
+599
+00:35:08,928 --> 00:35:11,744
+10 - 1 button in the maximum likelihood
+
+600
+00:35:12,512 --> 00:35:15,840
+Is what you get when you press Sigma
+
+601
+00:35:20,192 --> 00:35:20,960
+No
+
+602
+00:35:21,728 --> 00:35:27,872
+Discount applied hair isn't so the symmetric it it doesn't have concentric circles that that's what
+
+603
+00:35:28,128 --> 00:35:29,920
+Lopsided getting wider as you go up
+
+604
+00:35:30,432 --> 00:35:32,480
+And the reason for that is fairly intuitive
+
+605
+00:35:34,016 --> 00:35:37,088
+If it were actually the case that the me
+
+606
+00:35:37,344 --> 00:35:39,136
+Is not equal to
+
+607
+00:35:39,392 --> 00:35:40,160
+Did Asa mean
+
+608
+00:35:40,672 --> 00:35:45,280
+It will be okay something you the true underlying mean isn't exactly the station mean
+
+609
+00:35:45,536 --> 00:35:47,584
+For example the true value is
+
+610
+00:35:48,864 --> 00:35:50,400
+Hey a little bit away
+
+611
+00:35:50,656 --> 00:35:51,168
+From
+
+612
+00:35:51,680 --> 00:35:52,704
+Potato mean
+
+613
+00:35:53,216 --> 00:35:53,984
+Then
+
+614
+00:35:54,240 --> 00:35:55,008
+Think of
+
+615
+00:35:55,264 --> 00:35:58,336
+What the battery probably is given that
+
+616
+00:35:58,592 --> 00:36:00,896
+All the lights are off of the coast around here Bass
+
+617
+00:36:01,664 --> 00:36:06,528
+The average distance the mean Square distance to one of those
+
+618
+00:36:06,784 --> 00:36:08,576
+Because we moved away from the day to me
+
+619
+00:36:08,832 --> 00:36:10,880
+Then it was when we were out today to me
+
+620
+00:36:11,136 --> 00:36:13,952
+That means our estimate of how big do there is probably is
+
+621
+00:36:14,208 --> 00:36:20,352
+Is a bit bigger than what you would think the variances if you knew that the true mean really is equal to the day
+
+622
+00:36:20,608 --> 00:36:21,120
+Say to me
+
+623
+00:36:21,632 --> 00:36:22,656
+So that's why
+
+624
+00:36:23,168 --> 00:36:24,704
+Peak Vista
+
+625
+00:36:24,960 --> 00:36:26,240
+Why did function hat
+
+626
+00:36:26,496 --> 00:36:30,080
+Is off that little bit upwards away from the value house
+
+627
+00:36:30,848 --> 00:36:33,664
+If we assume you is actually both of the day to me
+
+628
+00:36:34,688 --> 00:36:36,480
+Sidedness
+
+629
+00:36:36,992 --> 00:36:40,832
+And if we take into account now the fact that we don't know
+
+630
+00:36:41,344 --> 00:36:42,112
+New
+
+631
+00:36:42,368 --> 00:36:46,976
+And if someone told I don't care. I want to know how big the noise
+
+632
+00:36:47,232 --> 00:36:49,024
+Level is because I'm interested in noise
+
+633
+00:36:49,536 --> 00:36:52,608
+Please tell me what I should believe about the noise give Anastasia
+
+634
+00:36:53,376 --> 00:36:56,960
+And given that we haven't got a clue what we do is accept what they show is telling us
+
+635
+00:36:57,984 --> 00:37:02,336
+If we now put that request into mathematics
+
+636
+00:37:02,592 --> 00:37:04,384
+What the requester is telling us
+
+637
+00:37:04,640 --> 00:37:07,200
+I'm going to clear about what Miu is and I don't care
+
+638
+00:37:07,456 --> 00:37:10,784
+They saying I've got a very broad prior on me
+
+639
+00:37:11,040 --> 00:37:15,648
+Okay let's just use an unspecified
+
+640
+00:37:15,904 --> 00:37:21,280
+Uniform distribution of some with that we don't care anymore
+
+641
+00:37:24,864 --> 00:37:27,424
+And then it saying please tell me what I should believe about Sigma
+
+642
+00:37:28,192 --> 00:37:29,728
+The way you answer that question
+
+643
+00:37:30,496 --> 00:37:31,264
+Is
+
+644
+00:37:33,056 --> 00:37:34,080
+We can work out
+
+645
+00:37:35,616 --> 00:37:39,200
+We could imagine receding into steps we could say
+
+646
+00:37:40,480 --> 00:37:45,344
+What would you be she doesn't want to know me but let's imagine inferi it anyway
+
+647
+00:37:46,112 --> 00:37:49,440
+Let's imagine when you Sigma Delta Zeta
+
+648
+00:37:53,024 --> 00:37:54,560
+How advanced insurance work
+
+649
+00:37:54,816 --> 00:37:59,680
+Well we need to know the date I given U and sigma
+
+650
+00:37:59,936 --> 00:38:02,240
+X the prior probability
+
+651
+00:38:02,752 --> 00:38:04,032
+Have you
+
+652
+00:38:05,312 --> 00:38:10,432
+Normalize by the productivity
+
+653
+00:38:11,200 --> 00:38:12,224
+Sorry
+
+654
+00:38:16,064 --> 00:38:19,136
+Talk to myself a self inference number 1
+
+655
+00:38:20,416 --> 00:38:24,256
+Where where we imagine answering the thing that we don't care about
+
+656
+00:38:27,328 --> 00:38:32,960
+So you need to pry which I said is going to be some rules distribution one of a Delta Museum
+
+657
+00:38:34,240 --> 00:38:36,544
+Secondary Brule disrespect
+
+658
+00:38:44,480 --> 00:38:47,552
+And then this probability is the likelihood function
+
+659
+00:38:48,576 --> 00:38:50,368
+But we're assuming that we no Stigma
+
+660
+00:38:50,880 --> 00:38:53,696
+What does normalizing constant while this is
+
+661
+00:38:53,952 --> 00:38:56,000
+The integral theme
+
+662
+00:38:56,512 --> 00:38:58,048
+Kayavax
+
+663
+00:38:58,304 --> 00:38:59,840
+70
+
+664
+00:39:00,096 --> 00:39:01,120
+X
+
+665
+00:39:03,680 --> 00:39:04,960
+Normalizing constant
+
+666
+00:39:07,008 --> 00:39:12,128
+Often we ignore no more than constant speakers are they just know there's no dependents
+
+667
+00:39:12,640 --> 00:39:14,944
+All the thing on the left hand side
+
+668
+00:39:15,456 --> 00:39:16,480
+A little magic constant
+
+669
+00:39:16,736 --> 00:39:22,880
+But around the beautiful pass and often occurs in a serving for the normalizing constant one person doesn't care
+
+670
+00:39:23,136 --> 00:39:25,440
+90 + anybody wants to know
+
+671
+00:39:25,696 --> 00:39:30,816
+Is exactly the answer to the question someone else wants to know inference number two
+
+672
+00:39:31,072 --> 00:39:32,352
+Inference number two
+
+673
+00:39:32,608 --> 00:39:35,424
+The first player casters for
+
+674
+00:39:35,680 --> 00:39:39,264
+Was he said I just want to know what I should believe about Sigma
+
+675
+00:39:39,520 --> 00:39:40,544
+Given the data
+
+676
+00:39:40,800 --> 00:39:43,104
+And if you decide to come to my house
+
+677
+00:39:43,360 --> 00:39:44,128
+Cast
+
+678
+00:39:45,664 --> 00:39:51,808
+I'm not 580sm is the purpose of people today to give him Sigma sign for probably
+
+679
+00:39:52,832 --> 00:39:57,184
+/ normalizing he doesn't care
+
+680
+00:39:59,488 --> 00:40:04,608
+The date of dependent time but he does care about is the probability of all the data
+
+681
+00:40:04,864 --> 00:40:05,632
+Kevin Sigma
+
+682
+00:40:05,888 --> 00:40:06,912
+And that is
+
+683
+00:40:07,680 --> 00:40:08,960
+Personalizing constant
+
+684
+00:40:09,472 --> 00:40:15,616
+That is a very common pattern that when you just follow the rules of probability to work out what you want to know
+
+685
+00:40:15,872 --> 00:40:17,408
+Normalizing constants
+
+686
+00:40:17,664 --> 00:40:23,808
+That one person or unimportant for the next level of inference
+
+687
+00:40:24,320 --> 00:40:28,416
+So hey we need to do an integral with respect in view of this likelihood function
+
+688
+00:40:28,672 --> 00:40:30,208
+Assuming a flat
+
+689
+00:40:30,464 --> 00:40:31,232
+Prana hat
+
+690
+00:40:31,744 --> 00:40:33,280
+That's a simple homework exercise
+
+691
+00:40:33,536 --> 00:40:35,328
+When you do that inference
+
+692
+00:40:35,840 --> 00:40:37,120
+You can work out
+
+693
+00:40:37,376 --> 00:40:38,144
+What
+
+694
+00:40:38,400 --> 00:40:39,424
+The likelihood
+
+695
+00:40:40,448 --> 00:40:43,008
+Study of data
+
+696
+00:40:43,264 --> 00:40:48,128
+Given Sigma is as a function of Sigma so I'm going to show you my little grass
+
+697
+00:40:49,408 --> 00:40:50,432
+The likelihood
+
+698
+00:40:50,944 --> 00:40:54,016
+As a function of stigma and what it looks like is
+
+699
+00:40:56,064 --> 00:40:56,832
+That sort of thing
+
+700
+00:40:59,648 --> 00:41:04,000
+Is that the garbage day for the gamma distribution and it's going to Pink
+
+701
+00:41:04,256 --> 00:41:06,048
+And the peak is at
+
+702
+00:41:06,304 --> 00:41:08,608
+Sigma - 1
+
+703
+00:41:09,376 --> 00:41:13,728
+So that's what you think is for on the couch like that in this
+
+704
+00:41:13,984 --> 00:41:15,520
+Probability
+
+705
+00:41:15,776 --> 00:41:19,616
+View of inferences probability-based or Bayesian View
+
+706
+00:41:20,640 --> 00:41:21,920
+Okay
+
+707
+00:41:25,504 --> 00:41:27,552
+So what I've done here is I
+
+708
+00:41:27,808 --> 00:41:33,952
+Reintroduce you to familiar things that you've known since you were 15 years old you've had a calculator
+
+709
+00:41:34,208 --> 00:41:37,280
+Annex Barber I have a cigarette in Boston
+
+710
+00:41:37,536 --> 00:41:39,328
+How to say more n -1 button
+
+711
+00:41:39,584 --> 00:41:44,960
+And now we know a meaning for these buttons that they always of finding peaks of various
+
+712
+00:41:45,216 --> 00:41:47,776
+Likelihood functions of model likelihood
+
+713
+00:41:48,032 --> 00:41:54,175
+This thing we do here so the likelihood function is the likelihood all new and
+
+714
+00:41:54,431 --> 00:41:54,943
+Sigma
+
+715
+00:41:57,247 --> 00:42:00,575
+This is the correct use of the word likelihood by the way
+
+716
+00:42:00,831 --> 00:42:02,367
+The likelihood is
+
+717
+00:42:02,623 --> 00:42:08,511
+Imma talk about the probability of some data conditioned on the thing that we call it the likelihood of
+
+718
+00:42:08,767 --> 00:42:14,911
+Many people sadly used would like it improbability interchangeably
+
+719
+00:42:15,167 --> 00:42:19,519
+What is the likelihood of this is a probability of that and that Exchange.
+
+720
+00:42:20,031 --> 00:42:26,175
+When doing statistics I think it's a good idea to be absolutely rigorous about these are the times we use
+
+721
+00:42:26,431 --> 00:42:32,575
+Only when it's that correct usage which is in this context
+
+722
+00:42:34,367 --> 00:42:37,695
+This thing here is emotional like to hit
+
+723
+00:42:38,719 --> 00:42:41,023
+It's the motto of likelihood
+
+724
+00:42:43,583 --> 00:42:45,631
+Call Sigma
+
+725
+00:42:45,887 --> 00:42:48,447
+Which means it's the probability of all the data
+
+726
+00:42:48,703 --> 00:42:49,983
+Kevin Sigler
+
+727
+00:42:50,495 --> 00:42:52,543
+This thing way down here
+
+728
+00:42:54,079 --> 00:42:56,383
+Is the mountain like the hood
+
+729
+00:42:57,151 --> 00:42:59,967
+Alpha hypothesis
+
+730
+00:43:01,503 --> 00:43:03,807
+Which is the hypothesis that says
+
+731
+00:43:04,063 --> 00:43:05,599
+What did Isaac came from
+
+732
+00:43:06,111 --> 00:43:08,415
+I think I've seen with me and you and
+
+733
+00:43:08,671 --> 00:43:10,975
+IMDb action Sigma with
+
+734
+00:43:11,231 --> 00:43:13,279
+Prior distribution is described by P of Maryland
+
+735
+00:43:13,791 --> 00:43:14,303
+Sigma
+
+736
+00:43:16,351 --> 00:43:20,703
+There is another name that is sometimes given to this thing because it's such an important quality
+
+737
+00:43:20,959 --> 00:43:23,007
+I'm not going to like it is a bit of a mouthful
+
+738
+00:43:23,263 --> 00:43:28,127
+And sounds may be too technical perception important to take
+
+739
+00:43:28,383 --> 00:43:30,943
+I was going to see in the next election
+
+740
+00:43:31,455 --> 00:43:37,599
+This is the important if you want to do model comparison if you have if you had an alternative theory for weather station came from
+
+741
+00:43:37,855 --> 00:43:40,415
+This is how well this quantity measures
+
+742
+00:43:40,671 --> 00:43:44,255
+How well the theory age predicted the date of the happened
+
+743
+00:43:44,511 --> 00:43:50,655
+So this is what we need in order to model comparison
+
+744
+00:43:50,911 --> 00:43:51,679
+The evidence
+
+745
+00:43:51,935 --> 00:43:56,031
+4 model X that's not a universal
+
+746
+00:43:56,543 --> 00:44:01,919
+Notation of universal name but like a lot of people use this name as an alternative
+
+747
+00:44:02,175 --> 00:44:03,967
+Name for module likelihood
+
+748
+00:44:05,759 --> 00:44:06,271
+Okay
+
+749
+00:44:06,783 --> 00:44:07,551
+So that was
+
+750
+00:44:08,319 --> 00:44:11,391
+A familiar Beast dancing distribution
+
+751
+00:44:12,159 --> 00:44:13,439
+Answering the question
+
+752
+00:44:13,695 --> 00:44:15,999
+When you use Bayesian inference
+
+753
+00:44:17,279 --> 00:44:18,303
+What what
+
+754
+00:44:22,911 --> 00:44:29,055
+I got a question was is the evidence of Prior on the prior address I didn't eat in the next election we're going to do it
+
+755
+00:44:29,311 --> 00:44:30,079
+Mobile comparison
+
+756
+00:44:30,335 --> 00:44:36,223
+And what the evidence is is how well the theory
+
+757
+00:44:36,479 --> 00:44:37,247
+Predicted
+
+758
+00:44:37,503 --> 00:44:38,783
+The date of the happened
+
+759
+00:44:39,807 --> 00:44:45,951
+You when you want to do inferences how probable this theory is compared with other theories you need to put your own prior
+
+760
+00:44:46,207 --> 00:44:50,815
+On those those hypotheses the prior probability of hypothesis is not
+
+761
+00:44:53,887 --> 00:44:57,727
+All right just as here this is a likelihood
+
+762
+00:44:57,983 --> 00:44:59,007
+How much is the price
+
+763
+00:44:59,263 --> 00:45:02,079
+So the role that we haven't played in model comparison
+
+764
+00:45:02,335 --> 00:45:05,151
+Is the role that the body that the likelihood is playing
+
+765
+00:45:05,663 --> 00:45:07,455
+Endless Runner face there
+
+766
+00:45:08,735 --> 00:45:09,247
+So
+
+767
+00:45:09,503 --> 00:45:11,807
+Will do it again in the next election hopefully he'll become
+
+768
+00:45:12,063 --> 00:45:12,575
+Clara
+
+769
+00:45:13,855 --> 00:45:18,463
+In the next election we're going to start off with the following exercise
+
+770
+00:45:18,719 --> 00:45:24,863
+This is an exercise that I took from the exam paper in the Cambridge physics
+
+771
+00:45:25,119 --> 00:45:25,887
+Past exams
+
+772
+00:45:26,143 --> 00:45:28,191
+From the 1980s also
+
+773
+00:45:28,447 --> 00:45:30,239
+I'm the same question sad
+
+774
+00:45:30,751 --> 00:45:36,895
+Imagine that a source is emitting particles and IDK locations which we measure those location
+
+775
+00:45:37,151 --> 00:45:43,295
+Exponentially distributed in the length Skylander missile picture shows what that might look like if your
+
+776
+00:45:43,551 --> 00:45:45,855
+It was axes the horizontal coordinates
+
+777
+00:45:47,391 --> 00:45:49,439
+And the y-coordinate is just
+
+778
+00:45:49,951 --> 00:45:51,743
+Spacing points away from each other
+
+779
+00:45:52,511 --> 00:45:58,655
+The taser can only be observed however if location Fulton the window in the window goes from X-Men X-Men
+
+780
+00:45:58,911 --> 00:46:00,447
+1
+
+781
+00:46:00,703 --> 00:46:01,983
+220 centimeters
+
+782
+00:46:02,751 --> 00:46:08,127
+Now and decays are observed and their locations Xbox Rex and what do you think Lambda is
+
+783
+00:46:08,895 --> 00:46:13,247
+That's exam question and I want you to think about that for the next lecture
+
+784
+00:46:14,015 --> 00:46:17,599
+And I'd like you especially to cast your mind back
+
+785
+00:46:17,855 --> 00:46:21,951
+Before you ever heard of bass them as being the right way to do in Prince
+
+786
+00:46:22,207 --> 00:46:25,279
+How would you have solved this problem
+
+787
+00:46:25,535 --> 00:46:27,327
+Before you knew about base 10
+
+788
+00:46:27,583 --> 00:46:32,191
+And I'm hoping that you'll find it interesting to see how easy it is to solve this problem
+
+789
+00:46:32,447 --> 00:46:36,287
+Replaced them and how this contrasts with
+
+790
+00:46:37,567 --> 00:46:40,383
+Perhaps the difficulty of solving this problem
+
+791
+00:46:40,639 --> 00:46:43,455
+With all the ways you might have come across beforehand
+
+792
+00:46:46,015 --> 00:46:48,575
+So that's what we'll do next time
+
+793
+00:46:49,343 --> 00:46:51,391
+Thank you very much for listening just as a question
+
+794
+00:46:58,303 --> 00:47:00,863
+Yes absolutely so the question is
+
+795
+00:47:03,423 --> 00:47:09,567
+In the statistics literature and standard textbooks people talk about number of degrees of freedom
+
+796
+00:47:09,823 --> 00:47:12,895
+When you go from Aunt and might as well and you've lost one degree of freedom
+
+797
+00:47:13,151 --> 00:47:18,015
+And that absolutely is a helpful way to think about these things what we've done when we did this
+
+798
+00:47:18,271 --> 00:47:24,415
+Integral hair which we didn't actually do I said do that integral as I will question you integrated
+
+799
+00:47:24,671 --> 00:47:25,695
+That one parameter
+
+800
+00:47:25,951 --> 00:47:31,583
+Anat Goebbels up one degree of freedom of the noise if you actually knew
+
+801
+00:47:31,839 --> 00:47:33,631
+Un datapoints
+
+802
+00:47:33,887 --> 00:47:36,959
+Then you would have an independent measurements of how big the variances
+
+803
+00:47:37,983 --> 00:47:38,495
+But
+
+804
+00:47:38,751 --> 00:47:42,847
+If we don't know Mew and we integrated that we've lost one of those
+
+805
+00:47:44,383 --> 00:47:45,919
+Degrees of freedom if you like
+
+806
+00:47:46,175 --> 00:47:50,783
+Of measurement of noise so the number is that the number of independent measurements because of the noise
+
+807
+00:47:51,039 --> 00:47:55,135
+Has been reduced to a 10-1 it's definitely a helpful way to think about these things
+
+808
+00:47:56,671 --> 00:48:01,535
+It's all so you don't need to understand that concept to get the right answer
+
+809
+00:48:01,791 --> 00:48:04,863
+If you just write down the likelihood do the integral
+
+810
+00:48:05,119 --> 00:48:05,887
+Closest Ralph's
+
+811
+00:48:06,143 --> 00:48:08,703
+And say I'm interested in knowing which type of this
+
+812
+00:48:08,959 --> 00:48:13,567
+Did the best job of putting the day that you will find Sigma and -1 and you don't even need to understand
+
+813
+00:48:13,823 --> 00:48:14,591
+Degrees of freedom
+
+814
+00:48:14,847 --> 00:48:19,455
+But definitely degrees of freedom is an interesting and useful concept
+
+815
+00:48:20,223 --> 00:48:21,247
+Questions
+
+816
+00:48:23,551 --> 00:48:24,319
+Okay thank you

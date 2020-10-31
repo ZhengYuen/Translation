@@ -1,0 +1,4995 @@
+1
+00:00:06,656 --> 00:00:08,960
+Okay welcome to the lecture 10
+
+2
+00:00:10,240 --> 00:00:16,384
+When I tank Cambridge and study Physics I have the privilege of being taught by Steve Gall and I asked him
+
+3
+00:00:16,640 --> 00:00:22,784
+How to solve this exam question which I suspect he was the examiner for when it was originally set
+
+4
+00:00:23,040 --> 00:00:24,576
+We've got
+
+5
+00:00:25,600 --> 00:00:28,672
+Events with an exponential distribution we don't know Lambda
+
+6
+00:00:28,928 --> 00:00:33,792
+We can only see the events if they happen in a window that goes from one centimeter to 20 cm
+
+7
+00:00:34,304 --> 00:00:38,656
+Look at all the x coordinates of the points we want to infer Lambda
+
+8
+00:00:39,168 --> 00:00:41,472
+I like to start off by asking you what is
+
+9
+00:00:42,496 --> 00:00:44,544
+Before you heard about Bayesian inference
+
+10
+00:00:44,800 --> 00:00:48,128
+How would you have gone about solving this problem using
+
+11
+00:00:48,384 --> 00:00:54,528
+Classical statistics methods that you got stored during a Physics course or at High School
+
+12
+00:00:54,784 --> 00:00:57,344
+Seat of the pants
+
+13
+00:00:57,600 --> 00:00:58,112
+Method
+
+14
+00:00:58,624 --> 00:01:00,928
+So would you like to tell me
+
+15
+00:01:01,696 --> 00:01:07,584
+Approaches you might have used in general or specific approaches you would use to solve this
+
+16
+00:01:08,096 --> 00:01:08,608
+Task
+
+17
+00:01:09,632 --> 00:01:10,144
+Yeah
+
+18
+00:01:13,472 --> 00:01:17,824
+Gradient descent in what so you're going to maximize or minimize something
+
+19
+00:01:20,640 --> 00:01:23,968
+So the idea is optimized
+
+20
+00:01:24,224 --> 00:01:28,832
+Something something that you would optimize
+
+21
+00:01:29,088 --> 00:01:29,856
+5%
+
+22
+00:01:37,792 --> 00:01:42,144
+Okay so optimized a measure
+
+23
+00:01:42,400 --> 00:01:45,216
+All discrepancy
+
+24
+00:01:47,776 --> 00:01:49,312
+Between
+
+25
+00:01:53,408 --> 00:01:55,712
+Weather
+
+26
+00:01:55,968 --> 00:01:57,248
+Might look like that
+
+27
+00:01:57,504 --> 00:01:59,552
+And
+
+28
+00:02:00,320 --> 00:02:01,600
+The probability density
+
+29
+00:02:07,488 --> 00:02:10,560
+But you got if you pick up a particular value
+
+30
+00:02:12,352 --> 00:02:13,120
+Lambda
+
+31
+00:02:13,632 --> 00:02:14,400
+Okay
+
+32
+00:02:15,424 --> 00:02:19,008
+So that sounds a reason why do you some data
+
+33
+00:02:19,264 --> 00:02:24,896
+You have some summary of a data and then you adjust your model says to get a good fit
+
+34
+00:02:25,408 --> 00:02:30,016
+Let's go to a bit more detail how are we actually going to guess a measure of a discrepancy
+
+35
+00:02:30,272 --> 00:02:31,808
+What if there are three
+
+36
+00:02:32,064 --> 00:02:33,344
+Data points for example
+
+37
+00:02:33,856 --> 00:02:35,648
+If it's up for an hour wake up three points
+
+38
+00:02:35,904 --> 00:02:40,512
+Or there might be a hundred what did you have in mind and
+
+39
+00:02:42,048 --> 00:02:42,816
+Okay
+
+40
+00:02:43,328 --> 00:02:47,168
+So I got a window somewhere to collect Delta X
+
+41
+00:02:48,448 --> 00:02:52,800
+Chop up your day to world into little windows in size Delta racks
+
+42
+00:02:53,056 --> 00:02:55,360
+How many points are in each
+
+43
+00:02:55,616 --> 00:02:56,640
+Linda Grant
+
+44
+00:02:57,152 --> 00:02:57,664
+Okay
+
+45
+00:02:57,920 --> 00:03:04,064
+So we have Windows in the bins
+
+46
+00:03:05,088 --> 00:03:08,928
+So this is an example of how we get a measure of discrepancy
+
+47
+00:03:09,184 --> 00:03:13,536
+Preventive measure discrepancy and to do that we're going to put in bins
+
+48
+00:03:15,328 --> 00:03:17,120
+Which might look like
+
+49
+00:03:18,400 --> 00:03:24,544
+This webpage is not account then or if we are
+
+50
+00:03:24,800 --> 00:03:25,568
+Look like
+
+51
+00:03:29,664 --> 00:03:30,432
+Okay
+
+52
+00:03:30,944 --> 00:03:35,808
+I noticed something you have to choose was this
+
+53
+00:03:36,576 --> 00:03:38,624
+Had to be chosen
+
+54
+00:03:38,880 --> 00:03:41,440
+In order for this to work
+
+55
+00:03:41,952 --> 00:03:42,720
+Okay
+
+56
+00:03:42,976 --> 00:03:45,536
+Save-A-Lot School Ms
+
+57
+00:03:45,792 --> 00:03:51,936
+Well I'm at 2 at three of the count in each of these things
+
+58
+00:03:53,728 --> 00:03:54,752
+That we've got
+
+59
+00:03:55,776 --> 00:04:01,920
+So you compare that with what the model with parameter Lambda would have per day
+
+60
+00:04:02,176 --> 00:04:03,712
+I'm guessing
+
+61
+00:04:03,968 --> 00:04:05,248
+So
+
+62
+00:04:06,528 --> 00:04:09,344
+Let me check if you agree with this
+
+63
+00:04:10,368 --> 00:04:12,928
+You could work out given Lambda
+
+64
+00:04:13,440 --> 00:04:16,000
+What the expected value
+
+65
+00:04:17,024 --> 00:04:19,583
+Of asked in a particular bin would be
+
+66
+00:04:21,887 --> 00:04:22,655
+And
+
+67
+00:04:24,191 --> 00:04:25,471
+That would give you
+
+68
+00:04:25,983 --> 00:04:27,263
+Expected number two
+
+69
+00:04:27,519 --> 00:04:29,311
+Half half half
+
+70
+00:04:30,847 --> 00:04:31,615
+Like that
+
+71
+00:04:36,223 --> 00:04:36,991
+When you
+
+72
+00:04:37,247 --> 00:04:43,391
+Talk about him some sort of measure of how far apart they are was it the distance between
+
+73
+00:04:43,647 --> 00:04:46,207
+Mountain View expected in mind
+
+74
+00:04:50,303 --> 00:04:53,887
+Some sort of inner product Okay so
+
+75
+00:04:54,143 --> 00:04:55,167
+All
+
+76
+00:04:56,703 --> 00:04:58,495
+One measure of goodness of fit
+
+77
+00:05:00,031 --> 00:05:04,383
+Which I was suggesting is we some overall the bends
+
+78
+00:05:04,639 --> 00:05:09,247
+The distance between FB and expected value of FB
+
+79
+00:05:09,503 --> 00:05:11,295
+Giving Lambda
+
+80
+00:05:14,111 --> 00:05:15,903
+Repetitive taking absolute value
+
+81
+00:05:16,159 --> 00:05:16,671
+Call
+
+82
+00:05:16,927 --> 00:05:20,255
+Square or something like that that was some of the squares Maybe
+
+83
+00:05:20,511 --> 00:05:22,303
+Is a measure of how close they are old
+
+84
+00:05:22,559 --> 00:05:23,071
+To each other
+
+85
+00:05:23,839 --> 00:05:26,143
+So that was the thing I was
+
+86
+00:05:26,399 --> 00:05:28,191
+Guessing
+
+87
+00:05:28,703 --> 00:05:34,847
+How about adult product goodness-of-fit to is a measure of how similar these two vectors to each other
+
+88
+00:05:35,103 --> 00:05:37,407
+In a product of FB
+
+89
+00:05:37,919 --> 00:05:38,687
+With
+
+90
+00:05:38,943 --> 00:05:40,479
+Pats Peak
+
+91
+00:05:43,039 --> 00:05:43,807
+All right
+
+92
+00:05:44,575 --> 00:05:46,879
+Let's just have a quick think about that
+
+93
+00:05:47,391 --> 00:05:49,951
+If we spend the square
+
+94
+00:05:50,975 --> 00:05:53,023
+We got some of that be
+
+95
+00:05:54,815 --> 00:05:57,375
+We get some of that to be square
+
+96
+00:06:01,471 --> 00:06:02,495
+Minus
+
+97
+00:06:04,799 --> 00:06:06,847
+To some of FB
+
+98
+00:06:07,103 --> 00:06:08,127
+FB
+
+99
+00:06:08,383 --> 00:06:09,151
+Averaged
+
+100
+00:06:10,687 --> 00:06:11,455
+Plus
+
+101
+00:06:11,711 --> 00:06:12,991
+Son of a b
+
+102
+00:06:13,247 --> 00:06:15,295
+Average of S&P
+
+103
+00:06:16,319 --> 00:06:17,343
+Squid
+
+104
+00:06:17,855 --> 00:06:20,415
+So if I
+
+105
+00:06:20,927 --> 00:06:22,207
+Minimize this thing
+
+106
+00:06:23,743 --> 00:06:27,839
+With respect to Lambda and if you maximize this thing with respect to Lambda
+
+107
+00:06:28,863 --> 00:06:31,167
+We're going to get pretty similar answers only because
+
+108
+00:06:31,423 --> 00:06:35,519
+Actually this is just a constant as long as we use the same bin sizes each other
+
+109
+00:06:36,287 --> 00:06:37,311
+About to constant
+
+110
+00:06:38,847 --> 00:06:40,127
+Once the bins been chosen
+
+111
+00:06:40,383 --> 00:06:46,527
+I miss Lawton okay
+
+112
+00:06:46,783 --> 00:06:52,927
+Things are actually quite similar
+
+113
+00:06:53,183 --> 00:06:56,255
+Not exactly identical because of this difference
+
+114
+00:06:56,511 --> 00:06:58,815
+Okay so you got to measure goodness of fit
+
+115
+00:06:59,071 --> 00:07:03,935
+And something you might have the back of your mind is all these questions that we have friends
+
+116
+00:07:04,191 --> 00:07:10,335
+? how did you choose Delta Rex
+
+117
+00:07:11,359 --> 00:07:12,895
+How to choose
+
+118
+00:07:13,407 --> 00:07:15,711
+Between different measures of goodness of fit
+
+119
+00:07:15,967 --> 00:07:18,015
+I'm not saying either of these is a good
+
+120
+00:07:18,271 --> 00:07:20,063
+The first one
+
+121
+00:07:20,319 --> 00:07:26,463
+Has anyone got another approach to this method to
+
+122
+00:07:26,719 --> 00:07:32,863
+Optimize gradient descent with suggested as long as we find
+
+123
+00:07:33,119 --> 00:07:39,263
+When we've done the optimization it will spit out I guess Alondra the best fit
+
+124
+00:07:40,287 --> 00:07:42,591
+Does anyone have
+
+125
+00:07:42,847 --> 00:07:47,711
+Another approach because there are many approaches you got taught when you'll be into it
+
+126
+00:07:47,967 --> 00:07:49,503
+Ad hoc statistical methods
+
+127
+00:07:50,271 --> 00:07:54,111
+I'm sure some of you thought of methods that don't look like
+
+128
+00:07:56,927 --> 00:07:57,695
+Jesse Owens
+
+129
+00:08:00,767 --> 00:08:05,119
+So what's the price of gas in his approach to answering the question what is Lambda
+
+130
+00:08:11,519 --> 00:08:12,799
+Okay so
+
+131
+00:08:13,567 --> 00:08:16,895
+What dancing do you have in mind for this this problem
+
+132
+00:08:18,943 --> 00:08:21,759
+Okay the data points that that x-coordinates
+
+133
+00:08:22,527 --> 00:08:28,671
+Okay the x-coordinate solve these guys are exponentially distributed maybe I need to make Claire walk the assumption
+
+134
+00:08:28,927 --> 00:08:29,695
+Prxn
+
+135
+00:08:30,207 --> 00:08:32,255
+Given Lambda and
+
+136
+00:08:32,511 --> 00:08:35,327
+The window edges A&B
+
+137
+00:08:35,583 --> 00:08:36,607
+Is
+
+138
+00:08:36,863 --> 00:08:40,447
+Vanessa exponential one of these
+
+139
+00:08:40,959 --> 00:08:43,007
+82 -
+
+140
+00:08:43,263 --> 00:08:44,287
+Facts
+
+141
+00:08:46,079 --> 00:08:46,847
+Lambda
+
+142
+00:08:48,127 --> 00:08:50,943
+If x is
+
+143
+00:08:52,479 --> 00:08:55,039
+Between a and b
+
+144
+00:08:55,295 --> 00:08:56,063
+And it
+
+145
+00:08:56,319 --> 00:08:57,343
+0
+
+146
+00:08:58,623 --> 00:09:01,951
+Otherwise
+
+147
+00:09:03,743 --> 00:09:04,255
+All right
+
+148
+00:09:04,511 --> 00:09:09,631
+Whereas it is the integral from A to B
+
+149
+00:09:09,887 --> 00:09:12,191
+People minus X on Lambda
+
+150
+00:09:12,447 --> 00:09:17,567
+So the actual probability density of each acts if we knew Lambda is an exponential
+
+151
+00:09:18,847 --> 00:09:23,455
+There are possibly some gas stations running around in this for example
+
+152
+00:09:23,711 --> 00:09:24,479
+If I
+
+153
+00:09:24,735 --> 00:09:25,759
+Define a bin
+
+154
+00:09:26,015 --> 00:09:29,343
+And if we measure the count of how many points are I did not been
+
+155
+00:09:30,111 --> 00:09:33,183
+It may be true that the probability distribution of that count
+
+156
+00:09:33,695 --> 00:09:39,839
+Which is actually a distribution of integers it may be reasonably well approximated that's impossible
+
+157
+00:09:40,095 --> 00:09:43,679
+Direction you could go in that the definitely does involve
+
+158
+00:09:43,935 --> 00:09:44,703
+Calciums
+
+159
+00:09:45,471 --> 00:09:49,311
+Does anyone else have a completely different approach to this
+
+160
+00:09:49,567 --> 00:09:50,079
+Problem
+
+161
+00:09:51,359 --> 00:09:53,407
+Did anyone study Physics
+
+162
+00:09:55,967 --> 00:09:56,479
+No one else
+
+163
+00:09:56,735 --> 00:09:58,783
+Yeah ok Google
+
+164
+00:09:59,039 --> 00:10:00,831
+Isn't it the case that when
+
+165
+00:10:01,343 --> 00:10:04,159
+Little young physicists I told to do stuff with that data
+
+166
+00:10:04,671 --> 00:10:05,695
+Fat toad
+
+167
+00:10:05,951 --> 00:10:06,975
+Get the data
+
+168
+00:10:07,487 --> 00:10:13,631
+Rearrange the equation that predicts the data given the premises in such a way that got a straight line graph
+
+169
+00:10:13,887 --> 00:10:16,959
+Straight line isn't that one of the rules of had to do
+
+170
+00:10:17,215 --> 00:10:18,239
+Statistical inference
+
+171
+00:10:20,287 --> 00:10:23,359
+So let me run with that idea
+
+172
+00:10:24,127 --> 00:10:25,407
+Sir
+
+173
+00:10:26,687 --> 00:10:28,479
+Best wispy of xn
+
+174
+00:10:28,735 --> 00:10:30,783
+Given Lambda a + b
+
+175
+00:10:33,855 --> 00:10:37,183
+62 - x on Lambda
+
+176
+00:10:37,951 --> 00:10:39,231
+/ that
+
+177
+00:10:39,487 --> 00:10:42,303
+I said depends on Lambda AA on big
+
+178
+00:10:44,351 --> 00:10:46,655
+If we got a load of points Acts
+
+179
+00:10:46,911 --> 00:10:52,031
+How can we turn this love into some sort of straight line well
+
+180
+00:10:52,287 --> 00:10:53,055
+Let's
+
+181
+00:10:53,311 --> 00:10:59,455
+First X little window as we had before been size P of X and given Lambda AMV
+
+182
+00:10:59,711 --> 00:11:01,247
+X Delta X
+
+183
+00:11:02,015 --> 00:11:03,551
+That's now
+
+184
+00:11:06,623 --> 00:11:07,135
+The
+
+185
+00:11:07,391 --> 00:11:13,535
+Probability that the next point will fool in this particular been located at
+
+186
+00:11:13,791 --> 00:11:14,303
+Skibidi
+
+187
+00:11:14,559 --> 00:11:17,375
+Analysts think of this as a function of x
+
+188
+00:11:18,143 --> 00:11:23,519
+This is the probability that the next point will full in a bin of size X plus minus
+
+189
+00:11:25,055 --> 00:11:25,823
+I've been
+
+190
+00:11:26,079 --> 00:11:29,151
+Or would sell tax located on X approximately all right
+
+191
+00:11:29,919 --> 00:11:33,759
+So if I multiply that by the total number Vega points we got
+
+192
+00:11:34,015 --> 00:11:35,551
+Which is an
+
+193
+00:11:38,623 --> 00:11:40,671
+That's the expected
+
+194
+00:11:41,439 --> 00:11:42,463
+Number
+
+195
+00:11:43,231 --> 00:11:44,511
+In a bin
+
+196
+00:11:45,791 --> 00:11:49,631
+And that is equal to and on Zaid
+
+197
+00:11:49,887 --> 00:11:51,935
+A two- axon Lambda
+
+198
+00:11:52,447 --> 00:11:54,495
+We want some way of turning this
+
+199
+00:11:54,751 --> 00:12:00,639
+Expected number which will relate to that to measure number into some sort of straight line
+
+200
+00:12:00,895 --> 00:12:03,199
+Thing that would measuring his ex so that's
+
+201
+00:12:03,711 --> 00:12:04,735
+A variable list
+
+202
+00:12:04,991 --> 00:12:06,783
+Changes as you move the been around
+
+203
+00:12:07,039 --> 00:12:08,831
+Under the / Lambda
+
+204
+00:12:09,087 --> 00:12:14,463
+That's horrible but we physicists we know how to get rid of exponential to take the log
+
+205
+00:12:15,231 --> 00:12:16,255
+And
+
+206
+00:12:23,679 --> 00:12:25,471
+So you can have the log
+
+207
+00:12:25,727 --> 00:12:28,031
+Of the expected count
+
+208
+00:12:28,799 --> 00:12:29,823
+In
+
+209
+00:12:31,103 --> 00:12:36,479
+I've been at x with with Delta X
+
+210
+00:12:37,503 --> 00:12:38,783
+The log of expected count
+
+211
+00:12:39,039 --> 00:12:44,159
+Is log off and on Zed which is something the constant
+
+212
+00:12:44,927 --> 00:12:47,231
+Minus X
+
+213
+00:12:48,767 --> 00:12:49,535
+Lambda
+
+214
+00:12:53,375 --> 00:12:59,519
+That's not a straight line with an intercept of something-or-other and a slope of -1
+
+215
+00:12:59,775 --> 00:13:00,287
+Linda
+
+216
+00:13:01,311 --> 00:13:02,079
+All right
+
+217
+00:13:03,359 --> 00:13:06,943
+So if you've been subjected to the physics
+
+218
+00:13:07,199 --> 00:13:13,343
+Training the size of a high school thing to do is take the money and get a straight line
+
+219
+00:13:13,599 --> 00:13:16,671
+And everyone knows how to say so
+
+220
+00:13:18,463 --> 00:13:20,767
+I didn't number one was
+
+221
+00:13:21,279 --> 00:13:22,047
+Let's
+
+222
+00:13:23,327 --> 00:13:28,703
+Put the diaper to Ben's I got a histogram that doesn't solve the problem when I need to do something with a histogram
+
+223
+00:13:28,959 --> 00:13:35,103
+Things we could do with a histogram notice I've done it twice and it was fat beans one
+
+224
+00:13:35,359 --> 00:13:39,455
+Time to just emphasize the answer we end up with may depend on the size of a penis
+
+225
+00:13:43,039 --> 00:13:43,807
+His the
+
+226
+00:13:44,319 --> 00:13:48,159
+Physics education idea to take the log of your Instagram then fit a straight line
+
+227
+00:13:48,671 --> 00:13:50,719
+So the suggestion is
+
+228
+00:13:50,975 --> 00:13:52,767
+Take the actual data
+
+229
+00:13:53,279 --> 00:13:57,119
+The thing that is true is that the log of the expected number is
+
+230
+00:13:57,375 --> 00:13:59,167
+Some constant minus X on Lambda
+
+231
+00:13:59,679 --> 00:14:02,239
+But we're not going to do is take the actual beta
+
+232
+00:14:02,495 --> 00:14:03,519
+FB
+
+233
+00:14:04,031 --> 00:14:05,311
+Who can take the log of that
+
+234
+00:14:06,847 --> 00:14:09,407
+Unplug that against tax
+
+235
+00:14:12,223 --> 00:14:14,783
+And what I'm going to fit a straight line
+
+236
+00:14:15,295 --> 00:14:21,439
+Is a lot of extra questions getting raised by this approach when we say fit a straight line
+
+237
+00:14:21,695 --> 00:14:27,839
+How to fix a straight line to just use this straight line fitting thing that comes on your computer that's probably won't
+
+238
+00:14:28,095 --> 00:14:28,607
+To do
+
+239
+00:14:28,863 --> 00:14:33,471
+But something that could very easily be the case is when you define your bins
+
+240
+00:14:33,727 --> 00:14:39,871
+If you define them before you actually get today to it to the sort of correct way to do classical statistics you shouldn't change up
+
+241
+00:14:40,127 --> 00:14:41,919
+Best way to ask to look at it
+
+242
+00:14:42,687 --> 00:14:46,783
+It could well be the case that won bin might have their accounts in it
+
+243
+00:14:47,807 --> 00:14:49,855
+Not when you take the log of 0
+
+244
+00:14:50,367 --> 00:14:51,903
+You going to have and not been
+
+245
+00:14:52,927 --> 00:14:58,815
+Log of 0 you have an infinitely negative value to put into your straight line fishing method
+
+246
+00:15:01,119 --> 00:15:01,887
+So
+
+247
+00:15:02,143 --> 00:15:06,239
+It all sounds pretty good and it looks fairly good what if you get lucky
+
+248
+00:15:06,495 --> 00:15:08,287
+Up on the screen
+
+249
+00:15:08,543 --> 00:15:13,151
+With nice fat Benz and lots of data you can see a straight line
+
+250
+00:15:13,407 --> 00:15:14,943
+I was going to give you the rights
+
+251
+00:15:15,455 --> 00:15:18,271
+Universal method for answering problems
+
+252
+00:15:20,575 --> 00:15:22,111
+So just use to Benny's
+
+253
+00:15:22,367 --> 00:15:24,927
+Okay so here's another suggestion
+
+254
+00:15:25,439 --> 00:15:26,719
+Take the data
+
+255
+00:15:26,975 --> 00:15:29,791
+Put it in only two bins
+
+256
+00:15:30,047 --> 00:15:36,191
+I know we going to fix the bins before hunt or Willie set the boundary between the bins
+
+257
+00:15:37,215 --> 00:15:42,847
+What you wanting to do is make sure we got some points in each bin yeah and then do something
+
+258
+00:15:43,103 --> 00:15:45,919
+This is a number 3
+
+259
+00:15:46,431 --> 00:15:48,223
+You fit a straight line
+
+260
+00:15:51,039 --> 00:15:55,903
+I didn't number for is just used to bins but be smart about where you put the bin battery
+
+261
+00:15:56,415 --> 00:15:58,463
+Three points
+
+262
+00:15:59,487 --> 00:16:00,767
+What are the two bins going to be
+
+263
+00:16:01,023 --> 00:16:01,791
+Wicked
+
+264
+00:16:02,047 --> 00:16:08,191
+Well hello hello hello
+
+265
+00:16:08,447 --> 00:16:13,311
+I have two in one bed and one in the other or one in one and two in the other
+
+266
+00:16:13,567 --> 00:16:16,127
+It's a nice idea it's probably
+
+267
+00:16:16,383 --> 00:16:17,919
+It was probably something in it
+
+268
+00:16:18,175 --> 00:16:23,807
+But it still got pitfalls namely if you actually end up with two points you trying to struggle
+
+269
+00:16:24,319 --> 00:16:27,647
+Because of the loss of all between us now by the way you put your Ben batteries
+
+270
+00:16:29,439 --> 00:16:30,463
+Okay
+
+271
+00:16:31,487 --> 00:16:33,279
+Are there any other suggestions
+
+272
+00:16:33,535 --> 00:16:36,607
+Pat's exhausted a whole bunch of different laser
+
+273
+00:16:36,863 --> 00:16:39,167
+Making been putting it into Benz
+
+274
+00:16:40,191 --> 00:16:42,495
+And then doing something with those histograms
+
+275
+00:16:43,007 --> 00:16:44,031
+What other ideas
+
+276
+00:16:49,407 --> 00:16:53,247
+Okay so another suggestion suggestion number 5
+
+277
+00:16:53,503 --> 00:16:54,015
+It is
+
+278
+00:16:54,271 --> 00:16:55,551
+Could we look at
+
+279
+00:16:56,063 --> 00:16:57,599
+The cumulative distribution
+
+280
+00:17:01,183 --> 00:17:02,463
+So
+
+281
+00:17:02,975 --> 00:17:04,255
+His ID number five
+
+282
+00:17:04,511 --> 00:17:10,655
+If I give you some data like that you can deduce from it
+
+283
+00:17:10,911 --> 00:17:13,215
+Image of distribution which is nothing
+
+284
+00:17:13,727 --> 00:17:14,751
+1
+
+285
+00:17:15,263 --> 00:17:16,031
+She said
+
+286
+00:17:16,543 --> 00:17:17,823
+3/3
+
+287
+00:17:20,383 --> 00:17:21,919
+So that's the cumulative
+
+288
+00:17:22,175 --> 00:17:27,039
+Distribution function from any particular hypothesis
+
+289
+00:17:27,295 --> 00:17:33,183
+It says what Lavender is used to find the probability density
+
+290
+00:17:33,695 --> 00:17:34,975
+CDF
+
+291
+00:17:35,231 --> 00:17:37,791
+For that value of Lambda which will be
+
+292
+00:17:38,815 --> 00:17:39,839
+Something like that
+
+293
+00:17:40,351 --> 00:17:40,863
+Okay
+
+294
+00:17:41,375 --> 00:17:46,751
+And now we've got a thing that has little steps and it wherever they Point happened to come
+
+295
+00:17:47,007 --> 00:17:49,567
+And we could repeat now
+
+296
+00:17:49,823 --> 00:17:54,431
+Let's have a measure of how close this is to this
+
+297
+00:17:55,199 --> 00:17:57,247
+Now we need to decide what time is replacements
+
+298
+00:17:58,015 --> 00:18:04,159
+And where do we measure it so we can measure it here in here in here in San Antonio
+
+299
+00:18:04,415 --> 00:18:05,695
+Distances between
+
+300
+00:18:05,951 --> 00:18:06,719
+These two
+
+301
+00:18:09,279 --> 00:18:10,047
+CVS
+
+302
+00:18:11,071 --> 00:18:17,215
+How many topping way of measuring distances between the two differences of decision about
+
+303
+00:18:17,471 --> 00:18:20,799
+What's the density of points at which we measure the difference
+
+304
+00:18:21,311 --> 00:18:22,079
+Albuquerque
+
+305
+00:18:22,335 --> 00:18:24,895
+Well I only care about the TGIF in this weekend
+
+306
+00:18:25,151 --> 00:18:26,175
+Hawaii
+
+307
+00:18:32,319 --> 00:18:33,599
+Does an issue of
+
+308
+00:18:33,855 --> 00:18:34,879
+How do you measure
+
+309
+00:18:35,135 --> 00:18:41,279
+I need to come up with ways of measuring how close
+
+310
+00:18:41,535 --> 00:18:42,815
+Ccdf soft
+
+311
+00:18:43,327 --> 00:18:46,655
+And I do that is a problem because it means there's an infinite number of ways
+
+312
+00:18:46,911 --> 00:18:49,471
+But answering the question how do we fit
+
+313
+00:18:49,727 --> 00:18:50,239
+Lambda
+
+314
+00:18:50,495 --> 00:18:52,031
+2 States at what we think Landry's
+
+315
+00:18:53,055 --> 00:18:55,359
+So we could do things with TDS
+
+316
+00:18:55,871 --> 00:19:00,479
+That would get rid of Ben wittes but it still leaves some interesting questions leftover yes
+
+317
+00:19:02,527 --> 00:19:08,671
+Brilliant okay so how do we find the mean of a gaussian distribution
+
+318
+00:19:08,927 --> 00:19:14,303
+Well we just take snacks and we some of us it was right by Anne
+
+319
+00:19:14,559 --> 00:19:20,703
+I'm not giving us the number
+
+320
+00:19:20,959 --> 00:19:22,239
+Enfig options
+
+321
+00:19:22,495 --> 00:19:27,359
+New hot equals x bar
+
+322
+00:19:27,615 --> 00:19:33,759
+So that's something we can do with no bins at all we can take all of these days we can take some of that sand
+
+323
+00:19:35,039 --> 00:19:38,879
+Because the windows going to left hand side remember the left hand side of the window
+
+324
+00:19:39,391 --> 00:19:40,671
+Is at a
+
+325
+00:19:40,927 --> 00:19:45,791
+They don't have any points to less that I made it would be sensible to subtract a
+
+326
+00:19:53,727 --> 00:19:56,031
+Now that's an interesting thing about the me
+
+327
+00:19:56,543 --> 00:19:58,847
+Distance from
+
+328
+00:19:59,615 --> 00:20:01,151
+And that clearly has
+
+329
+00:20:01,663 --> 00:20:07,807
+Unexpected dependent on land of the big of a value Lambda has the more the Pine-Sol search to the
+
+330
+00:20:08,063 --> 00:20:11,391
+Right hand side and eventually The Middle on average
+
+331
+00:20:11,903 --> 00:20:14,207
+If you have a really large
+
+332
+00:20:14,719 --> 00:20:16,511
+Then you have a uniform distribution
+
+333
+00:20:16,767 --> 00:20:20,351
+So this isn't precisely related to Lambda
+
+334
+00:20:21,119 --> 00:20:23,423
+But in the case goes to Infinity
+
+335
+00:20:23,935 --> 00:20:27,007
+If the window is infinitely wide on the right hand side
+
+336
+00:20:27,263 --> 00:20:28,031
+Then
+
+337
+00:20:28,543 --> 00:20:34,687
+Something you might remember about exponential distributions is the meaning of this guy
+
+338
+00:20:34,943 --> 00:20:37,247
+Is Ethan mine effects on Lambda now
+
+339
+00:20:37,503 --> 00:20:38,271
+With no window
+
+340
+00:20:39,295 --> 00:20:43,391
+The mean of this distribution is Lambda
+
+341
+00:20:44,159 --> 00:20:47,487
+Okay expected value Max is Lambda
+
+342
+00:20:47,743 --> 00:20:53,119
+So I think that's a really good idea to say maybe there's something in the idea of computing to me
+
+343
+00:20:58,495 --> 00:21:00,031
+Absolutely we can
+
+344
+00:21:00,287 --> 00:21:04,639
+Let's have a measure discrepancy between the
+
+345
+00:21:05,407 --> 00:21:05,919
+And
+
+346
+00:21:06,175 --> 00:21:07,199
+The predicted me
+
+347
+00:21:07,967 --> 00:21:12,319
+Let's imagine doing that it is not a very difficult calculation to do
+
+348
+00:21:16,928 --> 00:21:18,720
+I will keep asking questions as well
+
+349
+00:21:23,328 --> 00:21:24,096
+Set
+
+350
+00:21:24,864 --> 00:21:26,656
+The expected value of x
+
+351
+00:21:26,912 --> 00:21:29,984
+For the real distribution is the integral from A to B
+
+352
+00:21:30,240 --> 00:21:32,288
+8 - x on Lambda
+
+353
+00:21:32,800 --> 00:21:35,616
+Text / Zedd
+
+354
+00:21:38,176 --> 00:21:43,040
+And you cancel that and it's a function all day being lined up so this is some sort of
+
+355
+00:21:43,552 --> 00:21:45,088
+Escort new off
+
+356
+00:21:45,344 --> 00:21:47,648
+Hey Atlanta
+
+357
+00:21:52,256 --> 00:21:53,280
+If this is a
+
+358
+00:21:53,536 --> 00:21:54,560
+This is B
+
+359
+00:21:55,072 --> 00:22:00,192
+How much is Lambda what Mew actually looks like his is roughly Linea down here
+
+360
+00:22:00,448 --> 00:22:00,960
+And then
+
+361
+00:22:01,472 --> 00:22:02,752
+It flattens out like that
+
+362
+00:22:04,032 --> 00:22:06,592
+So that's what you of
+
+363
+00:22:06,848 --> 00:22:09,152
+Baby in London actually looks like
+
+364
+00:22:10,432 --> 00:22:15,808
+Another suggestion is take all the title take your 1000.4 your message to enormous precision
+
+365
+00:22:16,064 --> 00:22:18,624
+The throw away all of the position of that and just out of mouth
+
+366
+00:22:19,136 --> 00:22:19,904
+Okay
+
+367
+00:22:20,672 --> 00:22:25,024
+Why did you compute the mean you're throwing it all away love information there
+
+368
+00:22:25,280 --> 00:22:27,840
+Information
+
+369
+00:22:29,888 --> 00:22:31,936
+But you can do it and then
+
+370
+00:22:32,192 --> 00:22:33,984
+You got to do something with this kind of hair
+
+371
+00:22:35,520 --> 00:22:38,592
+So you would come out what the actual datamine is
+
+372
+00:22:38,848 --> 00:22:40,896
+So you bring a long ax bar
+
+373
+00:22:42,176 --> 00:22:45,248
+Define the actual me
+
+374
+00:22:49,088 --> 00:22:52,672
+Which I'm not a defining to be the sum of X and Iran
+
+375
+00:22:53,184 --> 00:22:56,256
+You bring it along and use it through this line
+
+376
+00:22:56,512 --> 00:23:00,352
+Can you plop it downstairs and you said okay there is an estimator
+
+377
+00:23:00,608 --> 00:23:01,376
+Salamander
+
+378
+00:23:02,144 --> 00:23:03,168
+Not what you had in mind
+
+379
+00:23:04,192 --> 00:23:05,216
+I like that idea
+
+380
+00:23:07,520 --> 00:23:09,056
+Don't have any beans in it
+
+381
+00:23:09,568 --> 00:23:12,384
+But it didn't go very big step for saying I'm going to compute the me
+
+382
+00:23:12,896 --> 00:23:14,176
+And you could have said
+
+383
+00:23:14,432 --> 00:23:20,576
+I'm going to compute the variance or I'm going to compute V moment or you could have invented a whole load of other things to make
+
+384
+00:23:20,832 --> 00:23:22,880
+And then you could have plotted them
+
+385
+00:23:23,392 --> 00:23:26,976
+As a function of Lambda so another thing
+
+386
+00:23:28,768 --> 00:23:31,328
+Could have been plotted as a function of Lambda
+
+387
+00:23:33,632 --> 00:23:36,960
+And then you got to your day turn you come down and say or it could be anybody
+
+388
+00:23:38,496 --> 00:23:44,128
+Not an infinite family of things that you could do I think this is a brilliant idea and you'll see why in a moment
+
+389
+00:23:44,640 --> 00:23:48,736
+Does an infant number of things you could invent which depend on Lambda
+
+390
+00:23:49,504 --> 00:23:50,528
+And you could
+
+391
+00:23:50,784 --> 00:23:55,392
+Pick one of those and then measure it and use it to come back and get an estimate of Lambda
+
+392
+00:23:57,184 --> 00:24:00,000
+So that's another thing that is done in Costco statistics
+
+393
+00:24:00,512 --> 00:24:01,280
+And it
+
+394
+00:24:01,536 --> 00:24:03,072
+Can often be done well
+
+395
+00:24:03,584 --> 00:24:08,960
+And you can also get in trouble cuz what if the 3-day points is a is B
+
+396
+00:24:12,800 --> 00:24:13,824
+That could happen right
+
+397
+00:24:14,336 --> 00:24:15,360
+You got any free points
+
+398
+00:24:15,872 --> 00:24:17,664
+Rolls-Royce
+
+399
+00:24:19,968 --> 00:24:20,480
+The midpoint
+
+400
+00:24:21,248 --> 00:24:24,320
+So now you work out the mean and it's above the midpoint of a b
+
+401
+00:24:25,344 --> 00:24:27,904
+And now you don't know what to do because your methods head
+
+402
+00:24:28,160 --> 00:24:30,208
+Come across from the title value and read down
+
+403
+00:24:30,720 --> 00:24:32,256
+And I haven't got an answer anymore
+
+404
+00:24:33,024 --> 00:24:33,536
+Okay
+
+405
+00:24:35,584 --> 00:24:39,168
+There's lots of ways to solve problems the wrong way
+
+406
+00:24:39,424 --> 00:24:44,800
+I'm reminded of a Penn and Teller video at Penn and Teller studying a controversial topic
+
+407
+00:24:45,312 --> 00:24:45,824
+And
+
+408
+00:24:46,336 --> 00:24:47,360
+Hotnewhiphop
+
+409
+00:24:48,384 --> 00:24:54,528
+And they interview a guy who has also the reason for the engine UK and they say we believe in violence on our show so
+
+410
+00:24:54,784 --> 00:25:00,416
+We gave attempts to every part of you express from the idiot now let's hear from a guy who's right
+
+411
+00:25:01,440 --> 00:25:07,328
+Let's now so this inference problem using Bayes theorem and there will be a unique answer
+
+412
+00:25:07,840 --> 00:25:13,984
+He'll be one answer to the public in any case with any case with any amount of data 3 days
+
+413
+00:25:14,240 --> 00:25:15,520
+3000 data points
+
+414
+00:25:15,776 --> 00:25:17,568
+Angela National think
+
+415
+00:25:18,080 --> 00:25:23,456
+You got the right answer you don't need to choose being sizes you don't need to invent measures of goodness of fit
+
+416
+00:25:24,224 --> 00:25:30,112
+You don't need to invent interesting functions like the meaning of the data which in this case is a brilliant holiday
+
+417
+00:25:32,160 --> 00:25:33,184
+Put another problems
+
+418
+00:25:34,208 --> 00:25:36,256
+You might struggle to think of the brilliant idea
+
+419
+00:25:39,072 --> 00:25:43,168
+You don't actually need to think you need to know what you're doing
+
+420
+00:25:43,680 --> 00:25:44,960
+Need to get it right
+
+421
+00:25:45,216 --> 00:25:47,008
+But it is a mechanical
+
+422
+00:25:49,568 --> 00:25:50,848
+And it don't take yours
+
+423
+00:25:51,104 --> 00:25:53,152
+To get used to doing things the Basin way
+
+424
+00:25:54,688 --> 00:25:55,968
+So how does it work
+
+425
+00:25:57,504 --> 00:25:58,272
+All right
+
+426
+00:25:59,808 --> 00:26:04,160
+So here's a list of other ideas that people I can come up with I think we've gone through them
+
+427
+00:26:05,184 --> 00:26:08,000
+Open when I asked the question how would you solve this problem
+
+428
+00:26:08,256 --> 00:26:09,792
+People say Chi Squared
+
+429
+00:26:10,304 --> 00:26:14,656
+And that goes back to the bins story have to count in the bin
+
+430
+00:26:14,912 --> 00:26:17,472
+Many measure the difference between accountant expected
+
+431
+00:26:17,728 --> 00:26:19,008
+He's getting for chi-square
+
+432
+00:26:19,776 --> 00:26:20,544
+So that
+
+433
+00:26:20,800 --> 00:26:23,872
+We already had that roughly in methods 1 and 2
+
+434
+00:26:25,664 --> 00:26:27,968
+Images of Arrow between the fairy in the beta
+
+435
+00:26:28,224 --> 00:26:29,504
+Look at the day to me
+
+436
+00:26:30,272 --> 00:26:35,392
+And see how that very lined up or pick some other quantity and see how that varies with Lambda
+
+437
+00:26:35,648 --> 00:26:37,952
+Any ideas
+
+438
+00:26:38,208 --> 00:26:41,024
+That are out there and I will do it using Bass Down
+
+439
+00:26:41,792 --> 00:26:45,632
+That's right down again what's the probability of the data is
+
+440
+00:26:47,168 --> 00:26:51,264
+For single data point given Lambda
+
+441
+00:26:52,288 --> 00:26:55,616
+This distribution is 8 -
+
+442
+00:26:55,872 --> 00:26:56,896
+Text my mom.
+
+443
+00:27:02,272 --> 00:27:04,064
+Is that is the indigo
+
+444
+00:27:04,320 --> 00:27:06,880
+Thanks
+
+445
+00:27:08,928 --> 00:27:09,952
+Online de
+
+446
+00:27:11,232 --> 00:27:12,768
+I need to do the integral
+
+447
+00:27:14,304 --> 00:27:20,448
+It's not hot it is Lambda Eastman - aeon lender Finance
+
+448
+00:27:20,704 --> 00:27:22,496
+Reminder speed on Lambda
+
+449
+00:27:23,776 --> 00:27:27,104
+I really want to emphasize how easy and straightforward and simple with his
+
+450
+00:27:27,616 --> 00:27:28,384
+And
+
+451
+00:27:28,896 --> 00:27:35,040
+It's just a few lines of computer code cuz all you need to not put into your computer is this statement which Define
+
+452
+00:27:35,808 --> 00:27:36,832
+PMX giving Lunde
+
+453
+00:27:39,392 --> 00:27:42,208
+And then you put in this one which defines house that depends on Lambda
+
+454
+00:27:42,976 --> 00:27:47,584
+And now you're done because it says that you can infer Lambda
+
+455
+00:27:48,096 --> 00:27:52,704
+Given by just multiplying together
+
+456
+00:27:56,032 --> 00:27:58,080
+All these things are so you have
+
+457
+00:27:58,336 --> 00:28:00,896
+How late is 1 + 11
+
+458
+00:28:01,152 --> 00:28:03,200
+Angelo Devita - x 10
+
+459
+00:28:04,992 --> 00:28:05,504
+On
+
+460
+00:28:05,760 --> 00:28:06,528
+Lambda
+
+461
+00:28:08,064 --> 00:28:13,440
+Is that is a function of Lambda Lambda
+
+462
+00:28:13,696 --> 00:28:15,232
+Depends on x
+
+463
+00:28:15,488 --> 00:28:17,792
+Does Linda Pennington hair this length
+
+464
+00:28:18,048 --> 00:28:19,584
+Flying together
+
+465
+00:28:19,840 --> 00:28:25,984
+And that that is your likelihood so this is the only active
+
+466
+00:28:26,240 --> 00:28:27,264
+Honda
+
+467
+00:28:27,520 --> 00:28:32,384
+They multiply that by what Avenue about Lambda beforehand
+
+468
+00:28:35,712 --> 00:28:36,736
+Andino mice
+
+469
+00:28:41,344 --> 00:28:45,696
+And this is the uninteresting normalizing costumes that you don't care about if all you want to do is
+
+470
+00:28:45,952 --> 00:28:48,000
+Compatible scientific theories about Lambda
+
+471
+00:28:48,768 --> 00:28:51,840
+Let's look at the meeting yesterday too dependent best
+
+472
+00:28:52,096 --> 00:28:55,680
+And this is where the first time you see this
+
+473
+00:28:55,936 --> 00:29:00,800
+I find it just thrilling to automatically happens
+
+474
+00:29:01,056 --> 00:29:02,336
+You take this function
+
+475
+00:29:03,104 --> 00:29:05,152
+Let's stick with the slice
+
+476
+00:29:06,432 --> 00:29:08,480
+His the code you need to write down
+
+477
+00:29:08,736 --> 00:29:13,344
+I've written it and blue fault which is a language that you can use to define functions
+
+478
+00:29:13,600 --> 00:29:14,368
+Time Portland
+
+479
+00:29:14,624 --> 00:29:17,952
+It's hard to find a function P of X and Al which is
+
+480
+00:29:18,464 --> 00:29:19,744
+Dysfunction hat
+
+481
+00:29:20,000 --> 00:29:23,328
+X and Lambda Lambda sternadel on the bus
+
+482
+00:29:23,584 --> 00:29:26,656
+So the top line to find P the second line to find Zedge
+
+483
+00:29:27,424 --> 00:29:31,264
+Define said slightly differently put the one over Alan to the PA
+
+484
+00:29:31,520 --> 00:29:32,544
+But it's
+
+485
+00:29:32,800 --> 00:29:33,568
+That's a good one
+
+486
+00:29:34,080 --> 00:29:36,128
+Redefine a redefine B
+
+487
+00:29:36,384 --> 00:29:37,152
+And then
+
+488
+00:29:37,408 --> 00:29:43,552
+We can float these as a function of X which is the normal way of placing these things so you fix Lambda
+
+489
+00:29:45,600 --> 00:29:51,744
+Any plot of x given Lambda as a function of X and it looks like
+
+490
+00:29:52,000 --> 00:29:53,536
+Very normal
+
+491
+00:29:55,328 --> 00:29:58,400
+So that's what it looks like the three different values of Lambda
+
+492
+00:29:58,912 --> 00:30:01,472
+How to have a very smooth
+
+493
+00:30:01,984 --> 00:30:03,264
+Welcome to my time left
+
+494
+00:30:03,520 --> 00:30:05,056
+Happy big Lambda
+
+495
+00:30:07,360 --> 00:30:09,152
+Uniform distribution
+
+496
+00:30:09,920 --> 00:30:16,064
+But every one of these probabilities integrates to Wong and it's a little very normal
+
+497
+00:30:17,088 --> 00:30:18,880
+Find the area under
+
+498
+00:30:19,136 --> 00:30:20,160
+The Green Cove
+
+499
+00:30:23,744 --> 00:30:27,072
+Is also
+
+500
+00:30:27,584 --> 00:30:30,656
+That's all very standard and very simple in the chest exponential's
+
+501
+00:30:30,912 --> 00:30:34,496
+And then baystorm says like I know you want to know the line with the given actually just
+
+502
+00:30:34,752 --> 00:30:35,776
+Plot the same function
+
+503
+00:30:36,032 --> 00:30:36,800
+But look at it
+
+504
+00:30:37,056 --> 00:30:38,080
+How's the function of Lambda
+
+505
+00:30:38,336 --> 00:30:41,920
+Play take these innocent exponential functions I'm looking the other way around
+
+506
+00:30:42,944 --> 00:30:47,040
+And this is what they look like so this is the probability of x
+
+507
+00:30:47,552 --> 00:30:48,320
+Given
+
+508
+00:30:49,088 --> 00:30:49,856
+Lambda
+
+509
+00:30:51,904 --> 00:30:53,440
+Sorry it's not
+
+510
+00:30:53,696 --> 00:30:55,232
+Okay
+
+511
+00:30:56,512 --> 00:31:02,656
+Ind.vs to do this we need to fix that to a particular value so I'm showing you three different
+
+512
+00:31:02,912 --> 00:31:06,240
+Time for three different possible accessrx good bo3
+
+513
+00:31:08,544 --> 00:31:12,896
+This is what direction Lambda looks like for 3 Lite Luca
+
+514
+00:31:13,152 --> 00:31:14,688
+The five it's the blue one
+
+515
+00:31:14,944 --> 00:31:16,736
+12 it's the purple one
+
+516
+00:31:17,760 --> 00:31:20,320
+An amazing thing is just one of those functions
+
+517
+00:31:21,088 --> 00:31:22,112
+Take a Bow
+
+518
+00:31:22,368 --> 00:31:28,512
+If we fix x-23 and then plot of x given Lambda as a function of Lambda
+
+519
+00:31:28,768 --> 00:31:29,792
+The horizontal axis hair
+
+520
+00:31:30,048 --> 00:31:31,584
+And I put it on a log scale
+
+521
+00:31:32,864 --> 00:31:33,632
+It's got a pink
+
+522
+00:31:34,400 --> 00:31:35,936
+So a single data point
+
+523
+00:31:36,192 --> 00:31:38,752
+Is not giving you this nice PC function and saying
+
+524
+00:31:39,008 --> 00:31:40,032
+That
+
+525
+00:31:41,056 --> 00:31:44,896
+Just one datapoint that happened to arrive at
+
+526
+00:31:45,152 --> 00:31:46,944
+X = 3
+
+527
+00:31:47,712 --> 00:31:51,040
+That one day 2.90 tells dude
+
+528
+00:31:52,832 --> 00:31:55,904
+Tell Jason opinions you won't have about different values of Lambda
+
+529
+00:31:58,720 --> 00:32:01,792
+Extremely small values of Lambda close to zero
+
+530
+00:32:02,560 --> 00:32:04,608
+Essentially ruled out by us
+
+531
+00:32:06,656 --> 00:32:09,216
+Values of land initiative to also
+
+532
+00:32:09,472 --> 00:32:12,032
+Tiffany happy they did a good job before the dance
+
+533
+00:32:12,288 --> 00:32:13,568
+Matilija values
+
+534
+00:32:13,824 --> 00:32:18,432
+A slightly ruthann but nobody much they just slightly penalize compared to
+
+535
+00:32:18,688 --> 00:32:20,736
+Lambda is too also
+
+536
+00:32:26,112 --> 00:32:27,392
+So just one datapoint
+
+537
+00:32:27,648 --> 00:32:31,744
+Can tell you something about what language should be and as you piling more more data points
+
+538
+00:32:32,256 --> 00:32:34,304
+Multiply these functions by each other
+
+539
+00:32:34,816 --> 00:32:38,144
+The special case of a data point this out beyond the midpoint
+
+540
+00:32:39,168 --> 00:32:40,704
+Gives you the purple line here
+
+541
+00:32:40,960 --> 00:32:47,104
+Which STI can we can definitely rule out tiny bodies of Lambda there's no way Lambda could be Point 10.3 or something like that
+
+542
+00:32:47,360 --> 00:32:50,688
+I got a pint at 12 that's crazy so that's ruled out
+
+543
+00:32:50,944 --> 00:32:56,832
+But all values of Lambda from 10-20-30 100 day rule equally probable
+
+544
+00:32:57,344 --> 00:33:00,672
+Predictive estate appoint equally well
+
+545
+00:33:01,184 --> 00:33:07,328
+Because they will protect essentially uniform distribution so that equally unsurprised by saying evaluation
+
+546
+00:33:07,584 --> 00:33:08,096
+12
+
+547
+00:33:10,144 --> 00:33:10,656
+Okay
+
+548
+00:33:10,912 --> 00:33:12,448
+So we will play these together
+
+549
+00:33:12,960 --> 00:33:19,104
+When you multiply those functions together hair of X functions imagining that there are just three days points at three 5
+
+550
+00:33:19,360 --> 00:33:22,688
+5 and 12 * speak
+
+551
+00:33:26,528 --> 00:33:27,296
+We can
+
+552
+00:33:27,552 --> 00:33:32,416
+I think a bit more about what this function actually is how does the function depend on the data
+
+553
+00:33:32,928 --> 00:33:38,816
+Well this particular function depends on the writer MSY
+
+554
+00:33:40,608 --> 00:33:43,936
+Let's go eat in the minors
+
+555
+00:33:44,192 --> 00:33:46,240
+Suck it up staff Ethan Miner
+
+556
+00:33:46,496 --> 00:33:47,776
+Sum of x n
+
+557
+00:33:50,080 --> 00:33:51,360
+Atlanta
+
+558
+00:33:53,408 --> 00:33:55,712
+Is all you need to know in fact
+
+559
+00:33:55,968 --> 00:33:59,552
+So I'm rewriting the likelihood
+
+560
+00:34:02,880 --> 00:34:09,024
+So the brilliant intuition that said why don't you just compute the mean of the data is exactly right
+
+561
+00:34:09,280 --> 00:34:15,424
+Exponential then the only thing you need to know is the sum
+
+562
+00:34:15,936 --> 00:34:17,984
+And then you can work out the lights
+
+563
+00:34:18,240 --> 00:34:20,544
+So you don't actually need to know all the data points
+
+564
+00:34:22,080 --> 00:34:23,104
+You just need some of them
+
+565
+00:34:24,640 --> 00:34:26,688
+Because of this particular form
+
+566
+00:34:27,200 --> 00:34:28,992
+All of the probability density
+
+567
+00:34:29,248 --> 00:34:33,088
+If the model didn't look like this it wouldn't be in the meeting that is the thing you need to know
+
+568
+00:34:33,344 --> 00:34:39,488
+The lessons of the alphabet is not computer
+
+569
+00:34:41,536 --> 00:34:47,424
+What you need to do is look at the likelihood function under like its function will tell you what you want to do with your date and in this case
+
+570
+00:34:47,680 --> 00:34:49,216
+Find the mean
+
+571
+00:34:49,472 --> 00:34:50,240
+And then
+
+572
+00:34:51,008 --> 00:34:54,592
+Good function and on the screen we have a likely function math
+
+573
+00:34:55,616 --> 00:34:56,384
+And
+
+574
+00:34:57,408 --> 00:34:57,920
+I can
+
+575
+00:34:58,176 --> 00:35:01,504
+Recreate these cuz we're just looking at
+
+576
+00:35:01,760 --> 00:35:02,528
+Again
+
+577
+00:35:03,552 --> 00:35:04,320
+So
+
+578
+00:35:05,856 --> 00:35:06,880
+Here are
+
+579
+00:35:07,392 --> 00:35:08,928
+I'll just repeat the sequence I did
+
+580
+00:35:09,696 --> 00:35:15,328
+Here are three probability densities over data Space X
+
+581
+00:35:15,584 --> 00:35:19,680
+You could imagine getting data at Point such as 3 or 5 or 12
+
+582
+00:35:20,192 --> 00:35:26,336
+The predictions of these different models of different values of Lambda a simple exponential that's something you can know.
+
+583
+00:35:27,360 --> 00:35:30,432
+Is there a places for example the left-hand Blue Line
+
+584
+00:35:30,688 --> 00:35:33,504
+Where the red is above the oranges above the yellow
+
+585
+00:35:33,760 --> 00:35:35,552
+So the Red Wings it predicted that
+
+586
+00:35:36,064 --> 00:35:38,880
+The places where the yellow is above the oranges above the red
+
+587
+00:35:39,392 --> 00:35:41,952
+Under places where the oranges top
+
+588
+00:35:42,464 --> 00:35:44,768
+So there are outcomes
+
+589
+00:35:45,280 --> 00:35:48,352
+Such that any of those three can be the winner in terms of having
+
+590
+00:35:48,608 --> 00:35:49,376
+Predicted Betha
+
+591
+00:35:49,632 --> 00:35:50,656
+Then the other two
+
+592
+00:35:51,168 --> 00:35:52,448
+That's another way of saying
+
+593
+00:35:52,704 --> 00:35:56,032
+When then they will be at Peak
+
+594
+00:35:56,288 --> 00:35:57,056
+As a function
+
+595
+00:35:57,312 --> 00:35:58,336
+Lambda
+
+596
+00:35:58,848 --> 00:36:01,664
+So now we do that we put the likelihood function
+
+597
+00:36:02,688 --> 00:36:06,016
+And this is the likelihood multiplying together those three
+
+598
+00:36:07,552 --> 00:36:08,576
+Numbers
+
+599
+00:36:09,856 --> 00:36:16,000
+I'm not showing in red orange and yellow cat just three values of Lambda that we were considering remember that we looked at Landry's
+
+600
+00:36:16,256 --> 00:36:17,280
+25 + 10
+
+601
+00:36:17,792 --> 00:36:19,328
+This is when you get data
+
+602
+00:36:21,632 --> 00:36:23,424
+MP3
+
+603
+00:36:23,936 --> 00:36:24,960
+At the three points
+
+604
+00:36:25,984 --> 00:36:27,264
+I mentioned before
+
+605
+00:36:28,544 --> 00:36:29,056
+Okay
+
+606
+00:36:29,568 --> 00:36:30,848
+Step one more time
+
+607
+00:36:31,360 --> 00:36:31,872
+What's going on
+
+608
+00:36:41,088 --> 00:36:41,856
+Triangle
+
+609
+00:36:44,928 --> 00:36:45,440
+Okay
+
+610
+00:36:46,208 --> 00:36:48,256
+So just getting through the sequence again
+
+611
+00:36:48,768 --> 00:36:50,816
+His three places you could get data
+
+612
+00:36:51,584 --> 00:36:55,680
+I left on point points to the red hypothesis being the most probable
+
+613
+00:36:56,960 --> 00:36:58,752
+Datavant at 5
+
+614
+00:36:59,008 --> 00:37:02,080
+Prefers by publish The Landry something like five
+
+615
+00:37:02,336 --> 00:37:06,432
+And they Point inside prefer to be 10 or so
+
+616
+00:37:06,688 --> 00:37:08,736
+To the hypothesis that Landers 205
+
+617
+00:37:08,992 --> 00:37:14,880
+So this is what the likelihood look like if you got just one data point that is respectively at 3 or 5 or 12
+
+618
+00:37:16,928 --> 00:37:18,464
+And this is the product of x
+
+619
+00:37:19,232 --> 00:37:19,744
+Okay
+
+620
+00:37:21,536 --> 00:37:22,560
+That face serum
+
+621
+00:37:23,328 --> 00:37:25,376
+So finding a single parameter Lambda
+
+622
+00:37:25,632 --> 00:37:28,448
+Wasn't that easy because all you have to do
+
+623
+00:37:28,704 --> 00:37:29,472
+Was right
+
+624
+00:37:29,984 --> 00:37:30,752
+Essentially
+
+625
+00:37:31,008 --> 00:37:32,032
+Warm
+
+626
+00:37:32,288 --> 00:37:33,056
+2
+
+627
+00:37:33,824 --> 00:37:35,104
+Three lines
+
+628
+00:37:35,360 --> 00:37:39,456
+Define the function and now we've got this bump that tells us
+
+629
+00:37:39,968 --> 00:37:40,480
+The answer
+
+630
+00:37:41,248 --> 00:37:43,040
+What time does Walt how well
+
+631
+00:37:43,296 --> 00:37:47,392
+Predicted points
+
+632
+00:37:47,648 --> 00:37:49,696
+Another word for 3000 datapoints as well
+
+633
+00:37:50,208 --> 00:37:50,720
+Yeah
+
+634
+00:37:53,280 --> 00:37:55,840
+Okay who said anything about picking Lambda
+
+635
+00:37:56,096 --> 00:37:59,936
+The question said what is Lambda and I think the correct way to answer that
+
+636
+00:38:00,192 --> 00:38:04,032
+Is either do you really want me to take less Lambda if so tell me how
+
+637
+00:38:04,288 --> 00:38:10,432
+But if someone says what is Landry I think the correct way to answer that question is whether it's roughly this O+ o- this the way
+
+638
+00:38:10,688 --> 00:38:11,456
+Answer my question
+
+639
+00:38:11,712 --> 00:38:14,016
+How heavy is this book
+
+640
+00:38:14,272 --> 00:38:16,576
+I don't want to get a give me a number
+
+641
+00:38:17,088 --> 00:38:19,904
+I wanted to say well it could be
+
+642
+00:38:20,160 --> 00:38:23,488
+Do underground + -100 I'm not very good at estimating weight to books
+
+643
+00:38:24,000 --> 00:38:25,280
+So
+
+644
+00:38:25,792 --> 00:38:29,888
+Dumb question said what is Lambda it didn't say provide a single point estimate
+
+645
+00:38:30,144 --> 00:38:33,216
+If you want the point estimate guess what I might maximize the likelihood
+
+646
+00:38:33,728 --> 00:38:34,496
+But
+
+647
+00:38:35,008 --> 00:38:41,152
+I'm not addicted to maximizing like it's because you could get silly answers remember when we go we're looking in the gas industry
+
+648
+00:38:41,408 --> 00:38:41,920
+Division
+
+649
+00:38:42,432 --> 00:38:44,480
+I miss the gaussian with a single data point
+
+650
+00:38:44,736 --> 00:38:46,784
+Had infinitely big likelihood
+
+651
+00:38:47,040 --> 00:38:49,600
+Down here this is Mew
+
+652
+00:38:49,856 --> 00:38:54,464
+Are Swiss log Sigma Nu
+
+653
+00:38:54,976 --> 00:38:58,304
+Maximizing like it it doesn't have any fundamental status
+
+654
+00:38:59,584 --> 00:39:05,728
+It may well be better than a whole lot of other ways of doing things and principal
+
+655
+00:39:05,984 --> 00:39:06,752
+Can be dangerous
+
+656
+00:39:07,520 --> 00:39:13,664
+What would I say is answer I would return the likelihood and if someone wants a quick summary of rough
+
+657
+00:39:13,920 --> 00:39:15,200
+What the likelihood looks like
+
+658
+00:39:15,456 --> 00:39:19,552
+I would see if I can find a peek and I'd give some description of Hyrule Deepika
+
+659
+00:39:20,576 --> 00:39:21,088
+So
+
+660
+00:39:21,344 --> 00:39:25,440
+A very common thing you can do with a tail like this is if you got more than three datapoints
+
+661
+00:39:25,696 --> 00:39:29,280
+You can probably make a gassy and fit to that blue cup on the screen
+
+662
+00:39:29,792 --> 00:39:32,864
+What is the formula for it
+
+663
+00:39:33,120 --> 00:39:38,752
+A function that will compute the likelihood and here is a Galaxy an approximation to that it's called this mean in this standard deviation
+
+664
+00:39:39,520 --> 00:39:42,336
+So that the general method I'd I'd suggest
+
+665
+00:39:42,592 --> 00:39:43,872
+But often works well
+
+666
+00:39:44,384 --> 00:39:45,920
+You take your likelihood function
+
+667
+00:39:46,688 --> 00:39:48,992
+And your proxmate
+
+668
+00:39:49,504 --> 00:39:51,040
+The likelihood
+
+669
+00:39:53,600 --> 00:39:55,648
+Buy I got a chance baby
+
+670
+00:39:56,672 --> 00:39:59,744
+That isn't the rule but it's a suggestion
+
+671
+00:40:01,024 --> 00:40:07,168
+When you approximated by gas you need to describe what you need to decide what the variable on the horizontal axis is
+
+672
+00:40:07,680 --> 00:40:09,728
+Characters in have log Lambda
+
+673
+00:40:11,008 --> 00:40:15,616
+You could also have lemon womxn don't hold graphic looks excited
+
+674
+00:40:15,872 --> 00:40:20,480
+And I got an approximation in one space may not be as good as it can I send another
+
+675
+00:40:28,416 --> 00:40:29,952
+Okay the question is
+
+676
+00:40:30,464 --> 00:40:31,744
+Looking at these three
+
+677
+00:40:32,000 --> 00:40:34,816
+Likelihood for single data points on the top of the screen
+
+678
+00:40:35,328 --> 00:40:39,680
+Does the yellow one which is the probability of producing Mexico's 12
+
+679
+00:40:40,192 --> 00:40:41,984
+As a function of Lambda
+
+680
+00:40:42,240 --> 00:40:48,384
+Does it have a pika tool as Lambda goes to infinity and the answer is no always values of Lambda give identical
+
+681
+00:40:48,640 --> 00:40:50,944
+Prediction so it just asymptotes to
+
+682
+00:40:51,456 --> 00:40:52,992
+The value 1 - 19
+
+683
+00:40:54,016 --> 00:40:55,808
+Because the window is 19 wide
+
+684
+00:40:56,832 --> 00:40:58,624
+And so all of those in the limit
+
+685
+00:40:58,880 --> 00:41:02,464
+Put that probability density uniformly over 19 at space
+
+686
+00:41:02,720 --> 00:41:04,000
+19 centimeters wide
+
+687
+00:41:08,608 --> 00:41:13,472
+Yes it if you change the width of the window from being 19 centimeters wide
+
+688
+00:41:13,984 --> 00:41:15,776
+To being sad
+
+689
+00:41:16,032 --> 00:41:17,056
+190
+
+690
+00:41:17,312 --> 00:41:23,456
+Centimeters life then it would have a peek again just as for three and five at any point the left hand side of the midpoint
+
+691
+00:41:23,968 --> 00:41:24,736
+You got a pink
+
+692
+00:41:25,248 --> 00:41:31,392
+That that's the rough rule of thumb think I'm writing but I said that
+
+693
+00:41:31,904 --> 00:41:32,928
+Mythical aesthetic
+
+694
+00:41:34,720 --> 00:41:35,232
+Yes
+
+695
+00:41:38,048 --> 00:41:40,096
+Could the likelihood function have multiple Peaks
+
+696
+00:41:40,352 --> 00:41:43,168
+Definitely in general it could for this problem account
+
+697
+00:41:43,424 --> 00:41:49,568
+Mitsudomoe total for this problem but in general like food functions can go all over the place and we will come up with many examples of
+
+698
+00:41:49,824 --> 00:41:50,592
+Sebastian future elections
+
+699
+00:41:52,384 --> 00:41:58,527
+Okay what I want to do now is I want to move on or you can do this for any day just that says another day just
+
+700
+00:41:58,783 --> 00:42:02,111
+Chat with just three points and 1.7
+
+701
+00:42:02,367 --> 00:42:06,207
+That still only three data points but it is much more shot PP
+
+702
+00:42:06,719 --> 00:42:11,327
+So it depends on what the data actually turn out to be how sharp your likelihood will be
+
+703
+00:42:11,583 --> 00:42:17,727
+It is possible with three points old left hand side they can get quite a good estimate of of Lambda just from three days
+
+704
+00:42:18,751 --> 00:42:22,847
+An approach that use bins of a fixed size it was fixed before the date arrived
+
+705
+00:42:23,103 --> 00:42:25,919
+Will probably be hopeless at this sort of thing function
+
+706
+00:42:26,175 --> 00:42:29,503
+Don't the right thing for you when you can get a very precise answer for Lambda
+
+707
+00:42:29,759 --> 00:42:32,063
+Even given any three data points it gives you that
+
+708
+00:42:32,319 --> 00:42:38,463
+So we hate putting date went to Ben's and her off of the likely function because you'll never need to use Ben's ever again
+
+709
+00:42:39,743 --> 00:42:40,255
+Okay
+
+710
+00:42:40,767 --> 00:42:42,047
+I want to finish
+
+711
+00:42:42,559 --> 00:42:43,839
+The next 15 minutes
+
+712
+00:42:44,863 --> 00:42:45,887
+With another question
+
+713
+00:42:46,399 --> 00:42:49,215
+The topic for today it's like Shelton
+
+714
+00:42:50,239 --> 00:42:54,335
+But something for today is inference of parameters and models
+
+715
+00:42:54,847 --> 00:43:00,735
+And if I gave you something to like this and if I didn't just say they come from
+
+716
+00:43:00,991 --> 00:43:05,599
+I'm not actually sure if it's from one Lambda warm exponential maybe there's a mixture
+
+717
+00:43:05,855 --> 00:43:06,879
+Of exponentials
+
+718
+00:43:07,647 --> 00:43:10,207
+Please tell me what I should think about that
+
+719
+00:43:10,463 --> 00:43:15,583
+Is it credible given the state so that it comes from two guys Ian's rosin far to exponential
+
+720
+00:43:15,839 --> 00:43:17,119
+Robin just one
+
+721
+00:43:18,143 --> 00:43:19,679
+How do we solve that problem
+
+722
+00:43:19,935 --> 00:43:20,959
+Well
+
+723
+00:43:21,215 --> 00:43:22,751
+Let's write down
+
+724
+00:43:23,263 --> 00:43:24,287
+FaceTime again
+
+725
+00:43:28,895 --> 00:43:32,735
+Habitats your neighbor about how to solve this problem when I want to build
+
+726
+00:43:35,807 --> 00:43:36,575
+Okay
+
+727
+00:43:36,831 --> 00:43:40,415
+So what we going to do now is we're going to introduce two hypotheses
+
+728
+00:43:40,671 --> 00:43:43,231
+One is hypothesis wrong with your testing working on
+
+729
+00:43:43,743 --> 00:43:44,767
+Hypothesis wrong
+
+730
+00:43:45,279 --> 00:43:47,583
+Which is named after the number promises it's gone
+
+731
+00:43:48,607 --> 00:43:50,399
+The number of exponentials
+
+732
+00:43:51,423 --> 00:43:52,447
+Here it is
+
+733
+00:43:52,959 --> 00:43:55,775
+And this is how we fit H1 to the data
+
+734
+00:43:56,031 --> 00:43:57,055
+Phishing involves
+
+735
+00:43:57,567 --> 00:44:01,407
+Thinking what its Lambda it one parameter Lambda might be
+
+736
+00:44:05,247 --> 00:44:06,527
+And the prior
+
+737
+00:44:06,783 --> 00:44:10,879
+I didn't even specify what it was the sort of thing you might do
+
+738
+00:44:11,391 --> 00:44:11,903
+And this
+
+739
+00:44:12,415 --> 00:44:16,255
+If it were a real life problem you might think a little bit about
+
+740
+00:44:16,767 --> 00:44:21,375
+If you know anything about lavender already know if it was shorter then something or other then
+
+741
+00:44:21,631 --> 00:44:26,495
+The universe will explode if it was a bigger than we will be dad might be
+
+742
+00:44:26,751 --> 00:44:32,895
+A range of values a pretty shoalanda must be within if you really don't know anything about that
+
+743
+00:44:33,151 --> 00:44:36,223
+You might be tempted to have some sort of uniform prior
+
+744
+00:44:36,479 --> 00:44:37,759
+Petrino's values
+
+745
+00:44:38,015 --> 00:44:43,647
+It actually depends what the problem is what you should do about it think it is subjective and that's the way
+
+746
+00:44:43,903 --> 00:44:44,415
+I think
+
+747
+00:44:44,671 --> 00:44:45,695
+It has to be
+
+748
+00:44:45,951 --> 00:44:46,719
+And
+
+749
+00:44:47,487 --> 00:44:53,631
+Set the sort of thing that the prior might be is some beautiful mixed distribution over some broad range of
+
+750
+00:44:54,399 --> 00:44:55,679
+Vlog Lambda
+
+751
+00:44:57,471 --> 00:44:57,983
+Okay
+
+752
+00:44:59,263 --> 00:45:04,383
+I'm not saying I have to be that way that's just the way I often work if I have real inference problems
+
+753
+00:45:04,639 --> 00:45:07,967
+Positive quantity Lambda Decay length
+
+754
+00:45:08,223 --> 00:45:14,111
+I'll tend to think of the log of that variable is an actual way to work with it and then they put the product on the look of it
+
+755
+00:45:14,367 --> 00:45:16,671
+Robin directly on Lambert South
+
+756
+00:45:17,439 --> 00:45:20,767
+What this implies for the prior lender is that it may be a bit of a
+
+757
+00:45:21,791 --> 00:45:24,095
+Lopsided looking a bit like
+
+758
+00:45:25,375 --> 00:45:27,423
+This because this prior is saying that
+
+759
+00:45:27,935 --> 00:45:32,287
+Value such as .1 + 1 + 10 + 100
+
+760
+00:45:32,543 --> 00:45:34,847
+Parole just as likely as as each other
+
+761
+00:45:35,615 --> 00:45:36,383
+That means
+
+762
+00:45:36,639 --> 00:45:37,919
+Tobias if you liked it
+
+763
+00:45:38,431 --> 00:45:39,199
+Small veins
+
+764
+00:45:42,015 --> 00:45:43,295
+Okay
+
+765
+00:45:44,319 --> 00:45:48,671
+Stop I haven't obsessed about his prime but it's going to become slightly more important than the moving
+
+766
+00:45:49,439 --> 00:45:52,511
+When I went to DCFS a second hypothesis
+
+767
+00:45:52,767 --> 00:45:54,559
+And the second hypothesis
+
+768
+00:45:54,815 --> 00:45:59,935
+Says that the probability density of x if you knew Lambda want an alarm to 2
+
+769
+00:46:01,471 --> 00:46:07,615
+And if you knew quotes to let go and Pie one pie to which of the weights of the two exponential
+
+770
+00:46:08,127 --> 00:46:11,711
+To be the length scales in these a how much probability Masters in each of them
+
+771
+00:46:15,039 --> 00:46:16,063
+The public works
+
+772
+00:46:17,599 --> 00:46:20,159
+Given those promises and H2 is
+
+773
+00:46:20,671 --> 00:46:23,231
+8 + -6
+
+774
+00:46:23,999 --> 00:46:25,535
+Online level one
+
+775
+00:46:30,911 --> 00:46:37,055
++ 8 - x 2 x weight
+
+776
+00:46:37,311 --> 00:46:37,823
+Taiwan
+
+777
+00:46:40,383 --> 00:46:42,687
+Simplicity
+
+778
+00:46:43,711 --> 00:46:46,783
+We could pretend to the left hand side of the window is it
+
+779
+00:46:47,295 --> 00:46:49,343
+Zero from now on
+
+780
+00:46:49,599 --> 00:46:50,111
+But
+
+781
+00:46:50,367 --> 00:46:53,695
+So that is
+
+782
+00:46:54,207 --> 00:46:55,999
+A mixture of two
+
+783
+00:46:56,767 --> 00:46:58,047
+Exponentials
+
+784
+00:46:59,327 --> 00:47:00,351
+And
+
+785
+00:47:01,887 --> 00:47:05,471
+Let's retract what I just said this is true parole activity 9B
+
+786
+00:47:06,239 --> 00:47:08,799
+I'm at 0 otherwise
+
+787
+00:47:11,359 --> 00:47:17,503
+Okay so H2 has two interesting promises Lambda Lambda to another couple of promises by one pipe
+
+788
+00:47:17,759 --> 00:47:22,367
+Switch off positive
+
+789
+00:47:23,135 --> 00:47:23,647
+And
+
+790
+00:47:24,415 --> 00:47:27,999
+To get on with it I'm going to declare so I'll
+
+791
+00:47:28,255 --> 00:47:30,047
+Cathedral by life inside
+
+792
+00:47:30,303 --> 00:47:34,143
+Half of the Masters in what exponential health is in the oven
+
+793
+00:47:35,423 --> 00:47:36,447
+And
+
+794
+00:47:36,959 --> 00:47:43,103
+I didn't have to do that it would just make it a bit easier to do what we're about to do so the motor will only have two parameters
+
+795
+00:47:43,359 --> 00:47:44,639
+Rather than three
+
+796
+00:47:46,175 --> 00:47:49,759
+End
+
+797
+00:47:50,015 --> 00:47:51,807
+We can do infants with both of them
+
+798
+00:47:54,879 --> 00:47:58,207
+So we can infer land of an alarm to 2
+
+799
+00:47:58,975 --> 00:47:59,999
+Given
+
+800
+00:48:01,023 --> 00:48:02,303
+Other than beta
+
+801
+00:48:05,119 --> 00:48:08,191
+Imagine gold controller
+
+802
+00:48:08,959 --> 00:48:09,727
+X
+
+803
+00:48:09,983 --> 00:48:12,287
+Given on the 1 alarm to 2
+
+804
+00:48:12,799 --> 00:48:14,591
+Which is the product of all of these things
+
+805
+00:48:17,407 --> 00:48:22,271
+I'm not suppressing the pies because I just arbitrarily decided that I wanted
+
+806
+00:48:23,039 --> 00:48:25,599
+We have a prior on the tool
+
+807
+00:48:36,863 --> 00:48:37,887
+So that's how we
+
+808
+00:48:39,167 --> 00:48:41,215
+To put it crudely fix model 2
+
+809
+00:48:41,471 --> 00:48:42,239
+To the beta
+
+810
+00:48:43,007 --> 00:48:45,823
+Robert Howey in full on the 111th to give me the date
+
+811
+00:48:46,079 --> 00:48:52,223
+I need to know that we don't care about because it's just analyzing constant if it were doing is thinking what we
+
+812
+00:48:52,479 --> 00:48:54,271
+Believeland should be
+
+813
+00:48:55,551 --> 00:48:58,367
+However if we know what to do model comparison
+
+814
+00:49:02,463 --> 00:49:06,559
+Then what we want to do is say how probably is I-81 given today
+
+815
+00:49:06,815 --> 00:49:10,399
+And he'll probably late to get in the beta
+
+816
+00:49:10,655 --> 00:49:16,287
+An answer to this question can also be found by based on the rules of probability
+
+817
+00:49:16,543 --> 00:49:22,687
+Starting from our assumptions of day to give an H1 times what have y'all probably fit h-11
+
+818
+00:49:25,503 --> 00:49:27,039
+/ normalizing customs
+
+819
+00:49:28,063 --> 00:49:30,879
+Unless one is the probability of the data
+
+820
+00:49:32,671 --> 00:49:35,487
+Multiply 5 equivalent to
+
+821
+00:49:37,023 --> 00:49:40,095
+/ the same
+
+822
+00:49:41,887 --> 00:49:44,191
+And if you like I'm suppressing hair
+
+823
+00:49:44,447 --> 00:49:47,263
+Some further assumptions it's all depends on
+
+824
+00:49:47,775 --> 00:49:49,311
+Wish we could cool
+
+825
+00:49:49,567 --> 00:49:51,103
+That's what I
+
+826
+00:49:51,615 --> 00:49:54,943
+Other assumptions severe is a Rolex
+
+827
+00:49:55,455 --> 00:50:00,063
+A key assumption here is the assumption that either there's two exponential's
+
+828
+00:50:00,319 --> 00:50:01,599
+Well this one exponential
+
+829
+00:50:01,855 --> 00:50:03,903
+And this assumption about the prize
+
+830
+00:50:04,159 --> 00:50:05,695
+Premises
+
+831
+00:50:06,463 --> 00:50:08,511
+So all of these things depend on
+
+832
+00:50:09,023 --> 00:50:10,559
+Is Romania
+
+833
+00:50:11,327 --> 00:50:13,887
+I'm not wanting to hide
+
+834
+00:50:15,679 --> 00:50:21,823
+So the beautiful things to know just ask is if you have Kathleen sold problem one which was please fit model 1
+
+835
+00:50:23,359 --> 00:50:25,919
+But if you have Kathy so probably too
+
+836
+00:50:27,199 --> 00:50:31,295
+Infidel and Wonderland tutu and if you have done that in a way that
+
+837
+00:50:34,879 --> 00:50:39,743
+Is normalizing constant if you didn't just ignore it but you computed it when you are solving
+
+838
+00:50:39,999 --> 00:50:43,583
+This inference are in fruits
+
+839
+00:50:46,655 --> 00:50:48,703
+If you got the normalizing constant
+
+840
+00:50:48,959 --> 00:50:50,751
+That is exactly what you need
+
+841
+00:50:51,775 --> 00:50:53,055
+In order to do this
+
+842
+00:50:54,079 --> 00:50:58,431
+Bayesian inference are the dates of dependent time and the other one
+
+843
+00:50:59,199 --> 00:50:59,967
+If you have ever had
+
+844
+00:51:02,271 --> 00:51:03,551
+Lost my green
+
+845
+00:51:05,087 --> 00:51:06,879
+So that's, that's pretty red
+
+846
+00:51:09,183 --> 00:51:10,719
+Vista life in constant
+
+847
+00:51:11,743 --> 00:51:12,767
+In Fridley rad
+
+848
+00:51:13,535 --> 00:51:14,559
+Is this one here
+
+849
+00:51:20,191 --> 00:51:20,959
+So we have
+
+850
+00:51:21,727 --> 00:51:23,775
+Parameter inference
+
+851
+00:51:24,031 --> 00:51:30,175
+How many done because if you did you promise her properly and you don't know why isn't Coulson you've already done model comparison
+
+852
+00:51:30,431 --> 00:51:32,223
+What you need in order to do mobile comparison
+
+853
+00:51:32,735 --> 00:51:36,063
+So let me step you through this and I'm going to
+
+854
+00:51:36,575 --> 00:51:42,719
+Do it in a slightly different way from what I wrote down here what I just described Haywood what just fine function of
+
+855
+00:51:42,975 --> 00:51:45,535
+Xlong Devon and Lambda 2
+
+856
+00:51:46,815 --> 00:51:51,167
+I'm about to / Zant right at all
+
+857
+00:51:51,679 --> 00:51:55,263
+The Wonder Woman lemon
+
+858
+00:51:57,311 --> 00:52:01,151
+So we put a function of X number 1 number 2
+
+859
+00:52:01,663 --> 00:52:02,943
+And you can just
+
+860
+00:52:03,199 --> 00:52:04,479
+Multiply dokodemo
+
+861
+00:52:04,735 --> 00:52:05,503
+And then normalize
+
+862
+00:52:06,271 --> 00:52:08,319
+But there's another way of thinking about what's going on here
+
+863
+00:52:08,831 --> 00:52:11,391
+Which is if you believe it was to exponentials
+
+864
+00:52:11,647 --> 00:52:12,927
+And you get a lot of data
+
+865
+00:52:17,535 --> 00:52:18,815
+You can imagine
+
+866
+00:52:20,607 --> 00:52:23,679
+Deja came out and some of them are colored White
+
+867
+00:52:24,447 --> 00:52:26,751
+And some of them
+
+868
+00:52:27,007 --> 00:52:27,519
+Red
+
+869
+00:52:28,543 --> 00:52:32,895
+And the color can be telling you which exponential that came from
+
+870
+00:52:33,407 --> 00:52:34,431
+The white was
+
+871
+00:52:35,199 --> 00:52:35,967
+I'm the one
+
+872
+00:52:38,015 --> 00:52:39,295
+Red
+
+873
+00:52:39,551 --> 00:52:40,575
+Islam the two
+
+874
+00:52:40,831 --> 00:52:41,599
+For example
+
+875
+00:52:44,415 --> 00:52:45,439
+And then
+
+876
+00:52:45,951 --> 00:52:49,535
+Someone was true of you and I rub that all the colors and just told you that coordinates
+
+877
+00:52:50,303 --> 00:52:51,583
+But you could imagine
+
+878
+00:52:52,095 --> 00:52:54,655
+Trying to infer what those missing colors wear
+
+879
+00:52:55,167 --> 00:52:58,495
+We could do an inference that involves naming those missing colors
+
+880
+00:52:59,007 --> 00:53:02,079
+So I'm going to rewrite now mobile 2
+
+881
+00:53:02,335 --> 00:53:05,151
+I'm going to say that my will has in it
+
+882
+00:53:06,175 --> 00:53:09,759
+Alarm 2
+
+883
+00:53:13,087 --> 00:53:14,623
+Next
+
+884
+00:53:14,879 --> 00:53:15,647
+XM
+
+885
+00:53:17,183 --> 00:53:21,023
+Cayenne
+
+886
+00:53:21,535 --> 00:53:23,839
+The van going from walk to end
+
+887
+00:53:24,351 --> 00:53:25,887
+I'm not the way that we
+
+888
+00:53:26,143 --> 00:53:30,751
+Get all of the data if we New London to is we first pick a color
+
+889
+00:53:31,263 --> 00:53:32,543
+And then we draw
+
+890
+00:53:33,055 --> 00:53:33,823
+The point
+
+891
+00:53:34,079 --> 00:53:35,615
+From
+
+892
+00:53:36,127 --> 00:53:36,639
+That
+
+893
+00:53:38,431 --> 00:53:40,223
+We draw the the next point
+
+894
+00:53:40,735 --> 00:53:41,247
+From
+
+895
+00:53:42,015 --> 00:53:44,063
+The distribution condition on McCullough
+
+896
+00:53:45,343 --> 00:53:46,623
+Sir
+
+897
+00:53:55,327 --> 00:53:56,607
+We can write this as
+
+898
+00:53:56,863 --> 00:53:58,399
+Probability with colors
+
+899
+00:53:58,655 --> 00:54:01,215
+Reminder 1 alarm to 2
+
+900
+00:54:06,079 --> 00:54:08,639
+Find the probability of x
+
+901
+00:54:09,663 --> 00:54:11,967
+Given the color
+
+902
+00:54:15,295 --> 00:54:16,319
+And
+
+903
+00:54:18,111 --> 00:54:19,903
+We can put a product
+
+904
+00:54:21,951 --> 00:54:24,255
+Product from 1 to n
+
+905
+00:54:25,279 --> 00:54:26,303
+Technicolor
+
+906
+00:54:26,815 --> 00:54:27,583
+Man
+
+907
+00:54:27,839 --> 00:54:28,607
+Pickaxe
+
+908
+00:54:30,655 --> 00:54:31,167
+Okay
+
+909
+00:54:32,959 --> 00:54:36,287
+Then we can do a variety of inferences we can
+
+910
+00:54:36,799 --> 00:54:37,567
+Still
+
+911
+00:54:37,823 --> 00:54:40,383
+Work out the probability of Lambda Lambda to if we want
+
+912
+00:54:40,639 --> 00:54:46,783
+But we can also do other things we could work out how probable is it the correct coloring of all these
+
+913
+00:54:47,039 --> 00:54:47,807
+Point is
+
+914
+00:54:48,831 --> 00:54:51,903
+KN from 1 to n given
+
+915
+00:54:56,767 --> 00:54:59,327
+And assuming that a 2 is true
+
+916
+00:54:59,839 --> 00:55:01,887
+We can ask questions like that
+
+917
+00:55:05,471 --> 00:55:08,287
+And what we think
+
+918
+00:55:08,543 --> 00:55:12,639
+Alarm 2 to give him the daytime
+
+919
+00:55:12,895 --> 00:55:14,175
+Which is the question we just
+
+920
+00:55:16,223 --> 00:55:18,015
+Does the range of
+
+921
+00:55:18,271 --> 00:55:19,807
+Of questions we can ask
+
+922
+00:55:20,063 --> 00:55:21,087
+And I'm going to
+
+923
+00:55:21,599 --> 00:55:22,623
+Enumerate
+
+924
+00:55:23,391 --> 00:55:27,999
+Listen to I talk to space off different hypotheses about Lando on Atlanta to
+
+925
+00:55:28,255 --> 00:55:28,767
+And
+
+926
+00:55:29,023 --> 00:55:29,791
+Cayenne
+
+927
+00:55:30,303 --> 00:55:31,839
+So what I'm going to show you now
+
+928
+00:55:33,631 --> 00:55:35,167
+Cuz I like the computer
+
+929
+00:55:42,591 --> 00:55:43,615
+To show us
+
+930
+00:55:44,895 --> 00:55:48,479
+How well the beta off predictive
+
+931
+00:55:48,735 --> 00:55:53,855
+As a function of time to warm to the colors
+
+932
+00:55:59,231 --> 00:56:05,375
+Likelihood function so I'm not increasing the number of parameters in my problem from 2 to 1/2
+
+933
+00:56:05,631 --> 00:56:07,935
+Whatever NSR event is
+
+934
+00:56:08,191 --> 00:56:10,751
+8 I'm getting myself a type of 10 parameters
+
+935
+00:56:11,007 --> 00:56:12,799
+Two real numbers
+
+936
+00:56:13,055 --> 00:56:13,823
+And then
+
+937
+00:56:14,079 --> 00:56:15,615
+10 * 8
+
+938
+00:56:15,871 --> 00:56:18,431
+Categorical variables which are either red or white
+
+939
+00:56:19,455 --> 00:56:21,503
+And we can look at the likelihood function
+
+940
+00:56:21,759 --> 00:56:23,551
+As a function of all of those
+
+941
+00:56:23,807 --> 00:56:25,087
+I'm going to imagine
+
+942
+00:56:25,343 --> 00:56:25,855
+Fat
+
+943
+00:56:26,111 --> 00:56:29,695
+Set of possible values of the land along
+
+944
+00:56:30,463 --> 00:56:31,487
+Eleven22
+
+945
+00:56:35,839 --> 00:56:40,703
+Which is k1 through Cayenne is living in a stack of pancakes
+
+946
+00:56:41,215 --> 00:56:41,983
+So
+
+947
+00:56:43,007 --> 00:56:49,151
+Every one of these pancakes has Atlanta won exatlon the two exits in this discrete pancakes for the number pancakes
+
+948
+00:56:49,407 --> 00:56:50,175
+2 to the power
+
+949
+00:56:50,431 --> 00:56:50,943
+And
+
+950
+00:56:52,223 --> 00:56:56,575
+The Boston pancake is the one that says that kawann
+
+951
+00:56:56,831 --> 00:57:01,951
+2 km is
+
+952
+00:57:02,719 --> 00:57:05,279
+One of Thee
+
+953
+00:57:06,303 --> 00:57:12,447
+Exponential's and his the top of the pancake or just pay one through K and his old zeros and then
+
+954
+00:57:16,287 --> 00:57:16,799
+Instead of
+
+955
+00:57:18,079 --> 00:57:19,103
+Wanted to
+
+956
+00:57:19,615 --> 00:57:23,199
+And in between we have all the other possible labelings of the puns
+
+957
+00:57:23,711 --> 00:57:29,087
+Temporary hypothesis about what the labeling is and what lender 111 we can count
+
+958
+00:57:29,343 --> 00:57:30,879
+What the value of
+
+959
+00:57:31,903 --> 00:57:33,951
+Tee off
+
+960
+00:57:36,511 --> 00:57:37,279
+Given
+
+961
+00:57:37,535 --> 00:57:38,815
+Lambda
+
+962
+00:57:41,631 --> 00:57:46,239
+In fact we can work out the probability of X and quantities together
+
+963
+00:57:46,751 --> 00:57:47,775
+Right
+
+964
+00:57:48,287 --> 00:57:49,055
+Let's do that
+
+965
+00:57:58,271 --> 00:58:01,599
+So here are some data points I'm going to repeat this exercise
+
+966
+00:58:01,855 --> 00:58:03,903
+The four different data sets
+
+967
+00:58:04,415 --> 00:58:06,719
+And what I'm going to do is show you
+
+968
+00:58:06,975 --> 00:58:08,767
+The inference of what we think
+
+969
+00:58:09,023 --> 00:58:13,375
+Lambda Lambda 2 and Chaos I'm going to show you the stack of pancakes
+
+970
+00:58:14,911 --> 00:58:21,055
+And I'm also going to run to the inference for the simple model that says that there is only one exponential
+
+971
+00:58:22,079 --> 00:58:25,151
+Go back to the T-Mobile one military the enforcement other one
+
+972
+00:58:27,199 --> 00:58:32,831
+What am I going to do I'm going to stop just by you doing the inferences from little warm again
+
+973
+00:58:33,087 --> 00:58:35,647
+And then we'll move on to doing more than one animal to
+
+974
+00:58:35,903 --> 00:58:38,975
+So here's our super simple dating site with just 4 points in it
+
+975
+00:58:39,743 --> 00:58:42,559
+Good function looks like as a function of Lambda
+
+976
+00:58:42,815 --> 00:58:44,607
+Or as a function of Lambda
+
+977
+00:58:45,119 --> 00:58:46,655
+So that's what we did in my with the guy
+
+978
+00:58:46,911 --> 00:58:51,519
+So I'm just showing you again on a slightly different style the things you familiar with
+
+979
+00:58:52,287 --> 00:58:58,431
+This is what you get if you take the maximum likelihood value of Lambda so you take a point estimate Lambda a new show
+
+980
+00:58:58,687 --> 00:59:01,759
+Density in data space alongside those four points
+
+981
+00:59:02,271 --> 00:59:02,783
+All right
+
+982
+00:59:03,295 --> 00:59:07,647
+So I'm introducing you to the sequence of things I'll show you I'll show you the the data
+
+983
+00:59:07,903 --> 00:59:10,719
+I show you a likelihood function and then I show you
+
+984
+00:59:10,975 --> 00:59:12,255
+Best fit
+
+985
+00:59:12,511 --> 00:59:15,839
+Distribution the fit that maximizes the likelihood
+
+986
+00:59:16,607 --> 00:59:22,751
+And then just for the sake of argument I'll show you what might have happened if we had chosen some beans to put the plants in
+
+987
+00:59:23,007 --> 00:59:27,103
+And counted how many where they spend so this to Blue bins in a histogram
+
+988
+00:59:27,615 --> 00:59:29,407
+I'm rich maybe food for thought
+
+989
+00:59:29,919 --> 00:59:31,199
+I got his motivator
+
+990
+00:59:31,455 --> 00:59:32,991
+So
+
+991
+00:59:33,247 --> 00:59:34,527
+Penny datapoints also
+
+992
+00:59:34,783 --> 00:59:35,807
+And you can
+
+993
+00:59:36,063 --> 00:59:37,599
+What kind of like a function
+
+994
+00:59:37,855 --> 00:59:41,183
+Landers quite well determined
+
+995
+00:59:42,719 --> 00:59:46,559
+Its characteristic in this sort of problem that typically the width of the peak
+
+996
+00:59:46,815 --> 00:59:48,863
+Shrinks as the square root
+
+997
+00:59:49,119 --> 00:59:52,447
+Drink has one of his Square each of the the number of data points youth golf
+
+998
+00:59:52,703 --> 00:59:54,495
+That's a useful rule of thumb
+
+999
+00:59:54,751 --> 00:59:56,287
+To have for this one problem
+
+1000
+00:59:57,055 --> 01:00:00,895
+And that is the best fishing
+
+1001
+01:00:04,223 --> 01:00:10,111
+That's the Green Cove that maximizes the likelihood for the model that says there is only one Lambda
+
+1002
+01:00:10,879 --> 01:00:17,023
+But if you have very careful eyes and the skeptical mindset you might look at this clumping
+
+1003
+01:00:17,279 --> 01:00:19,839
+Appoint elections items I need to sure about that
+
+1004
+01:00:20,863 --> 01:00:25,215
+So you might be a skeptic about the warm Lambda hypothesis
+
+1005
+01:00:25,727 --> 01:00:26,495
+That's what
+
+1006
+01:00:26,751 --> 01:00:28,799
+The date it looks like if you shove it into Benz
+
+1007
+01:00:29,311 --> 01:00:35,455
+Where to buy just invented
+
+1008
+01:00:40,063 --> 01:00:42,367
+Data inventions
+
+1009
+01:00:42,879 --> 01:00:44,671
+Not that we had about Benz
+
+1010
+01:00:44,927 --> 01:00:46,207
+But just to remind you
+
+1011
+01:00:46,463 --> 01:00:48,255
+Methods that when not using
+
+1012
+01:00:48,511 --> 01:00:53,631
+Okay let's move on today step number three of slightly reduce the amount of data because I want to to the end
+
+1013
+01:00:53,887 --> 01:00:54,655
+3 manageable
+
+1014
+01:00:54,911 --> 01:01:01,055
+Talk of the dataset hair that I've deliberately chosen to have size eight points so Tuesday is 250
+
+1015
+01:01:01,311 --> 01:01:07,455
+256 hypotheses about how the point we're actually colored in red and white before the colors were there
+
+1016
+01:01:07,711 --> 01:01:09,247
+Raised to make a mold blue
+
+1017
+01:01:11,295 --> 01:01:14,879
+So that's how we're going to fit model one in the same way as before
+
+1018
+01:01:15,135 --> 01:01:16,927
+And we're also going to look at Model T
+
+1019
+01:01:17,439 --> 01:01:19,487
+So here's the likelihood function from other one
+
+1020
+01:01:19,999 --> 01:01:21,791
+Showing it as a function Lambda
+
+1021
+01:01:22,303 --> 01:01:24,095
+And here it is I was going to Laughlin.
+
+1022
+01:01:25,375 --> 01:01:26,911
+And that is the best fit
+
+1023
+01:01:27,935 --> 01:01:30,751
+Green card for best single exponential
+
+1024
+01:01:31,263 --> 01:01:32,799
+You got by maximizing likelihood
+
+1025
+01:01:33,823 --> 01:01:34,591
+No
+
+1026
+01:01:35,871 --> 01:01:38,943
+That's the histogram using a particular bin size
+
+1027
+01:01:39,711 --> 01:01:45,855
+Just a few interesting things now what we're doing is going to Rattle through the pancakes so the 256 of them
+
+1028
+01:01:46,111 --> 01:01:48,159
+Shuffle down to Pancake number 7
+
+1029
+01:01:48,415 --> 01:01:54,303
+The labeling that k12k and is in buying Ray station on cake
+
+1030
+01:01:54,559 --> 01:02:00,703
+And the likelihood function that any particular labeling K is beautifully simple because if you nuke a
+
+1031
+01:02:00,959 --> 01:02:04,287
+Then you would know that the last three days but I told him from lime to two
+
+1032
+01:02:04,543 --> 01:02:07,103
+And the first 5.0 came from the wall
+
+1033
+01:02:07,871 --> 01:02:13,503
+And the likelihood function probability as a function of Lambda one
+
+1034
+01:02:14,015 --> 01:02:20,159
+It's just the simple function that we had the full form of the metal one and the likelihood as much 11 to 2
+
+1035
+01:02:20,415 --> 01:02:22,207
+Is it the same function
+
+1036
+01:02:22,463 --> 01:02:26,303
+We had against a little Wang if you know which points go with which
+
+1037
+01:02:26,559 --> 01:02:28,863
+Pasta is which exponential
+
+1038
+01:02:29,631 --> 01:02:35,775
+So this is a super simple thing it's just a product of two of the two functions that we are already familiar with
+
+1039
+01:02:36,031 --> 01:02:37,567
+When we are dealing with more than one
+
+1040
+01:02:38,079 --> 01:02:44,223
+I love you through the pancake. Blob is a simple separable function just moves around because
+
+1041
+01:02:44,479 --> 01:02:50,623
+Different wavelengths put the put the best gas alarm to 1 alarm to 2 in different places the finals
+
+1042
+01:02:50,879 --> 01:02:51,647
+Back of the pancake
+
+1043
+01:02:51,903 --> 01:02:58,047
+The final layer is one that says that rule from Lambda Wang in fact
+
+1044
+01:02:58,303 --> 01:02:59,839
+Is the way round of Godly
+
+1045
+01:03:02,655 --> 01:03:04,191
+The old ones hypothesis
+
+1046
+01:03:04,447 --> 01:03:09,311
+Says they will be long till I'm the one which means land one is quite well determined don't have a clue about number two
+
+1047
+01:03:10,079 --> 01:03:10,847
+Because
+
+1048
+01:03:11,103 --> 01:03:13,407
+None of the bike that came from the second cluster
+
+1049
+01:03:13,663 --> 01:03:15,199
+Okay so some of the pancake
+
+1050
+01:03:16,735 --> 01:03:17,759
+Suffolk walks
+
+1051
+01:03:18,015 --> 01:03:23,135
+Look I'm like this and many of them look like the globe and they're all in different locations
+
+1052
+01:03:26,719 --> 01:03:30,303
+Blah blah blah blah blah blah
+
+1053
+01:03:30,815 --> 01:03:35,679
+I'm this one iPad will be a just the same rotated 90 degrees
+
+1054
+01:03:36,959 --> 01:03:42,847
+What can we do with all this information that we've accumulated we've run through a total number of hypotheses
+
+1055
+01:03:43,103 --> 01:03:46,943
+Twitching of 256 times the number of points I looked at
+
+1056
+01:03:47,455 --> 01:03:53,599
+Any I take the number of points that was such as you * 32 * 1.2 never take so I've come
+
+1057
+01:03:53,855 --> 01:03:54,367
+Imputed
+
+1058
+01:03:54,879 --> 01:03:59,743
+256000 numbers have switch off every one of those subtype policies
+
+1059
+01:04:00,255 --> 01:04:06,143
+Go to 56000 Suffolk place where every one of those how we did that
+
+1060
+01:04:06,399 --> 01:04:07,935
+Predict the day that she happened
+
+1061
+01:04:08,703 --> 01:04:12,543
+When we know that we can then read anything we're interested in for example
+
+1062
+01:04:12,799 --> 01:04:14,079
+We can read that
+
+1063
+01:04:14,335 --> 01:04:20,479
+How probable alternative you got that essentially by summing all of the time
+
+1064
+01:04:20,735 --> 01:04:22,015
+Pancakes on top of each other
+
+1065
+01:04:25,599 --> 01:04:27,135
+That's what I look like
+
+1066
+01:04:28,415 --> 01:04:34,559
+Sorry to bumps.on what that saying is yes this data which someone with a keen I might have thought
+
+1067
+01:04:36,095 --> 01:04:42,239
+It's almost may have thought that there's evidence for to exponential's in that
+
+1068
+01:04:42,495 --> 01:04:44,543
+The most benefit to the state about giving yourself
+
+1069
+01:04:44,799 --> 01:04:46,335
+2 kilometers
+
+1070
+01:04:46,591 --> 01:04:50,431
+And what that says about looks like with pretty colors is showing
+
+1071
+01:04:50,943 --> 01:04:52,479
+What it looks like is a contour plot
+
+1072
+01:04:52,735 --> 01:04:53,503
+As a function of
+
+1073
+01:04:53,759 --> 01:04:59,903
+Landa Wonderland the two distinct bumps saying yes you can either fix slime
+
+1074
+01:05:00,159 --> 01:05:03,231
+And the ones with small value and longitude value or vice versa
+
+1075
+01:05:03,487 --> 01:05:09,631
+And those are by far more probable than other values of London Wonderland the two for example that that equal to
+
+1076
+01:05:09,887 --> 01:05:11,167
+Which would lie along
+
+1077
+01:05:12,191 --> 01:05:13,471
+Diagonal
+
+1078
+01:05:13,727 --> 01:05:19,871
+We can also ask the question what's the poster distribution of the labels what we think all the khazar
+
+1079
+01:05:20,127 --> 01:05:26,271
+And this 256 hypotheses and this is the sum is essentially the sum of every
+
+1080
+01:05:26,527 --> 01:05:27,039
+Nothing in the pancake
+
+1081
+01:05:27,807 --> 01:05:28,831
+All right
+
+1082
+01:05:30,623 --> 01:05:31,391
+And
+
+1083
+01:05:31,903 --> 01:05:33,183
+He has some that up
+
+1084
+01:05:33,439 --> 01:05:34,207
+And
+
+1085
+01:05:34,719 --> 01:05:40,863
+You find the different labeling labeling
+
+1086
+01:05:41,119 --> 01:05:43,423
+Labelings which correspond to one
+
+1087
+01:05:43,679 --> 01:05:49,823
+Purple Simon Reds and whites and the other opposite assignment symmetry about the middle because the
+
+1088
+01:05:50,079 --> 01:05:55,199
+The binary representation type of property that if you take one labeling in your voice or the ones and zeros
+
+1089
+01:05:55,455 --> 01:06:01,599
+You switch between integers that sum to 255 so that's why it looks white is that nursing
+
+1090
+01:06:01,855 --> 01:06:02,367
+Symmetry
+
+1091
+01:06:03,647 --> 01:06:07,231
+Okay so we can read out if we're interested in
+
+1092
+01:06:07,487 --> 01:06:12,095
+The maximum likelihood value of philando 111
+
+1093
+01:06:12,607 --> 01:06:13,887
+And that's shown hair
+
+1094
+01:06:14,655 --> 01:06:18,495
+And the purple line showing one of the exponential's
+
+1095
+01:06:18,751 --> 01:06:23,615
+And the gray line is showing the other exponential and the green line is the
+
+1096
+01:06:24,895 --> 01:06:27,199
+Some of those those two exponentials
+
+1097
+01:06:28,991 --> 01:06:29,759
+And
+
+1098
+01:06:30,271 --> 01:06:33,087
+The green light is on top of the grey line NYC
+
+1099
+01:06:33,343 --> 01:06:34,623
+Let me see a little bit of the Gray Line
+
+1100
+01:06:35,647 --> 01:06:37,695
+Okay so that's the maximum likelihood
+
+1101
+01:06:37,951 --> 01:06:39,743
+Hypothesis using two Lambos
+
+1102
+01:06:41,023 --> 01:06:41,791
+Then
+
+1103
+01:06:42,559 --> 01:06:47,935
+We can repeat this for another day to sat and what I wanted to show you before we do that
+
+1104
+01:06:48,447 --> 01:06:49,727
+Is let's
+
+1105
+01:06:49,983 --> 01:06:53,823
+Answer the final question the model comparison question you compare the models
+
+1106
+01:06:54,079 --> 01:06:55,103
+By summing up
+
+1107
+01:06:55,359 --> 01:07:01,247
+I'm getting the normalizing constant and the code I just ran as a rent through these examples
+
+1108
+01:07:01,503 --> 01:07:02,271
+Did that
+
+1109
+01:07:03,039 --> 01:07:05,087
+Unfold is 30%
+
+1110
+01:07:05,855 --> 01:07:07,391
+This is what happened
+
+1111
+01:07:09,183 --> 01:07:11,999
+V Wong
+
+1112
+01:07:12,255 --> 01:07:13,535
+Is this consultation
+
+1113
+01:07:14,559 --> 01:07:16,607
+Have been tense
+
+1114
+01:07:16,863 --> 01:07:19,679
+Formula 1
+
+1115
+01:07:20,191 --> 01:07:21,215
+Is that guy
+
+1116
+01:07:26,591 --> 01:07:27,359
+Is this guy
+
+1117
+01:07:27,871 --> 01:07:32,479
+Providence long came out 5.4 x 6 - 7
+
+1118
+01:07:32,735 --> 01:07:34,527
+What what is predicting
+
+1119
+01:07:34,783 --> 01:07:38,367
+A problem with a probability density overnight dimensional space
+
+1120
+01:07:38,623 --> 01:07:44,767
+Weathers 8 data points will be so it's not surprising have an extremely small number for the evidence because
+
+1121
+01:07:45,791 --> 01:07:46,815
+Predicting in a
+
+1122
+01:07:47,071 --> 01:07:48,095
+Elijah space
+
+1123
+01:07:49,887 --> 01:07:51,167
+A real valued
+
+1124
+01:07:51,679 --> 01:07:53,215
+Atrial bankruptcies
+
+1125
+01:07:53,471 --> 01:07:55,775
+Evidence number 2
+
+1126
+01:07:56,031 --> 01:07:58,591
+I want to talk about comes to 1.4 * 20 - 5
+
+1127
+01:07:59,615 --> 01:08:05,759
+And what that means is the evidence ratio which is what you need if you want to know the probability ratio but
+
+1128
+01:08:06,015 --> 01:08:07,295
+These two
+
+1129
+01:08:07,551 --> 01:08:11,903
+Number to evidence ratio is 26 to 1
+
+1130
+01:08:12,159 --> 01:08:18,303
+20 blackout that evidence ratio I did need to make an assumption about what the prior online the walls and I've gone the Forgotten
+
+1131
+01:08:18,559 --> 01:08:20,607
+What primer on laminate I actually chose
+
+1132
+01:08:20,863 --> 01:08:27,007
+But it was uniform overload Lambda in some range I forgot from from Walter boxer
+
+1133
+01:08:28,031 --> 01:08:29,823
+Four orders of magnitude or something like that
+
+1134
+01:08:30,079 --> 01:08:34,687
+These answers do depend on that prior but nothing is super sensitive way
+
+1135
+01:08:36,223 --> 01:08:42,367
+Obviously I have to depend on your assumptions but you shouldn't worry about that particular assumption be a terrible
+
+1136
+01:08:43,647 --> 01:08:44,927
+ISO game-breaker
+
+1137
+01:08:45,695 --> 01:08:51,839
+If it is a game-breaker you can find out you can explore the sensitivity of the answers to these questions
+
+1138
+01:08:52,095 --> 01:08:56,447
+To those assumptions if you're worried about whether you thought happen enough about your assumptions
+
+1139
+01:08:56,703 --> 01:09:00,543
+This particular
+
+1140
+01:09:00,799 --> 01:09:06,431
+Prince takes too long in favor of mobile to so if they had equal prior probabilities
+
+1141
+01:09:06,687 --> 01:09:12,831
+You got a stator and you end up saying it's 96% to 4% also in favor of
+
+1142
+01:09:13,087 --> 01:09:13,855
+Little Texas
+
+1143
+01:09:15,135 --> 01:09:15,647
+No
+
+1144
+01:09:15,903 --> 01:09:19,231
+The final thing to emphasize is that it didn't have to come out that way
+
+1145
+01:09:19,743 --> 01:09:24,351
+There are many ways on fishing models for example if someone doesn't maximum likelihood fish
+
+1146
+01:09:24,863 --> 01:09:29,471
+How do you say I know how do I tell which model best will let's pick them up with the biggest blanket
+
+1147
+01:09:29,727 --> 01:09:31,007
+If you do that
+
+1148
+01:09:31,263 --> 01:09:37,407
+Belinda always choosing mobile to because trivially mobile 2 with an extra parameters can achieve a better
+
+1149
+01:09:37,663 --> 01:09:39,199
+A bigger likelihood
+
+1150
+01:09:41,759 --> 01:09:44,831
+But that isn't a Bayesian model comparison the books
+
+1151
+01:09:45,087 --> 01:09:51,231
+It involves doing this summation nude with your compassion based on the normalizing constant so we don't look at what was
+
+1152
+01:09:51,487 --> 01:09:53,791
+We looked at what state
+
+1153
+01:09:54,559 --> 01:09:59,935
+Aggregate of how well you predicted the data coming over all the possible values for your hypotheses
+
+1154
+01:10:00,191 --> 01:10:03,519
+That is not necessarily the case that mold to will always win
+
+1155
+01:10:03,775 --> 01:10:04,543
+Indeed
+
+1156
+01:10:04,799 --> 01:10:08,639
+They're all dataset switch model one wins and that's the final thing I'll now show you
+
+1157
+01:10:09,151 --> 01:10:09,663
+So
+
+1158
+01:10:09,919 --> 01:10:11,199
+The spinal dataset
+
+1159
+01:10:11,967 --> 01:10:13,247
+Sharon hair
+
+1160
+01:10:13,503 --> 01:10:16,575
+Is it ice that that really did come from a single exponential
+
+1161
+01:10:16,831 --> 01:10:19,135
+I drew eight points from an exponential
+
+1162
+01:10:19,391 --> 01:10:25,535
+If we go with the likelihood function fit model 1 unlock Style
+
+1163
+01:10:25,791 --> 01:10:26,559
+Vince
+
+1164
+01:10:27,071 --> 01:10:30,911
+And then we do model 2 and we run through all the pancakes
+
+1165
+01:10:31,423 --> 01:10:35,775
+It looks just the same as before to a casual Observer
+
+1166
+01:10:36,031 --> 01:10:38,079
+Have these bumps wobbling around as we
+
+1167
+01:10:38,335 --> 01:10:40,383
+Run through the 256 assignments
+
+1168
+01:10:40,895 --> 01:10:41,663
+And now
+
+1169
+01:10:41,919 --> 01:10:43,199
+When we say What's the
+
+1170
+01:10:43,455 --> 01:10:45,503
+Majin likelihood of laminate 1 alarm to 2
+
+1171
+01:10:45,759 --> 01:10:47,807
+You find it's actually
+
+1172
+01:10:48,831 --> 01:10:49,855
+It looks fairly
+
+1173
+01:10:50,111 --> 01:10:52,671
+Uni Moodle it's not exactly in the middle
+
+1174
+01:10:52,927 --> 01:10:58,559
+If you make a contour plot and if you go into the zoom into the peak of this and look super super super carefully
+
+1175
+01:10:58,815 --> 01:11:00,095
+Beyonce's on the screen now
+
+1176
+01:11:00,351 --> 01:11:01,119
+We could do that
+
+1177
+01:11:01,375 --> 01:11:02,143
+You actually find
+
+1178
+01:11:02,655 --> 01:11:05,471
+That you can get a slightly bigger likelihood
+
+1179
+01:11:05,983 --> 01:11:06,751
+Bye
+
+1180
+01:11:07,263 --> 01:11:11,615
+Having learned one very very similar to each other
+
+1181
+01:11:13,151 --> 01:11:16,991
+All right so that's the likelihood of number 1 and number 2
+
+1182
+01:11:17,503 --> 01:11:23,647
+And this is the posterior distribution of the labels just as last time some labelings are more probable than others
+
+1183
+01:11:24,159 --> 01:11:27,487
+And we can work out the evidence ratio
+
+1184
+01:11:27,743 --> 01:11:31,839
+And the answer for the evidence ratio is shown
+
+1185
+01:11:33,887 --> 01:11:35,679
+It's .27
+
+1186
+01:11:35,935 --> 01:11:42,079
+The other way so now the more probable model in this case hair is Mortal woman comes out
+
+1187
+01:11:42,335 --> 01:11:45,919
+78% to 22% if they equally probable
+
+1188
+01:11:46,431 --> 01:11:47,199
+In the beginning
+
+1189
+01:11:48,735 --> 01:11:54,879
+So that is how mullican person works and what I take away from this is
+
+1190
+01:11:55,391 --> 01:11:56,927
+Given that
+
+1191
+01:11:57,183 --> 01:12:03,327
+Standard ways of fishing even model with just one parameter can run. Plagens problems unless you use Bayes theorem
+
+1192
+01:12:03,583 --> 01:12:06,399
+I find it quite a compelling
+
+1193
+01:12:06,655 --> 01:12:12,799
+Argument for saying yes let's use Bayes theorem
+
+1194
+01:12:13,055 --> 01:12:19,199
+Running around that was an introduction to inference of promises and multiple
+
+1195
+01:12:19,455 --> 01:12:22,015
+What we going to do next
+
+1196
+01:12:22,271 --> 01:12:23,039
+Time
+
+1197
+01:12:23,807 --> 01:12:25,087
+Is
+
+1198
+01:12:26,367 --> 01:12:28,927
+We will move on to the topic of clustering
+
+1199
+01:12:29,695 --> 01:12:30,975
+I'll discuss
+
+1200
+01:12:31,231 --> 01:12:37,375
+Some quite popular algorithms for doing clustering which can be used for things like
+
+1201
+01:12:40,703 --> 01:12:46,847
+Maybe I kind of recognition and speech recognition problems has an example from speech
+
+1202
+01:12:47,103 --> 01:12:53,247
+You could take a single word utterance and take its spectrogram and the Olio
+
+1203
+01:12:53,503 --> 01:12:54,527
+Objects on the left
+
+1204
+01:12:54,783 --> 01:12:55,807
+Of the top
+
+1205
+01:12:56,063 --> 01:13:00,927
+Are people saying the wood Witch is it one of those long and one of them 0
+
+1206
+01:13:01,183 --> 01:13:03,743
+Israel
+
+1207
+01:13:05,535 --> 01:13:11,679
+I guess the right angles of the zeros and then you train up on all of those training examples
+
+1208
+01:13:11,935 --> 01:13:17,311
+Someone gives you some more words to recognize which they are and you could imagine that
+
+1209
+01:13:17,823 --> 01:13:21,407
+Yeah so the ones on the left in the zeros on the right
+
+1210
+01:13:21,919 --> 01:13:28,063
+So we'll talk about clustering and I'll describe a popular method to doing clustering then we'll give it a Bayesian interpretation and
+
+1211
+01:13:28,319 --> 01:13:30,879
+Discuss how to make it a better using
+
+1212
+01:13:31,135 --> 01:13:31,903
+Top Beijing
+
+1213
+01:13:32,159 --> 01:13:33,183
+Interpretation
+
+1214
+01:13:33,439 --> 01:13:35,231
+So that's the first thing we'll do next time
+
+1215
+01:13:35,743 --> 01:13:37,279
+Are there any questions
+
+1216
+01:13:39,839 --> 01:13:42,399
+Okay thanks very much
+
+1217
+01:13:45,471 --> 01:13:51,359
+Okay the question is have Bayesian methods not being used frequently because I computer intensive
+
+1218
+01:13:51,615 --> 01:13:55,455
+I think that's not really then it suddenly makes it easier
+
+1219
+01:13:55,711 --> 01:13:58,527
+To use Bayesian methods if you brought the computer
+
+1220
+01:13:58,783 --> 01:14:03,391
+But I think it's a strange accident of History really because
+
+1221
+01:14:03,647 --> 01:14:04,671
+It's perfectly possible
+
+1222
+01:14:05,183 --> 01:14:07,487
+Take a problem like this when we did hair
+
+1223
+01:14:08,255 --> 01:14:14,399
+I with a single exponential it's respectful to work out a lot to the function and sketch it's by where I do
+
+1224
+01:14:14,655 --> 01:14:17,215
+A method that we didn't need a computer to do it
+
+1225
+01:14:18,751 --> 01:14:20,031
+And
+
+1226
+01:14:21,055 --> 01:14:27,199
+So I think it is more an accident of some personalities and political fights between academic
+
+1227
+01:14:27,967 --> 01:14:33,087
+That these other schools doing things otherwise I grew up
+
+1228
+01:14:33,599 --> 01:14:34,367
+And
+
+1229
+01:14:35,391 --> 01:14:41,535
+But it does this urge to have a circle the projective method labeled subjective
+
+1230
+01:14:41,791 --> 01:14:44,607
+Can people deluded themselves into thinking booties other methods
+
+1231
+01:14:45,119 --> 01:14:47,423
+Would actually a subjective as well
+
+1232
+01:14:47,935 --> 01:14:49,215
+So
+
+1233
+01:14:49,727 --> 01:14:55,359
+Having computers definitely makes its rightful to use off of Bayesian methods and what we're going to discuss
+
+1234
+01:14:55,615 --> 01:14:57,151
+A whole bunch of ways of
+
+1235
+01:14:57,407 --> 01:15:00,223
+Doing practical Bayesian methods on computers
+
+1236
+01:15:00,479 --> 01:15:03,551
+But way back before computers Raven.
+
+1237
+01:15:04,575 --> 01:15:07,391
+The earliest work on inference
+
+1238
+01:15:07,647 --> 01:15:09,695
+With that being done by LaPlace
+
+1239
+01:15:10,207 --> 01:15:11,231
+LaPlace
+
+1240
+01:15:11,487 --> 01:15:17,631
+The correct name for Bayes theorem instantly it is with my sister because I used it in anger on real data
+
+1241
+01:15:17,887 --> 01:15:19,423
+Update on the obit
+
+1242
+01:15:19,679 --> 01:15:21,727
+And the way things to be inferred and he used
+
+1243
+01:15:22,239 --> 01:15:25,311
+They start to do those inferences
+
+1244
+01:15:26,847 --> 01:15:29,919
+He knew that it was the right way to do things and
+
+1245
+01:15:30,687 --> 01:15:34,015
+That was the birth of of Bayesian inference
+
+1246
+01:15:35,039 --> 01:15:37,855
+So it's not for like a computers
+
+1247
+01:15:38,111 --> 01:15:41,439
+There are other exclamation exclamation that's probably social
+
+1248
+01:15:41,695 --> 01:15:42,207
+Exclamation
+
+1249
+01:15:44,511 --> 01:15:46,303
+Okay thanks see you next week

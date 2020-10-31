@@ -1,0 +1,3039 @@
+1
+00:00:04,096 --> 00:00:05,376
+Walking directions to re
+
+2
+00:00:05,888 --> 00:00:07,168
+We'll talk about sauce
+
+3
+00:00:07,424 --> 00:00:09,984
+Coding orthodontist data compression
+
+4
+00:00:10,240 --> 00:00:16,384
+The big picture is in lecture one I introduced you to the middle of the course noisy Channel coding
+
+5
+00:00:16,640 --> 00:00:22,784
+Step back and think about how to measure information content and how that relate to doing data compression
+
+6
+00:00:23,296 --> 00:00:29,440
+And for two topics for today are we going to continue examining the evidence for the assertion that
+
+7
+00:00:29,696 --> 00:00:32,768
+The Shannon information content which I burned down here
+
+8
+00:00:33,024 --> 00:00:35,840
+Is the right way to measure information content
+
+9
+00:00:36,352 --> 00:00:41,984
+We will prove to Source coding therapy that actually proves that
+
+10
+00:00:43,008 --> 00:00:45,312
+The sun information content is the
+
+11
+00:00:45,568 --> 00:00:50,944
+Will SketchUp roof the details are in the
+
+12
+00:00:54,016 --> 00:00:54,784
+So
+
+13
+00:00:55,040 --> 00:01:01,184
+What disgusting how to compress redundant files and as a toy example of a redundant file
+
+14
+00:01:02,208 --> 00:01:03,488
+You could imagine
+
+15
+00:01:04,000 --> 00:01:10,144
+An alphabet with just two possible car doesn't it is 0 and 1 Generation by tossing a bent calling
+
+16
+00:01:10,400 --> 00:01:13,984
+Has a nice chance of coming up 0% chance of coming up
+
+17
+00:01:15,264 --> 00:01:21,408
+So that's an example of a very simple toy redundant file and we'll talk more about that
+
+18
+00:01:21,664 --> 00:01:22,176
+If you cuss
+
+19
+00:01:23,200 --> 00:01:27,296
+The general claim is the son of information content of an outcome
+
+20
+00:01:27,552 --> 00:01:30,624
+Is a sensible way to measure how much information
+
+21
+00:01:30,880 --> 00:01:32,672
+That outcome gives you
+
+22
+00:01:33,184 --> 00:01:38,048
+Add if you take the average of the Shannon information content you get the entropy
+
+23
+00:01:38,304 --> 00:01:44,448
+And the second claim is the entropy is a sensible measure of expected or average information content
+
+24
+00:01:50,848 --> 00:01:51,616
+We
+
+25
+00:01:51,872 --> 00:01:54,176
+Discuss the last time a first
+
+26
+00:01:55,712 --> 00:01:58,528
+Experiment if you like a first case study
+
+27
+00:01:58,784 --> 00:02:03,392
+For testing these claims about but kind of information cannot be looked at the weigh-in problem
+
+28
+00:02:03,648 --> 00:02:09,792
+And must be going to try and Foal billing problem struggle a bit and think about it quite a lot
+
+29
+00:02:10,048 --> 00:02:13,120
+Maybe after a couple of days struggling they still haven't got the answer
+
+30
+00:02:13,376 --> 00:02:19,520
+And the Shannon information from 10 gives you an idea where it says if you want info with it why or why not choose one
+
+31
+00:02:19,776 --> 00:02:20,800
+Not with maximum entropy
+
+32
+00:02:21,568 --> 00:02:26,432
+When you follow that principle you got a solution that got you done in three Wayne just fine
+
+33
+00:02:26,688 --> 00:02:30,272
+Out of a 12-volt which one is the old one and heavy or light
+
+34
+00:02:30,528 --> 00:02:32,320
+In 3 weighings
+
+35
+00:02:32,832 --> 00:02:33,856
+And that's all it needs
+
+36
+00:02:34,112 --> 00:02:40,256
+And that's the best you can do and so it's a it's a little piece of evidence that hey maybe this
+
+37
+00:02:40,512 --> 00:02:41,792
+We think it's useful
+
+38
+00:02:43,584 --> 00:02:45,120
+If you don't choose
+
+39
+00:02:45,376 --> 00:02:51,520
+The waiting at each step that has the maximum possible entropy that you are going for a strategy that
+
+40
+00:02:51,776 --> 00:02:54,336
+Does not guarantee to get you done in free
+
+41
+00:02:55,104 --> 00:02:56,384
+It's a good idea
+
+42
+00:02:57,664 --> 00:02:59,200
+Probably think about entropy
+
+43
+00:03:00,992 --> 00:03:07,136
+Deferred payment going to discuss is the seal coating serum that says it if you guys got a big string of N Out
+
+44
+00:03:07,392 --> 00:03:08,672
+Outcomes from a source
+
+45
+00:03:08,928 --> 00:03:10,976
+Then they can be compressed
+
+46
+00:03:11,488 --> 00:03:13,792
+Into roughly n times the entropy
+
+47
+00:03:14,048 --> 00:03:14,816
+This
+
+48
+00:03:15,840 --> 00:03:17,120
+Sir
+
+49
+00:03:17,888 --> 00:03:22,240
+I asked you last time to have a think about the bent coin Lottery
+
+50
+00:03:22,496 --> 00:03:23,520
+Puzzle
+
+51
+00:03:23,776 --> 00:03:27,872
+We'll come back to this very soon the best coin laundry in voles
+
+52
+00:03:28,384 --> 00:03:32,992
+Nothing's been calling a thousand times to determine which is the winning ticket and if you
+
+53
+00:03:33,248 --> 00:03:35,552
+And the winning ticket you win a gazillion pounds
+
+54
+00:03:36,064 --> 00:03:42,208
+And the question I asked you was if the mafia boss tells you that you must buy enough
+
+55
+00:03:42,464 --> 00:03:46,304
+Tickets from the shop to guarantee a 99% chance of winning
+
+56
+00:03:46,560 --> 00:03:52,704
+The price which tickets would you buy assuming that you try to minimize the cost of the tickets they cost you a quid
+
+57
+00:03:52,960 --> 00:03:53,728
+H
+
+58
+00:03:55,008 --> 00:03:58,080
+And how many tickets would that add up to
+
+59
+00:03:58,336 --> 00:04:04,480
+Okay so we'll come back to the first one to look at to slightly simpler example
+
+60
+00:04:04,736 --> 00:04:10,880
+Two more little games to think about these claims about the showing information contact the first game is
+
+61
+00:04:11,136 --> 00:04:13,184
+Code 63 and it works progress
+
+62
+00:04:13,440 --> 00:04:19,583
+In 63 I think of a number and the number is drawn from this hat is everyone...
+
+63
+00:04:19,839 --> 00:04:20,607
+63
+
+64
+00:04:20,863 --> 00:04:22,143
+So I pick a number
+
+65
+00:04:22,399 --> 00:04:27,007
+And then you ask me questions and I say yes or no to go questions
+
+66
+00:04:27,263 --> 00:04:28,799
+And when you know what it is
+
+67
+00:04:29,055 --> 00:04:31,103
+How do you say I know X
+
+68
+00:04:31,615 --> 00:04:35,455
+How to talk to your neighbor
+
+69
+00:04:35,967 --> 00:04:41,599
+What strategy would you use to try and identify the number I'm thinking of
+
+70
+00:04:42,111 --> 00:04:44,927
+As rapidly as possible using as few guesses as possible
+
+71
+00:04:46,719 --> 00:04:49,535
+Okay who'd like to suggest a way of
+
+72
+00:04:50,303 --> 00:04:52,607
+Ask a guy asking questions to
+
+73
+00:04:52,863 --> 00:04:53,631
+Play the sky
+
+74
+00:04:54,143 --> 00:04:55,423
+I don't be shy
+
+75
+00:05:00,799 --> 00:05:01,567
+Okay
+
+76
+00:05:02,079 --> 00:05:06,687
+So your first question could be is X bigger than or equal to 32
+
+77
+00:05:08,735 --> 00:05:11,039
+How's your day and I could say
+
+78
+00:05:11,551 --> 00:05:14,623
+Yes and then your next question will be
+
+79
+00:05:21,791 --> 00:05:27,423
+I can't is it in the range 48 to 63 and I could say no
+
+80
+00:05:27,935 --> 00:05:34,079
+I keep on having and you're getting for simple eye-popping you just continue as warm
+
+81
+00:05:34,335 --> 00:05:40,479
+Ask your second question for you in a general way you could ask for edx modulo 32
+
+82
+00:05:41,503 --> 00:05:44,831
+Number greater than or equal to 16
+
+83
+00:05:45,599 --> 00:05:46,111
+Okay
+
+84
+00:05:46,367 --> 00:05:46,879
+Enat
+
+85
+00:05:47,647 --> 00:05:53,791
+Xbox X32 means throw a 32
+
+86
+00:05:54,815 --> 00:05:59,679
+Alright so this answer the first question was yes which I could go Wong
+
+87
+00:05:59,935 --> 00:06:01,727
+Second question was 0
+
+88
+00:06:01,983 --> 00:06:04,543
+Question is going to be his ex
+
+89
+00:06:05,823 --> 00:06:09,407
+Body like 16 or equal to
+
+90
+00:06:09,663 --> 00:06:10,943
+Marketside
+
+91
+00:06:13,503 --> 00:06:15,295
+And then he'd ask
+
+92
+00:06:15,551 --> 00:06:20,415
+Is X mode
+
+93
+00:06:21,183 --> 00:06:22,463
+And I might say no
+
+94
+00:06:26,047 --> 00:06:29,631
+Like I need to keep on going and going and you ask this phone
+
+95
+00:06:30,655 --> 00:06:32,959
+How do I say yes
+
+96
+00:06:33,727 --> 00:06:34,495
+Pioneer
+
+97
+00:06:34,751 --> 00:06:40,895
+The X1 July 4th pick 2
+
+98
+00:06:41,151 --> 00:06:46,015
+The same as asking is it an even or an odd number
+
+99
+00:06:46,271 --> 00:06:47,807
+And I might tell you
+
+100
+00:06:48,319 --> 00:06:49,087
+No
+
+101
+00:06:49,343 --> 00:06:50,623
+Analogy day
+
+102
+00:06:57,023 --> 00:06:58,047
+Okay
+
+103
+00:06:58,559 --> 00:07:01,375
+I'm what I'm answer is 42
+
+104
+00:07:01,631 --> 00:07:02,911
+Because what you
+
+105
+00:07:03,167 --> 00:07:09,311
+Nitrostat is 101010 is 42 in binary
+
+106
+00:07:14,431 --> 00:07:18,271
+I don't got any comments questions everyone with me
+
+107
+00:07:20,063 --> 00:07:20,831
+Okay
+
+108
+00:07:21,087 --> 00:07:24,671
+Suck a solution to the game of 63
+
+109
+00:07:24,927 --> 00:07:26,207
+And
+
+110
+00:07:26,463 --> 00:07:29,279
+An observation we can make is that
+
+111
+00:07:30,047 --> 00:07:35,167
+If you want to be sure of identifying an outcome in this alphabet
+
+112
+00:07:35,935 --> 00:07:41,311
+Then it will take you six binary questions to be sure by identifying it
+
+113
+00:07:42,591 --> 00:07:48,735
+We could also have a think about these Clayton what The Shining information comes I bet School answers
+
+114
+00:07:48,991 --> 00:07:51,807
+What's the first question wrong
+
+115
+00:07:52,063 --> 00:07:55,903
+C2 C3 C4 and song
+
+116
+00:07:56,159 --> 00:07:57,439
+Questions
+
+117
+00:08:05,119 --> 00:08:10,239
+What was the Shannon information content of each of these answers
+
+118
+00:08:10,495 --> 00:08:15,103
+Well it's time you asked the question question
+
+119
+00:08:16,127 --> 00:08:18,687
+You didn't know what I was thinking also it was 50/50
+
+120
+00:08:19,199 --> 00:08:20,479
+Well dance with me
+
+121
+00:08:21,503 --> 00:08:26,111
+So the Shannon information content open.com walls
+
+122
+00:08:26,367 --> 00:08:31,231
+Log base 2 1 over the provision of outcome which was a hawk whatever happened
+
+123
+00:08:31,999 --> 00:08:33,535
+So that's love II
+
+124
+00:08:34,559 --> 00:08:35,839
+Cheap one bed
+
+125
+00:08:38,399 --> 00:08:44,031
+So the total information content according to Shannon that you got total
+
+126
+00:08:44,543 --> 00:08:45,311
+Heinen
+
+127
+00:08:46,335 --> 00:08:47,615
+Information
+
+128
+00:08:47,871 --> 00:08:49,151
+Contents
+
+129
+00:08:51,199 --> 00:08:52,479
+Put your games
+
+130
+00:08:52,991 --> 00:08:58,111
+Throughout the whole Burlingame with six bits
+
+131
+00:09:02,207 --> 00:09:05,279
+The string of answers that you don't
+
+132
+00:09:06,303 --> 00:09:08,863
+C1 to C6
+
+133
+00:09:10,399 --> 00:09:13,215
+Is an encoding of x
+
+134
+00:09:20,895 --> 00:09:21,663
+Heinrich
+
+135
+00:09:21,919 --> 00:09:28,063
+Karolina kurkova tfx string of 642
+
+136
+00:09:29,855 --> 00:09:33,951
+1010 I-10
+
+137
+00:09:34,975 --> 00:09:38,559
+When making a connection to session
+
+138
+00:09:38,815 --> 00:09:41,887
+If you got an outcome you can compress it into 6 bit
+
+139
+00:09:42,399 --> 00:09:47,775
+And 6 bit to shine information content and it's all making sense there's nothing very surprising Happening Here
+
+140
+00:09:48,543 --> 00:09:50,847
+Text of this is very weak evidence
+
+141
+00:09:51,103 --> 00:09:52,127
+The idea yep
+
+142
+00:09:52,383 --> 00:09:54,943
+Shannon information content is looking promising
+
+143
+00:09:58,015 --> 00:10:00,319
+Why was it a good strategy to split
+
+144
+00:10:00,831 --> 00:10:04,159
+It into switch everything into some people
+
+145
+00:10:04,671 --> 00:10:07,231
+So why don't you ask first is it a prime number
+
+146
+00:10:07,743 --> 00:10:10,303
+Why is it a good idea to split exactly into
+
+147
+00:10:14,911 --> 00:10:21,055
+It got Maxim information content maximum expected information contact the probability
+
+148
+00:10:21,567 --> 00:10:22,847
+I wouldn't be
+
+149
+00:10:23,103 --> 00:10:23,871
+Haha
+
+150
+00:10:24,383 --> 00:10:30,527
+I'm trying to say hey you're not getting as much expected information that you could cause a channel Samsung like the
+
+151
+00:10:30,783 --> 00:10:36,927
+In the big sat out of the two to go crashing can talk to 7:15 then
+
+152
+00:10:37,183 --> 00:10:38,719
+You're going to need more than
+
+153
+00:10:38,975 --> 00:10:41,535
+The remaining whatever it would it be in 5 questions
+
+154
+00:10:43,071 --> 00:10:43,583
+Okay
+
+155
+00:10:45,119 --> 00:10:50,239
+Let's ask you one more question based on this game and then do another game
+
+156
+00:10:50,751 --> 00:10:52,031
+All right
+
+157
+00:10:52,287 --> 00:10:53,823
+Suck it the question
+
+158
+00:10:54,591 --> 00:10:57,663
+If I cover sets with s possible outcomes in it
+
+159
+00:10:57,919 --> 00:11:04,063
+How many bits long must each name be if every outcome is going to have a unique name
+
+160
+00:11:04,319 --> 00:11:08,159
+The question is I have got a drawer full of
+
+161
+00:11:08,415 --> 00:11:10,719
+Underwear at home
+
+162
+00:11:17,375 --> 00:11:23,519
+I don't want to be Farrah and systemic can give every one of these a unique name so I can record on Facebook which player
+
+163
+00:11:23,775 --> 00:11:24,799
+I'm wearing today
+
+164
+00:11:25,055 --> 00:11:27,615
+Talking to right little names on them
+
+165
+00:11:27,871 --> 00:11:29,151
+And the question is
+
+166
+00:11:29,919 --> 00:11:33,247
+If I'm going to post on Facebook the
+
+167
+00:11:34,783 --> 00:11:39,647
+Binary name of each of these items
+
+168
+00:11:42,207 --> 00:11:47,327
+Capital S different pieces of underwear
+
+169
+00:11:47,583 --> 00:11:53,727
+How long does each of these binary names have to be assuming I give them oil binary names of the same
+
+170
+00:11:53,983 --> 00:11:55,007
+Likes
+
+171
+00:11:55,519 --> 00:11:56,799
+Habitat your neighbor
+
+172
+00:11:59,359 --> 00:12:00,383
+Okay
+
+173
+00:12:01,407 --> 00:12:03,967
+How long do my labels need to be
+
+174
+00:12:04,223 --> 00:12:06,015
+To label my underwear
+
+175
+00:12:06,527 --> 00:12:09,087
+An outcome from the set, uncoded
+
+176
+00:12:09,343 --> 00:12:11,647
+Healthy communication in how many bits
+
+177
+00:12:13,183 --> 00:12:13,695
+Yeah
+
+178
+00:12:17,023 --> 00:12:18,303
+Log base 2
+
+179
+00:12:18,559 --> 00:12:22,143
+Alves any Advance America
+
+180
+00:12:25,215 --> 00:12:31,359
+But we're going to round it up a bit in case this isn't an integer longer 64 or 6
+
+181
+00:12:31,615 --> 00:12:32,895
+Which is nice and convenient
+
+182
+00:12:33,151 --> 00:12:36,223
+In general logos 67 or something
+
+183
+00:12:36,735 --> 00:12:42,879
+We'll have to round it up a bit so maybe you need to go up by almost 1 and weak feeling
+
+184
+00:12:43,135 --> 00:12:46,719
+Symbol hand means ceiling
+
+185
+00:12:47,231 --> 00:12:48,255
+Which means
+
+186
+00:12:48,767 --> 00:12:51,327
+Take this number rounded to the nearest integer
+
+187
+00:12:51,583 --> 00:12:52,607
+Okay
+
+188
+00:12:52,863 --> 00:12:59,007
+Telogis is definitely the spirit of the arm sore after and if we're being obsessive we stealing longest
+
+189
+00:12:59,263 --> 00:13:01,055
+Rachel hunt net worth
+
+190
+00:13:01,311 --> 00:13:04,895
+We got the right temperature
+
+191
+00:13:05,151 --> 00:13:11,295
+An outcome from a certain size asked if you give them all names of binary
+
+192
+00:13:13,087 --> 00:13:17,439
+This outcome can be communicated and low base to pass
+
+193
+00:13:17,951 --> 00:13:21,279
+Burrell
+
+194
+00:13:21,535 --> 00:13:24,095
+Okay time for another game
+
+195
+00:13:25,119 --> 00:13:31,263
+This is a game based on battleships but a slightly more boring game
+
+196
+00:13:31,519 --> 00:13:34,847
+It's called submarine
+
+197
+00:13:35,359 --> 00:13:41,503
+Man submarine Wong submarine is hidden somewhere in the ocean and then have to stop firing at it just like in bed
+
+198
+00:13:41,759 --> 00:13:44,575
+Tips to try and find the wrong submarine
+
+199
+00:13:46,623 --> 00:13:48,927
+So let's run submarine
+
+200
+00:13:50,207 --> 00:13:51,487
+Hair It Is
+
+201
+00:13:53,279 --> 00:13:59,423
+Sucks let's have a game Sally built in some Shannon advice so who can see
+
+202
+00:13:59,679 --> 00:14:05,823
+For every possible thing we could do hair you can fire a tiny Square tells you what the probability of getting
+
+203
+00:14:06,079 --> 00:14:12,223
+Yes but you hit the submarine submarine is just one square of 64
+
+204
+00:14:12,479 --> 00:14:15,039
+63 / 64 that's right
+
+205
+00:14:15,295 --> 00:14:21,439
+It's 67-64 for the square
+
+206
+00:14:21,695 --> 00:14:22,207
+Better with time
+
+207
+00:14:22,463 --> 00:14:23,743
+Marinas
+
+208
+00:14:23,999 --> 00:14:28,351
+Actually fire this crap and
+
+209
+00:14:28,607 --> 00:14:34,751
+It will keep in track what was the probability of the outcomes that happened Greenwich is no no
+
+210
+00:14:35,775 --> 00:14:38,591
+The answer for that first outcome
+
+211
+00:14:38,847 --> 00:14:39,615
+Is
+
+212
+00:14:44,735 --> 00:14:46,015
+The probability
+
+213
+00:14:46,271 --> 00:14:48,319
+That response number one
+
+214
+00:14:48,575 --> 00:14:49,855
+Was no
+
+215
+00:14:50,111 --> 00:14:53,183
+What is 63 / 64
+
+216
+00:14:53,439 --> 00:14:57,791
+So The Shining information content of that first
+
+217
+00:14:58,047 --> 00:15:04,191
+How come is log base 2 of one over that which is lowest 264
+
+218
+00:15:04,447 --> 00:15:04,959
+63
+
+219
+00:15:05,983 --> 00:15:07,007
+All right
+
+220
+00:15:07,775 --> 00:15:10,335
+And that's a Slightly bizarre
+
+221
+00:15:10,591 --> 00:15:16,479
+Number 0.02 to 7
+
+222
+00:15:17,247 --> 00:15:23,391
+At what kind of trivial examples weighing problems
+
+223
+00:15:23,647 --> 00:15:25,695
+We looked at
+
+224
+00:15:25,951 --> 00:15:29,023
+Identifying underwear with fiber strings
+
+225
+00:15:29,535 --> 00:15:35,679
+I got you a 63
+
+226
+00:15:35,935 --> 00:15:36,959
+Uneven
+
+227
+00:15:37,471 --> 00:15:41,055
+Shannon says when you find out square in no
+
+228
+00:15:42,079 --> 00:15:45,919
+You got this much information .022 7 fix
+
+229
+00:15:47,711 --> 00:15:50,015
+But it's not obvious
+
+230
+00:15:50,271 --> 00:15:51,039
+Okay
+
+231
+00:15:51,295 --> 00:15:53,343
+Charlottetown playing and see what happens
+
+232
+00:15:53,599 --> 00:15:59,743
+Africa
+
+233
+00:15:59,999 --> 00:16:00,511
+53
+
+234
+00:16:02,047 --> 00:16:06,143
+And the public you know it's 62 every 60 take a shower fire
+
+235
+00:16:06,399 --> 00:16:08,191
+Boom what happened
+
+236
+00:16:09,215 --> 00:16:15,359
+The probability of getting another is what happened
+
+237
+00:16:15,615 --> 00:16:16,895
+2 / 63
+
+238
+00:16:17,151 --> 00:16:22,271
+Shannon information content with log face to event
+
+239
+00:16:22,527 --> 00:16:23,551
+Which was
+
+240
+00:16:23,807 --> 00:16:25,599
+Slightly more
+
+241
+00:16:26,111 --> 00:16:27,391
+But no
+
+242
+00:16:27,903 --> 00:16:29,183
+5
+
+243
+00:16:29,695 --> 00:16:30,719
+Sorry.
+
+244
+00:16:31,487 --> 00:16:33,279
+North
+
+245
+00:16:33,535 --> 00:16:39,423
+3 and the right-hand column is keeping track of the total information we've gained so far let's
+
+246
+00:16:39,935 --> 00:16:41,215
+Write that down
+
+247
+00:16:42,239 --> 00:16:43,263
+Dwell
+
+248
+00:16:46,079 --> 00:16:52,223
+Turtle information gained so far
+
+249
+00:16:56,063 --> 00:16:57,343
+6311
+
+250
+00:16:58,367 --> 00:16:59,647
+62
+
+251
+00:17:01,183 --> 00:17:07,071
+I carry on playing all of these
+
+252
+00:17:07,327 --> 00:17:09,631
+Maybe if we could have suggested
+
+253
+00:17:09,887 --> 00:17:11,679
+Dying for a little while
+
+254
+00:17:11,935 --> 00:17:18,079
+We could go if I can find fire this way but the probability of snow is One Republic
+
+255
+00:17:18,335 --> 00:17:23,711
+And that would give us no information content and nothing happens
+
+256
+00:17:30,367 --> 00:17:32,159
+Hahaha
+
+257
+00:17:32,415 --> 00:17:34,975
+Okay what's happened so far.
+
+258
+00:17:37,023 --> 00:17:38,559
+Half of the squares
+
+259
+00:17:39,327 --> 00:17:45,471
+And what's happened to the Shannon information content when you add it all up so far I got lots and lots of nose
+
+260
+00:17:45,727 --> 00:17:48,799
+Who's in the final long that I've just asked
+
+261
+00:17:49,311 --> 00:17:52,895
+Is log 33 / 32
+
+262
+00:17:53,151 --> 00:17:59,295
+Samantha Shannon information
+
+263
+00:18:03,903 --> 00:18:05,183
+What's going on
+
+264
+00:18:05,439 --> 00:18:06,463
+Well
+
+265
+00:18:07,231 --> 00:18:09,279
+It's a bit like playing 63
+
+266
+00:18:10,047 --> 00:18:16,191
+And choosing to ask question is the number one hit song
+
+267
+00:18:16,447 --> 00:18:22,591
+Very silly sausage in 63 and we got home late or is it his
+
+268
+00:18:22,847 --> 00:18:23,359
+Fetty WAP
+
+269
+00:18:23,871 --> 00:18:24,895
+And the answer is
+
+270
+00:18:25,151 --> 00:18:26,687
+No it's not that
+
+271
+00:18:28,223 --> 00:18:31,807
+And the great thing about this and that's just the same as asking
+
+272
+00:18:32,063 --> 00:18:33,599
+Is it less or equal to
+
+273
+00:18:35,135 --> 00:18:36,159
+Which
+
+274
+00:18:36,671 --> 00:18:39,999
+This is consistent with what we already felt was completely obvious
+
+275
+00:18:40,255 --> 00:18:44,607
+All right so that's promising this lot has ended up to
+
+276
+00:18:44,863 --> 00:18:50,751
+One bit very painfully acquired information content but it makes complete
+
+277
+00:18:51,007 --> 00:18:52,031
+Sense
+
+278
+00:18:52,799 --> 00:18:56,127
+Okay
+
+279
+00:19:05,599 --> 00:19:06,367
+Okay
+
+280
+00:19:07,391 --> 00:19:08,415
+What happened
+
+281
+00:19:09,951 --> 00:19:12,255
+La love
+
+282
+00:19:12,511 --> 00:19:18,655
+32 / 31 and what attempt was did this
+
+283
+00:19:20,703 --> 00:19:26,335
+Well we would just about to expect another know it would had a probability of
+
+284
+00:19:26,591 --> 00:19:28,383
+19 / 20
+
+285
+00:19:29,663 --> 00:19:30,943
+Latest thing we just
+
+286
+00:19:31,199 --> 00:19:36,575
+Did the Gullah know information competitive log
+
+287
+00:19:37,087 --> 00:19:39,903
+But then amazingly
+
+288
+00:19:40,159 --> 00:19:46,303
+We got a sudden enormous flu full .3
+
+289
+00:19:46,559 --> 00:19:48,351
+Send information contact over something
+
+290
+00:19:50,911 --> 00:19:52,447
+It feels a little bit
+
+291
+00:19:54,239 --> 00:19:55,775
+How much is it'll add up to
+
+292
+00:19:56,031 --> 00:19:57,055
+Look
+
+293
+00:19:57,311 --> 00:20:00,383
+Chex Mix
+
+294
+00:20:02,431 --> 00:20:08,319
+Hey I thought that expects we found the submarine we found which number I can 63
+
+295
+00:20:09,343 --> 00:20:10,879
+The computer was thinking of
+
+296
+00:20:11,135 --> 00:20:14,207
+Why did it come to such a beautiful routing number was that
+
+297
+00:20:14,719 --> 00:20:18,815
+Some special coincidence or does it always happen but let's just
+
+298
+00:20:19,583 --> 00:20:23,679
+Checkr report occasion
+
+299
+00:20:25,471 --> 00:20:28,031
+S&S I'm blessed I'm blessed I'm blessed
+
+300
+00:20:28,543 --> 00:20:30,591
+Preventative
+
+301
+00:20:30,847 --> 00:20:36,479
+Unless unless I'm so the answer is always going to come out once you found
+
+302
+00:20:37,503 --> 00:20:39,807
+Submarine Malone face tattoo
+
+303
+00:20:40,063 --> 00:20:43,647
+64
+
+304
+00:20:45,951 --> 00:20:47,487
+Look at that snow proof
+
+305
+00:20:47,743 --> 00:20:53,887
+But it's a nice little bit of evidence that maybe this log of 1 of A P thing which looked a bit strange beginning
+
+306
+00:20:54,143 --> 00:20:59,007
+Maybe that is the right way to measure how much information you got when something happens
+
+307
+00:21:00,031 --> 00:21:01,055
+You want to play again
+
+308
+00:21:01,567 --> 00:21:05,151
+Maybe not any questions
+
+309
+00:21:06,687 --> 00:21:07,711
+Okay
+
+310
+00:21:08,479 --> 00:21:10,015
+So that submarine
+
+311
+00:21:10,271 --> 00:21:11,807
+Now that there's been calling Lottery
+
+312
+00:21:12,575 --> 00:21:16,159
+Suck the question is the mafia boss tells you
+
+313
+00:21:16,928 --> 00:21:18,464
+To buy tickets
+
+314
+00:21:20,000 --> 00:21:24,864
+The outcome is going to be the string that is obtained when the coin is tossed
+
+315
+00:21:25,120 --> 00:21:27,680
+1000 * it's been calling
+
+316
+00:21:29,216 --> 00:21:33,312
+Redheads and common tiles
+
+317
+00:21:34,592 --> 00:21:37,920
+You can buy any of the tickets you want from the box office
+
+318
+00:21:38,688 --> 00:21:39,712
+If you roll
+
+319
+00:21:39,968 --> 00:21:42,784
+The winning ticket then you got a gazillion pounds
+
+320
+00:21:43,552 --> 00:21:45,856
+And the mafia boss forces you to buy
+
+321
+00:21:46,368 --> 00:21:49,184
+Lotto tickets in Oakland have a 99% chance
+
+322
+00:21:49,440 --> 00:21:55,584
+What are the questions I'm going to ask you if instead the rule of being forced to buy one ticket
+
+323
+00:21:55,840 --> 00:21:56,864
+Stop pounding.
+
+324
+00:21:57,120 --> 00:21:58,144
+To go and spend it
+
+325
+00:21:58,400 --> 00:22:00,448
+Which ticket would you buy
+
+326
+00:22:00,704 --> 00:22:02,240
+Have the best chance of winning
+
+327
+00:22:02,496 --> 00:22:03,520
+Then
+
+328
+00:22:03,776 --> 00:22:09,408
+Question 2 is going to be have a 99% chance of winning which tickets would you buy and how many tickets is that
+
+329
+00:22:09,920 --> 00:22:16,064
+And please express your answer in the form 2 ^ something that's three questions
+
+330
+00:22:16,320 --> 00:22:16,832
+For you
+
+331
+00:22:17,088 --> 00:22:21,184
+Please answer all of these questions
+
+332
+00:22:21,696 --> 00:22:22,720
+I want the board
+
+333
+00:22:25,792 --> 00:22:28,608
+Okay let's start with the simple question
+
+334
+00:22:28,864 --> 00:22:31,680
+You're forced to buy one ticket from the shop
+
+335
+00:22:32,448 --> 00:22:33,216
+Which
+
+336
+00:22:33,472 --> 00:22:35,776
+Ticket would you buy
+
+337
+00:22:36,288 --> 00:22:37,312
+Penny Wong
+
+338
+00:22:41,152 --> 00:22:42,944
+The old man I was ticket
+
+339
+00:22:43,200 --> 00:22:49,344
+Is
+
+340
+00:22:52,928 --> 00:22:54,720
+Anyone want a different ticket
+
+341
+00:22:57,280 --> 00:22:58,048
+Really
+
+342
+00:22:59,328 --> 00:22:59,840
+Yeah
+
+343
+00:23:03,424 --> 00:23:09,568
+What is 900 + 101
+
+344
+00:23:11,872 --> 00:23:12,384
+Chat
+
+345
+00:23:12,896 --> 00:23:17,504
+Does the older I get
+
+346
+00:23:17,760 --> 00:23:20,832
+Which one would you would you buy
+
+347
+00:23:21,600 --> 00:23:22,624
+Which of these
+
+348
+00:23:26,720 --> 00:23:27,488
+You don't mind
+
+349
+00:23:27,744 --> 00:23:31,328
+I'll take one for you I'll take this one
+
+350
+00:23:43,616 --> 00:23:46,944
+Are you happy with this choice of would you like a different one
+
+351
+00:23:48,992 --> 00:23:49,760
+It's up to you
+
+352
+00:23:53,600 --> 00:23:59,232
+You like the most spread out I can't
+
+353
+00:23:59,744 --> 00:24:05,888
+Okay I'll give you one where the most for that
+
+354
+00:24:11,520 --> 00:24:15,104
+Okay we could still have the details
+
+355
+00:24:15,360 --> 00:24:21,504
+But we would come up with a particular answer whether spread out until you say you're happy and then we sell it to you for
+
+356
+00:24:22,016 --> 00:24:23,296
+Okay
+
+357
+00:24:24,064 --> 00:24:28,928
+Let's run the lottery now and see which of these tickets
+
+358
+00:24:29,184 --> 00:24:35,328
+When Sarah got a choice of three we could go this too today this is be mrs. tickets
+
+359
+00:24:37,632 --> 00:24:41,728
+So I got a computer and computer the great running lotteries
+
+360
+00:24:43,264 --> 00:24:44,800
+So
+
+361
+00:24:45,312 --> 00:24:46,336
+Nautilus submarine
+
+362
+00:24:47,616 --> 00:24:50,176
+I'm his v card for running a lottery
+
+363
+00:24:50,944 --> 00:24:52,992
+U-Pick and
+
+364
+00:24:53,504 --> 00:24:54,528
+You said f
+
+365
+00:24:54,784 --> 00:25:00,928
+And you do a loop and time spitting out zeros and ones
+
+366
+00:25:01,184 --> 00:25:06,048
+Look like I'm going to run it runs and times to see who wins
+
+367
+00:25:08,096 --> 00:25:14,240
+To make it a little bit faster because you might anticipate that it would take a long time to actually run this Law Firm
+
+368
+00:25:14,496 --> 00:25:20,640
+Might have too many thousands of simulations before we go anywhere this I'm going to change and
+
+369
+00:25:20,896 --> 00:25:26,016
+Will change into 20 I'm going to use the same kind
+
+370
+00:25:26,528 --> 00:25:32,672
+All right I'm going to take the liberty of updating the answers you've given me so group
+
+371
+00:25:32,928 --> 00:25:37,792
+Who liked the old heroes ticket out using the old zero tickets till
+
+372
+00:25:39,072 --> 00:25:45,216
+3br voting for the one that has to office immediately followed by
+
+373
+00:25:45,472 --> 00:25:47,776
+18 zeros
+
+374
+00:25:48,032 --> 00:25:48,800
+Okay
+
+375
+00:25:53,664 --> 00:25:54,688
+Andrew Percy
+
+376
+00:25:54,944 --> 00:26:01,088
+This is your chance to say what you want you can read it out to me if you want I'll make it up for you
+
+377
+00:26:01,344 --> 00:26:04,416
+Then you can say if you want a different one
+
+378
+00:26:06,464 --> 00:26:10,304
+Speak speak speak
+
+379
+00:26:10,560 --> 00:26:12,096
+Is that alright
+
+380
+00:26:12,608 --> 00:26:13,376
+That long
+
+381
+00:26:14,400 --> 00:26:18,496
+Hi okay. Two wrongs in it
+
+382
+00:26:18,752 --> 00:26:21,824
+If you want to 10% and you wanted them spread out
+
+383
+00:26:22,336 --> 00:26:25,408
+Join a different one we're about to run the lottery this is your chance
+
+384
+00:26:25,664 --> 00:26:29,760
+Okay I'm the winner gets a chocolate biscuit
+
+385
+00:26:30,528 --> 00:26:34,624
+But you're not allowed to eat in the election
+
+386
+00:26:35,392 --> 00:26:41,536
+I'm going to keep running it in fact because if we just had a winner that was the luck of the draw
+
+387
+00:26:41,792 --> 00:26:44,864
+I'm going to run until someone has run 10 times alright
+
+388
+00:26:45,120 --> 00:26:47,168
+And then we'll see how everyone else did
+
+389
+00:26:47,680 --> 00:26:53,824
+Yeah if you wanted a right so this group
+
+390
+00:26:55,360 --> 00:27:00,224
+Let's Get Rich As for me and you can check to see whenever they happen will keep count
+
+391
+00:27:00,480 --> 00:27:03,552
+Until someone is 1/10 times already
+
+392
+00:27:05,088 --> 00:27:06,368
+Hahaha
+
+393
+00:27:08,672 --> 00:27:11,744
+Surrounded that night we got a warning about variable names
+
+394
+00:27:12,000 --> 00:27:14,304
+So that's the first one
+
+395
+00:27:15,328 --> 00:27:18,912
+All right no one chest just don't get it right
+
+396
+00:27:19,168 --> 00:27:20,704
+Second lottery ticket
+
+397
+00:27:20,960 --> 00:27:22,752
+FreeOnes goodness make
+
+398
+00:27:24,544 --> 00:27:26,848
+Who won one
+
+399
+00:27:27,616 --> 00:27:28,384
+K
+
+400
+00:27:29,664 --> 00:27:30,944
+Hahaha
+
+401
+00:27:32,224 --> 00:27:33,760
+Hello what the LeBrons
+
+402
+00:27:35,808 --> 00:27:38,368
+Okay turkey pan
+
+403
+00:27:38,624 --> 00:27:43,232
+If you've had one win the ticket
+
+404
+00:27:44,256 --> 00:27:45,536
+As Roma two wrongs
+
+405
+00:27:45,792 --> 00:27:47,328
+I want to talk to you on
+
+406
+00:27:48,352 --> 00:27:52,704
+What's wrong with that was to
+
+407
+00:27:52,960 --> 00:27:54,240
+I want to talk to you wrong
+
+408
+00:27:54,496 --> 00:27:57,056
+Second wind
+
+409
+00:27:57,312 --> 00:28:01,152
+I also got three this week up to
+
+410
+00:28:01,408 --> 00:28:05,248
+This is. 322 warm
+
+411
+00:28:05,760 --> 00:28:06,528
+1 long
+
+412
+00:28:07,040 --> 00:28:07,808
+One one
+
+413
+00:28:10,368 --> 00:28:11,648
+Reruns for Wee Ones
+
+414
+00:28:12,672 --> 00:28:16,256
+Hey how many of you want so far group a
+
+415
+00:28:17,024 --> 00:28:18,560
+3 winds well-done
+
+416
+00:28:19,072 --> 00:28:20,352
+But you're just lucky on you
+
+417
+00:28:20,864 --> 00:28:27,008
+QuikTrip
+
+418
+00:28:27,264 --> 00:28:28,800
+Nachos but I think being delayed
+
+419
+00:28:29,312 --> 00:28:30,080
+McKay
+
+420
+00:28:34,432 --> 00:28:37,248
+Oh that sucks Pokemon you see that
+
+421
+00:28:37,504 --> 00:28:38,784
+But
+
+422
+00:28:39,040 --> 00:28:41,088
+They had an extra one Ono
+
+423
+00:28:43,392 --> 00:28:44,928
+1006
+
+424
+00:28:46,720 --> 00:28:47,232
+7
+
+425
+00:28:56,192 --> 00:28:57,472
+How many begotten
+
+426
+00:28:58,240 --> 00:28:58,752
+9
+
+427
+00:29:06,688 --> 00:29:10,272
+Okay so what happened with had 10 wins
+
+428
+00:29:10,528 --> 00:29:12,064
+For this ticket
+
+429
+00:29:12,320 --> 00:29:15,136
+Knowing for the Swannanoa and so that one
+
+430
+00:29:15,392 --> 00:29:17,952
+All right so what was the last dinosaur
+
+431
+00:29:18,976 --> 00:29:24,352
+Looks like he was a good choice or ticket is the most probable ticket
+
+432
+00:29:24,608 --> 00:29:25,376
+This
+
+433
+00:29:25,888 --> 00:29:27,936
+A much higher chance of two woman coming up
+
+434
+00:29:28,704 --> 00:29:34,848
+That is very improbable thing having no one's at all so that intuition is absolutely right that you're not expecting the old
+
+435
+00:29:35,104 --> 00:29:38,944
+You are expecting typically to Wong's
+
+436
+00:29:39,200 --> 00:29:39,968
+Something
+
+437
+00:29:40,224 --> 00:29:41,760
+But the most powerful ticket
+
+438
+00:29:42,016 --> 00:29:43,296
+Is the old zero ticket
+
+439
+00:29:43,552 --> 00:29:46,624
+All right so what was Christian
+
+440
+00:29:47,392 --> 00:29:47,904
+2
+
+441
+00:29:48,160 --> 00:29:51,488
+If you have 99% chance of winning at lowest
+
+442
+00:29:51,744 --> 00:29:56,096
+Which tickets would you buy have another chat to your neighbor
+
+443
+00:30:02,496 --> 00:30:04,800
+I'm going with Anna's a thousand again
+
+444
+00:30:09,920 --> 00:30:16,064
+Okay I already heard of chocolate biscuits
+
+445
+00:30:16,320 --> 00:30:20,928
+Send it for talking so whoever suggested deal zero ticket gets one at the end
+
+446
+00:30:21,440 --> 00:30:22,464
+I know
+
+447
+00:30:24,256 --> 00:30:26,560
+Got a 99% chance of winning
+
+448
+00:30:33,984 --> 00:30:36,032
+Which tickets would you buy
+
+449
+00:30:36,544 --> 00:30:37,312
+Speak up
+
+450
+00:30:41,152 --> 00:30:41,920
+Yeah
+
+451
+00:30:56,256 --> 00:30:58,560
+Okay so you would buy the older or ticket
+
+452
+00:30:58,816 --> 00:31:01,632
+Only one
+
+453
+00:31:01,888 --> 00:31:04,960
+0 tickets 10
+
+454
+00:31:05,216 --> 00:31:07,264
+Tickets
+
+455
+00:31:07,520 --> 00:31:09,824
+One one
+
+456
+00:31:10,336 --> 00:31:11,104
+Well then
+
+457
+00:31:11,360 --> 00:31:13,920
+Boulevard one
+
+458
+00:31:14,176 --> 00:31:15,968
+Full movie
+
+459
+00:31:16,224 --> 00:31:18,016
+To Milan
+
+460
+00:31:18,272 --> 00:31:19,808
+Tickets
+
+461
+00:31:20,320 --> 00:31:21,344
+Find
+
+462
+00:31:25,184 --> 00:31:29,536
+Okay which is where I want to eat you already said you got
+
+463
+00:31:30,560 --> 00:31:32,352
+So give me a bit more information
+
+464
+00:31:35,168 --> 00:31:40,800
+Okay they didn't add up to some and what do you anticipate is going to be
+
+465
+00:31:41,056 --> 00:31:43,360
+Let's call it movie
+
+466
+00:31:43,616 --> 00:31:45,920
+CarMax
+
+467
+00:31:46,176 --> 00:31:48,736
+Juan
+
+468
+00:31:48,992 --> 00:31:55,136
+Tickets I'm introducing a babbling now going to happens when the lottery
+
+469
+00:31:55,392 --> 00:31:55,904
+Run
+
+470
+00:31:57,440 --> 00:32:03,328
+You're going to buy movie tickets will it take to have all Max
+
+471
+00:32:04,352 --> 00:32:10,496
+One's on the roughly what the max needs to be if you do that calculation you described involving a
+
+472
+00:32:12,288 --> 00:32:14,592
+Probability distribution
+
+473
+00:32:15,872 --> 00:32:17,664
+Binomial distribution again
+
+474
+00:32:18,176 --> 00:32:18,688
+Good
+
+475
+00:32:19,200 --> 00:32:20,224
+Roughly
+
+476
+00:32:20,736 --> 00:32:21,760
+What are mikes
+
+477
+00:32:24,832 --> 00:32:30,976
+Something like two to the 100 the baby okay so you'll talk me the number
+
+478
+00:32:31,232 --> 00:32:35,328
+Tickets that you need to buy I'm asking what does Max need to be sorry
+
+479
+00:32:36,864 --> 00:32:38,912
+120th
+
+480
+00:32:39,168 --> 00:32:40,960
+Okay
+
+481
+00:32:41,472 --> 00:32:42,240
+Set
+
+482
+00:32:42,752 --> 00:32:44,800
+Why 120 ish
+
+483
+00:32:56,832 --> 00:32:59,648
+The standard deviation of the number of ones that we got
+
+484
+00:33:00,160 --> 00:33:00,672
+Okay
+
+485
+00:33:10,144 --> 00:33:12,960
+Okay see you in 4 to send the deviations
+
+486
+00:33:13,472 --> 00:33:18,848
+Around the mean the mean number of 1 is 100
+
+487
+00:33:19,104 --> 00:33:25,248
+And the variance is an F1 - 1/2
+
+488
+00:33:25,504 --> 00:33:31,392
+Pictures of 1000 * 1.1 * 0.9
+
+489
+00:33:31,648 --> 00:33:33,952
+Which is roughly a hundred
+
+490
+00:33:34,976 --> 00:33:36,512
+But exactly 90
+
+491
+00:33:37,280 --> 00:33:42,912
+Which is roughly 10 Sigma the standard deviation is 10
+
+492
+00:33:43,168 --> 00:33:47,264
+Answer key to sanity be like you need to go
+
+493
+00:33:47,520 --> 00:33:52,384
+20 is 95%
+
+494
+00:33:52,640 --> 00:33:54,432
+The number of one's is going to be
+
+495
+00:33:55,456 --> 00:33:56,480
+100
+
+496
+00:33:57,504 --> 00:33:59,808
+Give at 8:20 so it's going to be between 80
+
+497
+00:34:00,064 --> 00:34:00,832
+120
+
+498
+00:34:01,856 --> 00:34:07,744
+I'm going to let you know that you all to buy bills Aerotek ticket even though it's very unlikely stay by everything down there as well
+
+499
+00:34:08,000 --> 00:34:09,792
+Because that's good value for money
+
+500
+00:34:10,048 --> 00:34:12,096
+But you stopped once you get up to
+
+501
+00:34:12,352 --> 00:34:13,376
+120
+
+502
+00:34:13,888 --> 00:34:16,704
+Navigate to a chance of winning of roughly
+
+503
+00:34:16,960 --> 00:34:21,568
+What's the probability that a normal variable
+
+504
+00:34:21,824 --> 00:34:24,640
+Is within two standard deviations
+
+505
+00:34:25,152 --> 00:34:27,456
+Have the main his long Sigma
+
+506
+00:34:27,712 --> 00:34:29,504
+Has two Sigma
+
+507
+00:34:30,016 --> 00:34:31,808
+Republican marriage
+
+508
+00:34:33,600 --> 00:34:34,880
+95%
+
+509
+00:34:35,136 --> 00:34:37,184
+What is 95% in that
+
+510
+00:34:37,440 --> 00:34:42,816
+And we've already bought this Taylor out here as well cuz it is the freaky lots of 0 tickets
+
+511
+00:34:43,072 --> 00:34:46,144
+What are the best value-for-money so the probability of its
+
+512
+00:34:47,424 --> 00:34:48,192
+And
+
+513
+00:34:48,960 --> 00:34:54,848
+Stylish 2.5% is 97.5%
+
+514
+00:34:55,104 --> 00:34:58,176
+Roughly if you buy all of these tickets movie
+
+515
+00:34:59,200 --> 00:35:02,528
+Suggesting or 121
+
+516
+00:35:03,808 --> 00:35:04,320
+Tickets
+
+517
+00:35:04,576 --> 00:35:10,720
+Write down a little bit. It's a hundred plus a small number
+
+518
+00:35:10,976 --> 00:35:11,744
+Compared with Android
+
+519
+00:35:13,024 --> 00:35:14,048
+How to K
+
+520
+00:35:14,816 --> 00:35:20,960
+Strategy and I think we're understanding what's a good strategy and now we need to know how many tickets is that
+
+521
+00:35:21,216 --> 00:35:24,032
+So if you buy this many tickets
+
+522
+00:35:24,288 --> 00:35:28,384
+How many oliveiro tickets are there is one how many Wong
+
+523
+00:35:29,152 --> 00:35:31,200
+Wang tickets
+
+524
+00:35:31,968 --> 00:35:34,528
+There's a thousand right
+
+525
+00:35:35,808 --> 00:35:37,600
+How many Q on tickets on
+
+526
+00:35:37,856 --> 00:35:39,392
+Thousand
+
+527
+00:35:39,648 --> 00:35:40,928
+Choose to
+
+528
+00:35:41,696 --> 00:35:44,512
+Which is more than a thousand bike light
+
+529
+00:35:45,024 --> 00:35:48,096
+Answer for how many hundred twenty
+
+530
+00:35:48,608 --> 00:35:50,400
+Wrong tickets all that
+
+531
+00:35:50,912 --> 00:35:52,960
+The number of them is
+
+532
+00:35:56,032 --> 00:35:57,312
+1000
+
+533
+00:35:57,568 --> 00:35:59,360
+Choose 120
+
+534
+00:36:00,384 --> 00:36:03,712
+So the number of tickets
+
+535
+00:36:03,968 --> 00:36:05,248
+Boss
+
+536
+00:36:07,808 --> 00:36:13,952
+Is 1 + 1000 + 2 + 8 + 1200
+
+537
+00:36:14,208 --> 00:36:19,840
+In the middle hair with the most probable value of which is 100
+
+538
+00:36:24,192 --> 00:36:29,056
+Okay I'm the question is is that something like 2 ^ 100 or not
+
+539
+00:36:31,360 --> 00:36:34,688
+Cactus big questions because this may be wrong
+
+540
+00:36:36,992 --> 00:36:38,528
+How to attach to each other
+
+541
+00:36:39,040 --> 00:36:42,112
+Which of these terms in the sum is the biggest
+
+542
+00:36:42,624 --> 00:36:46,720
+And what's a good approximation for is it to 200 or is it something else
+
+543
+00:36:52,864 --> 00:36:54,144
+Okay
+
+544
+00:36:55,168 --> 00:37:01,312
+I've slightly corrected the answer we had a moment ago cuz remember buying everything up to the 121
+
+545
+00:37:01,824 --> 00:37:07,968
+Tickets only got you a 97% chance of winning in the rule what you could have a 99% chance so I've gone
+
+546
+00:37:08,736 --> 00:37:14,880
+The tickets that have 123 ones on them
+
+547
+00:37:15,136 --> 00:37:16,928
+Country standard deviations and that's what you need
+
+548
+00:37:17,440 --> 00:37:21,280
+Sucks in this series has a sum of terms
+
+549
+00:37:21,536 --> 00:37:23,072
+Which is the biggest
+
+550
+00:37:23,584 --> 00:37:25,120
+Roughly how big is it
+
+551
+00:37:25,888 --> 00:37:27,424
+Press which is the biggest
+
+552
+00:37:29,472 --> 00:37:30,496
+Right one
+
+553
+00:37:30,752 --> 00:37:32,032
+Any alternative answer
+
+554
+00:37:32,544 --> 00:37:33,824
+I don't think it's not
+
+555
+00:37:34,592 --> 00:37:35,616
+He thinks it is
+
+556
+00:37:36,640 --> 00:37:39,456
+OK Google okay
+
+557
+00:37:39,712 --> 00:37:41,760
+Stop this is right answer
+
+558
+00:37:42,016 --> 00:37:48,160
+If you plot a graph of and shoes which is that first Factor the binomial distribution
+
+559
+00:37:48,416 --> 00:37:50,464
+As all goes from 0
+
+560
+00:37:50,720 --> 00:37:56,864
+2 and becomes extremely big and then comes back down again and its biggest
+
+561
+00:37:57,120 --> 00:37:57,888
+And I would too
+
+562
+00:37:58,912 --> 00:38:03,520
+And we talked about the first up to here and then getting steadily bigger and bigger and bigger
+
+563
+00:38:03,776 --> 00:38:05,312
+We could hardly see them on this graph
+
+564
+00:38:05,568 --> 00:38:08,128
+But I do like the last one we just brought repair
+
+565
+00:38:08,384 --> 00:38:09,152
+Resume in
+
+566
+00:38:09,408 --> 00:38:13,504
+I got like that and that's the last one hits the biggest okay
+
+567
+00:38:14,016 --> 00:38:16,064
+How big is
+
+568
+00:38:16,576 --> 00:38:18,368
+This one Rock Lee
+
+569
+00:38:18,624 --> 00:38:20,928
+This is roughly 2 to the power something
+
+570
+00:38:21,440 --> 00:38:22,720
+And how big
+
+571
+00:38:23,232 --> 00:38:25,280
+Is this in the Forum
+
+572
+00:38:25,536 --> 00:38:27,072
+2 to the something
+
+573
+00:38:27,328 --> 00:38:33,472
+I think this is the biggest we don't really care about Lenny face we just want to know what's that number start with this one
+
+574
+00:38:35,008 --> 00:38:36,544
+Perhaps a little bit more familiar
+
+575
+00:38:37,312 --> 00:38:40,384
+Roughly what's 1000 choose 100
+
+576
+00:38:40,896 --> 00:38:41,920
+Anyone
+
+577
+00:38:44,736 --> 00:38:46,016
+2 to the power
+
+578
+00:38:47,040 --> 00:38:48,576
+800 something
+
+579
+00:38:49,344 --> 00:38:51,904
+Where did you get that from
+
+580
+00:38:58,304 --> 00:38:59,584
+Approximating
+
+581
+00:39:04,448 --> 00:39:08,544
+Okay so you approximated and factorial
+
+582
+00:39:10,336 --> 00:39:14,944
+And minus are factorial factorial
+
+583
+00:39:15,456 --> 00:39:16,992
+Okay
+
+584
+00:39:17,504 --> 00:39:21,600
+It's quite tricky the first time you do it maybe two bucks mate
+
+585
+00:39:22,112 --> 00:39:28,000
+Factorial and this
+
+586
+00:39:28,512 --> 00:39:29,280
+4
+
+587
+00:39:30,048 --> 00:39:30,560
+What
+
+588
+00:39:32,864 --> 00:39:34,912
+What happens when we approximate
+
+589
+00:39:35,936 --> 00:39:36,704
+This dude
+
+590
+00:39:39,008 --> 00:39:40,032
+Okay
+
+591
+00:39:40,544 --> 00:39:43,104
+500 - where do you get 500 from
+
+592
+00:39:49,504 --> 00:39:50,272
+Okay
+
+593
+00:39:50,784 --> 00:39:54,880
+So you're saying it through to the end times the entropy
+
+594
+00:39:55,648 --> 00:39:57,440
+All the distribution
+
+595
+00:39:58,208 --> 00:40:00,768
+Point warm, no point nine
+
+596
+00:40:02,304 --> 00:40:04,352
+W i k
+
+597
+00:40:05,888 --> 00:40:06,400
+Kiss
+
+598
+00:40:08,192 --> 00:40:09,728
+Let's check the book
+
+599
+00:40:10,240 --> 00:40:12,288
+Which I have encouraged you to read
+
+600
+00:40:12,544 --> 00:40:15,872
+And we go all the way into the book to page
+
+601
+00:40:16,128 --> 00:40:17,408
+1
+
+602
+00:40:19,200 --> 00:40:21,504
+I'm page one says
+
+603
+00:40:21,760 --> 00:40:26,368
+The binomial distribution and it talks about how to approximate the binomial distribution
+
+604
+00:40:27,136 --> 00:40:29,184
+And it has approximation
+
+605
+00:40:29,440 --> 00:40:30,976
+4 + Tucson
+
+606
+00:40:31,488 --> 00:40:33,536
+I can't indeed
+
+607
+00:40:34,560 --> 00:40:36,352
+How is the homework problem for you
+
+608
+00:40:36,864 --> 00:40:38,656
+To confirm
+
+609
+00:40:38,912 --> 00:40:40,448
+Love this thing
+
+610
+00:40:40,960 --> 00:40:47,104
+Is well approximated by an X we call it the binary function of Our Own
+
+611
+00:40:49,408 --> 00:40:51,456
+All right
+
+612
+00:40:57,856 --> 00:40:58,624
+Good
+
+613
+00:41:02,208 --> 00:41:03,488
+Lottery
+
+614
+00:41:05,024 --> 00:41:11,168
+This one's about 2,500 is actually more like to the 470 this one's a little bit bigger than 2 to the 500
+
+615
+00:41:11,424 --> 00:41:13,984
+It comes to true to the five
+
+616
+00:41:14,240 --> 00:41:15,520
+130
+
+617
+00:41:16,032 --> 00:41:19,616
+And in general if it's if it's a been the general
+
+618
+00:41:21,152 --> 00:41:22,688
+Length n
+
+619
+00:41:22,944 --> 00:41:24,992
+Lottery Robinhood 1000
+
+620
+00:41:25,248 --> 00:41:26,016
+Lottery
+
+621
+00:41:26,272 --> 00:41:27,296
+Then
+
+622
+00:41:28,576 --> 00:41:31,392
+The number of tickets you would have had to buy
+
+623
+00:41:31,904 --> 00:41:35,744
+I have a 99% chance for General and an s
+
+624
+00:41:50,848 --> 00:41:56,223
+To have a nice chance you would buy one.
+
+625
+00:41:56,479 --> 00:41:58,271
+And juice
+
+626
+00:42:00,319 --> 00:42:01,599
+FN
+
+627
+00:42:01,855 --> 00:42:03,135
+Pop a little bit
+
+628
+00:42:03,391 --> 00:42:04,415
+A little bit
+
+629
+00:42:04,671 --> 00:42:10,815
+Hit something on the lines of f- at times and square rooted with some factor out front like to
+
+630
+00:42:11,071 --> 00:42:14,655
+2.3 to make sure you got enough standard deviation
+
+631
+00:42:16,191 --> 00:42:17,215
+That many tickets
+
+632
+00:42:17,471 --> 00:42:21,055
+Which is approximately to the Past
+
+633
+00:42:21,311 --> 00:42:21,823
+And
+
+634
+00:42:22,079 --> 00:42:23,615
+X
+
+635
+00:42:24,127 --> 00:42:25,407
+The Byron Bay
+
+636
+00:42:25,663 --> 00:42:26,175
+Off
+
+637
+00:42:27,711 --> 00:42:28,223
+F
+
+638
+00:42:29,247 --> 00:42:30,783
+Plus something smoke
+
+639
+00:42:31,295 --> 00:42:32,575
+Plus something
+
+640
+00:42:33,855 --> 00:42:35,135
+Pascal's eyes be
+
+641
+00:42:35,391 --> 00:42:37,439
+Square root
+
+642
+00:42:38,463 --> 00:42:39,487
+Right
+
+643
+00:42:43,327 --> 00:42:44,095
+Sex
+
+644
+00:42:46,143 --> 00:42:49,471
+Reductant counting yes?
+
+645
+00:42:51,775 --> 00:42:56,895
+Okay the mafia boss gave you instructions the question is why you won't have the lowest possible cost
+
+646
+00:42:57,151 --> 00:43:01,247
+That's because it's the rules getting invited not here he's paying for the tickets
+
+647
+00:43:01,503 --> 00:43:04,575
+He wants to minimize the cost every ticket cost one pound
+
+648
+00:43:05,087 --> 00:43:05,855
+Please
+
+649
+00:43:06,111 --> 00:43:08,671
+Spend the smallest amount of my money or I will kill you
+
+650
+00:43:08,927 --> 00:43:14,815
+And we must win the lottery early haven't proved to me that we have a 99% chance of winning or I will kill you
+
+651
+00:43:15,071 --> 00:43:17,119
+Okay that was the rules of the game
+
+652
+00:43:17,375 --> 00:43:19,935
+And now having followed his instructions
+
+653
+00:43:20,191 --> 00:43:22,495
+You get home and you have bought
+
+654
+00:43:23,007 --> 00:43:29,151
+This many tickets to Sao Paulo 550 tickets
+
+655
+00:43:29,407 --> 00:43:32,479
+I'm not now we're going to use
+
+656
+00:43:32,991 --> 00:43:38,623
+That result of how many tickets you bought to give us a crazy proof
+
+657
+00:43:38,879 --> 00:43:40,415
+Episource coding theorem
+
+658
+00:43:41,183 --> 00:43:41,951
+Okay
+
+659
+00:43:43,487 --> 00:43:45,535
+When you take those tickets home
+
+660
+00:43:45,791 --> 00:43:48,095
+Let me draw a picture of what you got
+
+661
+00:43:49,119 --> 00:43:51,167
+You've got yourself
+
+662
+00:43:51,935 --> 00:43:52,959
+A big bag
+
+663
+00:43:55,263 --> 00:43:56,543
+For the ticket
+
+664
+00:43:57,055 --> 00:43:58,335
+And every ticket
+
+665
+00:43:58,591 --> 00:44:04,735
+Has a great long string of ones and zeros on it and most of them have about 10% lungs
+
+666
+00:44:14,719 --> 00:44:20,095
+And it's a very long back for the tickets I'm bringing the tropical filter person
+
+667
+00:44:20,607 --> 00:44:25,471
+You decide to give every one of these tickets a shorter name
+
+668
+00:44:25,983 --> 00:44:27,775
+So you take every ticket
+
+669
+00:44:28,031 --> 00:44:31,871
+I need to turn it over I don't know if this side of that ticket
+
+670
+00:44:34,175 --> 00:44:35,711
+You write a shorter name
+
+671
+00:44:36,735 --> 00:44:38,271
+Which organ to write in binary
+
+672
+00:44:38,527 --> 00:44:44,671
+So the first one is Michael
+
+673
+00:44:44,927 --> 00:44:46,719
+Over to you
+
+674
+00:44:46,975 --> 00:44:50,815
+Replacement name which will be a shorter name of some lights
+
+675
+00:44:52,863 --> 00:44:57,215
+Here with me this is just because you're my father, it's like me and my underwear
+
+676
+00:44:57,471 --> 00:45:02,591
+Recycle your ticket to turn them all over and on the back you're going to write a unique name for ticket
+
+677
+00:45:03,359 --> 00:45:04,639
+So that
+
+678
+00:45:04,895 --> 00:45:11,039
+When the winning ticket comes along you have a nice short name when you can post on Facebook the winning ticket had this name written
+
+679
+00:45:11,295 --> 00:45:12,063
+Reverse
+
+680
+00:45:13,599 --> 00:45:14,623
+Attack
+
+681
+00:45:17,951 --> 00:45:19,743
+If you do that
+
+682
+00:45:20,255 --> 00:45:23,839
+How long is it to be short names going to be on the reverse of the ticket
+
+683
+00:45:25,887 --> 00:45:26,655
+Yeah
+
+684
+00:45:31,007 --> 00:45:31,775
+Okay
+
+685
+00:45:32,287 --> 00:45:36,383
+Set the cost of about 2 to the 500 tickets in your bag
+
+686
+00:45:37,407 --> 00:45:38,943
+The length of this is the house
+
+687
+00:45:39,199 --> 00:45:45,087
+Is there a set of size tutu they 500 the length and needs to have the ceiling off to be today
+
+688
+00:45:45,343 --> 00:45:46,879
+500 vs 500
+
+689
+00:45:48,159 --> 00:45:50,975
+Set it is roughly 500 actually
+
+690
+00:45:51,231 --> 00:45:52,255
+We have to buy
+
+691
+00:45:55,327 --> 00:45:59,935
+So in this particular case is 530
+
+692
+00:46:00,191 --> 00:46:06,335
+Long opposite direction the front of the ticket has x on it the outcome that might happen
+
+693
+00:46:06,847 --> 00:46:10,943
+I'm at a thousand fitslim
+
+694
+00:46:11,455 --> 00:46:14,527
+Travessa got a short name 550 bit slow
+
+695
+00:46:15,807 --> 00:46:17,599
+Now what are you got
+
+696
+00:46:17,855 --> 00:46:20,927
+You've got yourself a practical compression
+
+697
+00:46:21,183 --> 00:46:27,327
+System for the vent point you got a compressor compressor
+
+698
+00:46:27,583 --> 00:46:33,727
+How does it work look impressive looks like this so you won the lottery for the
+
+699
+00:46:33,983 --> 00:46:40,127
+Boss you pay him the zillion pounds and then you keep the bag because the bag is your compressor
+
+700
+00:46:40,639 --> 00:46:45,759
+The way it works is whenever someone create the file using the Bank coin
+
+701
+00:46:46,271 --> 00:46:48,063
+Eureka bag
+
+702
+00:46:48,319 --> 00:46:50,879
+Can you find the bag of V winning ticket
+
+703
+00:46:51,135 --> 00:46:54,207
+But you're almost doesn't have in that 99% chance U
+
+704
+00:46:54,463 --> 00:47:00,607
+You find the winning ticket and you write the short name and store that on the list
+
+705
+00:47:00,863 --> 00:47:01,375
+Strife
+
+706
+00:47:01,887 --> 00:47:03,167
+And then when someone says
+
+707
+00:47:03,679 --> 00:47:06,495
+Tell me that filed but you can press for me
+
+708
+00:47:08,287 --> 00:47:14,431
+Negative the zip file real telling you the short name on the back of the ticket and used
+
+709
+00:47:14,687 --> 00:47:20,831
+And you look in the bag back of every ticket until you find the wrong with that
+
+710
+00:47:21,087 --> 00:47:25,951
+Best name on it
+
+711
+00:47:26,463 --> 00:47:26,975
+Okay
+
+712
+00:47:27,743 --> 00:47:33,887
+That what we have shown is we can make a compressor on and on compressor let's go to 99%
+
+713
+00:47:34,143 --> 00:47:40,287
+Effects
+
+714
+00:47:40,543 --> 00:47:45,919
+We could have made it 99.9 just fine fastening that standard deviation little bit
+
+715
+00:47:46,175 --> 00:47:52,319
+The compressed length still would have be 500 plus a little bit now
+
+716
+00:47:52,575 --> 00:47:55,647
+It is just as the square root of an and that's relatively small
+
+717
+00:47:56,671 --> 00:47:57,695
+So what weekend
+
+718
+00:47:57,951 --> 00:47:58,719
+Michonne butt
+
+719
+00:47:58,975 --> 00:48:01,791
+And out comes from the coin
+
+720
+00:48:02,047 --> 00:48:05,119
+Can be compressed into roughly
+
+721
+00:48:05,375 --> 00:48:10,495
+And * the entropy of 0.9
+
+722
+00:48:10,751 --> 00:48:12,031
+Bets
+
+723
+00:48:14,591 --> 00:48:17,151
+Freetime compress
+
+724
+00:48:17,407 --> 00:48:22,271
+Capcom into
+
+725
+00:48:23,039 --> 00:48:23,807
+V money
+
+726
+00:48:24,319 --> 00:48:30,463
+Bits in a little for the batteries not included conditions apply in college
+
+727
+00:48:30,719 --> 00:48:34,303
+Deal with the √ and roughly
+
+728
+00:48:34,559 --> 00:48:39,679
+Which is bacillus coding Center and increasing the address
+
+729
+00:48:39,935 --> 00:48:42,751
+Statement like I said
+
+730
+00:48:43,263 --> 00:48:49,407
+Return compression. Comes into roughly at age fits and we proved this by counting the typical set
+
+731
+00:48:49,663 --> 00:48:51,455
+The book contains
+
+732
+00:48:51,711 --> 00:48:57,855
+The general rigorous proof of the source coding theorem for Dental Source not just the band coin
+
+733
+00:48:58,111 --> 00:49:04,255
+The Hobbit chapter 4 if you want to see the full proof and the general definition of what we cool
+
+734
+00:49:04,511 --> 00:49:10,655
+Typicality typical set the typical set for the bent coin is old
+
+735
+00:49:10,911 --> 00:49:17,055
+Come here that which we expect to see most of the time so go down
+
+736
+00:49:17,311 --> 00:49:20,895
+A couple of standard deviations
+
+737
+00:49:25,503 --> 00:49:27,039
+This is the typical fat
+
+738
+00:49:27,295 --> 00:49:33,439
+On the precipice of skirting theorem depends on defining typicality and shoving that when and is very big
+
+739
+00:49:33,695 --> 00:49:35,999
+What usually happens is almost always
+
+740
+00:49:36,255 --> 00:49:36,767
+Typical
+
+741
+00:49:40,863 --> 00:49:42,655
+Next lecture
+
+742
+00:49:43,423 --> 00:49:44,447
+We're going to discuss
+
+743
+00:49:44,959 --> 00:49:51,103
+More practically have to do compression because you may be aware of the fact of how 500
+
+744
+00:49:51,359 --> 00:49:54,431
+Is substantially bigger than the number of electrons in the universe
+
+745
+00:49:54,687 --> 00:50:00,831
+Service I call this a practical compressor well is not really fast and then the next lecture.
+
+746
+00:50:01,087 --> 00:50:07,231
+Real practical compression systems for trying to get close to what the source coding theorem proof
+
+747
+00:50:07,743 --> 00:50:08,767
+It's possible
+
+748
+00:50:12,351 --> 00:50:17,471
+I'd like to give you a project so you're thinking about this task already before I tell you the answer
+
+749
+00:50:17,983 --> 00:50:19,007
+All the answers
+
+750
+00:50:19,519 --> 00:50:22,847
+The project is please invent a compressor and turbine compressor
+
+751
+00:50:23,359 --> 00:50:26,175
+Which is a practical pair of systems
+
+752
+00:50:26,431 --> 00:50:30,527
+Assuming that we consult
+
+753
+00:50:30,783 --> 00:50:36,159
+And let's assume it's been calling for the probability of 1% of coming out
+
+754
+00:50:36,671 --> 00:50:38,719
+Alright I like you to implement
+
+755
+00:50:38,975 --> 00:50:43,839
+Your compressor and a compressor on a computer and or estimated value method
+
+756
+00:50:44,095 --> 00:50:47,167
+What I think it's the valuable exercise for you to do
+
+757
+00:50:47,423 --> 00:50:49,983
+As we move on to discussing practical compresses
+
+758
+00:50:50,239 --> 00:50:53,311
+Harrison recommended exercises and reading
+
+759
+00:50:53,567 --> 00:50:54,591
+From the book
+
+760
+00:50:55,103 --> 00:50:56,383
+Thank you very much for coming

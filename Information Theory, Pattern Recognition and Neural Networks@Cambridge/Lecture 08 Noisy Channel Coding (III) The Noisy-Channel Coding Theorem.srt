@@ -1,0 +1,4003 @@
+1
+00:00:06,144 --> 00:00:11,264
+Welcome to lecture 8 of information Theory pattern recognition and neural networks
+
+2
+00:00:11,520 --> 00:00:17,664
+This is one of the Pinnacles of the course where we will prove what for me is one of the
+
+3
+00:00:17,920 --> 00:00:23,552
+Mathematics of the 20th century Channel coding theorem
+
+4
+00:00:23,808 --> 00:00:29,952
+I will prove it the proof is in the book will give us proof
+
+5
+00:00:30,208 --> 00:00:33,536
+Complete proof for a special case
+
+6
+00:00:33,792 --> 00:00:34,560
+Today
+
+7
+00:00:35,840 --> 00:00:41,984
+What have we been well last lecture we defined the capacity of a channel
+
+8
+00:00:42,240 --> 00:00:46,848
+What channel is a set of inputs each which gives you a probability distribution
+
+9
+00:00:47,872 --> 00:00:52,736
+The way you get the capacity of the channel is you invent a probability distribution on the inputs
+
+10
+00:00:52,992 --> 00:00:59,136
+You been to find the mutual information between the inputs and outputs and you maximize at Mutual information
+
+11
+00:00:59,392 --> 00:01:05,536
+With respect to the auditory input distribution as a theoretical constructs that gives you this
+
+12
+00:01:06,048 --> 00:01:06,816
+Ticketmaster
+
+13
+00:01:07,584 --> 00:01:13,728
+And what we're going to prove today is that this isn't just an interesting number it is actually the rate at which
+
+14
+00:01:13,984 --> 00:01:17,824
+Virtually every communication is possible over that
+
+15
+00:01:18,080 --> 00:01:23,456
+That's a really remarkable thing is something for nothing result that
+
+16
+00:01:23,712 --> 00:01:29,856
+You kind of cheap reliable communication I-10 right as big as the capacity
+
+17
+00:01:32,672 --> 00:01:38,816
+So last time we Define the capacity and we started looking at a few simple examples of channels and asking the question
+
+18
+00:01:39,072 --> 00:01:45,216
+What is the capacity of this channel we looked at a few and I left you at the exercise
+
+19
+00:01:45,472 --> 00:01:46,496
+I'm looking at
+
+20
+00:01:47,008 --> 00:01:53,152
+The question is what is the optimal input distribution of this noise
+
+21
+00:01:53,408 --> 00:01:58,784
+And what's its capacity so please turn to your neighbor and discuss your answer to this
+
+22
+00:01:59,040 --> 00:01:59,808
+Question
+
+23
+00:03:06,624 --> 00:03:10,976
+Okay who's got a capacity first what's the capacity of this channel
+
+24
+00:03:13,024 --> 00:03:13,536
+Honeywell
+
+25
+00:03:17,120 --> 00:03:18,144
+Okay let me take you to it
+
+26
+00:03:18,912 --> 00:03:25,056
+It's the maximum possible vehicle information that you can get between input and output what's the mutual information
+
+27
+00:03:25,568 --> 00:03:28,384
+Well you can write it in a
+
+28
+00:03:28,640 --> 00:03:34,784
+Pair of different ways you can say it's the entropy of the output minus the entropy of the output
+
+29
+00:03:35,040 --> 00:03:37,088
+Conditional on the input
+
+30
+00:03:37,856 --> 00:03:40,672
+And we want to maximize that
+
+31
+00:03:40,928 --> 00:03:41,952
+So
+
+32
+00:03:42,208 --> 00:03:44,256
+What are these two objects
+
+33
+00:03:45,536 --> 00:03:47,840
+Well the second one is
+
+34
+00:03:48,352 --> 00:03:50,912
+What's a trivia on the input and
+
+35
+00:03:51,168 --> 00:03:57,312
+Any input gives rise to three possibilities with equal probability distribution you choose
+
+36
+00:03:57,568 --> 00:04:00,384
+Answer to this quantity is it just log
+
+37
+00:04:01,920 --> 00:04:02,944
+No choice about that
+
+38
+00:04:04,992 --> 00:04:11,136
+What's the entropy of the output while it's the Envy of what I've a distribution you end up spitting out onto the outputs if you were
+
+39
+00:04:11,392 --> 00:04:15,488
+S&B then you get a distribution that without your log 3
+
+40
+00:04:15,744 --> 00:04:21,887
+Bits of entropy but if you use a r uniform Distribution on head
+
+41
+00:04:22,911 --> 00:04:29,055
+What the biggest possible entropy you could get on why the output answer the uniform distribution
+
+42
+00:04:29,311 --> 00:04:34,943
+Can you achieve that yes I just told you one way of doing that so the answer is log 27
+
+43
+00:04:37,503 --> 00:04:42,879
+That's the maximum value that this can happen so this is the answer which is load nice
+
+44
+00:04:44,927 --> 00:04:51,071
+Capacity and the optimal input distribution is the input distribution that achieves
+
+45
+00:04:51,327 --> 00:04:53,375
+Maximum entropy on the outputs
+
+46
+00:04:53,887 --> 00:05:00,031
+By symmetry one way of doing that is to pick the uniform distribution so the optimal
+
+47
+00:05:00,287 --> 00:05:06,431
+Distribution is 137 137 137
+
+48
+00:05:09,759 --> 00:05:13,087
+And that is an input distribution for the Chiefs this maximum
+
+49
+00:05:13,343 --> 00:05:18,463
+Does anyone have any suggestion of an alternative input distribution
+
+50
+00:05:18,975 --> 00:05:21,535
+Is this the unique one or the other alternatives
+
+51
+00:05:23,583 --> 00:05:29,471
+Great so if you pick only the letters s a b e e h
+
+52
+00:05:30,751 --> 00:05:32,031
+Then
+
+53
+00:05:34,847 --> 00:05:37,663
+You're putting one
+
+54
+00:05:38,687 --> 00:05:41,247
+On each of those options everything
+
+55
+00:05:43,807 --> 00:05:49,951
+This has been nice property still that a uniform Distribution on those inputs Will Smith a uniform
+
+56
+00:05:50,207 --> 00:05:56,351
+Distribution of the outputs achieved its maximum
+
+57
+00:05:56,607 --> 00:06:02,751
+Nobody way of communicating reliably with the noisy type-ahead Channel namely you never use the other
+
+58
+00:06:03,007 --> 00:06:06,079
+You just use it and puts beh and Zedd
+
+59
+00:06:06,335 --> 00:06:12,479
+And therefore you can communicate reliably how fast can you communicate reliably 12 each time
+
+60
+00:06:12,735 --> 00:06:17,599
+You can take one of nine possible inputs that fall you will be today at 9
+
+61
+00:06:17,855 --> 00:06:19,135
+Fitspo YouTube channel
+
+62
+00:06:19,647 --> 00:06:22,975
+So this is another case slightly more interesting than the ones we had
+
+63
+00:06:23,231 --> 00:06:23,999
+Last week
+
+64
+00:06:24,767 --> 00:06:28,863
+This is a case where we can find a way of reliably communicating
+
+65
+00:06:29,119 --> 00:06:35,263
+At capacity of a noisy Channel coding theorem is true for this channel is giving us a bit of inside
+
+66
+00:06:35,519 --> 00:06:41,663
+How we actually sold communication over noisy channels one of the messages of today's lecture is going to be
+
+67
+00:06:41,919 --> 00:06:45,503
+That if you use any channel a lot of times
+
+68
+00:06:45,759 --> 00:06:46,783
+In sequence
+
+69
+00:06:47,295 --> 00:06:50,623
+Send a collection of say and uses of
+
+70
+00:06:50,879 --> 00:06:52,415
+Your noisy channel is a lot like
+
+71
+00:06:52,671 --> 00:06:56,255
+A noisy typewriter typewriter
+
+72
+00:06:56,511 --> 00:06:57,535
+Applies to
+
+73
+00:06:57,791 --> 00:06:59,327
+Noisy channels in general
+
+74
+00:07:00,607 --> 00:07:01,887
+So where we going
+
+75
+00:07:02,143 --> 00:07:03,167
+Is
+
+76
+00:07:03,679 --> 00:07:08,031
+We want to establish Shannon's noisy Channel coding Theory which says
+
+77
+00:07:08,287 --> 00:07:09,823
+Set for any channel
+
+78
+00:07:15,199 --> 00:07:17,503
+There exists coding schemes
+
+79
+00:07:19,807 --> 00:07:22,111
+Ditch Witch will have a rate and a
+
+80
+00:07:22,367 --> 00:07:25,183
+An era write a frequency of mistakes
+
+81
+00:07:25,695 --> 00:07:31,327
+Coding theorem says that you can achieve everywhere in this diagram
+
+82
+00:07:31,583 --> 00:07:37,727
+Right way down Albuquerque close to zero error probability while keeping the rate finite at
+
+83
+00:07:37,983 --> 00:07:40,287
+Which we have just defined
+
+84
+00:07:40,543 --> 00:07:43,871
+Maximum beats information
+
+85
+00:07:44,127 --> 00:07:45,663
+Is achievable
+
+86
+00:07:46,175 --> 00:07:50,527
+Plaza is known as evil and the exciting part
+
+87
+00:07:50,783 --> 00:07:52,319
+Of this theorem
+
+88
+00:07:54,879 --> 00:07:55,647
+Is
+
+89
+00:07:56,927 --> 00:08:00,511
+Respect the fact that you can get arbitrarily close to zero
+
+90
+00:08:00,767 --> 00:08:01,535
+With
+
+91
+00:08:01,791 --> 00:08:04,351
+Communication rights as close as you like to the capacity
+
+92
+00:08:04,863 --> 00:08:06,911
+So this is the really exciting
+
+93
+00:08:07,423 --> 00:08:08,959
+Part of the diagram
+
+94
+00:08:09,471 --> 00:08:09,983
+That
+
+95
+00:08:10,751 --> 00:08:12,287
+And that's what we're going to prove
+
+96
+00:08:12,543 --> 00:08:13,055
+Today
+
+97
+00:08:15,359 --> 00:08:21,503
+Namely that you can get anywhere in here as well that proved in the book and the fact that you come
+
+98
+00:08:21,759 --> 00:08:25,855
+Achieve anything over here is also approved in the book we wouldn't do that today
+
+99
+00:08:29,439 --> 00:08:31,487
+So his the only deer
+
+100
+00:08:31,999 --> 00:08:36,863
+Why we should believe this is true for a general Channel
+
+101
+00:08:37,631 --> 00:08:40,447
+We can introduce the idea of an extended Channel
+
+102
+00:08:40,703 --> 00:08:41,727
+Which means
+
+103
+00:08:41,983 --> 00:08:44,287
+The channel that you get when you use
+
+104
+00:08:46,079 --> 00:08:51,455
+End times in a row so for example if we're dealing with the binary symmetric Channel
+
+105
+00:08:51,711 --> 00:08:54,527
+You take and uses of it
+
+106
+00:08:54,783 --> 00:08:58,623
+And do not go yourself a channel whose possible input
+
+107
+00:08:58,879 --> 00:09:02,975
+Everything ranging from a string of n zeros
+
+108
+00:09:05,535 --> 00:09:07,327
+What was Arizona Juan
+
+109
+00:09:07,583 --> 00:09:13,727
+Lots of zeros 1:04 the way up to
+
+110
+00:09:13,983 --> 00:09:17,311
+So you got an input alphabet now size 2 to the n
+
+111
+00:09:18,591 --> 00:09:24,735
+For this example extended Channel output alphabet is the same set of strings in this case
+
+112
+00:09:24,991 --> 00:09:27,551
+Because they put up the binary symmetric Channel
+
+113
+00:09:28,831 --> 00:09:30,111
+The thing off of that
+
+114
+00:09:30,367 --> 00:09:31,135
+As the
+
+115
+00:09:31,391 --> 00:09:32,671
+Input
+
+116
+00:09:32,927 --> 00:09:33,439
+So
+
+117
+00:09:34,975 --> 00:09:36,767
+Hey.
+
+118
+00:09:37,023 --> 00:09:41,631
+If we take a binary symmetric Channel and redefined this new extended Channel
+
+119
+00:09:41,887 --> 00:09:48,031
+Each of these input can give cries and principal to any output at all but four Lodge and that will be
+
+120
+00:09:48,287 --> 00:09:49,311
+Typical set
+
+121
+00:09:49,567 --> 00:09:50,079
+Of
+
+122
+00:09:50,591 --> 00:09:51,359
+Outputs
+
+123
+00:09:55,199 --> 00:09:56,223
+Like this
+
+124
+00:09:56,735 --> 00:09:58,783
+So if you send all zeros
+
+125
+00:09:59,551 --> 00:10:05,695
+You can be fairly sure if any is very long that you'll end up getting an output that has about
+
+126
+00:10:05,951 --> 00:10:08,767
+And ones at FN flips
+
+127
+00:10:10,047 --> 00:10:13,887
+Plus or minus something fairly small that's going a square root event
+
+128
+00:10:14,655 --> 00:10:17,215
+That's a typical set for this particular input
+
+129
+00:10:17,471 --> 00:10:20,031
+So then put next door to it there's a typical fat
+
+130
+00:10:20,287 --> 00:10:22,847
+Which has a lot of overlap
+
+131
+00:10:24,127 --> 00:10:24,895
+So he is
+
+132
+00:10:25,151 --> 00:10:30,271
+The typical sat and every one of these has its typical set will have
+
+133
+00:10:30,783 --> 00:10:33,855
+It almost identical chemical set
+
+134
+00:10:35,903 --> 00:10:36,671
+End
+
+135
+00:10:37,183 --> 00:10:39,487
+In general for a general Channel
+
+136
+00:10:40,767 --> 00:10:42,559
+If you take all of these
+
+137
+00:10:42,815 --> 00:10:45,375
+Overlapping typical stats
+
+138
+00:10:48,959 --> 00:10:50,751
+And if you
+
+139
+00:10:51,263 --> 00:10:57,407
+Inputs to this extended Channel by using a probability distribution on the input
+
+140
+00:10:58,943 --> 00:11:05,087
+Of the type PX that we just been talking about when we Define the capacity so you pick each input
+
+141
+00:11:05,343 --> 00:11:09,439
+Symbol just from a distribution PX then
+
+142
+00:11:09,695 --> 00:11:12,767
+This collection of all the typical sets
+
+143
+00:11:13,535 --> 00:11:14,815
+That could come out here
+
+144
+00:11:15,071 --> 00:11:18,655
+Is going to have a size 2 to the end time to entropy of why
+
+145
+00:11:20,703 --> 00:11:24,031
+And the size of each of these typical sets
+
+146
+00:11:27,103 --> 00:11:30,175
+Will be about 2 to the end
+
+147
+00:11:30,431 --> 00:11:32,991
+Hrvy
+
+148
+00:11:33,247 --> 00:11:34,015
+Get an ex
+
+149
+00:11:35,551 --> 00:11:37,343
+Now cast your mind back
+
+150
+00:11:37,599 --> 00:11:38,879
+The noisy typewriter
+
+151
+00:11:39,135 --> 00:11:45,279
+Where did we got log9 bits from well we took the total number of typical
+
+152
+00:11:45,535 --> 00:11:49,375
+27 possible outputs 3/3 and we got nine
+
+153
+00:11:49,887 --> 00:11:53,215
+And that was how many known confusable inputs
+
+154
+00:11:55,519 --> 00:11:57,311
+Similarly here
+
+155
+00:11:57,823 --> 00:12:02,431
+We can take this extended Channel as long as that is really large
+
+156
+00:12:02,687 --> 00:12:08,831
+And we can imagine that we might be able to come up with a set of non confusable input
+
+157
+00:12:09,087 --> 00:12:10,623
+Do this extended Channel
+
+158
+00:12:12,159 --> 00:12:15,231
+And the number of known confusable
+
+159
+00:12:18,047 --> 00:12:23,423
+Inputs when I say non confusable I mean almost definitely
+
+160
+00:12:25,983 --> 00:12:28,031
+Long confusable inputs
+
+161
+00:12:28,799 --> 00:12:29,567
+Will be
+
+162
+00:12:30,335 --> 00:12:34,943
+The size of a typical set of outputs divided by the size of each of these Globes hat
+
+163
+00:12:35,199 --> 00:12:39,295
+CPN
+
+164
+00:12:39,551 --> 00:12:42,879
+Hrvy
+
+165
+00:12:43,135 --> 00:12:44,415
+Kevin X
+
+166
+00:12:46,463 --> 00:12:48,767
+Okay which is 2 to the end
+
+167
+00:12:49,023 --> 00:12:51,839
+X Mutual information
+
+168
+00:12:52,863 --> 00:12:55,167
+Which is h y - 8 Supply given X
+
+169
+00:12:56,447 --> 00:13:01,567
+I'm sorry if I repeat this is a story we just told picking inputs at random
+
+170
+00:13:01,823 --> 00:13:06,175
+But using the optimal input distribution we will maximize this thing here
+
+171
+00:13:06,431 --> 00:13:10,015
+And in that case we will that established that we could get
+
+172
+00:13:10,527 --> 00:13:14,879
+Don't confuse will inputs whose size it is to to the end
+
+173
+00:13:15,135 --> 00:13:16,415
+* the capacity
+
+174
+00:13:18,719 --> 00:13:23,583
+Which means that each time you use the extended Channel which is an uses of the
+
+175
+00:13:24,095 --> 00:13:25,119
+Original Channel
+
+176
+00:13:25,631 --> 00:13:30,751
+We can communicate and see bits by picking one of those known confusable inputs
+
+177
+00:13:31,263 --> 00:13:33,823
+So you can send NC bit
+
+178
+00:13:34,079 --> 00:13:37,407
+And channel uses
+
+179
+00:13:40,479 --> 00:13:46,623
+QED and that's amazing that's amazing result this is not a proof it's just us to the plausibility argument
+
+180
+00:13:46,879 --> 00:13:49,695
+To help you understand why this might be possible
+
+181
+00:13:49,951 --> 00:13:51,743
+But we're not going to do
+
+182
+00:13:51,999 --> 00:13:55,583
+Is we're going to actually prove his theorem for the special case
+
+183
+00:13:55,839 --> 00:13:57,375
+Of the binary symmetric Channel
+
+184
+00:13:57,887 --> 00:13:59,167
+Yes question
+
+185
+00:14:07,103 --> 00:14:08,127
+Okay
+
+186
+00:14:08,639 --> 00:14:11,711
+In the case of the binary symmetric Channel
+
+187
+00:14:12,223 --> 00:14:15,551
+The actual size of this entire space here is 2 cm
+
+188
+00:14:16,831 --> 00:14:22,975
+In general or general Channel it could be as big as alphabets
+
+189
+00:14:23,231 --> 00:14:26,047
+Size to the end so for General Channel
+
+190
+00:14:26,303 --> 00:14:32,447
+If you got an alphabet size a why you take that and raise it the power and that's the entire
+
+191
+00:14:32,703 --> 00:14:35,263
+Size of the conceivable alphabet
+
+192
+00:14:36,543 --> 00:14:40,895
+But what I've been said was you pick the inputs from sum distribution PX
+
+193
+00:14:41,151 --> 00:14:47,039
+And that's up to you and when you do that you may find you're not using the full range of the output alphabet
+
+194
+00:14:47,551 --> 00:14:49,855
+Which may or may not be a good thing
+
+195
+00:14:50,111 --> 00:14:56,255
+So you got to choose PX not been determined which tip
+
+196
+00:14:56,511 --> 00:15:02,655
+Optical input to using witch what your input sequence
+
+197
+00:15:02,911 --> 00:15:09,055
+That would mean you never send this one cuz you never said you'd be sending a typical small or over here
+
+198
+00:15:09,311 --> 00:15:15,455
+Unsimilar you'd never get half the channel or ones because that's very improbable to so it's possible if you want you could
+
+199
+00:15:15,711 --> 00:15:21,855
+Pick a probability distribution PX
+
+200
+00:15:22,111 --> 00:15:23,135
+Use the full outfit alphabet
+
+201
+00:15:23,903 --> 00:15:30,047
+For a symmetric Channel like this you're absolutely right when you do this optimization and he say how big can
+
+202
+00:15:30,303 --> 00:15:36,447
+Set of known confusable inputs make sure you got a nice uniform distribution
+
+203
+00:15:36,703 --> 00:15:37,727
+Very often the case
+
+204
+00:15:39,007 --> 00:15:40,031
+Okay
+
+205
+00:15:41,567 --> 00:15:42,591
+Any other questions
+
+206
+00:15:44,383 --> 00:15:45,151
+All right
+
+207
+00:15:47,199 --> 00:15:50,015
+Here is the proof
+
+208
+00:15:50,271 --> 00:15:56,415
+And will they cut them a bit more precise and I'll remind you what we already know about the binder symmetric
+
+209
+00:15:56,671 --> 00:16:01,535
+Channel and then we will prove the theorem for the binary symmetric Channel
+
+210
+00:16:06,911 --> 00:16:07,679
+Okay
+
+211
+00:16:08,191 --> 00:16:10,239
+So let's write down a theorem
+
+212
+00:16:15,103 --> 00:16:17,151
+The theorem says
+
+213
+00:16:17,407 --> 00:16:19,199
+That
+
+214
+00:16:20,479 --> 00:16:24,575
+For the binary symmetric Channel
+
+215
+00:16:24,831 --> 00:16:26,879
+Coin flip probability
+
+216
+00:16:28,671 --> 00:16:29,695
+Ass
+
+217
+00:16:33,535 --> 00:16:35,839
+The general theorem is for any channel
+
+218
+00:16:36,095 --> 00:16:38,399
+But we're going to prove it for this particular case
+
+219
+00:16:38,655 --> 00:16:41,983
+Minus magic tunnel with a flip table
+
+220
+00:16:42,495 --> 00:16:44,543
+Who is capacity
+
+221
+00:16:47,615 --> 00:16:51,967
+Is equals 1 - 8
+
+222
+00:16:54,015 --> 00:16:56,319
+Now we're getting them statement
+
+223
+00:16:57,087 --> 00:16:58,367
+For any
+
+224
+00:16:59,903 --> 00:17:00,671
+Epsilon
+
+225
+00:17:00,927 --> 00:17:02,463
+No matter how small
+
+226
+00:17:02,719 --> 00:17:05,279
+As long as it's bigger than zero Epsilon
+
+227
+00:17:05,791 --> 00:17:07,583
+Looks on this diagram
+
+228
+00:17:12,191 --> 00:17:13,727
+And for any rate
+
+229
+00:17:13,983 --> 00:17:18,591
+As long as it's more than anywhere in this yellow region
+
+230
+00:17:19,103 --> 00:17:20,383
+On this diagram
+
+231
+00:17:23,711 --> 00:17:28,319
+You can pick him in the number of times you use the channel
+
+232
+00:17:29,599 --> 00:17:32,671
+Nevaeh put that is full on Jenna fan
+
+233
+00:17:34,719 --> 00:17:37,791
+Then you can make a code that will be this good
+
+234
+00:17:39,327 --> 00:17:45,471
+Islam and specificity login there exist
+
+235
+00:17:47,775 --> 00:17:50,079
+With that length
+
+236
+00:17:51,359 --> 00:17:52,895
+I'm with the rate
+
+237
+00:17:53,407 --> 00:17:56,479
+Big unrightful to the audit would be requested
+
+238
+00:17:57,503 --> 00:17:59,551
+And the Dakota forgot code
+
+239
+00:18:02,111 --> 00:18:03,903
+Such that
+
+240
+00:18:05,439 --> 00:18:06,719
+The probability
+
+241
+00:18:07,231 --> 00:18:08,767
+Look era
+
+242
+00:18:16,447 --> 00:18:19,007
+Is less than
+
+243
+00:18:19,775 --> 00:18:22,079
+The required value Epsilon
+
+244
+00:18:23,359 --> 00:18:24,127
+All right
+
+245
+00:18:24,639 --> 00:18:30,783
+I'm going to clean the board like you to turn to your neighbor and remind yourself what you know about the seven for having Co
+
+246
+00:18:31,039 --> 00:18:33,343
+Which we introduced in the first lecture
+
+247
+00:18:43,327 --> 00:18:43,839
+Okay
+
+248
+00:18:44,607 --> 00:18:48,191
+The 7th element code when we encountered it in lecture 1
+
+249
+00:18:48,703 --> 00:18:50,495
+Look like
+
+250
+00:18:51,775 --> 00:18:53,055
+This
+
+251
+00:18:53,567 --> 00:18:56,383
+Handling coding rule very sad
+
+252
+00:18:56,639 --> 00:19:02,783
+The music gets to pick full bit switch everything hair S1 S2 S3
+
+253
+00:19:03,039 --> 00:19:09,183
+Then we use for constraints represented by the three constraints re
+
+254
+00:19:09,439 --> 00:19:15,583
+Represented by these three circles to set the remaining three of the seven transmitted bits
+
+255
+00:19:15,839 --> 00:19:17,631
+C5 C6
+
+256
+00:19:17,887 --> 00:19:18,655
+T7
+
+257
+00:19:19,935 --> 00:19:22,751
+Then we had a decoding rule that said
+
+258
+00:19:23,263 --> 00:19:29,407
+When you receive some receive bits you write them into this circle with three circles
+
+259
+00:19:29,663 --> 00:19:35,807
+You write and 127 into this diagram and you see
+
+260
+00:19:36,063 --> 00:19:39,391
+Which constraints are violated
+
+261
+00:19:40,671 --> 00:19:46,815
+Which is a positive so happy inside circles and then you use that syndrome to did you
+
+262
+00:19:47,839 --> 00:19:50,399
+The most probable explanation
+
+263
+00:19:52,703 --> 00:19:58,847
+Explanation being an account of which bits you think probably was flipped and then you can
+
+264
+00:19:59,103 --> 00:20:02,431
+Close ended 7 transmitted
+
+265
+00:20:02,687 --> 00:20:04,223
+It's probably what
+
+266
+00:20:04,479 --> 00:20:05,503
+Okay
+
+267
+00:20:06,015 --> 00:20:08,063
+So that was a 7 full hamming code
+
+268
+00:20:08,319 --> 00:20:10,623
+And it has the property that
+
+269
+00:20:10,879 --> 00:20:15,743
+If you flip any woman if the channel flips anyone bit then that bit can be
+
+270
+00:20:15,999 --> 00:20:22,143
+Era can be detected and corrected and we use that for the binary symmetric Channel
+
+271
+00:20:22,399 --> 00:20:25,727
+To take the rate down from wall
+
+272
+00:20:27,775 --> 00:20:29,823
+Venera probe self
+
+273
+00:20:30,591 --> 00:20:34,175
+Down to something that was more of order at squared
+
+274
+00:20:34,431 --> 00:20:36,479
+Since I was 7 full having code
+
+275
+00:20:37,759 --> 00:20:40,575
+What's the code to the race of 4/7 from one
+
+276
+00:20:41,087 --> 00:20:46,207
+And it had a small lateral probability examples of a block code
+
+277
+00:20:47,231 --> 00:20:51,839
+Now I'm the screen I'm showing you another way of defining is having for having code its
+
+278
+00:20:52,351 --> 00:20:58,495
+The same code but I'm showing you the three constraints by matrix and it has cooled the party check
+
+279
+00:20:58,751 --> 00:21:00,031
+Matrix
+
+280
+00:21:02,335 --> 00:21:04,639
+The idea is
+
+281
+00:21:05,151 --> 00:21:10,015
+That for any linear code you can Define the set of constraints
+
+282
+00:21:10,783 --> 00:21:15,135
+Buy a set of rows each constraint we will have three here three circles
+
+283
+00:21:15,391 --> 00:21:15,903
+Each
+
+284
+00:21:16,416 --> 00:21:19,232
+Constraint is defined by a row of The Matrix
+
+285
+00:21:19,744 --> 00:21:25,888
+Valley transmission satisfy this equation H * T where T is the transmission is equal to 0
+
+286
+00:21:26,144 --> 00:21:32,288
+That means that the top constraint gives you 0 second gives you there
+
+287
+00:21:32,544 --> 00:21:38,688
+Ones are in this Matrix is identifying which bits are in which Circle so this is the first Circle hair
+
+288
+00:21:39,712 --> 00:21:42,272
+This is the second misses the first
+
+289
+00:21:42,528 --> 00:21:43,552
+And
+
+290
+00:21:43,808 --> 00:21:49,952
+Circle one contains bits 123 and 5 which is why the Matrix goes 1 1 1 0
+
+291
+00:21:50,208 --> 00:21:51,488
+00
+
+292
+00:21:53,280 --> 00:21:54,048
+Okay
+
+293
+00:21:55,072 --> 00:21:56,352
+Circle 2
+
+294
+00:21:56,608 --> 00:22:01,472
+Has 2 3/4 and 6 so put the wanting comes 2 3 4 and 6
+
+295
+00:22:02,240 --> 00:22:04,544
+And the food Circle
+
+296
+00:22:06,336 --> 00:22:09,920
+134 + 78347
+
+297
+00:22:11,456 --> 00:22:12,224
+And
+
+298
+00:22:12,992 --> 00:22:19,136
+Because this particular code has the property that every one of the constraints is just
+
+299
+00:22:19,392 --> 00:22:25,536
+Moon dangling extra power keep it sitting in it you have As Nice simple property
+
+300
+00:22:25,792 --> 00:22:30,656
+Inside this Matrix the identity Matrix looking
+
+301
+00:22:31,936 --> 00:22:38,080
+And that makes the code very easy to encode you just slap in whatever values want for the
+
+302
+00:22:38,336 --> 00:22:44,480
+Best full bit then you can read out what these bits need to be set at 2 but in general you can make codes
+
+303
+00:22:44,736 --> 00:22:50,880
+You don't have a simple identity Matrix taking that coding a bit more difficult
+
+304
+00:22:51,136 --> 00:22:55,744
+But you can imagine codes that we don't have this nice simplification
+
+305
+00:22:56,256 --> 00:23:02,400
+Nevertheless you could come up with an encoding rules that use assets some number of bits k
+
+306
+00:23:03,168 --> 00:23:04,960
+Which hair is for
+
+307
+00:23:05,216 --> 00:23:11,360
+And then the total transmission of n Bits hair 7 is that in such a way
+
+308
+00:23:11,616 --> 00:23:13,152
+About these constraints off at the time
+
+309
+00:23:13,664 --> 00:23:19,808
+All right so that's the general way of describing and coding list of constraints that must be satisfied
+
+310
+00:23:20,064 --> 00:23:23,648
+Facenda set some of the bits the constraints determine the other bits
+
+311
+00:23:24,416 --> 00:23:25,440
+Then you receive
+
+312
+00:23:26,208 --> 00:23:32,352
+I received the factor which was thinking of us being t+ and when I + I mean mug
+
+313
+00:23:32,608 --> 00:23:34,400
+So didn't bitwise addition
+
+314
+00:23:34,656 --> 00:23:35,680
+What do you like to
+
+315
+00:23:36,448 --> 00:23:42,592
+We compute the syndrome which is which circles a happy and which are sad by x h x
+
+316
+00:23:42,848 --> 00:23:45,664
+That's cool that that is a name for the syndrome
+
+317
+00:23:46,432 --> 00:23:47,712
+8 * I
+
+318
+00:23:47,968 --> 00:23:54,112
+Will an example example let's say that we flip
+
+319
+00:23:54,368 --> 00:23:56,928
+Bit number
+
+320
+00:23:57,440 --> 00:23:58,208
+All right
+
+321
+00:23:58,976 --> 00:24:04,608
+Then whatever we transmit the way the sender is going to come out this is h x
+
+322
+00:24:04,864 --> 00:24:06,656
+T+
+
+323
+00:24:06,912 --> 00:24:10,240
+And that equals 8 * 2 + 8 * n
+
+324
+00:24:10,752 --> 00:24:15,360
+Which is just eight times and because whatever we chose to transmit satisfied
+
+325
+00:24:15,616 --> 00:24:21,760
+Hate something so we lose EHT molest of the syndrome that just depends on which
+
+326
+00:24:22,016 --> 00:24:23,552
+Cheap Fitbit
+
+327
+00:24:23,808 --> 00:24:29,952
+Then the transmission for example might have b0100
+
+328
+00:24:33,536 --> 00:24:38,400
+Transmission received my 2001
+
+329
+00:24:38,656 --> 00:24:43,264
+There is there is there a n f u x h x that thing
+
+330
+00:24:43,520 --> 00:24:46,080
+Written as a column vector
+
+331
+00:24:46,592 --> 00:24:49,920
+Then it'll spit out Wong Wong Sera
+
+332
+00:24:53,248 --> 00:24:54,016
+Which is
+
+333
+00:24:55,040 --> 00:24:57,600
+The three you find in the second column across
+
+334
+00:24:58,368 --> 00:24:58,880
+All right
+
+335
+00:24:59,136 --> 00:25:05,280
+And by looking at the syndrome you can say which of these columns possibly could be an explanation for the syndrome when you noticed
+
+336
+00:25:09,376 --> 00:25:15,520
+Right that's how easy syndrome decoding is in the Sky City just looking to Matrix suicide what is the one called him
+
+337
+00:25:15,776 --> 00:25:17,824
+That could have been explained this
+
+338
+00:25:18,592 --> 00:25:20,128
+In general
+
+339
+00:25:20,384 --> 00:25:26,528
+It's the noise has flipped more than one of its maybe a heart attacks to do syndrome decoding you got some
+
+340
+00:25:26,784 --> 00:25:32,928
+Received you hit with h and you got his ass and now the task is to say
+
+341
+00:25:33,184 --> 00:25:39,328
+That's a 10 I wonder what noise the noise was itself is actually an NP complete problems
+
+342
+00:25:39,584 --> 00:25:41,632
+But we're going to assume that we can
+
+343
+00:25:41,888 --> 00:25:43,680
+So that's not a problem
+
+344
+00:25:43,936 --> 00:25:47,264
+And come up with a guess all fan
+
+345
+00:25:47,776 --> 00:25:49,056
+Bazooka Lenhart
+
+346
+00:25:49,312 --> 00:25:55,456
+That's the job of the syndrome Dakota that you give it a syndrome comes up with the most probable explanation the smallest
+
+347
+00:25:55,712 --> 00:25:57,504
+Wait noise vaxxer
+
+348
+00:25:57,760 --> 00:25:59,808
+The accounts of syndrome
+
+349
+00:26:00,576 --> 00:26:04,672
+Okay so that's how the 74 hamming code works and
+
+350
+00:26:05,440 --> 00:26:10,560
+The way I've described it leaves itself very nicely to a generalization namely
+
+351
+00:26:10,816 --> 00:26:12,096
+Full big Iran
+
+352
+00:26:12,864 --> 00:26:19,008
+And for any code rate of your interested in you can't imagine making a much bigger Matrix h
+
+353
+00:26:19,264 --> 00:26:22,336
+So you can make with
+
+354
+00:26:23,616 --> 00:26:26,432
+And could be enormous
+
+355
+00:26:26,688 --> 00:26:27,968
+Nmroads
+
+356
+00:26:30,016 --> 00:26:30,784
+And
+
+357
+00:26:37,440 --> 00:26:40,000
+If we find K2 B N - M
+
+358
+00:26:41,024 --> 00:26:41,792
+Then
+
+359
+00:26:42,304 --> 00:26:44,608
+This set of constraints the Weaver sundown
+
+360
+00:26:44,864 --> 00:26:51,008
+Probably defines a code with a rate something along the lines of is k / n
+
+361
+00:26:51,520 --> 00:26:57,664
+It may not be exactly this right because if the constraints YouVersion down rst redundant constraint twice
+
+362
+00:26:57,920 --> 00:27:04,064
+Then it doesn't count you'll just subtract off one row that you haven't
+
+363
+00:27:04,320 --> 00:27:06,880
+Imply each other then this is the right of your coat
+
+364
+00:27:07,904 --> 00:27:14,048
+So if not describe for you the entire field of coding theory for binary channels the task adjust
+
+365
+00:27:14,304 --> 00:27:16,352
+To come up with architect Matrix
+
+366
+00:27:16,608 --> 00:27:19,424
+And you'll need a Dakota that consoled this
+
+367
+00:27:19,680 --> 00:27:20,704
+Problem here
+
+368
+00:27:20,960 --> 00:27:27,104
+And the accession of Shannon's noisy Channel coding theorem is no Mountain House movie
+
+369
+00:27:27,360 --> 00:27:33,504
+No matter how close the races to beer you can actually find a Linea
+
+370
+00:27:33,760 --> 00:27:38,112
+Have to do anything fancy and you can define a party check Matrix h
+
+371
+00:27:38,368 --> 00:27:44,512
+That will get you places you like to the capacity and it can have an error probability
+
+372
+00:27:44,768 --> 00:27:47,584
+As small as you like as long as we get to choose N&M
+
+373
+00:27:47,840 --> 00:27:48,864
+Sufficiently
+
+374
+00:27:49,120 --> 00:27:49,888
+Lodge
+
+375
+00:27:50,144 --> 00:27:52,960
+So that's what we are now going to prove
+
+376
+00:27:53,216 --> 00:27:59,360
+I'm going to prove it with the help of something that we had a few weeks ago remember when
+
+377
+00:27:59,616 --> 00:28:02,176
+Show me proof that data compression responsible
+
+378
+00:28:02,688 --> 00:28:03,712
+We sent you off
+
+379
+00:28:03,968 --> 00:28:06,272
+The lottery ticket office
+
+380
+00:28:06,528 --> 00:28:08,064
+And your task was to buy
+
+381
+00:28:08,320 --> 00:28:14,464
+The smallest number of lottery tickets for the bent coin Lottery such that you could guarantee that you were going to
+
+382
+00:28:14,720 --> 00:28:16,512
+The win the bent coin Lottery
+
+383
+00:28:19,072 --> 00:28:25,216
+We sold this by thinking about typical sets and you came home with a very large dusting bag full of
+
+384
+00:28:26,240 --> 00:28:31,104
+On the front of every ticket was a string of zeros and ones of length n
+
+385
+00:28:32,640 --> 00:28:35,968
+And all the tickets had roughly
+
+386
+00:28:36,224 --> 00:28:37,760
+A fraction F1
+
+387
+00:28:38,528 --> 00:28:44,672
+So the number of tickets that you bought all the typical tickets and the number of those we worked
+
+388
+00:28:44,928 --> 00:28:48,512
+What's 2 ^ enzymes the Bunny Ranch
+
+389
+00:28:48,768 --> 00:28:50,816
+Plus a little bit to do with square root of n
+
+390
+00:28:51,584 --> 00:28:53,376
+Which is small compared to end
+
+391
+00:28:54,144 --> 00:28:57,472
+So that was how many tickets you had in your very big fat
+
+392
+00:28:58,240 --> 00:29:03,360
+I'm not going to make use of those tickets to prove the noisy Channel coding theorem
+
+393
+00:29:03,616 --> 00:29:04,384
+As well
+
+394
+00:29:09,248 --> 00:29:10,784
+And you can imagine this working
+
+395
+00:29:11,040 --> 00:29:12,320
+In two ways
+
+396
+00:29:13,088 --> 00:29:17,184
+If I tell you the theorem that there exists a good code
+
+397
+00:29:17,696 --> 00:29:23,840
+The standard way of proving such a theorem is then to describe how to make that good code so I tell you what
+
+398
+00:29:24,096 --> 00:29:30,240
+That phone is required what is it
+
+399
+00:29:30,496 --> 00:29:35,616
+To make good symbol codes
+
+400
+00:29:36,384 --> 00:29:42,528
+So I'll give you an excellent and it would be nice if I could just give you and you will make
+
+401
+00:29:47,136 --> 00:29:49,952
+Which has the property that its rate is
+
+402
+00:29:50,464 --> 00:29:55,328
+Bigger than or equal to it and it's our probability
+
+403
+00:29:55,584 --> 00:30:01,728
+That would be cold a constructive proof and polite and civil society that if you
+
+404
+00:30:01,984 --> 00:30:04,800
+You say something is true but it's true
+
+405
+00:30:05,056 --> 00:30:11,200
+I'm over now going to do is a rather outrageous thing which is we're going to have a non-constructive proof I'm going to show you the
+
+406
+00:30:11,456 --> 00:30:17,600
+This is true that there exists
+
+407
+00:30:17,856 --> 00:30:24,000
+But it looks like this let's have an analogy set in Iraq so let's say some Skeptics about
+
+408
+00:30:24,256 --> 00:30:30,400
+At World diplomacy say that Ashley in spite of all magnificent invented interventions in Iraq
+
+409
+00:30:30,656 --> 00:30:31,424
+Exist
+
+410
+00:30:31,680 --> 00:30:35,264
+A malnourished child in Iraq which we decide
+
+411
+00:30:36,800 --> 00:30:42,944
+And one way to do that is the constructive method that you identified a child whose weight is less than a kilogram
+
+412
+00:30:43,200 --> 00:30:49,344
+The definition of identify
+
+413
+00:30:49,600 --> 00:30:51,648
+Unless the street they live on
+
+414
+00:30:52,416 --> 00:30:56,512
+But Shannon's method is not chica he got his all the children in Iraq
+
+415
+00:30:56,768 --> 00:30:59,072
+Absolutely all of the mini weighing machine
+
+416
+00:30:59,328 --> 00:31:00,096
+Waze
+
+417
+00:31:00,352 --> 00:31:03,424
+All of them simultaneously and find the total weight
+
+418
+00:31:03,936 --> 00:31:07,008
+Permit you can deduce the average weight of all the children in Iraq
+
+419
+00:31:07,264 --> 00:31:10,080
+And if that average weight is less than 1 kilogram
+
+420
+00:31:10,336 --> 00:31:11,104
+Then
+
+421
+00:31:11,360 --> 00:31:17,504
+That establishes a positive way that must be at least one baby with weight loss
+
+422
+00:31:17,760 --> 00:31:20,320
+Almost all of them
+
+423
+00:31:20,576 --> 00:31:21,856
+At least half of them
+
+424
+00:31:22,112 --> 00:31:23,136
+Must be malnourished
+
+425
+00:31:23,648 --> 00:31:27,744
+Without ever identify any particular one of them rushed
+
+426
+00:31:29,024 --> 00:31:33,888
+And that's the way we're going to prove Santa's naughty teleporting through I'm not going to tell you
+
+427
+00:31:34,144 --> 00:31:40,288
+A particular way of making the partnership Matrix what we're going to do is a great big average overall party checkmate
+
+428
+00:31:40,544 --> 00:31:46,688
+I will say what is the average Premier Humira of all of these
+
+429
+00:31:46,944 --> 00:31:48,224
+Easiest answer that question
+
+430
+00:31:48,480 --> 00:31:50,272
+Identify one good coat
+
+431
+00:31:51,552 --> 00:31:55,136
+Will find that we can make the average probability of all the codes
+
+432
+00:31:55,648 --> 00:31:56,416
+Tiny
+
+433
+00:31:56,672 --> 00:31:57,952
+We can make this more as we like
+
+434
+00:31:58,208 --> 00:32:01,024
+Bethel there exist
+
+435
+00:32:01,792 --> 00:32:07,936
+Potassium actually making a good code is left as an exercise for the Rita and that what coding theory is all about
+
+436
+00:32:08,192 --> 00:32:12,288
+Another filled with Decades of work now under its belt
+
+437
+00:32:14,080 --> 00:32:20,224
+Okay so that's the plan of campaign we're going to use our lottery tickets
+
+438
+00:32:20,480 --> 00:32:20,992
+We're going to
+
+439
+00:32:21,504 --> 00:32:27,648
+Use them in conjunction with the set of all conceivable partnership matrices and we will prove the theorem
+
+440
+00:32:27,904 --> 00:32:30,976
+On the therm Hair Says
+
+441
+00:32:31,232 --> 00:32:37,376
+It said before
+
+442
+00:32:37,632 --> 00:32:42,240
+Reliable communication what's next
+
+443
+00:32:43,520 --> 00:32:44,288
+We will
+
+444
+00:32:44,544 --> 00:32:50,688
+Take a linear block code so we will pick a particular party techmatrix H which will actually end up pic
+
+445
+00:32:50,944 --> 00:32:53,760
+Looking at random will imagine that we have chosen that
+
+446
+00:32:54,016 --> 00:32:56,320
+We can then Define eye syndrome Dakota
+
+447
+00:32:56,576 --> 00:32:57,600
+Using
+
+448
+00:32:57,856 --> 00:32:59,392
+That particular code
+
+449
+00:33:00,672 --> 00:33:03,488
+Ascendant Dakota is not going to solve
+
+450
+00:33:03,744 --> 00:33:04,256
+This
+
+451
+00:33:04,512 --> 00:33:07,584
+Problem perfectly without going to find the most probable end
+
+452
+00:33:07,840 --> 00:33:10,144
+I'm going to the fine for you
+
+453
+00:33:10,400 --> 00:33:13,472
+Dakota based on the syndrome which is going to be good enough
+
+454
+00:33:13,984 --> 00:33:14,752
+And then
+
+455
+00:33:15,008 --> 00:33:17,056
+Having done that we will have defined
+
+456
+00:33:17,568 --> 00:33:20,640
+An encoder and decoder for that particular code
+
+457
+00:33:22,432 --> 00:33:26,784
+And then we're going to average overall coats and find what the average probability of era is
+
+458
+00:33:27,296 --> 00:33:28,576
+Just check what my next
+
+459
+00:33:28,832 --> 00:33:32,160
+Slightest so this is what we're going to do
+
+460
+00:33:33,440 --> 00:33:36,768
+Imagine that we have chosen a block length and
+
+461
+00:33:37,024 --> 00:33:42,400
+Will adjust that later on if need be to make it even larger then
+
+462
+00:33:42,912 --> 00:33:49,056
+We have gone to the bank coin Lottery and we won the bank Coin Laundry by buying a sufficiently large number of tickets in a roll in the back
+
+463
+00:33:49,312 --> 00:33:51,104
+Anderol to the nh2 of f
+
+464
+00:33:53,664 --> 00:33:55,456
+We not take all of those tickets
+
+465
+00:33:55,712 --> 00:34:01,856
+And instead of doing what we did a few weeks ago which was roseto we want to be systematic and right little short names on the river
+
+466
+00:34:02,112 --> 00:34:04,928
+And use that
+
+467
+00:34:05,184 --> 00:34:05,696
+Space
+
+468
+00:34:05,952 --> 00:34:10,304
+For the English or object namely we're going to write down syndrome
+
+469
+00:34:10,560 --> 00:34:12,096
+Of that noise vector
+
+470
+00:34:12,352 --> 00:34:13,376
+Which is on the front
+
+471
+00:34:14,144 --> 00:34:20,288
+We're going to write down it's syndrome using the package check Matrix age that we've just chosen another reverse
+
+472
+00:34:20,544 --> 00:34:24,128
+Write down the syndrome syndrome is h x n
+
+473
+00:34:24,640 --> 00:34:25,664
+And that's
+
+474
+00:34:26,176 --> 00:34:27,968
+Adult Jackfruit length is m
+
+475
+00:34:28,224 --> 00:34:29,760
+It's okay
+
+476
+00:34:31,040 --> 00:34:32,576
+So you take every ticket
+
+477
+00:34:32,832 --> 00:34:35,136
+On the front is not a possible noise actor
+
+478
+00:34:35,392 --> 00:34:41,536
+An SS is the flip right of the Channel with dealing with her that's what I'm assuming then you can be
+
+479
+00:34:42,560 --> 00:34:43,072
+That
+
+480
+00:34:43,328 --> 00:34:44,352
+Uo
+
+481
+00:34:44,864 --> 00:34:51,008
+The ticket but is going to have today's No Electronic when we use the channel and times in succession
+
+482
+00:34:51,264 --> 00:34:56,896
+The winning tickets every single ticket you write on the reverse of that ticket Walt the syndrome would be
+
+483
+00:34:57,152 --> 00:34:58,176
+Of the noise Factor
+
+484
+00:34:58,944 --> 00:34:59,456
+Okay
+
+485
+00:35:00,992 --> 00:35:05,088
+17 drive me just computed by multiplying h x no.2
+
+486
+00:35:06,880 --> 00:35:08,416
+Then
+
+487
+00:35:09,440 --> 00:35:11,232
+Then what we going to do
+
+488
+00:35:11,488 --> 00:35:12,256
+Is
+
+489
+00:35:13,536 --> 00:35:18,656
+Encode in the standard way the standard way of encoding is you let
+
+490
+00:35:19,168 --> 00:35:20,192
+The user
+
+491
+00:35:20,448 --> 00:35:22,240
+Set K of the bits
+
+492
+00:35:23,008 --> 00:35:25,824
+Then you set the remaining mbits
+
+493
+00:35:29,920 --> 00:35:36,064
+So the transmission we can think of a few MC to T3 up to TK
+
+494
+00:35:36,320 --> 00:35:38,368
+Which might not be in this order
+
+495
+00:35:38,880 --> 00:35:45,024
+But transmitted bit set by the user
+
+496
+00:35:45,280 --> 00:35:51,168
+Then the remaining ones TK plus one or the end
+
+497
+00:35:51,936 --> 00:35:53,472
+By using linear algebra
+
+498
+00:35:55,008 --> 00:36:01,152
+To figure out what value these guys need to have in order that all of these constraints h x t equals zero
+
+499
+00:36:01,408 --> 00:36:02,688
+Are indeed satisfied
+
+500
+00:36:03,712 --> 00:36:09,856
+All right but I think Cody and we send it over the Tamil we got the receipt Factory Witch
+
+501
+00:36:10,112 --> 00:36:10,624
+Is
+
+502
+00:36:10,880 --> 00:36:14,208
+Transmission plus noise syndrome
+
+503
+00:36:17,024 --> 00:36:18,304
+Which is 8 something
+
+504
+00:36:18,816 --> 00:36:24,960
+Then we reach into the big nothing back for the tickets we look at the back of all of them until we find one
+
+505
+00:36:25,216 --> 00:36:25,984
+Syndrome on it
+
+506
+00:36:27,264 --> 00:36:30,336
+Or maybe we find several that have that syndrome on it
+
+507
+00:36:31,104 --> 00:36:36,224
+Hopefully does anyone know which is all gas
+
+508
+00:36:37,248 --> 00:36:38,784
+That's not decoding method
+
+509
+00:36:39,808 --> 00:36:40,832
+This approach
+
+510
+00:36:41,344 --> 00:36:43,648
+Could fail in a couple of ways
+
+511
+00:36:45,184 --> 00:36:50,304
+It could be that we don't actually own the ticket that has the correct noise Vector on it
+
+512
+00:36:51,328 --> 00:36:52,352
+That possible
+
+513
+00:36:52,608 --> 00:36:58,752
+But it's very unlikely because we've already bought enough tickets have a 99.999999
+
+514
+00:36:59,008 --> 00:37:00,800
+9% chance of winning the lottery
+
+515
+00:37:01,568 --> 00:37:06,944
+Why we put enough nines into that 99.9 to get along
+
+516
+00:37:07,456 --> 00:37:10,272
+It's going to be so we're going to hit at salon
+
+517
+00:37:10,528 --> 00:37:11,552
+So
+
+518
+00:37:12,320 --> 00:37:14,112
+The probability of error
+
+519
+00:37:18,464 --> 00:37:24,608
+The probability of stalia is a sum of two possibilities as we might actually have the winning ticket
+
+520
+00:37:25,120 --> 00:37:27,424
+The one that has the correct noisette dramas
+
+521
+00:37:28,960 --> 00:37:30,752
+The other possibility is
+
+522
+00:37:31,008 --> 00:37:37,152
+We have got the winning ticket but was another ticket in the bet in the bag so we don't actually know
+
+523
+00:37:37,408 --> 00:37:39,200
+Which noise that just happened
+
+524
+00:37:39,712 --> 00:37:44,576
+So the Progressive Era is equal to the sum of two times
+
+525
+00:37:51,488 --> 00:37:53,024
+Uncle P Wong
+
+526
+00:37:53,792 --> 00:37:56,096
+Mp2
+
+527
+00:37:56,864 --> 00:37:58,912
+P1 is the probability
+
+528
+00:37:59,680 --> 00:38:00,704
+That
+
+529
+00:38:00,960 --> 00:38:06,336
+And is not in the bank
+
+530
+00:38:07,616 --> 00:38:13,760
+This is the Progressive Era of the entire and coding and CPT coding system is defined using a particular Matrix
+
+531
+00:38:14,016 --> 00:38:15,040
+H
+
+532
+00:38:15,296 --> 00:38:16,320
+Orvis
+
+533
+00:38:16,832 --> 00:38:18,112
+Code
+
+534
+00:38:18,368 --> 00:38:21,440
+With architect Matrix
+
+535
+00:38:21,696 --> 00:38:24,512
+H2O is the probability that depends on age
+
+536
+00:38:25,024 --> 00:38:28,096
+The first time is the Pro Bowl
+
+537
+00:38:28,608 --> 00:38:34,752
+I actually don't depend on the bag we just bought there's nothing to do with h when we both all those tickets
+
+538
+00:38:35,008 --> 00:38:37,056
+The best time is actually
+
+539
+00:38:37,312 --> 00:38:38,848
+Independence
+
+540
+00:38:41,920 --> 00:38:45,248
+The P2 is the other possibility explanation
+
+541
+00:38:46,528 --> 00:38:50,368
+And that says what I am is in the bag
+
+542
+00:38:52,160 --> 00:38:53,696
+But
+
+543
+00:38:57,280 --> 00:38:58,560
+And poodles
+
+544
+00:39:00,352 --> 00:39:01,632
+M&T Bank
+
+545
+00:39:03,936 --> 00:39:04,448
+Oops
+
+546
+00:39:04,960 --> 00:39:07,776
+I also in the bag
+
+547
+00:39:08,544 --> 00:39:13,152
+That satisfy h x and twiddle is equal to that
+
+548
+00:39:13,920 --> 00:39:19,808
+Or if you like eight times the difference between and and and twiddled is 0
+
+549
+00:39:25,696 --> 00:39:31,840
+Habitat Community but to see if you understanding me so far this is the most
+
+550
+00:40:16,896 --> 00:40:19,712
+Okay are there any questions about the
+
+551
+00:40:20,224 --> 00:40:23,296
+Commissions to the Progressive Era
+
+552
+00:40:24,320 --> 00:40:25,088
+Kevin on board
+
+553
+00:40:27,648 --> 00:40:29,952
+Okay so we can say the fan is not in the bag
+
+554
+00:40:30,208 --> 00:40:33,536
+That we can make the probability of that as small as we like
+
+555
+00:40:33,792 --> 00:40:34,816
+By picking
+
+556
+00:40:37,632 --> 00:40:39,168
+And Lodge
+
+557
+00:40:40,448 --> 00:40:46,592
+I'm being careful with this thing that I'm so fudging a little bit which is the size of a typical fats which is Tuesday and
+
+558
+00:40:46,848 --> 00:40:48,128
+H2 of f
+
+559
+00:40:51,456 --> 00:40:57,344
+That will come back to that. Fudge laundromat Edinburg we can make this place so small in the right sense
+
+560
+00:40:57,600 --> 00:41:00,416
+The first time is dealt with just by making an enormous
+
+561
+00:41:01,184 --> 00:41:07,328
+The second time is much more exciting this is the one that actually depends on eggs because if I picked some
+
+562
+00:41:08,608 --> 00:41:14,752
+The lights for example one with all the rows identical then maybe it's much more likely that you'll have identical syndrome
+
+563
+00:41:15,008 --> 00:41:21,152
+You can imagine all sorts of ways in which an H could be bad it is very easy to make vodka
+
+564
+00:41:24,224 --> 00:41:26,528
+Okay so let's write down the second time
+
+565
+00:41:26,784 --> 00:41:30,112
+That'll definition of it
+
+566
+00:41:30,368 --> 00:41:32,160
+P 2 of 8 is
+
+567
+00:41:32,416 --> 00:41:35,232
+It's a sum over all possible noise that cuz
+
+568
+00:41:35,744 --> 00:41:39,072
+Subject to them being in the bag
+
+569
+00:41:41,632 --> 00:41:42,656
+That we bought
+
+570
+00:41:43,936 --> 00:41:49,056
+Let Me Wait by the probability of that happening
+
+571
+00:41:50,592 --> 00:41:52,128
+I think that counts
+
+572
+00:41:52,384 --> 00:41:53,151
+Warm
+
+573
+00:41:53,407 --> 00:41:55,455
+If there's another End Portal in the bag
+
+574
+00:41:55,711 --> 00:42:01,855
+And 0 if not I'll give us the Progressive Era
+
+575
+00:42:02,111 --> 00:42:05,695
+Is warm if the thing in Brackets is true and it's zero otherwise
+
+576
+00:42:06,207 --> 00:42:09,279
+If there existed and twiddle
+
+577
+00:42:09,791 --> 00:42:10,815
+Such that
+
+578
+00:42:11,071 --> 00:42:12,863
+Anvil is not the same as an
+
+579
+00:42:13,631 --> 00:42:15,935
+And twiddle is in the bag
+
+580
+00:42:17,471 --> 00:42:21,055
++ 8 * + - + twiddle
+
+581
+00:42:21,311 --> 00:42:22,335
+Is there a
+
+582
+00:42:24,895 --> 00:42:28,991
+So this is the function which is warm if the number of clashes that we've got
+
+583
+00:42:29,247 --> 00:42:33,087
+Illinois Vector that actually happens is bigger than or equal to one
+
+584
+00:42:37,695 --> 00:42:42,815
+Okay if and twiddle the question was why does it matter event riddles in the back
+
+585
+00:42:43,327 --> 00:42:49,471
+We only have a problem if when we're reaching into the bag and look at the back of each other
+
+586
+00:42:56,127 --> 00:43:01,247
+Because we found two noise that gives it a different from each other
+
+587
+00:43:01,503 --> 00:43:03,807
+So it has to be in the bag
+
+588
+00:43:04,319 --> 00:43:05,343
+Takoda's trouble
+
+589
+00:43:06,623 --> 00:43:08,671
+I think because then we don't know what that is
+
+590
+00:43:09,439 --> 00:43:10,975
+The Assumption we're going to be biting
+
+591
+00:43:13,023 --> 00:43:13,791
+Is
+
+592
+00:43:14,047 --> 00:43:14,815
+That
+
+593
+00:43:15,071 --> 00:43:18,911
+Yeah the way the Dakota what is if you find the Cinderella on the back
+
+594
+00:43:20,191 --> 00:43:20,959
+Then
+
+595
+00:43:21,727 --> 00:43:24,543
+Retarded iPhone
+
+596
+00:43:25,055 --> 00:43:28,639
+Exactly one ticket that has a tender lump on the back
+
+597
+00:43:28,895 --> 00:43:35,039
+That will fail if we haven't got the right noise if we have got the right one in the bag
+
+598
+00:43:35,295 --> 00:43:38,367
+Another one in the back with the same syndrome
+
+599
+00:43:39,391 --> 00:43:40,159
+Okay
+
+600
+00:43:44,511 --> 00:43:50,655
+All right this is slightly coming proof maybe because it's using this notion of a syndrome Dakota
+
+601
+00:43:50,911 --> 00:43:57,055
+Maybe not
+
+602
+00:43:57,311 --> 00:44:00,895
+In the book which is the preferred general channels and you can look at that you
+
+603
+00:44:02,175 --> 00:44:02,943
+Right
+
+604
+00:44:03,711 --> 00:44:08,063
+This proposition is saying but the number of classes is bigger or equal to one
+
+605
+00:44:09,343 --> 00:44:10,879
+If you think about that
+
+606
+00:44:11,135 --> 00:44:12,159
+Function
+
+607
+00:44:13,183 --> 00:44:16,255
+That is a function which other function of the number of classes
+
+608
+00:44:17,023 --> 00:44:18,815
+Stop being
+
+609
+00:44:19,071 --> 00:44:20,095
+0
+
+610
+00:44:20,351 --> 00:44:24,959
+And then increases when you hit warm to the body of warm and then it remains
+
+611
+00:44:25,471 --> 00:44:25,983
+Guam
+
+612
+00:44:26,239 --> 00:44:29,823
+How many classes are all screwed
+
+613
+00:44:30,079 --> 00:44:34,687
+Which means we got to Wong out of this expression so the function with that
+
+614
+00:44:34,943 --> 00:44:38,783
+As a function of the number of classes it looks like this
+
+615
+00:44:39,551 --> 00:44:41,599
+How's the property
+
+616
+00:44:42,111 --> 00:44:44,415
+Vantage is less than or equal to
+
+617
+00:44:46,463 --> 00:44:48,511
+Which is the number of flashes
+
+618
+00:44:49,279 --> 00:44:52,351
+Okay so in yellow off showing the number of classes
+
+619
+00:44:54,399 --> 00:44:55,423
+In white
+
+620
+00:44:57,471 --> 00:44:58,239
+We have the function
+
+621
+00:45:01,311 --> 00:45:02,591
+Number flashes
+
+622
+00:45:03,615 --> 00:45:05,407
+It's raining right now
+
+623
+00:45:05,919 --> 00:45:11,551
+Why am I leaving this I want you to be clear that the other function is bigger than the white function
+
+624
+00:45:15,135 --> 00:45:16,159
+Nah
+
+625
+00:45:19,231 --> 00:45:20,767
+What should we do next
+
+626
+00:45:26,911 --> 00:45:27,679
+Let's
+
+627
+00:45:28,959 --> 00:45:30,239
+Use an inequality
+
+628
+00:45:32,031 --> 00:45:33,567
+And
+
+629
+00:45:34,847 --> 00:45:40,991
+Let's do a bit of redefining
+
+630
+00:45:44,575 --> 00:45:46,879
+But I'll rewrite this as
+
+631
+00:45:47,903 --> 00:45:50,463
+Awesome a proposition which is going to be the yellow lot
+
+632
+00:45:50,975 --> 00:45:54,303
+So now let's do Daniela
+
+633
+00:45:54,559 --> 00:45:55,839
+I'm going to add up
+
+634
+00:45:57,375 --> 00:46:00,447
+The some overall and riddles
+
+635
+00:46:00,959 --> 00:46:03,519
+But I'm not able to the noise active it actually happened
+
+636
+00:46:04,031 --> 00:46:07,615
+Subject to the constraints and twiddle is in the bag
+
+637
+00:46:08,383 --> 00:46:09,407
+I'm going to ask
+
+638
+00:46:09,663 --> 00:46:11,455
+Hello is the end riddle
+
+639
+00:46:11,967 --> 00:46:16,831
+Is your syndrome the same as the syndrome
+
+640
+00:46:17,343 --> 00:46:18,623
+Which is
+
+641
+00:46:18,879 --> 00:46:21,183
+The function h m i n Central
+
+642
+00:46:21,951 --> 00:46:23,231
+Is equal to 0
+
+643
+00:46:25,279 --> 00:46:29,119
+All right so I've relaxed this thing I've made it bigger
+
+644
+00:46:29,887 --> 00:46:35,007
+I'm not saying a piece of its smaller than its functioning as long as I can
+
+645
+00:46:35,263 --> 00:46:37,567
+Then I've also established his time
+
+646
+00:46:37,823 --> 00:46:43,967
+That's why I was staring I'm trying to manipulate P2 into a form where we can say I have if I do this
+
+647
+00:46:44,223 --> 00:46:45,503
+I can make it tiny
+
+648
+00:46:47,039 --> 00:46:47,807
+Power
+
+649
+00:46:48,063 --> 00:46:51,391
+Just fine
+
+650
+00:46:53,695 --> 00:46:54,463
+Yes
+
+651
+00:46:54,719 --> 00:47:00,863
+So this is the number of any twiddle to clash with me is the number of them because I'm not coming over oil and twiddles
+
+652
+00:47:01,119 --> 00:47:07,263
+All right Services looking at every single one of them and has an enormous number
+
+653
+00:47:07,519 --> 00:47:10,591
+Place the simple comes to hair which is either 0 or 1
+
+654
+00:47:10,847 --> 00:47:16,991
+Buy a sum of two to the NH avesta a trillion times
+
+655
+00:47:17,247 --> 00:47:23,391
+If any of the match will get someone
+
+656
+00:47:23,647 --> 00:47:25,951
+So we just this relaxation
+
+657
+00:47:26,463 --> 00:47:27,999
+No
+
+658
+00:47:31,327 --> 00:47:32,607
+The next thing we're going to do
+
+659
+00:47:33,631 --> 00:47:36,959
+We made a little bit of progress we've simplified this a little b****
+
+660
+00:47:37,471 --> 00:47:39,519
+And still got an H dependents in it
+
+661
+00:47:41,311 --> 00:47:46,175
+What we end up we want to end up showing is that we can make this very small
+
+662
+00:47:46,687 --> 00:47:52,831
+And it's going to be difficult to do that with any particular right so get the average overall H's and show that the average
+
+663
+00:47:53,087 --> 00:47:53,599
+P2
+
+664
+00:47:54,367 --> 00:47:55,135
+Is very small
+
+665
+00:47:56,415 --> 00:47:59,743
+So when I get to look at average of P2
+
+666
+00:48:01,023 --> 00:48:03,327
+I'm going to average over
+
+667
+00:48:03,583 --> 00:48:09,727
+Ohsi when I say average overall they just I just mean literally take the set of all possible binary Pirates check
+
+668
+00:48:09,983 --> 00:48:16,127
+Matrices and pick completely independently around so every 0 or 1
+
+669
+00:48:16,383 --> 00:48:17,663
+Is 0 warm
+
+670
+00:48:17,919 --> 00:48:19,199
+Photography 50/50
+
+671
+00:48:19,455 --> 00:48:20,223
+Right
+
+672
+00:48:20,479 --> 00:48:25,087
+Suck the average ability to choose is the some overall h
+
+673
+00:48:25,343 --> 00:48:27,647
+Pfh
+
+674
+00:48:29,695 --> 00:48:31,743
+Somerville and
+
+675
+00:48:31,999 --> 00:48:33,023
+In the bag
+
+676
+00:48:34,559 --> 00:48:35,839
+See you then
+
+677
+00:48:36,863 --> 00:48:39,679
+Some event rental in the back
+
+678
+00:48:41,471 --> 00:48:43,519
+And with a lot equal to end
+
+679
+00:48:44,287 --> 00:48:47,615
+No justice no P event Ritalin half the recipe of n
+
+680
+00:48:48,127 --> 00:48:48,639
+It's just
+
+681
+00:48:48,895 --> 00:48:50,687
+How they act is working
+
+682
+00:48:51,199 --> 00:48:52,991
+And we have Wong
+
+683
+00:48:53,247 --> 00:48:54,271
+4
+
+684
+00:48:55,551 --> 00:48:58,879
+Types of ax equals there I would have to find a new thing
+
+685
+00:48:59,135 --> 00:49:01,183
+X is defined to be
+
+686
+00:49:01,439 --> 00:49:02,975
++ - Central
+
+687
+00:49:10,399 --> 00:49:11,423
+All right
+
+688
+00:49:11,679 --> 00:49:12,447
+No
+
+689
+00:49:13,215 --> 00:49:15,519
+Let's reorder the summations little bit
+
+690
+00:49:16,031 --> 00:49:19,359
+We'll take the song over and in some of the French poodle
+
+691
+00:49:19,615 --> 00:49:21,407
+Outside and put some of H
+
+692
+00:49:21,663 --> 00:49:22,687
+On the inside
+
+693
+00:49:24,735 --> 00:49:26,527
+So have a sum of and
+
+694
+00:49:28,575 --> 00:49:29,855
+In the bag
+
+695
+00:49:32,159 --> 00:49:33,439
+Okay then
+
+696
+00:49:35,231 --> 00:49:37,023
+Summer Event riddle
+
+697
+00:49:38,047 --> 00:49:39,071
+In the bag
+
+698
+00:49:39,583 --> 00:49:40,607
+But not the same as an
+
+699
+00:49:44,959 --> 00:49:49,567
+Some / h h
+
+700
+00:49:50,591 --> 00:49:51,359
+Wang
+
+701
+00:49:51,615 --> 00:49:55,199
+If 8 * x equal 0
+
+702
+00:49:56,991 --> 00:50:00,831
+Inside by definition the difference between an event rental
+
+703
+00:50:01,599 --> 00:50:02,367
+All right
+
+704
+00:50:02,623 --> 00:50:04,415
+There was something overall
+
+705
+00:50:04,671 --> 00:50:05,951
+Typical noise actors
+
+706
+00:50:06,207 --> 00:50:10,559
+Waited by the overall typical noise that doesn't riddle
+
+707
+00:50:13,631 --> 00:50:18,239
+And then we look at the question if you take the difference between nose and hit it with the Matrix h
+
+708
+00:50:18,751 --> 00:50:20,287
+What's the probability
+
+709
+00:50:20,799 --> 00:50:26,175
+Averaging over old matrices age that you will get zero that's the meaning of this time in hat
+
+710
+00:50:27,967 --> 00:50:30,015
+Suck to answer that question
+
+711
+00:50:34,111 --> 00:50:35,391
+This thing here
+
+712
+00:50:35,647 --> 00:50:36,415
+Is
+
+713
+00:50:36,671 --> 00:50:39,999
+The probability that
+
+714
+00:50:40,511 --> 00:50:46,655
+Is it all given a particular f8x now would give an ax because once defined
+
+715
+00:50:46,911 --> 00:50:50,239
+And in this some event rental in this song we've got hostiles next
+
+716
+00:50:51,263 --> 00:50:54,335
+Now hair this is the probability for that given X
+
+717
+00:50:54,591 --> 00:50:56,383
+The probability that
+
+718
+00:50:56,639 --> 00:51:02,783
+The first row of the Matrix x x is equal to 0 times the second row of the
+
+719
+00:51:03,039 --> 00:51:06,367
+Is there a drug
+
+720
+00:51:06,623 --> 00:51:12,767
+Is Matrix x x is equal to 0 where H is this randomly-chosen Matrix who's Rosario
+
+721
+00:51:13,023 --> 00:51:13,791
+Guam
+
+722
+00:51:14,047 --> 00:51:15,839
+H2
+
+723
+00:51:16,351 --> 00:51:17,631
+Kh3
+
+724
+00:51:18,911 --> 00:51:22,751
+Dot-dot-dot on all of those accession
+
+725
+00:51:23,007 --> 00:51:27,871
+Texting a little Sideshow which is the exercise where we understand this problem
+
+726
+00:51:28,895 --> 00:51:30,687
+Forget everything you just been doing
+
+727
+00:51:30,943 --> 00:51:34,015
+I'm think about this extremely simple mathematical question
+
+728
+00:51:34,783 --> 00:51:38,111
+If I give you a fixed back to X which is non zero
+
+729
+00:51:39,903 --> 00:51:46,047
+It's nonzero because in fact is the difference between two noise actors and that's all different from each other
+
+730
+00:51:46,303 --> 00:51:49,631
+So that makes it non zero if I give you a fixed
+
+731
+00:51:50,143 --> 00:51:53,215
+Back to act which is non-binary in the spotlight stand
+
+732
+00:51:53,983 --> 00:51:57,567
+And then if I bring along a single row of this Matrix
+
+733
+00:52:00,383 --> 00:52:03,455
+Just one road and if I call it element H1 H2 H3 H4
+
+734
+00:52:04,223 --> 00:52:05,759
+What's the probability
+
+735
+00:52:06,015 --> 00:52:07,807
+The end of product between h
+
+736
+00:52:08,063 --> 00:52:08,831
+FedEx
+
+737
+00:52:09,343 --> 00:52:10,111
+Is there a
+
+738
+00:52:11,647 --> 00:52:12,415
+Habitat
+
+739
+00:52:12,927 --> 00:52:13,695
+Your neighbor
+
+740
+00:52:28,543 --> 00:52:33,407
+If it helps think about just this special case have it on the board with
+
+741
+00:52:33,663 --> 00:52:34,687
+Back to the blanks
+
+742
+00:52:41,087 --> 00:52:42,623
+Okay
+
+743
+00:52:43,135 --> 00:52:44,671
+The question is
+
+744
+00:52:45,183 --> 00:52:49,535
+What's the probability that one row of this Matrix
+
+745
+00:52:49,791 --> 00:52:51,071
+X x
+
+746
+00:52:51,583 --> 00:52:52,607
+Give zero
+
+747
+00:52:52,863 --> 00:52:53,631
+Would you like to
+
+748
+00:52:54,143 --> 00:52:55,167
+Any thoughts
+
+749
+00:53:00,543 --> 00:53:02,079
+Lockpicking the H's
+
+750
+00:53:02,335 --> 00:53:04,895
+Completely at random by flipping a Fair coin
+
+751
+00:53:05,663 --> 00:53:09,503
+Exit to fix Vector which has zeros in some places
+
+752
+00:53:10,271 --> 00:53:12,319
+And it's got some ones in other places
+
+753
+00:53:12,831 --> 00:53:14,879
+China special case here
+
+754
+00:53:15,135 --> 00:53:16,671
+The value
+
+755
+00:53:16,927 --> 00:53:23,071
+8 shot X is actually equal ch2
+
+756
+00:53:23,327 --> 00:53:23,839
+Lights for
+
+757
+00:53:24,607 --> 00:53:25,631
+Modulo 2
+
+758
+00:53:26,143 --> 00:53:29,215
+So let me ask the question another way if I take 3
+
+759
+00:53:29,471 --> 00:53:31,007
+Coins
+
+760
+00:53:31,775 --> 00:53:34,591
+And I say we're going to get her number
+
+761
+00:53:34,847 --> 00:53:40,991
+Which is either going to be all don't even I'm going to get it by adding up the outcomes of the coin tosses in the coin says what
+
+762
+00:53:41,247 --> 00:53:42,527
+On one side and 0 on the other
+
+763
+00:53:43,295 --> 00:53:45,599
+The question is if I add up
+
+764
+00:53:46,111 --> 00:53:48,927
+The number of ones and find out if it's old or even
+
+765
+00:53:49,695 --> 00:53:53,023
+If each of those coins is 50/50
+
+766
+00:53:54,559 --> 00:53:57,375
+If I add up all three of them what's the probability I got
+
+767
+00:53:57,887 --> 00:53:58,911
+An odd number
+
+768
+00:53:59,935 --> 00:54:01,215
+Okay yeah
+
+769
+00:54:01,471 --> 00:54:02,751
+It's 50/50
+
+770
+00:54:03,007 --> 00:54:05,311
+Does that depend on how many coins I had it up
+
+771
+00:54:05,823 --> 00:54:06,591
+No
+
+772
+00:54:06,847 --> 00:54:12,991
+Because I was just one of them or even if I give you any number whether it's a little
+
+773
+00:54:13,247 --> 00:54:18,367
+And now I flip another coin and I had that number is still 50/50
+
+774
+00:54:19,391 --> 00:54:19,903
+Okay
+
+775
+00:54:20,415 --> 00:54:22,207
+So the answer is
+
+776
+00:54:22,719 --> 00:54:26,815
+The probability that the top row x x gives you 0
+
+777
+00:54:29,887 --> 00:54:30,399
+Is a Hof
+
+778
+00:54:31,679 --> 00:54:32,703
+Not true
+
+779
+00:54:33,471 --> 00:54:34,495
+Feniex
+
+780
+00:54:38,335 --> 00:54:40,639
+So now the problem is that
+
+781
+00:54:41,151 --> 00:54:44,479
+All of these assertions are true the probability that you
+
+782
+00:54:45,247 --> 00:54:49,343
+When you go to give an act which is the difference between two noise that does as it happens
+
+783
+00:54:50,879 --> 00:54:52,671
+Okay that's the answer to question 1
+
+784
+00:54:53,183 --> 00:54:55,231
+Now the question is if I
+
+785
+00:54:55,743 --> 00:54:57,279
+Take a fixed X
+
+786
+00:54:58,815 --> 00:55:03,935
+Just as the 400m rows of this Matrix and I make them independently
+
+787
+00:55:04,447 --> 00:55:05,471
+By tossing coins
+
+788
+00:55:06,239 --> 00:55:11,615
+What's the probability of the first red contacts
+
+789
+00:55:12,127 --> 00:55:12,895
+Etc
+
+790
+00:55:15,711 --> 00:55:17,247
+How to talk to you later
+
+791
+00:55:33,631 --> 00:55:34,655
+Access fixed
+
+792
+00:55:35,423 --> 00:55:39,263
+I flip coins to seven letter that comes out or even
+
+793
+00:55:39,775 --> 00:55:42,847
+I'm a flip coin 7 comes out all the raven
+
+794
+00:55:43,103 --> 00:55:44,639
+It's 50-50 whether total revenue
+
+795
+00:55:45,663 --> 00:55:51,807
+How to flip coins for the next one Federal independent of each other so the probability even
+
+796
+00:55:52,063 --> 00:55:53,599
+Everything is
+
+797
+00:55:58,463 --> 00:55:59,743
+Hoffa Poweramp
+
+798
+00:56:01,279 --> 00:56:05,631
+Anyone think an alternative answer is 3
+
+799
+00:56:06,655 --> 00:56:07,423
+No
+
+800
+00:56:07,679 --> 00:56:10,495
+Anyone
+
+801
+00:56:12,287 --> 00:56:14,079
+I don't want to sleep or shy
+
+802
+00:56:14,591 --> 00:56:15,359
+Okay
+
+803
+00:56:15,615 --> 00:56:16,895
+So this is the correct answer
+
+804
+00:56:17,919 --> 00:56:20,991
+So we made a little progress cuz suddenly this is all disappeared
+
+805
+00:56:21,503 --> 00:56:23,039
+But it's just half the power and
+
+806
+00:56:24,831 --> 00:56:29,183
+And vanishes so up the next slide okay we don't want that
+
+807
+00:56:31,999 --> 00:56:37,887
+Average of p205h averaging overall h
+
+808
+00:56:38,143 --> 00:56:38,911
+Is
+
+809
+00:56:39,167 --> 00:56:42,495
+The song over the o n in the bag
+
+810
+00:56:43,007 --> 00:56:44,543
+Wasted by Pia van
+
+811
+00:56:45,823 --> 00:56:47,615
+Some overall length twiddle
+
+812
+00:56:48,639 --> 00:56:49,663
+Leather in the bag
+
+813
+00:56:52,223 --> 00:56:54,271
+And the time not the same as an
+
+814
+00:56:57,599 --> 00:56:59,647
+Then we do the Salvation / h
+
+815
+00:57:01,183 --> 00:57:05,023
+Listen time quantity half we just argued is off to the power 10
+
+816
+00:57:06,559 --> 00:57:08,351
+Which is the number
+
+817
+00:57:09,375 --> 00:57:12,447
+With no dependents
+
+818
+00:57:12,703 --> 00:57:16,031
+I just don't know Independence and interdependence either
+
+819
+00:57:16,287 --> 00:57:22,431
+Because it depends on X and the answer to that question we just answering didn't depend on X1
+
+820
+00:57:22,687 --> 00:57:23,967
+Just got out of the number
+
+821
+00:57:24,223 --> 00:57:26,015
+And the number is 1/2 of the m
+
+822
+00:57:26,271 --> 00:57:27,039
+X
+
+823
+00:57:27,295 --> 00:57:29,343
+The number of individuals that are in the bag
+
+824
+00:57:31,135 --> 00:57:32,159
+Left
+
+825
+00:57:33,951 --> 00:57:34,719
+Averaged
+
+826
+00:57:36,255 --> 00:57:37,279
+Over the distribution
+
+827
+00:57:37,535 --> 00:57:39,583
+And this thing doesn't have any dependents on an
+
+828
+00:57:39,839 --> 00:57:45,983
+So we can just say the some overall line in the bag will a maximum one isn't it
+
+829
+00:57:47,519 --> 00:57:48,287
+Time
+
+830
+00:57:48,799 --> 00:57:54,943
+The number things in the bag let's round up that -1 and say I was to to be to the end times entropy
+
+831
+00:57:55,199 --> 00:58:00,063
+Tuesday nh-27 size of a typical set
+
+832
+00:58:00,575 --> 00:58:01,599
+Little bit
+
+833
+00:58:01,855 --> 00:58:03,903
+That's the number things in the back
+
+834
+00:58:06,207 --> 00:58:08,255
+And then that multiplies aha
+
+835
+00:58:08,511 --> 00:58:10,047
+How to power amp
+
+836
+00:58:10,815 --> 00:58:14,655
+What are we done reviews Shannon's malnutrition detection scheme
+
+837
+00:58:14,911 --> 00:58:19,519
+To establish that if you average over absolutely all linear codes
+
+838
+00:58:19,775 --> 00:58:21,823
+The average performance of those codes
+
+839
+00:58:22,335 --> 00:58:26,431
+The probability of Mara if you use a slightly deranged syndrome Dakota with the lodge
+
+840
+00:58:26,687 --> 00:58:28,223
+I've been back for the tickets
+
+841
+00:58:28,479 --> 00:58:30,271
+The probability of error
+
+842
+00:58:30,527 --> 00:58:31,551
+Is
+
+843
+00:58:33,087 --> 00:58:34,367
+Progressive Era
+
+844
+00:58:36,927 --> 00:58:40,255
+Is lesser April therapy one which we can make tiny
+
+845
+00:58:40,767 --> 00:58:46,399
+Plus this all the time what you're coming this Saturday make time it depends on what nhu of F&M
+
+846
+00:58:47,423 --> 00:58:48,703
+Sorry
+
+847
+00:58:49,215 --> 00:58:50,239
+To the power
+
+848
+00:58:51,263 --> 00:58:54,591
+Let's put it downstairs so it'll be clear
+
+849
+00:58:56,639 --> 00:58:59,711
+What tiny looks like the one over
+
+850
+00:58:59,967 --> 00:59:01,247
+2 to the
+
+851
+00:59:01,503 --> 00:59:02,783
+Minus
+
+852
+00:59:03,295 --> 00:59:04,831
+And
+
+853
+00:59:05,087 --> 00:59:07,647
+H2off what's a little bit
+
+854
+00:59:12,767 --> 00:59:14,047
+Okay
+
+855
+00:59:15,583 --> 00:59:16,863
+I miss talking to him here
+
+856
+00:59:18,143 --> 00:59:24,287
+This time can be made arbitrarily small if well it vanishes is
+
+857
+00:59:26,335 --> 00:59:30,431
+Is much bigger than nh2 Avast
+
+858
+00:59:31,199 --> 00:59:35,039
+Rearranging that says if I move in
+
+859
+00:59:36,063 --> 00:59:38,879
+Is bigger than 8 to advance
+
+860
+00:59:40,159 --> 00:59:42,207
+Or rearranging again into terms
+
+861
+00:59:42,719 --> 00:59:43,999
+That we do like
+
+862
+00:59:44,255 --> 00:59:46,047
+1 - M / n
+
+863
+00:59:47,327 --> 00:59:48,351
+Is less than
+
+864
+00:59:48,607 --> 00:59:51,679
+One- H2O
+
+865
+00:59:52,447 --> 00:59:55,007
+I just run out of boards because that
+
+866
+00:59:55,263 --> 00:59:56,031
+It's saying
+
+867
+00:59:56,543 --> 00:59:59,359
+But this second time here vanishes
+
+868
+01:00:01,663 --> 01:00:02,431
+The right
+
+869
+01:00:03,199 --> 01:00:03,967
+His last
+
+870
+01:00:04,479 --> 01:00:05,503
+Van
+
+871
+01:00:05,759 --> 01:00:07,039
+The capacity
+
+872
+01:00:11,135 --> 01:00:12,159
+Guess the race
+
+873
+01:00:12,927 --> 01:00:19,071
+Is what channel this particular channel is 1 -
+
+874
+01:00:20,351 --> 01:00:22,399
+H2O
+
+875
+01:00:22,655 --> 01:00:28,799
+Thus we have proved noisy Channel coding for the binary symmetric Channel
+
+876
+01:00:29,055 --> 01:00:29,823
+Of s
+
+877
+01:00:30,079 --> 01:00:32,895
+And we did it by using sing Dustin bag
+
+878
+01:00:33,407 --> 01:00:36,991
+How do we already used to prove the source heading to proofs
+
+879
+01:00:37,247 --> 01:00:38,271
+The price of love
+
+880
+01:00:45,951 --> 01:00:47,231
+Are there any questions
+
+881
+01:00:49,535 --> 01:00:52,607
+American have questions about everything we've done in the first
+
+882
+01:00:52,863 --> 01:00:54,399
+Electra yes
+
+883
+01:01:03,103 --> 01:01:03,871
+Okay
+
+884
+01:01:04,127 --> 01:01:05,407
+So
+
+885
+01:01:07,199 --> 01:01:07,711
+Right
+
+886
+01:01:08,479 --> 01:01:09,759
+So the question is
+
+887
+01:01:10,015 --> 01:01:12,319
+What was this step from here
+
+888
+01:01:12,575 --> 01:01:13,087
+2 hair
+
+889
+01:01:15,391 --> 01:01:20,511
+Yeah alright why is it bigger. Hopefully that's going to be easy let's just make clear what we're doing here
+
+890
+01:01:22,559 --> 01:01:24,095
+At this point we were saying
+
+891
+01:01:24,351 --> 01:01:28,191
+I'm worried about the possibility this annoys back to Mike come along
+
+892
+01:01:28,703 --> 01:01:29,471
+Such that
+
+893
+01:01:29,727 --> 01:01:32,799
+There is another noise that cat in the bag with the same syndrome
+
+894
+01:01:33,567 --> 01:01:35,103
+On the probability of era
+
+895
+01:01:35,615 --> 01:01:36,895
+Is the probability
+
+896
+01:01:37,151 --> 01:01:37,663
+That
+
+897
+01:01:37,919 --> 01:01:41,247
+The number of such classes is he the one or two or three or four
+
+898
+01:01:42,015 --> 01:01:48,159
+That's a very complicated proposition to deal with if I tell you I want to know the probability that the number of classes
+
+899
+01:01:48,415 --> 01:01:50,719
+This is either one or two or three or four
+
+900
+01:01:51,231 --> 01:01:53,535
+And I don't care whether it's one or two or three or four
+
+901
+01:01:54,047 --> 01:01:57,119
+It turns out to be much much easier to say
+
+902
+01:01:57,887 --> 01:02:02,239
+Take this ticket out of the bag I want to know what the probability of clashing with this ticket
+
+903
+01:02:02,495 --> 01:02:05,311
+Then after that the provision flashing with this one
+
+904
+01:02:05,567 --> 01:02:11,711
+Then add the prophetic blessing with this one so I take every single ticket and separately book how was the probability of a classroom
+
+905
+01:02:11,967 --> 01:02:12,479
+Central
+
+906
+01:02:12,735 --> 01:02:14,271
+Then at all of those up
+
+907
+01:02:14,527 --> 01:02:18,111
+I'm not much easier because I answer a question about just
+
+908
+01:02:18,367 --> 01:02:22,719
+The original end and the end twiddle on this ticket that's much easier thing
+
+909
+01:02:22,975 --> 01:02:26,815
+Astrakhan we could answer that question then at least we could do the averaging
+
+910
+01:02:27,071 --> 01:02:27,583
+Easily
+
+911
+01:02:28,095 --> 01:02:30,911
+If we do that if we say what's the probability of a class with this one
+
+912
+01:02:31,167 --> 01:02:37,311
+And what's wrong with you besides for this and if we then add all those up Ashley over counting the probability of era
+
+913
+01:02:37,567 --> 01:02:43,711
+Because errors which may be rare is will occur when there is a clash Nick could be the Clash
+
+914
+01:02:43,967 --> 01:02:44,991
+Clumps
+
+915
+01:02:45,247 --> 01:02:46,783
+The wind there was a Clash
+
+916
+01:02:47,039 --> 01:02:49,855
+Revista Cara's
+
+917
+01:02:50,367 --> 01:02:52,927
+I'm so adding up the probability
+
+918
+01:02:53,951 --> 01:02:58,303
+Old individual crashes and adding those together gives you over estimate
+
+919
+01:02:58,559 --> 01:02:59,839
+Of the probability of era
+
+920
+01:03:00,351 --> 01:03:02,143
+Because you got only one IRA
+
+921
+01:03:02,399 --> 01:03:05,215
+When does the big car crash of clashing with each other
+
+922
+01:03:05,471 --> 01:03:07,775
+So we deliberately overestimating
+
+923
+01:03:08,031 --> 01:03:09,567
+The true probability of Ira
+
+924
+01:03:09,823 --> 01:03:10,335
+Bye
+
+925
+01:03:11,359 --> 01:03:13,663
+Taking a simpler thing to compute
+
+926
+01:03:14,175 --> 01:03:20,319
+Does a standard name for this cuz I forgot to note the type of mathematical operation we doing Harris
+
+927
+01:03:22,367 --> 01:03:25,695
+Union bound OK Google the union bound
+
+928
+01:03:26,719 --> 01:03:27,231
+All right
+
+929
+01:03:27,487 --> 01:03:31,327
+So you got a load of different possibilities that you're worried about
+
+930
+01:03:31,583 --> 01:03:35,679
+And if any of them happens it's bad news what's the probability of bad news happening
+
+931
+01:03:35,935 --> 01:03:39,007
+Well we're going to work out the probability of bad things happening
+
+932
+01:03:39,263 --> 01:03:45,151
+Then workout has a bad thing to them what kind of problems can Bad Thing 3 happening together
+
+933
+01:03:45,407 --> 01:03:51,551
+That will actually overestimate the true probability of a bad thing happening
+
+934
+01:03:51,807 --> 01:03:54,879
+That's the meaning of this inequality
+
+935
+01:03:56,159 --> 01:03:57,695
+Any other questions
+
+936
+01:04:00,511 --> 01:04:01,535
+It's a union that
+
+937
+01:04:02,047 --> 01:04:04,351
+But any questions about this proof
+
+938
+01:04:06,143 --> 01:04:07,423
+Any questions about
+
+939
+01:04:07,679 --> 01:04:08,959
+Let's just want to 8
+
+940
+01:04:09,983 --> 01:04:13,567
+Because we're now essentially done with information Theory
+
+941
+01:04:13,823 --> 01:04:17,151
+Not told you the whole of information Theory compression bit
+
+942
+01:04:17,407 --> 01:04:19,199
+Where's on the noisy Channel coding bit
+
+943
+01:04:19,967 --> 01:04:21,759
+That's all there any questions about
+
+944
+01:04:23,039 --> 01:04:24,831
+Great depression when was Utah County
+
+945
+01:04:42,239 --> 01:04:43,007
+Okay
+
+946
+01:04:58,879 --> 01:05:05,023
+Okay so the question is how do these tickets relate to pay which of
+
+947
+01:05:05,279 --> 01:05:11,423
+The sender and am which is the number of constraints the number of constrained
+
+948
+01:05:11,679 --> 01:05:14,495
+Find a code that way using
+
+949
+01:05:17,055 --> 01:05:18,847
+The tickets that we bought
+
+950
+01:05:20,639 --> 01:05:23,455
+Hypotheses written on them
+
+951
+01:05:23,711 --> 01:05:25,759
+Of what the noise vaxxine might be
+
+952
+01:05:26,527 --> 01:05:30,879
+And they all have the property that they got lots of zeros in a small number of 1
+
+953
+01:05:32,927 --> 01:05:35,999
+Because we know by typicality
+
+954
+01:05:36,767 --> 01:05:42,911
+That it's very likely that the actual number ones will be a Bath & F bus line
+
+955
+01:05:44,191 --> 01:05:45,215
+Flatter yourself
+
+956
+01:05:47,775 --> 01:05:52,383
+Find some little X Alpha to ensure that 99.9999%
+
+957
+01:05:52,639 --> 01:05:55,199
+Probability that the number of Long's
+
+958
+01:05:56,479 --> 01:05:58,527
+Looks like that
+
+959
+01:05:59,551 --> 01:06:04,415
+How does this relate to the sender is choosing to send
+
+960
+01:06:05,183 --> 01:06:11,327
+Well it's completely unrelated cuz he's noise actors added to the transmission
+
+961
+01:06:11,583 --> 01:06:13,119
+To the transmission itself
+
+962
+01:06:14,655 --> 01:06:16,191
+House just the same length
+
+963
+01:06:16,703 --> 01:06:22,335
+That will be a subset of those bits which conventionally often sits at the left hand side but don't have to
+
+964
+01:06:22,591 --> 01:06:23,871
+I'll be a subset of them
+
+965
+01:06:24,383 --> 01:06:25,407
+Numbering k
+
+966
+01:06:25,663 --> 01:06:31,807
+Which are set by the user so he's will be so that's one S2 S3 up to SK
+
+967
+01:06:33,087 --> 01:06:36,671
+And then the remaining ones will be sent by the constraints
+
+968
+01:06:37,183 --> 01:06:39,743
+Shelby these end of a bit
+
+969
+01:06:40,255 --> 01:06:45,887
+Tek plus one up to TN by the constraints
+
+970
+01:06:46,143 --> 01:06:48,447
+This is what we send it has
+
+971
+01:06:48,703 --> 01:06:54,847
+Nothing to do with the noise that goes it won't look like any of them it's very likely to be a dentist
+
+972
+01:06:55,103 --> 01:06:59,967
+These ones are very likely to look down as well
+
+973
+01:07:00,991 --> 01:07:05,087
+So that's what gets transmitted what's been received is the sum of these two
+
+974
+01:07:05,855 --> 01:07:11,999
+Then we hit that with the syndrome operation which is HJ bring on h u attacked people ascend
+
+975
+01:07:13,791 --> 01:07:15,583
+Which is received manga
+
+976
+01:07:16,351 --> 01:07:18,399
+Give you then
+
+977
+01:07:18,655 --> 01:07:19,935
+That value is that
+
+978
+01:07:20,447 --> 01:07:22,495
+Is 8 * 2 + 8 * n
+
+979
+01:07:22,751 --> 01:07:25,567
+Which is 8 times n
+
+980
+01:07:25,823 --> 01:07:27,615
+Which is completely independent of t
+
+981
+01:07:28,127 --> 01:07:34,271
+So yes the user was able to choose K if a bit since that them and then the constraints will use them
+
+982
+01:07:34,527 --> 01:07:37,087
+But the syndrome doesn't depend a******
+
+983
+01:07:37,343 --> 01:07:39,647
+It's completely independent
+
+984
+01:07:40,159 --> 01:07:45,023
+Whether we will achieve successful communication on this particular the use of the channel
+
+985
+01:07:45,791 --> 01:07:50,143
+Will depend on what end is because our success will be
+
+986
+01:07:50,399 --> 01:07:54,751
+Determined by the syndrome Dakota being able to identify and or not
+
+987
+01:07:55,775 --> 01:07:58,079
+Whether we succeed or not depends on
+
+988
+01:07:58,335 --> 01:08:04,479
+The center of Dakota identifying and that has nothing to do with T is completely independent
+
+989
+01:08:04,735 --> 01:08:07,807
+712 Harmon Cove we have the property that if you flip a bit
+
+990
+01:08:08,575 --> 01:08:09,087
+Then
+
+991
+01:08:09,343 --> 01:08:12,671
+You can detect that flip bit and it doesn't matter what the source
+
+992
+01:08:13,183 --> 01:08:14,207
+Choice Watson
+
+993
+01:08:14,975 --> 01:08:15,743
+Okay
+
+994
+01:08:16,255 --> 01:08:20,863
+So the 7 full having code is the analogy to use have to understand why
+
+995
+01:08:21,119 --> 01:08:22,655
+T doesn't matter at all
+
+996
+01:08:23,679 --> 01:08:25,471
+If we succeed
+
+997
+01:08:25,727 --> 01:08:31,871
+Then we will have identified an and we can add it back on to to some practice so sorry we could
+
+998
+01:08:32,127 --> 01:08:36,223
+Subtract it back off the receiver actor and did you steal again
+
+999
+01:08:36,991 --> 01:08:40,063
+That's how we actually would recover the transmission
+
+1000
+01:08:41,343 --> 01:08:43,135
+Any more questions
+
+1001
+01:08:46,463 --> 01:08:47,743
+Thank you for being here

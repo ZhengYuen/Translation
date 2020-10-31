@@ -1,0 +1,6715 @@
+1
+00:00:06,144 --> 00:00:12,288
+Let's recap where we're up to in the course and what relevant reading in the text
+
+2
+00:00:12,544 --> 00:00:13,312
+Book
+
+3
+00:00:14,080 --> 00:00:20,224
+We've done a lot of information Theory data compression and when I went to the inference and data modeling
+
+4
+00:00:22,272 --> 00:00:24,064
+The relevant chapters
+
+5
+00:00:24,320 --> 00:00:27,648
+7 haircut
+
+6
+00:00:27,904 --> 00:00:30,976
+What color method 91352
+
+7
+00:00:31,488 --> 00:00:34,560
+But I still message coming up in the next chapter 33
+
+8
+00:00:34,816 --> 00:00:36,864
+I'd like to highlight some additional reading
+
+9
+00:00:37,120 --> 00:00:41,728
+Whitcomb's material we wasn't doing lectures but it's a good thing to do
+
+10
+00:00:41,984 --> 00:00:46,336
+I encourage you to read a very short chapter cold
+
+11
+00:00:46,592 --> 00:00:50,176
+And in order to understand this life and the next one
+
+12
+00:00:50,432 --> 00:00:56,064
+You may want to read about icing models in you want if you're not already familiar with them
+
+13
+00:00:57,088 --> 00:01:02,976
+Isn't that whole bunch of recommended exercise is on the website and some of some of them are on the screen
+
+14
+00:01:03,232 --> 00:01:07,072
+Now you may enjoy doing that if I said anything you want
+
+15
+00:01:07,328 --> 00:01:10,656
+Fully understand Imperial then doing the exercises is a
+
+16
+00:01:10,912 --> 00:01:11,936
+Kipapa School
+
+17
+00:01:12,192 --> 00:01:16,032
+The course website the books website is there
+
+18
+00:01:18,080 --> 00:01:20,640
+We're in the middle of talking about Monte Carlo methods
+
+19
+00:01:21,920 --> 00:01:24,224
+In the last lecture we introduced some
+
+20
+00:01:24,480 --> 00:01:27,552
+Basic standard Monte Carlo methods
+
+21
+00:01:28,576 --> 00:01:32,416
+And the rules of the game that we are interested in
+
+22
+00:01:32,928 --> 00:01:35,488
+Red distribution copay
+
+23
+00:01:35,744 --> 00:01:38,048
+It's rats cuz it's a bit nasty
+
+24
+00:01:39,328 --> 00:01:40,096
+It's not
+
+25
+00:01:40,864 --> 00:01:43,168
+We can compute it
+
+26
+00:01:43,424 --> 00:01:47,520
+So we can write it as Ethan the lineup
+
+27
+00:01:47,776 --> 00:01:50,592
+On Zed and we have computer program
+
+28
+00:01:52,128 --> 00:01:53,920
+Evaluate this thing for any
+
+29
+00:01:54,432 --> 00:01:57,504
+Value of XX being a certified diamond small thing
+
+30
+00:01:58,016 --> 00:02:00,320
+These properties were interested in under the sister Beach
+
+31
+00:02:00,832 --> 00:02:02,368
+So the rules of the game
+
+32
+00:02:02,624 --> 00:02:04,672
+They can evaluate
+
+33
+00:02:08,256 --> 00:02:14,400
+But not that we don't know that cuz that would be of interest to be like
+
+34
+00:02:14,656 --> 00:02:19,520
+Want to know that we often give up on his head because it's so hot
+
+35
+00:02:19,776 --> 00:02:25,408
+On the problems with
+
+36
+00:02:26,432 --> 00:02:29,760
+Problem one says give me some samples
+
+37
+00:02:30,016 --> 00:02:36,160
+Repeat
+
+38
+00:02:37,184 --> 00:02:43,328
+Either by phone or in some other way please tell me the expected value of some functions I'm interested in
+
+39
+00:02:43,584 --> 00:02:46,656
+Under anesthesia red distribution
+
+40
+00:02:46,912 --> 00:02:48,960
+Average value of pi
+
+41
+00:02:49,472 --> 00:02:51,264
+Because some function I'm interested in
+
+42
+00:02:53,568 --> 00:02:59,712
+Not the average under the Nazi rest distribution of the function
+
+43
+00:02:59,968 --> 00:03:02,272
+Disable touch functions pie
+
+44
+00:03:02,528 --> 00:03:04,832
+You all
+
+45
+00:03:05,088 --> 00:03:06,880
+We can use
+
+46
+00:03:07,392 --> 00:03:13,536
+Solutions to problem want to answer problem too because we can just died his intestine
+
+47
+00:03:13,792 --> 00:03:15,840
+Mesa all
+
+48
+00:03:16,096 --> 00:03:19,424
+Expected value we can estimate
+
+49
+00:03:20,192 --> 00:03:26,336
+That's by summing up by
+
+50
+00:03:26,592 --> 00:03:31,968
+I hope that you got from the distribution empirical average of cost
+
+51
+00:03:33,504 --> 00:03:37,600
+Boy abusing
+
+52
+00:03:38,624 --> 00:03:44,768
+Sometimes today the nasty red distribution will be the fee
+
+53
+00:03:45,024 --> 00:03:51,168
+Spin systems are one example I mentioned in the last night. Maybe were interested in
+
+54
+00:03:51,424 --> 00:03:51,936
+Magnets
+
+55
+00:03:52,448 --> 00:03:57,056
+And we have a spin system with an energy
+
+56
+00:03:57,312 --> 00:04:01,152
+That depends on the couplings J
+
+57
+00:04:06,784 --> 00:04:12,928
+The Energy System the energy of a system is
+
+58
+00:04:13,184 --> 00:04:14,976
+The sum of a loader
+
+59
+00:04:20,095 --> 00:04:21,631
+Weighted
+
+60
+00:04:24,191 --> 00:04:26,751
+Truck X between Pairs of spins
+
+61
+00:04:27,007 --> 00:04:32,127
+And the mail also be local Fields H and HIV
+
+62
+00:04:32,639 --> 00:04:36,735
+Pale skins and there is
+
+63
+00:04:39,295 --> 00:04:43,903
+An n-dimensional binary that
+
+64
+00:04:44,671 --> 00:04:50,815
+But that's an example of a problem we want to focus all the sort of things you might want to know
+
+65
+00:04:51,071 --> 00:04:57,215
+But you're not a magnet what is its average energy
+
+66
+00:04:57,471 --> 00:05:03,615
+Fluctuations in its energy with you can get if you know the mean squared energy I mean honestly what this mean
+
+67
+00:05:03,871 --> 00:05:09,247
+Magnetisation which is the average of the spindle
+
+68
+00:05:09,503 --> 00:05:11,807
+Maybe mean squared
+
+69
+00:05:12,063 --> 00:05:13,343
+Magnetisation
+
+70
+00:05:13,599 --> 00:05:19,743
+Andrew might be interested in the entropy which which is the average
+
+71
+00:05:19,999 --> 00:05:22,303
+Log on everything
+
+72
+00:05:24,351 --> 00:05:28,191
+A bunch of things we might want tonight
+
+73
+00:05:28,703 --> 00:05:34,847
+Hernando magnet and you probably won't want to know all of those out of range of temperature so I can pop in it
+
+74
+00:05:35,103 --> 00:05:36,383
+Domino's Pizza
+
+75
+00:05:36,639 --> 00:05:42,783
+Like this and then recall
+
+76
+00:05:44,063 --> 00:05:49,183
+The inverse temperature Pizza is inverse temperature
+
+77
+00:05:50,719 --> 00:05:54,047
+So those are examples of things you might want to know
+
+78
+00:05:57,375 --> 00:06:03,519
+And I emphasize last time when we do Monte Carlo message we are not trying to find BMO
+
+79
+00:06:03,775 --> 00:06:07,359
+Most probable State offices
+
+80
+00:06:08,639 --> 00:06:14,783
+We would only be completely doing that if we set the temperature
+
+81
+00:06:15,039 --> 00:06:19,903
+Body cold then it will hopefully be fine
+
+82
+00:06:20,159 --> 00:06:26,303
+The Golem
+
+83
+00:06:26,559 --> 00:06:28,607
+A few samples
+
+84
+00:06:28,863 --> 00:06:29,887
+Look like
+
+85
+00:06:30,143 --> 00:06:36,287
+I'm going to try to visit the whole of it
+
+86
+00:06:36,543 --> 00:06:38,591
+The number of electrons in the universe
+
+87
+00:06:38,847 --> 00:06:40,895
+Embrace preferring lost power
+
+88
+00:06:42,175 --> 00:06:48,319
+Okay so that's the rules of the game and an example of what we doing last time
+
+89
+00:06:48,575 --> 00:06:51,391
+We discussed importance sampling rejection sampling
+
+90
+00:06:52,671 --> 00:06:55,231
+Get something on the Metropolis method
+
+91
+00:06:55,487 --> 00:07:01,631
+Metropolis method is actually a very general cancel because many of the other methods are examples
+
+92
+00:07:01,887 --> 00:07:08,031
+When I say the Metropolis message today I'm quite helping using a push or pull
+
+93
+00:07:08,287 --> 00:07:12,383
+Publix method with a simple proposal Distribution off the Titan High code
+
+94
+00:07:12,639 --> 00:07:14,943
+And the little
+
+95
+00:07:15,199 --> 00:07:19,551
+Let's repeat that little show now just to remind you what we were doing
+
+96
+00:07:19,807 --> 00:07:25,695
+So we have a nephew probability distribution in red and have functions whose average values
+
+97
+00:07:26,207 --> 00:07:27,487
+You're interested in
+
+98
+00:07:31,583 --> 00:07:37,727
+We looked at simple sampling from a uniform distribution and then we wait
+
+99
+00:07:37,983 --> 00:07:44,127
+Taking Point sampling distribution
+
+100
+00:07:44,383 --> 00:07:50,527
+No problem turning green the Easy distribution cute then you rewrite the point
+
+101
+00:07:50,783 --> 00:07:52,319
+Sampling Yuri weight
+
+102
+00:07:52,575 --> 00:07:54,367
+The five values
+
+103
+00:07:54,623 --> 00:07:58,207
+To take account of having used the wrong distribution
+
+104
+00:07:58,463 --> 00:08:02,047
+And we did that for a variety of distribution cookies
+
+105
+00:08:03,327 --> 00:08:04,863
+Then we
+
+106
+00:08:05,119 --> 00:08:11,263
+Rejection sampling which is a perfectly sampling from the red distribution by throwing away
+
+107
+00:08:11,519 --> 00:08:14,847
+Some of the samples from the green distribution
+
+108
+00:08:15,871 --> 00:08:17,407
+And rejection sampling
+
+109
+00:08:18,431 --> 00:08:19,967
+Doesn't work if you do it wrong
+
+110
+00:08:20,223 --> 00:08:23,039
+Nickel / dimensions
+
+111
+00:08:23,295 --> 00:08:24,063
+But it
+
+112
+00:08:24,575 --> 00:08:29,439
+Open Bible technique in small numbers of dimensions
+
+113
+00:08:29,695 --> 00:08:35,839
+And there are high dimensional methods which can use rejection sampling
+
+114
+00:08:36,095 --> 00:08:37,631
+Opponents to make them go
+
+115
+00:08:37,887 --> 00:08:41,471
+Something being used in one dimension as a Time
+
+116
+00:08:42,751 --> 00:08:45,055
+Then we go down to the Metropolis message
+
+117
+00:08:45,567 --> 00:08:48,639
+And my examples of metropolis message was that
+
+118
+00:08:48,895 --> 00:08:52,479
+Have a continuous space and the Nazi distribution is turning red
+
+119
+00:08:54,015 --> 00:09:00,159
+We introduced a green distribution which varies with the current states whatever your current state is required
+
+120
+00:09:00,415 --> 00:09:06,559
+For example
+
+121
+00:09:06,815 --> 00:09:10,399
+Properties of the red it doesn't have to be
+
+122
+00:09:10,655 --> 00:09:16,799
+So you pick any Q you want and then there's a rule when you grew up and let you but either accept thing
+
+123
+00:09:17,055 --> 00:09:19,103
+Florida get a proposal
+
+124
+00:09:19,359 --> 00:09:20,639
+I'm retarded around
+
+125
+00:09:26,527 --> 00:09:32,671
+The rejection lead to point piling up in the places where it is think so
+
+126
+00:09:32,927 --> 00:09:35,487
+Green distributions
+
+127
+00:09:35,999 --> 00:09:38,815
+Projections for the strength
+
+128
+00:09:39,071 --> 00:09:40,351
+Come Sunday
+
+129
+00:09:40,607 --> 00:09:41,631
+Bread distribution
+
+130
+00:09:42,143 --> 00:09:48,287
+And there's a fair that almost any greened recent Q
+
+131
+00:09:53,663 --> 00:09:55,199
+Will Givens
+
+132
+00:09:55,455 --> 00:09:56,479
+Long running time
+
+133
+00:09:56,735 --> 00:10:00,319
+Give you a sign for what Auntie comes from
+
+134
+00:10:00,575 --> 00:10:02,111
+Feed the thread distribution
+
+135
+00:10:03,135 --> 00:10:09,279
+Asymptotic time could be extremely long if you've made a poor choice of
+
+136
+00:10:15,423 --> 00:10:19,775
+I also showed you get something I wasn't recap for the kids that are now
+
+137
+00:10:21,311 --> 00:10:23,871
+But that's a little bit rock and roll
+
+138
+00:10:24,127 --> 00:10:28,479
+Updating one variable at a time from its conditional distribution
+
+139
+00:10:28,735 --> 00:10:31,295
+To get something nice property
+
+140
+00:10:32,063 --> 00:10:35,135
+But it doesn't have any parameters in it unlike
+
+141
+00:10:35,391 --> 00:10:37,951
+The public
+
+142
+00:10:38,207 --> 00:10:43,583
+That pickup
+
+143
+00:10:43,839 --> 00:10:45,887
+And that might be questioned important
+
+144
+00:10:46,143 --> 00:10:52,287
+Get something is not it doesn't mean to get something but at least you don't have to chew
+
+145
+00:10:54,591 --> 00:10:55,103
+Okay
+
+146
+00:10:56,127 --> 00:10:57,663
+What we're going to do now is
+
+147
+00:10:58,431 --> 00:11:03,551
+Focus in a bit Home Depot
+
+148
+00:11:03,807 --> 00:11:09,695
+And we're going to criticize it we are motivated to do the advice
+
+149
+00:11:10,719 --> 00:11:11,487
+So
+
+150
+00:11:13,535 --> 00:11:19,679
+Here are the problems with the standard most especially the Metropolis
+
+151
+00:11:19,935 --> 00:11:26,079
+But it gets around by random Walk and Run the books can be very slow
+
+152
+00:11:27,103 --> 00:11:27,615
+Second
+
+153
+00:11:28,127 --> 00:11:29,919
+Chocolate method I showed you
+
+154
+00:11:30,175 --> 00:11:34,271
+Hyukoh Stepside to it and the results that you got very sensitive
+
+155
+00:11:34,527 --> 00:11:39,647
+To the choice of steps I didn't choose honeysett size
+
+156
+00:11:39,903 --> 00:11:46,047
+If you use two biggest that side then typically you'll get nowhere very slowly
+
+157
+00:11:47,071 --> 00:11:47,583
+So
+
+158
+00:11:47,839 --> 00:11:52,447
+You have to choose exactly and it would be great for the scaffold training
+
+159
+00:11:53,215 --> 00:11:54,495
+How to get good results
+
+160
+00:11:55,519 --> 00:11:56,287
+Finally
+
+161
+00:11:57,055 --> 00:12:03,199
+I told you I said that's a synthetic leave this thing will converge but there's no way of telling that they send a message
+
+162
+00:12:03,455 --> 00:12:08,575
+Well how they can book you can run a whole letter Diagnostics that you really don't get any guarantee of confession
+
+163
+00:12:08,831 --> 00:12:12,159
+I'm going to look at Solutions of all three of these
+
+164
+00:12:12,415 --> 00:12:13,951
+Problems today
+
+165
+00:12:14,207 --> 00:12:20,351
+Behavior
+
+166
+00:12:20,607 --> 00:12:26,751
+Still have some
+
+167
+00:12:27,007 --> 00:12:28,031
+To those promises
+
+168
+00:12:28,287 --> 00:12:29,567
+Taken away
+
+169
+00:12:30,335 --> 00:12:33,663
+I'm finally I was discussing amazing thing for the exact time
+
+170
+00:12:34,687 --> 00:12:36,479
+Which is a method that
+
+171
+00:12:36,735 --> 00:12:42,879
+Effectively runs the change of time even though it's only uses a finite
+
+172
+00:12:43,135 --> 00:12:44,927
+Stop
+
+173
+00:12:46,719 --> 00:12:47,487
+Brilliant
+
+174
+00:12:47,999 --> 00:12:51,071
+Let's talk about random walk Behavior
+
+175
+00:12:52,351 --> 00:12:53,631
+I want to
+
+176
+00:12:53,887 --> 00:12:57,471
+Look at a simple a really simple example
+
+177
+00:13:00,543 --> 00:13:01,823
+Run home
+
+178
+00:13:02,591 --> 00:13:05,151
+Challenge of Running Wolf behavior is
+
+179
+00:13:06,431 --> 00:13:07,711
+So
+
+180
+00:13:07,967 --> 00:13:09,247
+Here we have
+
+181
+00:13:10,271 --> 00:13:11,295
+A little demo
+
+182
+00:13:12,063 --> 00:13:14,111
+Which is the following
+
+183
+00:13:14,367 --> 00:13:15,391
+Poly problem
+
+184
+00:13:18,207 --> 00:13:19,743
+Something you like
+
+185
+00:13:28,191 --> 00:13:29,471
+So for the polywell
+
+186
+00:13:29,983 --> 00:13:33,055
+The red distribution unnormalized
+
+187
+00:13:33,311 --> 00:13:35,359
+Is Wong
+
+188
+00:13:35,615 --> 00:13:39,455
+In a bunch of places and zero in a bunch of other
+
+189
+00:13:39,711 --> 00:13:41,503
+Clifton II
+
+190
+00:13:44,319 --> 00:13:50,463
+And it warm whenever X is in this subset of the type of windshield long to read
+
+191
+00:13:50,719 --> 00:13:51,999
+20
+
+192
+00:13:52,767 --> 00:13:57,119
+Zero Otto i t distribution
+
+193
+00:13:57,375 --> 00:14:00,959
+Which is a very good grass in your head
+
+194
+00:14:09,407 --> 00:14:12,991
+We're going to pretend that we can draw directly from that distribution
+
+195
+00:14:13,503 --> 00:14:19,647
+And to help us we're going to introduce a simple distribution that we can draw from because we do have access to a Fair coin
+
+196
+00:14:19,903 --> 00:14:24,511
+I'm going to make a proposal
+
+197
+00:14:25,279 --> 00:14:29,119
+The new from the current place at to a new place ex-prime
+
+198
+00:14:29,631 --> 00:14:30,655
+Can this way
+
+199
+00:14:30,911 --> 00:14:34,239
+We're going to flip a coin and it's going to come out
+
+200
+00:14:35,263 --> 00:14:38,591
+If it comes up heads will say let's move left
+
+201
+00:14:38,847 --> 00:14:39,871
+It comes up
+
+202
+00:14:40,127 --> 00:14:43,199
+Tails with a right
+
+203
+00:14:43,711 --> 00:14:44,479
+What unit
+
+204
+00:14:44,991 --> 00:14:51,135
+So this is an example of a nasty distribution which if we actually knew how
+
+205
+00:14:51,391 --> 00:14:54,719
+Why did walls we would realize it roughly 20
+
+206
+00:14:55,231 --> 00:14:57,791
+Why the Catholic I was going to be my name
+
+207
+00:14:58,047 --> 00:15:00,351
+The long light tile distribution
+
+208
+00:15:00,863 --> 00:15:03,679
+On the steps that which I was taken care
+
+209
+00:15:07,519 --> 00:15:11,615
+Call cool pet supplies long from getting a name to my
+
+210
+00:15:11,871 --> 00:15:15,967
+Stepside price at salon
+
+211
+00:15:17,759 --> 00:15:18,527
+Okay
+
+212
+00:15:18,783 --> 00:15:24,159
+What do I mean by Elwell it's something like the distance from Walton typical point in the typical set
+
+213
+00:15:24,671 --> 00:15:25,951
+To another physical point
+
+214
+00:15:26,719 --> 00:15:27,487
+Something like that
+
+215
+00:15:27,743 --> 00:15:30,815
+You could argue maybe that or else should be Channel
+
+216
+00:15:31,071 --> 00:15:32,607
+14
+
+217
+00:15:35,423 --> 00:15:39,007
+Awesome questions about this chain
+
+218
+00:15:39,263 --> 00:15:45,407
+Set it going you can imagine if this is plenty
+
+219
+00:15:45,663 --> 00:15:49,759
+Is why I could performance Poison Ivy by The Calling
+
+220
+00:15:50,015 --> 00:15:52,319
+Inteva moving to the right or the left
+
+221
+00:15:54,367 --> 00:16:00,511
+This proposed moves when you use them
+
+222
+00:16:00,767 --> 00:16:06,911
+Because the probability ratio between any two
+
+223
+00:16:07,167 --> 00:16:12,031
+I'm a cure so he's always going to be Wong
+
+224
+00:16:12,287 --> 00:16:15,871
+When I have to get the wool if we propose
+
+225
+00:16:16,639 --> 00:16:18,175
+Moving to the right
+
+226
+00:16:18,431 --> 00:16:19,967
+Then that will be division
+
+227
+00:16:20,735 --> 00:16:24,319
+And you'll get mixed up with probability of 0 Texas
+
+228
+00:16:24,831 --> 00:16:28,671
+So that's the first 20 steps on the screen
+
+229
+00:16:28,927 --> 00:16:33,023
+All This Time Staffing problem
+
+230
+00:16:33,279 --> 00:16:37,375
+Monogatari fight
+
+231
+00:16:37,631 --> 00:16:40,447
+How to get to it
+
+232
+00:16:40,959 --> 00:16:44,287
+I'm not princess right questions for YouTube
+
+233
+00:16:45,311 --> 00:16:46,335
+Western Wall
+
+234
+00:16:47,615 --> 00:16:48,895
+Roughly
+
+235
+00:16:50,431 --> 00:16:55,039
+How long will it take until the chain generate a good sample from Pig
+
+236
+00:17:04,767 --> 00:17:05,791
+Gold Exchange
+
+237
+00:17:06,815 --> 00:17:07,839
+Tannerite
+
+238
+00:17:10,143 --> 00:17:11,167
+That's good
+
+239
+00:17:11,935 --> 00:17:13,215
+Sample from 8
+
+240
+00:17:17,823 --> 00:17:22,431
+I have already to find few good but I just want you to send your neighbor and
+
+241
+00:17:24,223 --> 00:17:27,551
+Answer the question anyway this is the real world
+
+242
+00:17:28,319 --> 00:17:30,367
+Define things to think
+
+243
+00:17:31,135 --> 00:17:33,183
+So how long is it going to have to run for
+
+244
+00:17:37,535 --> 00:17:43,679
+And if you're struggling with that question is another question which is more precise
+
+245
+00:17:43,935 --> 00:17:45,471
+I think it's going to be roughly
+
+246
+00:17:45,727 --> 00:17:46,495
+Until
+
+247
+00:17:47,263 --> 00:17:49,055
+We hit
+
+248
+00:17:49,567 --> 00:17:50,335
+Hey
+
+249
+00:17:50,591 --> 00:17:53,151
+1 Willowdale
+
+250
+00:17:54,431 --> 00:17:58,015
+Christian Grey how long until weed
+
+251
+00:17:58,783 --> 00:18:01,087
+How long you think you'll be until April
+
+252
+00:18:10,303 --> 00:18:16,447
+Take questions two and three off precise question
+
+253
+00:18:16,703 --> 00:18:18,751
+I'd like you to rub plate
+
+254
+00:18:19,007 --> 00:18:22,847
+Tell me what that how long
+
+255
+00:18:23,103 --> 00:18:25,663
+It's always that one will how long until
+
+256
+00:18:25,919 --> 00:18:27,711
+And then you gotta think about whether those
+
+257
+00:18:28,479 --> 00:18:32,831
+Questions are relevant to question 1 how long do you need to run the chainsaw
+
+258
+00:18:33,343 --> 00:18:34,623
+Stop coughing from
+
+259
+00:18:34,879 --> 00:18:36,159
+Sciatica pain
+
+260
+00:18:37,183 --> 00:18:38,975
+Until you think you getting a good
+
+261
+00:18:40,767 --> 00:18:42,047
+Friends
+
+262
+00:18:47,935 --> 00:18:50,751
+Okay honey
+
+263
+00:18:51,263 --> 00:18:52,799
+Any of these questions
+
+264
+00:18:58,943 --> 00:19:00,991
+Okay which question are you
+
+265
+00:19:01,247 --> 00:19:01,759
+Anne Frank
+
+266
+00:19:08,927 --> 00:19:10,463
+Okay so
+
+267
+00:19:10,719 --> 00:19:15,327
+How to get a good sample from P you're saying it has to have a chance to
+
+268
+00:19:16,607 --> 00:19:17,887
+Getting quite a long way
+
+269
+00:19:18,143 --> 00:19:21,727
+And that's going to be quite a rare thing that manages to go a long way
+
+270
+00:19:22,239 --> 00:19:24,031
+So your suggestion was
+
+271
+00:19:25,311 --> 00:19:31,455
+Wanted made about 10 unlikely things happened then maybe we will
+
+272
+00:19:32,735 --> 00:19:34,783
+Anti what is off the 10.
+
+273
+00:19:35,039 --> 00:19:41,183
+That one in a thousand
+
+274
+00:19:41,439 --> 00:19:42,975
+It might be doing all right
+
+275
+00:19:43,487 --> 00:19:46,559
+Peacock about 10 unlocked
+
+276
+00:19:46,815 --> 00:19:48,095
+Interesting
+
+277
+00:19:48,351 --> 00:19:52,191
+Praying it may well be in writing any other ways
+
+278
+00:19:52,703 --> 00:19:53,983
+Answering any of these questions
+
+279
+00:19:55,519 --> 00:19:56,031
+Anyone
+
+280
+00:20:08,319 --> 00:20:08,831
+Okay
+
+281
+00:20:10,879 --> 00:20:17,023
+Okay so you're saying if we have long enough to hit the wall then it's probably long enough
+
+282
+00:20:17,279 --> 00:20:20,095
+Alright. How long is it until we
+
+283
+00:20:20,351 --> 00:20:23,167
+I had to work that you think this is the right time to?
+
+284
+00:20:24,447 --> 00:20:26,751
+About 200 that's why am I 200
+
+285
+00:20:35,711 --> 00:20:36,479
+Piranha
+
+286
+00:20:36,991 --> 00:20:42,623
+So the distance you got a typical distance you've gone there's something like the square root
+
+287
+00:20:42,879 --> 00:20:44,159
+Pause the number of times.
+
+288
+00:20:44,415 --> 00:20:45,951
+Border on the wall
+
+289
+00:20:46,463 --> 00:20:47,231
+Confirm
+
+290
+00:20:47,487 --> 00:20:49,279
+Even though
+
+291
+00:20:50,047 --> 00:20:56,191
+Did I only take 10 sets in principle to reach the wall
+
+292
+00:21:01,823 --> 00:21:02,335
+You will
+
+293
+00:21:02,847 --> 00:21:04,127
+Mystic
+
+294
+00:21:04,383 --> 00:21:10,527
+Toyota
+
+295
+00:21:10,783 --> 00:21:13,855
+And then if you want to get all the way from there to the other Old Navy
+
+296
+00:21:14,111 --> 00:21:14,879
+Broccoli
+
+297
+00:21:20,256 --> 00:21:22,560
+Maybe another 400-500
+
+298
+00:21:22,816 --> 00:21:24,864
+Do I have a chance of getting back
+
+299
+00:21:25,120 --> 00:21:27,936
+So let's let's go through the reasoning so
+
+300
+00:21:28,192 --> 00:21:32,032
+Let's define the distance that the random walk with a gum
+
+301
+00:21:33,056 --> 00:21:37,152
+3 is a sum of all the steps we might
+
+302
+00:21:39,200 --> 00:21:41,248
+So after time capital T
+
+303
+00:21:42,272 --> 00:21:47,392
+The distance to prom
+
+304
+00:21:49,952 --> 00:21:56,096
+Is Ada + 100 - could be zero if we do it rejection
+
+305
+00:21:57,888 --> 00:21:58,912
+But to start with
+
+306
+00:21:59,424 --> 00:22:04,800
+Where in the middle
+
+307
+00:22:05,312 --> 00:22:07,872
+Either you end up that her up answer
+
+308
+00:22:08,896 --> 00:22:11,968
+And then the stats are Oliva plus minus one variable
+
+309
+00:22:13,504 --> 00:22:14,784
+Interested in
+
+310
+00:22:15,296 --> 00:22:17,088
+The variance of Delta
+
+311
+00:22:18,880 --> 00:22:19,904
+Delta active
+
+312
+00:22:20,160 --> 00:22:22,208
+How far are we from Lancaster
+
+313
+00:22:22,720 --> 00:22:28,096
+How wide is the mission SF
+
+314
+00:22:28,352 --> 00:22:30,656
+Average value
+
+315
+00:22:32,960 --> 00:22:37,312
+Delta active the sum of independent random variables and so variances ass
+
+316
+00:22:38,336 --> 00:22:41,664
+The banks of LX is the sum of the variances
+
+317
+00:22:44,224 --> 00:22:50,368
+Would you take a single stack to see the volume
+
+318
+00:22:51,392 --> 00:22:53,184
+I'm tired Bavarian
+
+319
+00:22:53,952 --> 00:22:56,512
+Adelta X is T
+
+320
+00:22:59,328 --> 00:23:00,096
+Okay
+
+321
+00:23:02,144 --> 00:23:04,192
+So if you want
+
+322
+00:23:04,960 --> 00:23:07,264
+The typical distance of Kong
+
+323
+00:23:08,032 --> 00:23:09,824
+The elf grass
+
+324
+00:23:11,104 --> 00:23:12,128
+Then you need
+
+325
+00:23:16,992 --> 00:23:18,784
+The run this chamber time
+
+326
+00:23:21,344 --> 00:23:26,464
+At Salon Square running at 1 just to show you how this alien General
+
+327
+00:23:26,976 --> 00:23:27,744
+General
+
+328
+00:23:28,512 --> 00:23:30,304
+Little guy that phone is warm
+
+329
+00:23:30,560 --> 00:23:36,192
+These cats were size warm when I said what that means but that's ice Austin TX
+
+330
+00:23:37,216 --> 00:23:38,752
+Equal spread
+
+331
+00:23:39,776 --> 00:23:41,568
+53 L on it
+
+332
+00:23:42,592 --> 00:23:44,896
+All right that's a nasty scalene
+
+333
+00:23:45,152 --> 00:23:50,016
+Eyes getting quadratically with the ratio of the sides of your face
+
+334
+00:23:50,272 --> 00:23:51,040
+Good tasting
+
+335
+00:23:51,296 --> 00:23:54,880
+And example
+
+336
+00:23:55,136 --> 00:24:00,512
+But that didn't either 100 or 400 opening like that answer the question
+
+337
+00:24:01,024 --> 00:24:02,816
+2 question 3
+
+338
+00:24:03,840 --> 00:24:05,632
+And I know this may be
+
+339
+00:24:05,888 --> 00:24:08,704
+One of those
+
+340
+00:24:09,216 --> 00:24:09,728
+Which
+
+341
+00:24:10,240 --> 00:24:12,032
+Keep running the same
+
+342
+00:24:17,664 --> 00:24:18,944
+Sexiest Russians
+
+343
+00:24:19,456 --> 00:24:21,248
+Haiti attractions
+
+344
+00:24:21,760 --> 00:24:23,040
+Apprendre decoration
+
+345
+00:24:23,552 --> 00:24:28,928
+We have reached a wool so in this particular on a hundred was a very good guess
+
+346
+00:24:30,720 --> 00:24:36,864
+If you don't bunkering again
+
+347
+00:24:37,120 --> 00:24:43,264
+We went the last one guy 260
+
+348
+00:24:43,520 --> 00:24:44,800
+Hitting the same wool
+
+349
+00:24:45,056 --> 00:24:46,080
+300
+
+350
+00:24:46,592 --> 00:24:47,872
+400
+
+351
+00:24:48,128 --> 00:24:49,408
+440
+
+352
+00:24:49,664 --> 00:24:52,992
+Okay and then we've gone was supposed to lose
+
+353
+00:24:53,248 --> 00:24:55,040
+400i Generations
+
+354
+00:24:56,064 --> 00:25:01,184
+Unreasonably in agreement
+
+355
+00:25:01,440 --> 00:25:02,464
+3D edible
+
+356
+00:25:04,256 --> 00:25:10,400
+Back of envelope
+
+357
+00:25:10,656 --> 00:25:12,448
+Keep on running
+
+358
+00:25:12,704 --> 00:25:15,776
+Imma come back and get that way
+
+359
+00:25:16,288 --> 00:25:17,568
+And then maybe
+
+360
+00:25:18,592 --> 00:25:22,432
+400 fraction
+
+361
+00:25:22,944 --> 00:25:27,040
+Progress the other side
+
+362
+00:25:28,064 --> 00:25:28,832
+The 500
+
+363
+00:25:29,088 --> 00:25:30,880
+What about kissing because school
+
+364
+00:25:31,136 --> 00:25:32,160
+Okay
+
+365
+00:25:33,184 --> 00:25:36,256
+So that's what happens when you run the sink
+
+366
+00:25:37,280 --> 00:25:38,304
+So it takes
+
+367
+00:25:38,816 --> 00:25:40,864
+Thousands of iterations
+
+368
+00:25:41,120 --> 00:25:43,168
+To get good independent parts
+
+369
+00:25:46,752 --> 00:25:52,640
+One of the way of visualizing this is to imagine making a histogram over a week of being during the simulation
+
+370
+00:25:52,896 --> 00:25:54,944
+So hit the histogram a full TS racing
+
+371
+00:25:55,200 --> 00:25:57,760
+ATI 410
+
+372
+00:25:58,016 --> 00:26:00,320
+This is for the simulation we just did
+
+373
+00:26:02,112 --> 00:26:04,160
+So after 400 race engines
+
+374
+00:26:04,416 --> 00:26:10,560
+Life Alert
+
+375
+00:26:10,816 --> 00:26:12,352
+Uneven
+
+376
+00:26:13,376 --> 00:26:18,240
+So this is the point at which you might say I've actually got one decent independent sample from this
+
+377
+00:26:19,776 --> 00:26:22,080
+I forgot 500 iterations
+
+378
+00:26:23,872 --> 00:26:24,384
+Okay
+
+379
+00:26:24,640 --> 00:26:27,456
+I'm not saying
+
+380
+00:26:27,712 --> 00:26:33,856
+That when you run a metropolis method like this you should throw away all of the point by Juanita
+
+381
+00:26:34,112 --> 00:26:35,392
+Collectors talking points
+
+382
+00:26:35,648 --> 00:26:41,792
+The really effective number of independent samples
+
+383
+00:26:43,840 --> 00:26:44,864
+Just contacts
+
+384
+00:26:45,120 --> 00:26:46,912
+500
+
+385
+00:26:49,216 --> 00:26:49,984
+Okay
+
+386
+00:26:50,496 --> 00:26:52,288
+So that the random walk problem
+
+387
+00:26:55,104 --> 00:26:57,664
+We can analyze it a little bit more
+
+388
+00:27:05,856 --> 00:27:06,880
+Another way of
+
+389
+00:27:07,392 --> 00:27:09,184
+Look at this is
+
+390
+00:27:09,952 --> 00:27:13,792
+To make for ourselves the transition probability Matrix
+
+391
+00:27:14,304 --> 00:27:17,120
+We talk shows * 100
+
+392
+00:27:17,376 --> 00:27:19,424
+For the chain that we're running here
+
+393
+00:27:19,680 --> 00:27:21,472
+It's possible stay
+
+394
+00:27:21,984 --> 00:27:28,128
+And the transition probability
+
+395
+00:27:30,432 --> 00:27:34,784
+Staying where you are
+
+396
+00:27:35,296 --> 00:27:36,576
+Okay
+
+397
+00:27:38,624 --> 00:27:39,648
+We can now
+
+398
+00:27:40,416 --> 00:27:44,768
+Answer question wrong
+
+399
+00:27:45,024 --> 00:27:51,168
+Precisely we can say well for any particular generation where you will have
+
+400
+00:27:51,424 --> 00:27:54,240
+If you stop when I say zero
+
+401
+00:27:54,752 --> 00:27:56,800
+Any question or any
+
+402
+00:27:57,056 --> 00:28:02,176
+Starting position and we can plot the point where you will have I stayed upstairs
+
+403
+00:28:02,432 --> 00:28:03,200
+So
+
+404
+00:28:04,480 --> 00:28:10,624
+This is the answer to the zero set
+
+405
+00:28:10,880 --> 00:28:11,392
+10
+
+406
+00:28:11,648 --> 00:28:13,952
+Or in like I can 17 if that was why you stop it
+
+407
+00:28:14,208 --> 00:28:15,744
+Yellow and blue
+
+408
+00:28:16,000 --> 00:28:16,768
+Those two
+
+409
+00:28:17,280 --> 00:28:21,376
+Starting out with the probability of being in
+
+410
+00:28:21,888 --> 00:28:25,984
+Or public opinion state 17
+
+411
+00:28:26,240 --> 00:28:27,520
+Then after one set
+
+412
+00:28:28,032 --> 00:28:30,080
+You're either in these
+
+413
+00:28:30,336 --> 00:28:36,224
+615 East Yellow Pages
+
+414
+00:28:37,248 --> 00:28:40,320
+Okay this is your distribution
+
+415
+00:28:41,088 --> 00:28:42,112
+After three steps
+
+416
+00:28:42,368 --> 00:28:43,648
+That's your distribution
+
+417
+00:28:44,416 --> 00:28:45,696
+Can you recognize this
+
+418
+00:28:45,952 --> 00:28:50,048
+1331 Ingleside Street
+
+419
+00:28:50,304 --> 00:28:52,352
+Pascal's triangle
+
+420
+00:28:55,168 --> 00:29:00,288
+This one 46416 at the blue distribution
+
+421
+00:29:00,800 --> 00:29:02,848
+Is 146
+
+422
+00:29:03,104 --> 00:29:09,248
+4 and 1 steps
+
+423
+00:29:17,184 --> 00:29:23,072
+But that's the next row of Pascal's triangle except the right hand side. Something is happening
+
+424
+00:29:24,096 --> 00:29:26,656
+After 6 adoration 7
+
+425
+00:29:27,168 --> 00:29:31,776
+But update. Every 25
+
+426
+00:29:33,568 --> 00:29:35,360
+So that's up to 25 set
+
+427
+00:29:35,872 --> 00:29:37,920
+This is very jagged
+
+428
+00:29:38,176 --> 00:29:39,968
+Picture in gallery showing you
+
+429
+00:29:40,224 --> 00:29:42,528
+Thank you stop antenna 25 steps
+
+430
+00:29:42,784 --> 00:29:48,928
+It's still quite unlikely to have a war
+
+431
+00:29:49,184 --> 00:29:50,720
+Very likely to be in an hour
+
+432
+00:29:50,976 --> 00:29:51,744
+Location
+
+433
+00:29:52,000 --> 00:29:54,304
+If you even faces
+
+434
+00:29:54,816 --> 00:29:56,608
+But you have any chance of being
+
+435
+00:29:57,376 --> 00:29:59,936
+So after 50 attractions
+
+436
+00:30:01,728 --> 00:30:07,872
+Alice in Chains mutts if you saw 16 17 you're still very likely to be at the right hand side if you stopped in Middle
+
+437
+00:30:08,384 --> 00:30:12,480
+You're more likely be in the middle in it at the edges and you're very unlikely.
+
+438
+00:30:12,736 --> 00:30:13,504
+Locations
+
+439
+00:30:14,272 --> 00:30:15,552
+9 + 11
+
+440
+00:30:22,464 --> 00:30:26,560
+Very unlikely to be lucky memory of all the even
+
+441
+00:30:26,816 --> 00:30:30,656
+Only losing it all and even memory whenever it comes to a wolf
+
+442
+00:30:31,936 --> 00:30:33,984
+K75 is ricin
+
+443
+00:30:34,752 --> 00:30:36,032
+100 fraction
+
+444
+00:30:36,288 --> 00:30:38,848
+So if you said you think 100 is enough
+
+445
+00:30:39,104 --> 00:30:41,408
+You might look at this right now and I see pink again
+
+446
+00:30:41,664 --> 00:30:47,296
+Cuz if you run it for under the impression that every time
+
+447
+00:30:47,552 --> 00:30:48,576
+From The Middle
+
+448
+00:30:48,832 --> 00:30:53,952
+Turn around and around
+
+449
+00:30:56,512 --> 00:30:58,048
+Is it going to be even on me
+
+450
+00:30:58,304 --> 00:31:01,888
+You're not going to get the right numbers
+
+451
+00:31:02,400 --> 00:31:04,192
+100 isn't quite long enough
+
+452
+00:31:04,960 --> 00:31:07,008
+Even if you stopped in the middle
+
+453
+00:31:08,032 --> 00:31:11,360
+Indefinite not long enough if you start at 17 because
+
+454
+00:31:11,616 --> 00:31:16,480
+You've got a much lower transom uniform of being in 0 after I understand
+
+455
+00:31:16,736 --> 00:31:18,784
+Keep dying at 5
+
+456
+00:31:19,040 --> 00:31:19,808
+Sympathy
+
+457
+00:31:20,064 --> 00:31:21,344
+775
+
+458
+00:31:21,856 --> 00:31:22,880
+200
+
+459
+00:31:23,648 --> 00:31:24,416
+Okay
+
+460
+00:31:24,672 --> 00:31:26,464
+Pretty unicorn out of the rough
+
+461
+00:31:26,976 --> 00:31:30,560
+Yeah you could be pretty much anywhere after 200
+
+462
+00:31:31,072 --> 00:31:35,168
+Or after 4400
+
+463
+00:31:35,424 --> 00:31:38,496
+It's becoming fatty.
+
+464
+00:31:39,520 --> 00:31:41,312
+Would more likely to be in
+
+465
+00:31:42,592 --> 00:31:43,360
+All states
+
+466
+00:31:43,616 --> 00:31:44,384
+And yellow
+
+467
+00:31:44,896 --> 00:31:51,040
+I love it on now it will likely be an even state
+
+468
+00:31:51,296 --> 00:31:51,808
+We keep on going
+
+469
+00:31:52,320 --> 00:31:55,136
+355 360
+
+470
+00:31:55,392 --> 00:31:58,208
+3 * 400 set
+
+471
+00:31:58,464 --> 00:32:01,536
+You can hardly see on the screen the difference between
+
+472
+00:32:01,792 --> 00:32:03,584
+Yellow and the blue
+
+473
+00:32:09,728 --> 00:32:14,848
+Republicanism
+
+474
+00:32:15,104 --> 00:32:18,944
+After 500 stats
+
+475
+00:32:27,648 --> 00:32:28,160
+Okay
+
+476
+00:32:28,928 --> 00:32:29,696
+Good
+
+477
+00:32:30,720 --> 00:32:32,000
+Any questions about
+
+478
+00:32:32,256 --> 00:32:33,024
+Christopher
+
+479
+00:32:34,816 --> 00:32:37,376
+So the general message recall is
+
+480
+00:32:37,632 --> 00:32:41,216
+If you make sets of size at salon
+
+481
+00:32:41,984 --> 00:32:46,080
+But it's the distribution of dealing with his got a characteristic of blank tail
+
+482
+00:32:47,104 --> 00:32:48,640
+Oh in the same units
+
+483
+00:32:49,408 --> 00:32:54,272
+A random walk method is going to take at least one square
+
+484
+00:32:54,784 --> 00:33:00,928
+I think to get around it may be what because I might be other properties
+
+485
+00:33:03,488 --> 00:33:05,536
+Then you have to run to even longer
+
+486
+00:33:06,048 --> 00:33:06,816
+Service
+
+487
+00:33:07,072 --> 00:33:13,216
+Number regarding DSL on square is just a band it's a love I love how long
+
+488
+00:33:13,472 --> 00:33:13,984
+Have to run
+
+489
+00:33:15,008 --> 00:33:16,288
+One of these nights
+
+490
+00:33:20,128 --> 00:33:24,736
+Everything I've done you hair is in one dimension let's just make clear how it relates to
+
+491
+00:33:25,504 --> 00:33:27,808
+Hi Adonis No Problems in a typical
+
+492
+00:33:28,320 --> 00:33:28,832
+Problem
+
+493
+00:33:29,344 --> 00:33:32,160
+It's a it's an inference problem that you're working on
+
+494
+00:33:32,416 --> 00:33:33,440
+Nipple of these
+
+495
+00:33:33,696 --> 00:33:38,816
+Things called unknown parameters but not being determined by data
+
+496
+00:33:42,400 --> 00:33:42,912
+Then
+
+497
+00:33:43,168 --> 00:33:47,008
+In the real world
+
+498
+00:33:47,264 --> 00:33:48,032
+Promises
+
+499
+00:33:49,312 --> 00:33:50,080
+Answer
+
+500
+00:33:50,336 --> 00:33:52,128
+The nasty red distribution
+
+501
+00:33:53,920 --> 00:33:55,968
+They look more like this
+
+502
+00:33:56,480 --> 00:34:00,064
+It may be two dimensional it maybe even thousand dimensional
+
+503
+00:34:01,344 --> 00:34:06,464
+And it'll have some long length styles and some length styles that are
+
+504
+00:34:07,744 --> 00:34:09,024
+So
+
+505
+00:34:11,328 --> 00:34:13,376
+In general you might have
+
+506
+00:34:13,888 --> 00:34:15,424
+Pacific
+
+507
+00:34:15,680 --> 00:34:16,960
+Of the real situation
+
+508
+00:34:17,472 --> 00:34:23,616
+That might be damaged Dimensions gammoth Ogio good
+
+509
+00:34:23,872 --> 00:34:25,664
+Diamond Dimensions
+
+510
+00:34:25,920 --> 00:34:28,736
+Where the night Stylistics let's IL
+
+511
+00:34:29,504 --> 00:34:33,088
+And then there might be K -, other dimensions
+
+512
+00:34:33,344 --> 00:34:35,904
+The lifestyle isn't much larger
+
+513
+00:34:37,696 --> 00:34:43,840
+These would be the pulley determine the total number of promises
+
+514
+00:34:44,352 --> 00:34:49,216
+Canine is gamma dimensions of pulley just have invited I thought you haven't seen them down yet
+
+515
+00:34:49,728 --> 00:34:52,032
+And Gamma are welded coming by today
+
+516
+00:34:52,800 --> 00:34:55,360
+What is your effective number
+
+517
+00:34:55,616 --> 00:34:57,408
+Number of degrees of freedom
+
+518
+00:34:59,200 --> 00:35:00,992
+Number 1207 promises
+
+519
+00:35:01,760 --> 00:35:05,088
+And 59 give yourself a Stepside
+
+520
+00:35:05,344 --> 00:35:06,112
+Pet salon
+
+521
+00:35:09,696 --> 00:35:11,488
+You could imagine at Salaam
+
+522
+00:35:12,000 --> 00:35:13,024
+Being
+
+523
+00:35:13,536 --> 00:35:15,072
+As small as hell
+
+524
+00:35:15,328 --> 00:35:19,168
+So you could use as your step size 3 Metropolis method
+
+525
+00:35:20,448 --> 00:35:23,264
+Something respect the time you left alone
+
+526
+00:35:24,288 --> 00:35:25,824
+Or you could use something
+
+527
+00:35:27,360 --> 00:35:28,640
+I think
+
+528
+00:35:29,152 --> 00:35:30,432
+Or I could use something
+
+529
+00:35:33,760 --> 00:35:35,808
+Reading when you're designing in Metropolis
+
+530
+00:35:36,064 --> 00:35:37,600
+Thang Long
+
+531
+00:35:38,112 --> 00:35:40,672
+Be any size you want you pick that
+
+532
+00:35:41,184 --> 00:35:43,744
+What's going to happen now well
+
+533
+00:35:44,256 --> 00:35:48,608
+All your pets are accepted and you just do a random walk
+
+534
+00:35:48,864 --> 00:35:50,656
+Then it's still the case
+
+535
+00:35:50,912 --> 00:35:53,984
+That the typical distance you will have gum
+
+536
+00:35:55,008 --> 00:35:58,080
+After teeth that is growing as a square root
+
+537
+00:36:00,640 --> 00:36:02,176
+It's going to take you
+
+538
+00:36:08,064 --> 00:36:14,208
+At least I will not songs glad that you get around from one independent points into another
+
+539
+00:36:14,464 --> 00:36:15,232
+Effectively
+
+540
+00:36:15,488 --> 00:36:16,256
+Independent party
+
+541
+00:36:16,512 --> 00:36:18,048
+They need at least
+
+542
+00:36:19,840 --> 00:36:21,632
+Element
+
+543
+00:36:24,960 --> 00:36:26,496
+The fresh Independence Point
+
+544
+00:36:29,312 --> 00:36:31,104
+Fresh Independence sample
+
+545
+00:36:34,176 --> 00:36:40,064
+So that pushes you to say well I want at Salon to be really big then for the salon
+
+546
+00:36:40,320 --> 00:36:41,600
+Is a smooth possible
+
+547
+00:36:42,880 --> 00:36:44,928
+Which is true
+
+548
+00:36:46,464 --> 00:36:49,536
+They saying let's make it fun as big as we can
+
+549
+00:36:50,304 --> 00:36:51,072
+However
+
+550
+00:36:52,352 --> 00:36:56,192
+If you make at Salon really big make is big as hell for example
+
+551
+00:36:56,704 --> 00:36:58,496
+Big Al
+
+552
+00:36:59,264 --> 00:37:01,568
+Then what can actually happen
+
+553
+00:37:01,824 --> 00:37:07,200
+Well if you are in the typical sat and you make a proposal from this big green stair hair
+
+554
+00:37:08,480 --> 00:37:09,504
+Wait remember
+
+555
+00:37:10,272 --> 00:37:10,784
+Is
+
+556
+00:37:11,296 --> 00:37:15,136
+Ghana diamonds in the whole place is K dimensional
+
+557
+00:37:15,648 --> 00:37:17,440
+A demo of those dimensions
+
+558
+00:37:17,696 --> 00:37:21,792
+Take us off this time
+
+559
+00:37:22,304 --> 00:37:25,376
+I'm in so many looked at me
+
+560
+00:37:26,144 --> 00:37:32,288
+Well that means is the probability of making it except move
+
+561
+00:37:32,544 --> 00:37:33,824
+Going to be the ratio of
+
+562
+00:37:34,336 --> 00:37:35,360
+5th volume
+
+563
+00:37:37,408 --> 00:37:38,432
+Bitcoin
+
+564
+00:37:40,480 --> 00:37:41,504
+Anthony
+
+565
+00:37:42,528 --> 00:37:43,808
+Just think about that
+
+566
+00:37:47,392 --> 00:37:51,744
+You use an analog that significantly bigger than little a little like that
+
+567
+00:37:52,000 --> 00:37:55,840
+Then the probability of making expected move
+
+568
+00:37:56,608 --> 00:37:57,888
+This tiny
+
+569
+00:37:58,144 --> 00:37:58,912
+It's
+
+570
+00:37:59,424 --> 00:38:05,312
+In all of the long Dimensions you don't need to worry you're very unlikely to.
+
+571
+00:38:05,824 --> 00:38:09,664
+Beat the chance of thing on the pancake is is Tiny
+
+572
+00:38:09,920 --> 00:38:10,944
+It's going to be
+
+573
+00:38:11,200 --> 00:38:12,736
+The volume of the pancake
+
+574
+00:38:17,856 --> 00:38:20,416
+Indeed job site
+
+575
+00:38:20,672 --> 00:38:24,512
+You got that link Grace's how, which is the number of dimensions
+
+576
+00:38:25,024 --> 00:38:25,792
+Waco
+
+577
+00:38:26,048 --> 00:38:27,072
+Pancake
+
+578
+00:38:27,328 --> 00:38:30,656
+And then you divide that by the volume of the sphere that you're drawing from
+
+579
+00:38:30,912 --> 00:38:31,680
+This is
+
+580
+00:38:32,704 --> 00:38:35,008
+Accepted movie
+
+581
+00:38:38,336 --> 00:38:39,872
+And that is
+
+582
+00:38:40,384 --> 00:38:41,408
+Ratio all
+
+583
+00:38:41,920 --> 00:38:43,456
+Al the little length
+
+584
+00:38:43,712 --> 00:38:45,248
+Oval step by step one
+
+585
+00:38:45,504 --> 00:38:51,136
+Rice to possibly quite a big number Ghana the number of Wellington
+
+586
+00:38:51,904 --> 00:38:53,184
+This is a disaster
+
+587
+00:38:54,464 --> 00:38:55,744
+You make that phone big
+
+588
+00:38:56,512 --> 00:38:59,328
+Inside if you make it bigger than little Al at school
+
+589
+00:38:59,584 --> 00:39:01,376
+Essentially does a constrained
+
+590
+00:39:01,632 --> 00:39:02,400
+That
+
+591
+00:39:02,912 --> 00:39:03,680
+He comes
+
+592
+00:39:04,704 --> 00:39:06,240
+Goat app
+
+593
+00:39:07,776 --> 00:39:10,592
+Petland great of an owl
+
+594
+00:39:11,360 --> 00:39:12,128
+Is that news
+
+595
+00:39:13,664 --> 00:39:14,176
+Because
+
+596
+00:39:16,480 --> 00:39:21,088
+Even though you wanted to you know that reduced your random properties
+
+597
+00:39:21,856 --> 00:39:23,136
+He wanted to go hat
+
+598
+00:39:23,648 --> 00:39:29,792
+You're likely end up with a chain that just sit still and make proposals puzzle and all of those
+
+599
+00:39:30,048 --> 00:39:31,072
+Rejected
+
+600
+00:39:31,584 --> 00:39:32,608
+Except
+
+601
+00:39:32,864 --> 00:39:35,168
+A very very small capsules finally
+
+602
+00:39:35,424 --> 00:39:37,984
+Making a proposal it makes a nice people
+
+603
+00:39:38,240 --> 00:39:41,056
+Kentucky somewhat acceptable but it would happen so rarely
+
+604
+00:39:41,312 --> 00:39:42,848
+But you don't have to update
+
+605
+00:39:43,104 --> 00:39:44,384
+So in practice
+
+606
+00:39:44,896 --> 00:39:46,176
+Be feasible
+
+607
+00:39:47,200 --> 00:39:48,224
+Sensible
+
+608
+00:39:48,480 --> 00:39:50,784
+Patty's Restaurant
+
+609
+00:39:54,368 --> 00:39:55,648
+They're right
+
+610
+00:39:56,416 --> 00:39:59,744
+And obviously you don't want to make them that for me
+
+611
+00:40:00,512 --> 00:40:01,280
+Actually
+
+612
+00:40:01,536 --> 00:40:06,912
+This is why you want to be you want to somehow know what the smallest think Skyler distribution is
+
+613
+00:40:07,168 --> 00:40:08,448
+Then that's roughly
+
+614
+00:40:08,704 --> 00:40:11,264
+What you want just text I text
+
+615
+00:40:11,520 --> 00:40:17,664
+You're using a simple proposal
+
+616
+00:40:20,224 --> 00:40:23,552
+So in practice people using those sort of
+
+617
+00:40:24,320 --> 00:40:25,600
+Look up list methods
+
+618
+00:40:27,392 --> 00:40:28,672
+Will then find
+
+619
+00:40:29,440 --> 00:40:34,304
+That that ultimate song is roughly the smallest light scale
+
+620
+00:40:34,816 --> 00:40:39,936
+And when they run them Acropolis method with that Smollett blank status that set sign
+
+621
+00:40:40,448 --> 00:40:40,960
+Then
+
+622
+00:40:41,472 --> 00:40:42,752
+They will find
+
+623
+00:40:43,264 --> 00:40:46,848
+That that accepting roughly 50% of The Proposal
+
+624
+00:40:48,640 --> 00:40:51,456
+Resulting optimal acceptance probability
+
+625
+00:40:58,624 --> 00:41:00,416
+Ezra play Aha
+
+626
+00:41:00,672 --> 00:41:02,208
+Possibly a little bit bigger than 1/2
+
+627
+00:41:02,464 --> 00:41:04,768
+But not a million miles from
+
+628
+00:41:08,864 --> 00:41:09,888
+Okay
+
+629
+00:41:13,216 --> 00:41:14,240
+That I spent
+
+630
+00:41:14,752 --> 00:41:17,056
+Agent book about random walks
+
+631
+00:41:20,640 --> 00:41:25,760
+I know what we want to do is reveal some ways of getting rid of these random
+
+632
+00:41:26,016 --> 00:41:31,136
+Boystown Harrisburg tuition
+
+633
+00:41:31,392 --> 00:41:37,280
+But don't get around by random
+
+634
+00:41:37,536 --> 00:41:39,328
+In some way such that
+
+635
+00:41:39,584 --> 00:41:43,424
+You're still at
+
+636
+00:41:44,448 --> 00:41:45,216
+Thought
+
+637
+00:41:45,728 --> 00:41:50,848
+You keep going on a short timescale in it in the consistent Direct
+
+638
+00:41:52,128 --> 00:41:55,967
+Black Gold number one and number two is it the pain in the neck
+
+639
+00:41:56,223 --> 00:41:58,783
+Have to Catholic unicep cited
+
+640
+00:41:59,039 --> 00:42:02,111
+If you don't know what she'll just think Skyler your problem is
+
+641
+00:42:02,367 --> 00:42:07,231
+It will really pay off for you to find that out cuz if you use a set sizes too big
+
+642
+00:42:07,487 --> 00:42:10,559
+You let me be running a simulation that will do nothing about the time
+
+643
+00:42:11,327 --> 00:42:14,399
+Did you make it to small you're wasting time you badly
+
+644
+00:42:15,423 --> 00:42:21,567
+It would be brilliant have methods didn't require special sensitive password shooting
+
+645
+00:42:21,823 --> 00:42:24,895
+Aruba
+
+646
+00:42:25,151 --> 00:42:27,199
+Chooses the right that size
+
+647
+00:42:27,711 --> 00:42:30,527
+In a way that is valid using any soda crack
+
+648
+00:42:31,551 --> 00:42:32,831
+So let's know
+
+649
+00:42:33,343 --> 00:42:35,135
+Address both of those
+
+650
+00:42:35,903 --> 00:42:37,695
+By this
+
+651
+00:42:38,463 --> 00:42:41,535
+That we have through all of these pictures hair
+
+652
+00:42:43,583 --> 00:42:44,351
+Renault
+
+653
+00:42:45,375 --> 00:42:46,143
+Pokemap
+
+654
+00:42:46,399 --> 00:42:47,167
+Deficient
+
+655
+00:42:47,423 --> 00:42:48,447
+Montpelier message
+
+656
+00:42:49,727 --> 00:42:53,823
+And the first efficient method will talk about hamiltonian
+
+657
+00:42:54,079 --> 00:42:54,847
+Multicolor
+
+658
+00:42:56,127 --> 00:43:00,479
+And hamiltonian Monte Carlo it's something you couldn't do if you got yourself
+
+659
+00:43:00,991 --> 00:43:01,759
+A
+
+660
+00:43:02,015 --> 00:43:03,295
+Color method
+
+661
+00:43:03,551 --> 00:43:08,671
+Which is like the Metropolis message through Justice continuous State space
+
+662
+00:43:08,927 --> 00:43:15,071
+I didn't want used to make him small proposals of small moves using say I got you in distribution
+
+663
+00:43:15,583 --> 00:43:16,863
+Pool problems all that type
+
+664
+00:43:17,119 --> 00:43:18,911
+You may be able to use
+
+665
+00:43:21,727 --> 00:43:26,335
+This is how it works
+
+666
+00:43:27,103 --> 00:43:28,639
+Find the relevant demo
+
+667
+00:43:38,623 --> 00:43:39,903
+I'll show you first
+
+668
+00:43:40,671 --> 00:43:41,695
+A problem
+
+669
+00:43:46,559 --> 00:43:47,583
+Hidden problem
+
+670
+00:43:47,839 --> 00:43:53,983
+Distribution so we know all about gout
+
+671
+00:43:54,239 --> 00:44:00,383
+So I'm attempting to sample from the nasty reddish-orange casting distribution which is a highly car
+
+672
+00:44:00,639 --> 00:44:02,687
+Calcium distribution in two.
+
+673
+00:44:04,479 --> 00:44:07,807
+Staunton from an initial condition doesn't lie in this is so fat
+
+674
+00:44:08,063 --> 00:44:12,927
+And I'm using the Metropolis method making little circle green proposals
+
+675
+00:44:13,183 --> 00:44:18,047
+Circle proposals Pentatonix and
+
+676
+00:44:18,303 --> 00:44:24,447
+Suppose a new place in blue and
+
+677
+00:44:33,663 --> 00:44:36,991
+Did the show goes on screen
+
+678
+00:44:37,247 --> 00:44:38,271
+Tecumseh
+
+679
+00:44:38,527 --> 00:44:39,807
+The rejection
+
+680
+00:44:40,063 --> 00:44:44,415
+So that was after I sent you a post that I'm running for another fun-filled cystex
+
+681
+00:45:02,847 --> 00:45:05,151
+A little run
+
+682
+00:45:05,407 --> 00:45:08,223
+Sit still
+
+683
+00:45:08,735 --> 00:45:09,759
+What paint dry
+
+684
+00:45:12,575 --> 00:45:14,367
+So that's an example well
+
+685
+00:45:14,879 --> 00:45:15,647
+No
+
+686
+00:45:16,159 --> 00:45:18,207
+Let me describe to you how
+
+687
+00:45:18,463 --> 00:45:19,231
+The
+
+688
+00:45:19,487 --> 00:45:20,767
+Hamiltonian
+
+689
+00:45:21,023 --> 00:45:22,047
+Monte Carlo
+
+690
+00:45:22,559 --> 00:45:23,327
+I said what
+
+691
+00:45:24,095 --> 00:45:25,631
+Hamiltonian Monte Carlo
+
+692
+00:45:26,143 --> 00:45:27,679
+Has got two names actually
+
+693
+00:45:29,215 --> 00:45:31,775
+Either call Tony McCullough
+
+694
+00:45:35,871 --> 00:45:39,455
+Or in the old day that you can because hybrid Monte Carlo
+
+695
+00:45:46,623 --> 00:45:47,647
+Monte Carlo
+
+696
+00:45:47,903 --> 00:45:51,487
+Ricky Seahawks
+
+697
+00:45:53,023 --> 00:45:55,071
+The Cheeky waves at this what
+
+698
+00:45:55,327 --> 00:45:59,423
+We're imagining that we've got a nasty distribution that we are finding very difficult
+
+699
+00:45:59,679 --> 00:46:00,703
+The girlfriend.
+
+700
+00:46:01,471 --> 00:46:02,751
+What we going to do
+
+701
+00:46:03,519 --> 00:46:06,591
+It's going to take this difficult High dimensional problem
+
+702
+00:46:06,847 --> 00:46:10,431
+I'm going to say alright let's make the time in South East twice as big
+
+703
+00:46:12,991 --> 00:46:15,551
+Unless to find a new distribution
+
+704
+00:46:17,599 --> 00:46:20,159
+A new syncope
+
+705
+00:46:20,927 --> 00:46:22,719
+Which is going to be cold the momentum
+
+706
+00:46:24,511 --> 00:46:30,399
+The Joint distribution of X and P
+
+707
+00:46:30,655 --> 00:46:31,423
+To be
+
+708
+00:46:31,935 --> 00:46:35,007
+Division St distribution with us off on x
+
+709
+00:46:35,263 --> 00:46:36,799
+X
+
+710
+00:46:37,823 --> 00:46:42,687
+A simple distribution in a minus B squared
+
+711
+00:46:45,247 --> 00:46:46,527
+But the momentum variable
+
+712
+00:46:47,295 --> 00:46:48,319
+Appropriately
+
+713
+00:46:49,343 --> 00:46:50,111
+Normalize
+
+714
+00:46:50,367 --> 00:46:51,391
+What's that
+
+715
+00:46:54,975 --> 00:46:58,303
+So we make the problems faced by sivik
+
+716
+00:46:58,559 --> 00:47:03,935
+Okay you find it difficult
+
+717
+00:47:04,447 --> 00:47:08,543
+It's twice as big and it's not obvious why we should help at all
+
+718
+00:47:09,055 --> 00:47:11,871
+Well the neat thing we've done is
+
+719
+00:47:12,895 --> 00:47:18,271
+You can think of this probability distribution as the in the lineup and energy function
+
+720
+00:47:18,783 --> 00:47:21,855
+But you can think of as a potential energy in space
+
+721
+00:47:22,111 --> 00:47:25,695
+Plus we got the kinetic energy
+
+722
+00:47:26,207 --> 00:47:27,487
+N
+
+723
+00:47:32,351 --> 00:47:33,375
+Hawaii
+
+724
+00:47:33,887 --> 00:47:40,031
+I miss Ryan its total Camilia if you're thinking of your system is a physical system
+
+725
+00:47:40,287 --> 00:47:41,311
+For the potential energy
+
+726
+00:47:41,567 --> 00:47:45,919
+Honda kinetic energy
+
+727
+00:47:46,175 --> 00:47:51,039
+A Newton's laws are a way of getting around on a total Energy company like this
+
+728
+00:47:51,295 --> 00:47:53,343
+In a way that conserves energy
+
+729
+00:47:55,135 --> 00:47:56,159
+I hit the trick
+
+730
+00:47:56,671 --> 00:47:59,231
+We Define an augmented problem is twice as big
+
+731
+00:47:59,487 --> 00:48:04,607
+That opens up with the whole load of new moves we can do we can move around
+
+732
+00:48:05,119 --> 00:48:09,215
+On surfaces of constant total energy by using Newton's Laws
+
+733
+00:48:11,519 --> 00:48:15,871
+What does the real will do in order to sample from nasty distributions like that
+
+734
+00:48:16,127 --> 00:48:22,271
+But you didn't you can close and maybe trying to seem like it.
+
+735
+00:48:22,527 --> 00:48:23,807
+Interaction with a heat pack
+
+736
+00:48:24,575 --> 00:48:30,719
+I'm because these momentum variables have a very simple distribution we know how to redraw them from
+
+737
+00:48:30,975 --> 00:48:33,023
+Corresponding distribution
+
+738
+00:48:33,279 --> 00:48:37,119
+There every now and then we can have the momentum variable
+
+739
+00:48:37,631 --> 00:48:43,775
+But like what the real world real world use Newton's laws to make text move around and uses little say
+
+740
+00:48:44,543 --> 00:48:50,175
+The x. Is basically something to do with you I meant so you go in the direction of your momentum
+
+741
+00:48:50,687 --> 00:48:54,783
+MP. It's something to do with the floor so you go pee. Is
+
+742
+00:48:55,039 --> 00:48:58,111
+The derivative of energy with respect to X
+
+743
+00:48:59,391 --> 00:49:01,439
+I went both putting in a jetliner
+
+744
+00:49:01,695 --> 00:49:05,023
+What is Newton's Laws you keep going
+
+745
+00:49:08,095 --> 00:49:13,471
+You look at the fourth energy
+
+746
+00:49:14,239 --> 00:49:15,519
+State space variable
+
+747
+00:49:15,775 --> 00:49:20,127
+And you make the momentum change in the
+
+748
+00:49:21,151 --> 00:49:21,919
+All right
+
+749
+00:49:25,759 --> 00:49:27,807
+What time is it in Monte Carlo does
+
+750
+00:49:28,831 --> 00:49:34,463
+Is more complicated than what I just said
+
+751
+00:49:35,487 --> 00:49:39,071
+But the Roughriders this one seem like Newton's Laws
+
+752
+00:49:45,983 --> 00:49:51,359
+And we'll admit that we're out there doing that approximately but we're going to fix up the approximate mess
+
+753
+00:49:57,759 --> 00:49:58,527
+Bye
+
+754
+00:49:58,783 --> 00:49:59,807
+A clever
+
+755
+00:50:04,671 --> 00:50:05,951
+Call reject rule
+
+756
+00:50:06,207 --> 00:50:09,535
+The checks on what happened to the change in energy
+
+757
+00:50:13,887 --> 00:50:16,191
+The change in the total energy
+
+758
+00:50:18,495 --> 00:50:19,775
+Have your little simulation
+
+759
+00:50:20,543 --> 00:50:22,591
+Unset 3 is
+
+760
+00:50:23,615 --> 00:50:24,895
+Randomize
+
+761
+00:50:26,175 --> 00:50:26,943
+Levementum
+
+762
+00:50:29,759 --> 00:50:35,135
+Hey by growing it from the correct distribution.
+
+763
+00:50:37,951 --> 00:50:38,975
+And you repeat
+
+764
+00:50:42,559 --> 00:50:48,703
+You can close friend of mine and you run for
+
+765
+00:50:48,959 --> 00:50:51,519
+For a time and can be an arbitrary
+
+766
+00:50:52,031 --> 00:50:55,359
+Tunable promises you will still have to adjust
+
+767
+00:50:55,871 --> 00:51:00,479
+The simulation will involve little set sizes that you have to actually do Audino
+
+768
+00:51:00,735 --> 00:51:03,039
+LeapFrog method
+
+769
+00:51:03,295 --> 00:51:08,927
+And you have to choose Little Steps of time so it still has parameters which going to be pains in the neck
+
+770
+00:51:09,439 --> 00:51:12,511
+But you don't even know that you're going to be moving along way
+
+771
+00:51:13,023 --> 00:51:14,559
+I'll tell you that
+
+772
+00:51:16,095 --> 00:51:17,631
+To make this whole thing but we
+
+773
+00:51:17,887 --> 00:51:21,727
+Accept or reject every one of those newtonsville simulations
+
+774
+00:51:21,983 --> 00:51:23,007
+It's based on
+
+775
+00:51:23,263 --> 00:51:29,407
+Change it
+
+776
+00:51:29,663 --> 00:51:32,479
+Maybe I'll reject can you flip a coin to determine
+
+777
+00:51:32,735 --> 00:51:33,503
+W words at
+
+778
+00:51:33,759 --> 00:51:36,575
+If the energy goes down
+
+779
+00:51:36,831 --> 00:51:39,135
+But I'll accept it anyway because that's the way
+
+780
+00:51:39,391 --> 00:51:41,439
+I don't see what all the details are in the
+
+781
+00:51:41,695 --> 00:51:42,719
+Thought the book
+
+782
+00:51:44,511 --> 00:51:47,071
+Let go ahead and show you that thing
+
+783
+00:51:48,095 --> 00:51:51,679
+So we're going to stop and saying stop point
+
+784
+00:51:53,727 --> 00:51:57,311
+And I can do this a few times so you get to see the flavor
+
+785
+00:51:57,823 --> 00:51:58,847
+Of this
+
+786
+00:52:01,407 --> 00:52:05,247
+Here's what we did we started from the same cell function by the white Arrow
+
+787
+00:52:05,759 --> 00:52:08,831
+I use Newton's Laws with it quieter
+
+788
+00:52:09,087 --> 00:52:10,623
+Love pink set
+
+789
+00:52:11,135 --> 00:52:17,279
+So that let me start remember
+
+790
+00:52:19,327 --> 00:52:25,471
+When were at the station by the White House
+
+791
+00:52:25,727 --> 00:52:27,519
+NFL
+
+792
+00:52:27,775 --> 00:52:33,919
+And then the momentum after the second step we turned right on
+
+793
+00:52:34,175 --> 00:52:40,319
+Bum bum bumbum bum bumbum bum after what is it
+
+794
+00:52:40,575 --> 00:52:43,647
+Penalty stats of Newtonian simulation
+
+795
+00:52:43,903 --> 00:52:50,047
+What happened to the energy
+
+796
+00:52:50,303 --> 00:52:56,447
+Potential energy
+
+797
+00:52:59,007 --> 00:53:05,151
+Three other thing but she might think you could see them
+
+798
+00:53:05,407 --> 00:53:08,223
+When's the father turned around and came back
+
+799
+00:53:08,735 --> 00:53:12,319
+We persisted in lots of different directions
+
+800
+00:53:13,087 --> 00:53:13,599
+Okay
+
+801
+00:53:13,855 --> 00:53:15,647
+Pick up accepted and we run again
+
+802
+00:53:18,975 --> 00:53:25,119
+Now we've gone over that easily gone
+
+803
+00:53:25,375 --> 00:53:28,447
+Link-style this problem if you integrate pedometer
+
+804
+00:53:28,959 --> 00:53:33,311
+Huge long has gone downhill just a little bit as well
+
+805
+00:53:35,615 --> 00:53:41,759
+Do another run remember when we randomize eventually
+
+806
+00:53:44,831 --> 00:53:49,183
+But still have the same total energy
+
+807
+00:53:49,439 --> 00:53:52,255
+When you do step 3 that says randomize momentum
+
+808
+00:53:53,023 --> 00:53:59,167
+That means calm down
+
+809
+00:54:01,215 --> 00:54:03,263
+High speed distance time speed
+
+810
+00:54:03,775 --> 00:54:07,103
+Is high speed you got
+
+811
+00:54:07,359 --> 00:54:07,871
+Speed
+
+812
+00:54:08,127 --> 00:54:09,407
+Border wall
+
+813
+00:54:09,919 --> 00:54:12,991
+Let's go fast
+
+814
+00:54:14,271 --> 00:54:17,343
+Angry end up the Leatherface
+
+815
+00:54:17,855 --> 00:54:21,183
+Again
+
+816
+00:54:21,439 --> 00:54:23,487
+Grand Masti again
+
+817
+00:54:23,743 --> 00:54:27,327
+Friend of mine stay again
+
+818
+00:54:27,583 --> 00:54:33,727
+This is Johnny Contour of energy 102
+
+819
+00:54:33,983 --> 00:54:36,543
+Outside
+
+820
+00:54:36,799 --> 00:54:39,871
+Pot significantly outside again
+
+821
+00:54:40,127 --> 00:54:42,943
+Well let me know a while randomize mental
+
+822
+00:54:43,199 --> 00:54:48,831
+Now that what happened
+
+823
+00:54:49,087 --> 00:54:51,391
+We just happen to go over a short distance
+
+824
+00:54:51,903 --> 00:54:53,951
+Random
+
+825
+00:54:54,975 --> 00:54:55,743
+Okay
+
+826
+00:54:56,255 --> 00:54:57,279
+5 long way
+
+827
+00:54:57,535 --> 00:54:58,559
+Dynamites again
+
+828
+00:54:59,071 --> 00:55:03,679
+And then
+
+829
+00:55:03,935 --> 00:55:10,079
+Right at the bus I sometimes when we went right way
+
+830
+00:55:10,335 --> 00:55:13,407
+Take a right the way along the
+
+831
+00:55:13,663 --> 00:55:15,711
+Okay randomizer next weekend
+
+832
+00:55:16,223 --> 00:55:19,039
+Reducing jiggling around
+
+833
+00:55:24,159 --> 00:55:25,183
+I'll come back again
+
+834
+00:55:25,695 --> 00:55:27,999
+Randomizer
+
+835
+00:55:28,255 --> 00:55:32,863
+But they haven't making much ice to progress around than the standard
+
+836
+00:55:34,143 --> 00:55:39,007
+Ramapo let's go back to Metropolis
+
+837
+00:55:41,055 --> 00:55:42,335
+So what's going on
+
+838
+00:55:46,175 --> 00:55:48,991
+So we stopped and now we're using Metropolis method
+
+839
+00:55:51,039 --> 00:55:57,183
+And every one of these little you blue boxes is created by proposing a random little change and then we evaluate them
+
+840
+00:55:57,439 --> 00:55:58,719
+New energy in that location
+
+841
+00:55:59,743 --> 00:56:01,535
+The amount of computer time it takes
+
+842
+00:56:01,791 --> 00:56:05,119
+Make a note that and find the energy in that new location
+
+843
+00:56:05,375 --> 00:56:06,911
+Is about the same
+
+844
+00:56:07,167 --> 00:56:10,239
+As a Montague archetype if you're using Newton's Laws
+
+845
+00:56:10,751 --> 00:56:13,567
+Can you make a single little set of
+
+846
+00:56:14,079 --> 00:56:15,103
+Stimulating
+
+847
+00:56:15,615 --> 00:56:16,895
+Victor thing
+
+848
+00:56:17,151 --> 00:56:23,295
+Little change in position importance of a little bit of
+
+849
+00:56:23,807 --> 00:56:26,367
+Take out the energy
+
+850
+00:56:27,135 --> 00:56:27,647
+Right
+
+851
+00:56:28,671 --> 00:56:34,815
+I'm being fat little blue squares in the Metropolis
+
+852
+00:56:35,071 --> 00:56:37,631
+In the hamiltonian
+
+853
+00:56:37,887 --> 00:56:39,423
+Multicolor
+
+854
+00:56:43,775 --> 00:56:45,823
+Aretha V squishies that were making
+
+855
+00:56:46,079 --> 00:56:48,895
+Please take me to Save-A-Lot
+
+856
+00:56:49,663 --> 00:56:53,247
+LOL that's long Square Times
+
+857
+00:56:55,295 --> 00:56:59,647
+If we go back and stop exactly the same place with hamiltonian Monte Carlo
+
+858
+00:57:06,815 --> 00:57:07,839
+That okay
+
+859
+00:57:08,095 --> 00:57:08,607
+Then
+
+860
+00:57:08,863 --> 00:57:15,007
+With the thing like the computer time is those what was it think you'll so little blue steps
+
+861
+00:57:15,263 --> 00:57:16,287
+All the way to the other side
+
+862
+00:57:23,711 --> 00:57:29,855
+I hope this makes it really is acai
+
+863
+00:57:30,879 --> 00:57:33,439
+And massively reduce the random or behavior
+
+864
+00:57:33,951 --> 00:57:38,815
+But they have a whole bunch of promises you have around with so we may not be completely in love with it
+
+865
+00:57:40,351 --> 00:57:44,959
+Now let's move on to another contact goes over at station
+
+866
+00:57:46,751 --> 00:57:49,055
+The idea of over relaxation is
+
+867
+00:57:49,311 --> 00:57:50,591
+But it can be applied
+
+868
+00:57:50,847 --> 00:57:52,127
+The gift something problems
+
+869
+00:57:52,895 --> 00:57:56,479
+Get something remember doesn't have any
+
+870
+00:57:56,991 --> 00:58:01,599
+Tunable promises you just grew up in the conditional distribution 85014 time
+
+871
+00:58:02,623 --> 00:58:07,487
+And it doesn't have any obvious way of including momentum. So how can we get this
+
+872
+00:58:07,999 --> 00:58:08,767
+Well
+
+873
+00:58:09,279 --> 00:58:12,095
+Bianca Avila came up with
+
+874
+00:58:12,607 --> 00:58:14,143
+Pickles over outside
+
+875
+00:58:16,703 --> 00:58:17,727
+Where at
+
+876
+00:58:19,519 --> 00:58:21,055
+In standard Gibbs sampling
+
+877
+00:58:23,359 --> 00:58:26,175
+You would have the conditional distribution of the variable
+
+878
+00:58:30,527 --> 00:58:33,087
+You work out the conditional distribution of one of the variables
+
+879
+00:58:33,343 --> 00:58:35,903
+Conditioning conditional
+
+880
+00:58:37,695 --> 00:58:39,487
+Standard if I'm playing
+
+881
+00:58:40,767 --> 00:58:43,583
+With an s t distribution
+
+882
+00:58:44,095 --> 00:58:45,631
+Texas lice
+
+883
+00:58:46,143 --> 00:58:49,215
+What is the conditional distribution of Wong
+
+884
+00:58:49,727 --> 00:58:51,007
+Stable condition on the other
+
+885
+00:58:51,519 --> 00:58:55,103
+And wherever you are at the moment you just make a fresh grew up in that distribution
+
+886
+00:58:56,127 --> 00:58:58,175
+The other option is
+
+887
+00:58:58,943 --> 00:59:02,271
+If your current position is at prepare this point
+
+888
+00:59:03,295 --> 00:59:05,599
+Then in some cunning way
+
+889
+00:59:05,855 --> 00:59:09,695
+You deliberately draw not from the cracks conditional distribution
+
+890
+00:59:09,951 --> 00:59:12,511
+But from a distribution that somehow by us
+
+891
+00:59:12,767 --> 00:59:14,303
+The opposite side
+
+892
+00:59:15,583 --> 00:59:16,095
+The mode
+
+893
+00:59:19,423 --> 00:59:20,703
+The details are in the book
+
+894
+00:59:20,959 --> 00:59:22,495
+And the two ways of doing this
+
+895
+00:59:23,007 --> 00:59:24,031
+1 is
+
+896
+00:59:24,287 --> 00:59:27,871
+If the conditional distribution that you're talking about is a gascon
+
+897
+00:59:28,383 --> 00:59:31,967
+Pedro from the gas station that is pushed in on the side
+
+898
+00:59:32,223 --> 00:59:33,759
+Off the real castle
+
+899
+00:59:35,807 --> 00:59:39,391
+Simple squishies
+
+900
+00:59:39,903 --> 00:59:40,671
+Improve
+
+901
+00:59:40,927 --> 00:59:43,487
+Publicly you'll end up doing the right thing
+
+902
+00:59:43,999 --> 00:59:45,279
+The atlas method
+
+903
+00:59:46,815 --> 00:59:48,095
+Ratasha you now
+
+904
+00:59:50,655 --> 00:59:51,935
+Is a very simple method
+
+905
+00:59:52,447 --> 00:59:56,543
+For the conditional distributions
+
+906
+00:59:58,335 --> 00:59:59,615
+I got you
+
+907
+01:00:08,831 --> 01:00:14,975
+And you might say well how can it possibly be interesting if all your conditional distributions on Gaskins
+
+908
+01:00:15,231 --> 01:00:17,791
+Working with is a very simple distribution
+
+909
+01:00:18,303 --> 01:00:21,887
+Well that do exist interesting distributions
+
+910
+01:00:22,143 --> 01:00:27,007
+Pull up whose condition this weekend yet The Joint distribution is very difficult
+
+911
+01:00:27,263 --> 01:00:30,079
+What's up with this is an interesting Tech abilities have
+
+912
+01:00:31,103 --> 01:00:35,199
+Let me show you Outlook message on the gas industry shoe
+
+913
+01:00:44,159 --> 01:00:46,207
+Sorry son hamiltonian what color
+
+914
+01:00:46,719 --> 01:00:49,535
+This is what gives something looks like
+
+915
+01:00:49,791 --> 01:00:51,071
+For the same
+
+916
+01:00:51,327 --> 01:00:54,143
+We were just playing with
+
+917
+01:00:54,399 --> 01:00:58,751
+But has no promises at all
+
+918
+01:00:59,263 --> 01:01:01,567
+But the typical steps you take
+
+919
+01:01:01,823 --> 01:01:06,687
+When you draw from the conditional distributions this way or the conditions
+
+920
+01:01:07,711 --> 01:01:12,575
+Pick up those two directions
+
+921
+01:01:13,087 --> 01:01:14,111
+Dinner to the wind
+
+922
+01:01:14,623 --> 01:01:16,671
+The thing with the green distribution
+
+923
+01:01:16,927 --> 01:01:22,047
+So you never going to be taking stats aside Big Al there only thing to beat exercise little out
+
+924
+01:01:22,559 --> 01:01:23,327
+But juice
+
+925
+01:01:23,839 --> 01:01:26,655
+Which means that you got a random walk
+
+926
+01:01:27,679 --> 01:01:32,287
+Big Al on Little House Square time to get an independent sample using get something
+
+927
+01:01:32,799 --> 01:01:35,103
+So Atlas message that's says
+
+928
+01:01:35,615 --> 01:01:36,383
+It's that
+
+929
+01:01:37,663 --> 01:01:38,687
+That we drool
+
+930
+01:01:38,943 --> 01:01:41,247
+Deliberately from the opposite side
+
+931
+01:01:41,759 --> 01:01:43,551
+Papa distribution in one way
+
+932
+01:01:43,807 --> 01:01:47,135
+And then we got the other variable we draw from the opposite side of it
+
+933
+01:01:47,903 --> 01:01:54,047
+The net result is shown here in red they can see we're up me run along the comes up with a little bit of War
+
+934
+01:01:54,303 --> 01:01:55,327
+Consul
+
+935
+01:01:55,839 --> 01:01:58,655
+If we zoom in on this I'll show you the individual steps
+
+936
+01:02:00,191 --> 01:02:01,471
+Starting to you
+
+937
+01:02:01,727 --> 01:02:04,543
+I forget Which Way time Wednesday school reversible anyway
+
+938
+01:02:04,799 --> 01:02:07,871
+Let's imagine that we started from the bottom left
+
+939
+01:02:08,383 --> 01:02:09,663
+We started a little bit
+
+940
+01:02:10,175 --> 01:02:13,247
+Above the green console
+
+941
+01:02:13,759 --> 01:02:18,111
+And then wake me up beside still a little bit about the green Council
+
+942
+01:02:18,879 --> 01:02:23,743
+And then again about
+
+943
+01:02:23,999 --> 01:02:30,143
+And that means we persistently don't look at every other position that's what the red line is telling you
+
+944
+01:02:30,399 --> 01:02:31,935
+Wonder long console
+
+945
+01:02:32,191 --> 01:02:33,471
+And it's two dimensional problem
+
+946
+01:02:34,495 --> 01:02:36,031
+You can do this in high dimensions
+
+947
+01:02:36,287 --> 01:02:38,079
+Unfold many problems
+
+948
+01:02:38,335 --> 01:02:42,175
+It turns out to be around them
+
+949
+01:02:42,687 --> 01:02:47,039
+Sandra various ways of revealing the Improvement in performance
+
+950
+01:02:47,295 --> 01:02:52,927
+I'm wanted to invent some simple statistics statistics
+
+951
+01:02:53,183 --> 01:02:55,231
+If they feel too correlation time
+
+952
+01:02:55,487 --> 01:02:57,535
+Is Barry short for statistic
+
+953
+01:02:57,791 --> 01:03:02,655
+That nothing indication that is a good plan and quickly
+
+954
+01:03:02,911 --> 01:03:09,055
+The hit 8.1
+
+955
+01:03:09,311 --> 01:03:12,127
+Wandering around on the regular I get something
+
+956
+01:03:12,383 --> 01:03:13,407
+Nothing Orange
+
+957
+01:03:13,919 --> 01:03:16,991
+That in red is the umbrella station
+
+958
+01:03:17,247 --> 01:03:21,087
+Bible loathing definitely moving around
+
+959
+01:03:22,879 --> 01:03:23,647
+Pasta
+
+960
+01:03:23,903 --> 01:03:25,695
+Honda
+
+961
+01:03:26,463 --> 01:03:32,607
+And another country to look at this act one square and under get sampling
+
+962
+01:03:32,863 --> 01:03:35,423
+Around from being in the middle of being at one of the extreme
+
+963
+01:03:36,191 --> 01:03:37,983
+Encompass
+
+964
+01:03:38,751 --> 01:03:40,287
+Excellence bad is going
+
+965
+01:03:40,543 --> 01:03:41,823
+Up and down much faster
+
+966
+01:03:43,103 --> 01:03:44,895
+Accrued indication that
+
+967
+01:03:45,151 --> 01:03:47,199
+At least on this time problem
+
+968
+01:03:47,455 --> 01:03:48,479
+What is better
+
+969
+01:03:50,783 --> 01:03:53,343
+Tibet labor relaxation full
+
+970
+01:03:53,599 --> 01:03:58,975
+Conditional distribution
+
+971
+01:03:59,231 --> 01:04:04,095
+Doesn't involve any conditional distribution for the gas and I'm far more interesting than that
+
+972
+01:04:04,607 --> 01:04:09,727
+And the good news for you even if you are interesting to see you can still do
+
+973
+01:04:09,983 --> 01:04:11,007
+Station
+
+974
+01:04:12,543 --> 01:04:15,871
+Using another method ordered over allocation
+
+975
+01:04:17,663 --> 01:04:20,735
+An older driver allocation was invented by Radford Neal
+
+976
+01:04:28,159 --> 01:04:32,511
+Imagine that you are doing get something and you have to have a message
+
+977
+01:04:32,767 --> 01:04:34,047
+Which will draw you
+
+978
+01:04:34,815 --> 01:04:35,583
+The new point
+
+979
+01:04:37,631 --> 01:04:38,399
+From
+
+980
+01:04:38,655 --> 01:04:39,423
+This
+
+981
+01:04:39,679 --> 01:04:42,751
+Conditional distribution
+
+982
+01:04:44,287 --> 01:04:49,663
+And you hopped on the capability and get something to draw a one-year point in this condition distribution
+
+983
+01:04:50,431 --> 01:04:50,943
+Well
+
+984
+01:04:51,199 --> 01:04:52,223
+Benadryl
+
+985
+01:04:52,479 --> 01:04:55,039
+K x from that distribution
+
+986
+01:04:55,295 --> 01:04:56,319
+So you drool
+
+987
+01:04:56,575 --> 01:04:57,343
+Pay times
+
+988
+01:05:02,207 --> 01:05:04,767
+That gives you a whole bunch of points to my look like
+
+989
+01:05:08,863 --> 01:05:09,631
+All right
+
+990
+01:05:10,911 --> 01:05:14,239
+Make it more interesting
+
+991
+01:05:18,335 --> 01:05:19,103
+Couple wear
+
+992
+01:05:23,199 --> 01:05:25,759
+7 Greenpoint
+
+993
+01:05:26,015 --> 01:05:31,135
+The total set of points we have hair is a set of eight points including the one that looks currently
+
+994
+01:05:32,927 --> 01:05:39,071
+And the order they were stationed method says 1 2 3 4 5 6
+
+995
+01:05:39,327 --> 01:05:41,631
+7/8 your opposite point
+
+996
+01:05:41,887 --> 01:05:44,703
+Please go to the third one from the other end
+
+997
+01:05:45,471 --> 01:05:47,519
+Pick up the stick part in this
+
+998
+01:05:48,031 --> 01:05:51,103
+Whatever you want to go to the point
+
+999
+01:05:52,639 --> 01:05:53,151
+All right
+
+1000
+01:05:53,407 --> 01:05:57,759
+And that means if your way over if you would get the white. Was actually
+
+1001
+01:05:58,015 --> 01:06:00,575
+Number one in the less you would have gone
+
+1002
+01:06:01,343 --> 01:06:03,903
+This is something any real value
+
+1003
+01:06:04,159 --> 01:06:04,927
+Variable
+
+1004
+01:06:06,207 --> 01:06:12,351
+And it probably correct invalid and in practice a good value of K might be something like
+
+1005
+01:06:14,655 --> 01:06:17,983
+Additional work to get 20 rules from this distribution
+
+1006
+01:06:19,007 --> 01:06:24,639
+Quite often not much extra work at all example if you have to use adaptive rejection sampling
+
+1007
+01:06:25,151 --> 01:06:27,967
+If you're using a rejection sampling method to draw
+
+1008
+01:06:28,223 --> 01:06:31,295
+The first of these points in green
+
+1009
+01:06:31,807 --> 01:06:37,951
+Open adaptive rejection sampling has the property that you can get another one point
+
+1010
+01:06:38,207 --> 01:06:39,999
+The pool all of the way
+
+1011
+01:06:40,255 --> 01:06:42,815
+Consumed in getting the first part then the other ones are free
+
+1012
+01:06:43,071 --> 01:06:46,911
+The listing be a very very cheap method and it may well
+
+1013
+01:06:47,167 --> 01:06:49,471
+Improve your running
+
+1014
+01:06:50,751 --> 01:06:54,335
+There's no guarantee but it was funny
+
+1015
+01:06:54,591 --> 01:06:56,895
+Under the piece of stuff that kill bugs
+
+1016
+01:06:57,663 --> 01:07:00,735
+Which mean faith in inference using Gibbs sampling
+
+1017
+01:07:00,991 --> 01:07:04,575
+Buck's has been around for about 15 or 20 years now
+
+1018
+01:07:05,087 --> 01:07:09,183
+On my way of England to give something for a whole
+
+1019
+01:07:09,439 --> 01:07:13,023
+Different models
+
+1020
+01:07:13,279 --> 01:07:18,399
+Using a simple declarative language and then it figured out how to run to get something for you
+
+1021
+01:07:18,655 --> 01:07:23,263
+And I'm pretty sure that the buttons of bugs right now
+
+1022
+01:07:23,519 --> 01:07:26,079
+Ordered over a Station built into them
+
+1023
+01:07:26,335 --> 01:07:32,223
+So you can get this speed up for free or you can at least give you speed up
+
+1024
+01:07:35,039 --> 01:07:35,807
+Okay
+
+1025
+01:07:37,855 --> 01:07:43,999
+We've been gone for an hour so we just carry on with the advance message
+
+1026
+01:07:44,255 --> 01:07:44,767
+Need a break
+
+1027
+01:07:45,535 --> 01:07:47,327
+Let's keep going
+
+1028
+01:07:47,583 --> 01:07:48,607
+Stop
+
+1029
+01:07:48,863 --> 01:07:49,887
+Oberlin station
+
+1030
+01:07:50,911 --> 01:07:55,519
+I would like to move on to this question of dependence on parameters
+
+1031
+01:07:58,847 --> 01:07:59,871
+The vanilla
+
+1032
+01:08:00,383 --> 01:08:02,175
+Metropolis method we're talking about
+
+1033
+01:08:02,431 --> 01:08:06,783
+Used a gaussian distribution with somewhere and the width of that distribution was
+
+1034
+01:08:07,039 --> 01:08:10,879
+Crucially important we wanted it to be as big as possible and no bigger
+
+1035
+01:08:13,695 --> 01:08:17,535
+When are you turning Monte Carlo site promises
+
+1036
+01:08:19,839 --> 01:08:23,935
+Get something doesn't have any promises which means that maybe we like it
+
+1037
+01:08:25,471 --> 01:08:31,615
+But get something only works if you got a problem where you know how to draw from the conditional
+
+1038
+01:08:31,871 --> 01:08:32,383
+Distribution
+
+1039
+01:08:33,663 --> 01:08:35,711
+But it may be that you're in the world but you just
+
+1040
+01:08:35,967 --> 01:08:42,111
+Haven't got a clue how to do that go energy function
+
+1041
+01:08:43,135 --> 01:08:48,255
+It would be nice to have a method to automatically discovers Bristol the right Stepside
+
+1042
+01:08:49,023 --> 01:08:51,071
+Imats looks like something goes
+
+1043
+01:08:53,119 --> 01:08:54,399
+Are you allowed to go
+
+1044
+01:08:55,423 --> 01:08:56,447
+Play something
+
+1045
+01:09:00,031 --> 01:09:02,847
+Play something was invented by two people
+
+1046
+01:09:13,087 --> 01:09:14,111
+Night night
+
+1047
+01:09:14,367 --> 01:09:15,391
+Rapid meal
+
+1048
+01:09:24,607 --> 01:09:27,423
+And it's a very elegant
+
+1049
+01:09:28,703 --> 01:09:33,823
+Amazingly simple looking way of solving the problem it looks so simple you could imagine it
+
+1050
+01:09:34,079 --> 01:09:37,663
+8A School tile in Bensonhurst Bay and eat myself
+
+1051
+01:09:40,479 --> 01:09:42,271
+So let me show you
+
+1052
+01:09:47,391 --> 01:09:48,159
+Buy something
+
+1053
+01:09:52,255 --> 01:09:54,303
+I'll do it first four
+
+1054
+01:09:57,631 --> 01:10:02,239
+Good old red one-dimensional distribution
+
+1055
+01:10:02,495 --> 01:10:08,639
+Is you can do it in many. Mention by doing one by Mexicans just like
+
+1056
+01:10:08,895 --> 01:10:10,687
+You pick a single dimension
+
+1057
+01:10:10,943 --> 01:10:16,575
+The weapon for a single direction direction you want in your in your continued State space
+
+1058
+01:10:16,831 --> 01:10:17,599
+And you
+
+1059
+01:10:18,111 --> 01:10:21,695
+Use the method described in that one dimension
+
+1060
+01:10:21,951 --> 01:10:23,999
+And then repeat in other dimensions
+
+1061
+01:10:24,767 --> 01:10:26,047
+So his logos
+
+1062
+01:10:27,071 --> 01:10:28,095
+We have
+
+1063
+01:10:30,143 --> 01:10:31,679
+A nasty red distribution
+
+1064
+01:10:32,191 --> 01:10:33,983
+Let me have a current location
+
+1065
+01:10:34,239 --> 01:10:35,775
+Physical activity
+
+1066
+01:10:38,591 --> 01:10:43,711
+And I'm not going to describe to you how we get to the next location which will collect
+
+1067
+01:10:44,223 --> 01:10:45,247
+But it's going to be quiet
+
+1068
+01:10:45,503 --> 01:10:47,039
+A few steps so
+
+1069
+01:10:54,207 --> 01:10:56,255
+At the current location XT
+
+1070
+01:10:57,535 --> 01:10:59,071
+We evaluate Pizza
+
+1071
+01:10:59,327 --> 01:11:01,631
+This is a graph of pizza
+
+1072
+01:11:03,167 --> 01:11:04,191
+Find week
+
+1073
+01:11:06,495 --> 01:11:07,263
+Then
+
+1074
+01:11:07,775 --> 01:11:10,847
+We draw a point uniformly between 0
+
+1075
+01:11:11,103 --> 01:11:12,895
+Antique star of x
+
+1076
+01:11:13,407 --> 01:11:15,455
+And we can think of that has picking a
+
+1077
+01:11:15,711 --> 01:11:17,247
+Point on Metallica
+
+1078
+01:11:20,063 --> 01:11:20,831
+Then
+
+1079
+01:11:23,903 --> 01:11:24,671
+Recreate
+
+1080
+01:11:26,207 --> 01:11:27,231
+Horizontal
+
+1081
+01:11:27,487 --> 01:11:28,255
+Objects
+
+1082
+01:11:28,767 --> 01:11:29,535
+Of with
+
+1083
+01:11:30,047 --> 01:11:30,815
+W
+
+1084
+01:11:32,095 --> 01:11:35,935
+Where W is going to be a set size parameter office like something method
+
+1085
+01:11:36,191 --> 01:11:42,335
+Whose body we don't care about very much because the whole thing is going to be robust to it
+
+1086
+01:11:42,591 --> 01:11:43,103
+Might be
+
+1087
+01:11:44,127 --> 01:11:45,663
+We make a little object like that
+
+1088
+01:11:45,919 --> 01:11:47,199
+Little green thing
+
+1089
+01:11:47,711 --> 01:11:50,271
+It's height is determined by the height of white.
+
+1090
+01:11:50,783 --> 01:11:52,575
+And it's off that
+
+1091
+01:11:53,087 --> 01:11:57,183
+Is chosen randomly uniformly from Oak Bluff that from
+
+1092
+01:11:57,439 --> 01:11:58,975
+The two little
+
+1093
+01:11:59,999 --> 01:12:02,559
+End of the green Pole
+
+1094
+01:12:02,815 --> 01:12:08,703
+It's either aligned with white uniform
+
+1095
+01:12:08,959 --> 01:12:09,727
+3 pic
+
+1096
+01:12:10,495 --> 01:12:12,799
+A uniform choice of this little cars uncle
+
+1097
+01:12:13,055 --> 01:12:14,591
+Trucks coming off the telegraph Pole
+
+1098
+01:12:16,127 --> 01:12:17,663
+All right I was tattoo
+
+1099
+01:12:18,431 --> 01:12:19,711
+Step 3 is
+
+1100
+01:12:19,967 --> 01:12:21,247
+Check to see
+
+1101
+01:12:22,271 --> 01:12:23,807
+Those two places
+
+1102
+01:12:25,087 --> 01:12:26,879
+What the value of pizza that
+
+1103
+01:12:27,391 --> 01:12:29,183
+I must value Pizza
+
+1104
+01:12:29,439 --> 01:12:30,207
+That
+
+1105
+01:12:30,719 --> 01:12:31,743
+And it
+
+1106
+01:12:32,255 --> 01:12:34,559
+Victorio's Pizza is a bug
+
+1107
+01:12:36,095 --> 01:12:39,167
+The Greenline for today is
+
+1108
+01:12:39,423 --> 01:12:40,703
+That's not far enough
+
+1109
+01:12:40,959 --> 01:12:42,751
+Let's make an additional set
+
+1110
+01:12:43,007 --> 01:12:44,287
+The 5w
+
+1111
+01:12:47,359 --> 01:12:48,127
+And then check
+
+1112
+01:12:48,895 --> 01:12:51,455
+You keep on stepping out until when you check
+
+1113
+01:12:51,711 --> 01:12:52,479
+At that
+
+1114
+01:12:52,735 --> 01:12:54,271
+Play
+
+1115
+01:12:54,783 --> 01:12:56,319
+Are we above Pizza
+
+1116
+01:12:57,087 --> 01:13:01,439
+We aren't the hair was already yes we're above so we stop stepping out from this direction
+
+1117
+01:13:01,695 --> 01:13:03,231
+In this direction
+
+1118
+01:13:03,487 --> 01:13:06,815
+We have to step out once and then go to Check Yes or above
+
+1119
+01:13:08,607 --> 01:13:13,983
+I'm by that person street now created a wide a green object
+
+1120
+01:13:16,287 --> 01:13:17,055
+Then
+
+1121
+01:13:17,567 --> 01:13:18,591
+Connecting vide
+
+1122
+01:13:19,103 --> 01:13:25,247
+Is we drool uniformly from the green line that we can just break it so you pick any point to go on the green line
+
+1123
+01:13:26,783 --> 01:13:28,575
+Which could be for example
+
+1124
+01:13:32,927 --> 01:13:39,071
+And this is our candidate that were probably going to end up calling XT
+
+1125
+01:13:39,327 --> 01:13:41,119
+Check one more thing namely
+
+1126
+01:13:42,399 --> 01:13:43,679
+If you look that
+
+1127
+01:13:44,191 --> 01:13:45,215
+Does that
+
+1128
+01:13:45,471 --> 01:13:47,263
+Point lie about the red cup
+
+1129
+01:13:47,519 --> 01:13:49,311
+And if it doesn't
+
+1130
+01:13:49,567 --> 01:13:52,639
+We're okay if it does lie about the right there
+
+1131
+01:13:52,895 --> 01:13:54,943
+What's up no good sorry
+
+1132
+01:13:56,735 --> 01:14:00,575
+I didn't get that does lie about right there sorry that's not good
+
+1133
+01:14:00,831 --> 01:14:01,599
+And
+
+1134
+01:14:03,391 --> 01:14:06,207
+To make things run a bit faster you can optionally
+
+1135
+01:14:06,463 --> 01:14:10,815
+Wipe out all of the green stuff that live beyond this projected point
+
+1136
+01:14:11,839 --> 01:14:16,447
+Away from it in the central away from the white.
+
+1137
+01:14:16,959 --> 01:14:17,727
+Okay
+
+1138
+01:14:18,495 --> 01:14:19,007
+Sorry
+
+1139
+01:14:19,775 --> 01:14:21,823
+Propose the point on the green line
+
+1140
+01:14:22,335 --> 01:14:28,479
+We drew on that was above the rat we rejected it and I was crying again
+
+1141
+01:14:28,735 --> 01:14:33,855
+Until you get one and maybe in probably like that this
+
+1142
+01:14:34,623 --> 01:14:35,647
+Of 1/2
+
+1143
+01:14:36,159 --> 01:14:38,975
+In which case now you say no that's projected to cut it
+
+1144
+01:14:39,487 --> 01:14:44,351
+Flying above the red cup to valuations of pizza
+
+1145
+01:14:45,887 --> 01:14:47,935
+Green hair
+
+1146
+01:14:48,447 --> 01:14:52,543
+Next another screen thing is really quite a snug fit around the Red Tub
+
+1147
+01:14:52,799 --> 01:14:58,943
+The next time you're very unlikely that we're going to miss this
+
+1148
+01:15:01,503 --> 01:15:03,039
+Live below the red cup
+
+1149
+01:15:05,855 --> 01:15:08,415
+Homicide rate you're accepted
+
+1150
+01:15:08,671 --> 01:15:09,951
+How many kilometers from that
+
+1151
+01:15:10,463 --> 01:15:11,231
+Do that
+
+1152
+01:15:11,487 --> 01:15:14,303
+Amazon
+
+1153
+01:15:15,327 --> 01:15:21,471
+Many white everything that you have done had except you keep track of it by your pizza
+
+1154
+01:15:22,495 --> 01:15:23,519
+And you repeat
+
+1155
+01:15:25,567 --> 01:15:28,895
+I think that there's on the computer
+
+1156
+01:15:31,199 --> 01:15:33,247
+Suck a location
+
+1157
+01:15:33,759 --> 01:15:37,087
+Aurora Bushkill point in yellow
+
+1158
+01:15:37,343 --> 01:15:40,671
+Recreate the green thing of with w
+
+1159
+01:15:40,927 --> 01:15:46,047
+How it look the potential on the Galaxy
+
+1160
+01:15:46,815 --> 01:15:52,447
+Now we chat all the green endpoint outside above the the red cup
+
+1161
+01:15:52,959 --> 01:15:56,799
+The woman left
+
+1162
+01:15:57,055 --> 01:16:00,383
+Now you drool in blue and you point in the green line
+
+1163
+01:16:01,151 --> 01:16:02,431
+And that is underneath
+
+1164
+01:16:02,687 --> 01:16:03,711
+The red pill
+
+1165
+01:16:04,223 --> 01:16:06,271
+I'm sorry I'm a dog
+
+1166
+01:16:07,807 --> 01:16:08,575
+Presta
+
+1167
+01:16:08,831 --> 01:16:10,879
+Go to point uniformly on the line
+
+1168
+01:16:12,671 --> 01:16:14,207
+Make a thing of width w
+
+1169
+01:16:15,743 --> 01:16:16,767
+Girl from it
+
+1170
+01:16:18,047 --> 01:16:20,095
+And like the loser a cup
+
+1171
+01:16:20,351 --> 01:16:20,863
+I will done
+
+1172
+01:16:21,631 --> 01:16:24,447
+No time when we're done
+
+1173
+01:16:24,703 --> 01:16:28,031
+This problem has appeared at the very least it'll come back bump
+
+1174
+01:16:28,287 --> 01:16:31,871
+We're moving right the way from one side to the other side of the distribution
+
+1175
+01:16:33,151 --> 01:16:34,943
+Petrosmith purple line
+
+1176
+01:16:35,199 --> 01:16:40,831
+Now we broke something high up because this is a place where p is Big possible for the green truck to be high up
+
+1177
+01:16:41,087 --> 01:16:42,879
+Now I don't got to go so far all we
+
+1178
+01:16:44,671 --> 01:16:45,695
+And
+
+1179
+01:16:46,463 --> 01:16:47,999
+Let me draw from the green thing
+
+1180
+01:16:48,255 --> 01:16:51,071
+We can't go right over into the right hand side
+
+1181
+01:16:51,327 --> 01:16:53,375
+There's going to be rejected
+
+1182
+01:16:53,887 --> 01:16:59,775
+We automatically stay in the place with an r o t
+
+1183
+01:17:00,287 --> 01:17:02,847
+Because it's that bad a shorter distance
+
+1184
+01:17:04,127 --> 01:17:07,455
+And now we feel alone will we go fight a long way
+
+1185
+01:17:07,967 --> 01:17:14,111
+It was above the red line
+
+1186
+01:17:14,367 --> 01:17:16,671
+They know that we try again
+
+1187
+01:17:19,999 --> 01:17:20,767
+Again
+
+1188
+01:17:22,815 --> 01:17:27,679
+Spice that looks like something I'll let it run for a hundred
+
+1189
+01:17:29,215 --> 01:17:29,983
+Doing its thing
+
+1190
+01:17:33,311 --> 01:17:39,455
+And you can associate each of the acceptances was underneath the way you prove the favorite
+
+1191
+01:17:39,711 --> 01:17:45,343
+That's like something. The right thing did you prove it at least this distribution under the tub in Burien
+
+1192
+01:17:45,855 --> 01:17:46,623
+That the
+
+1193
+01:17:46,879 --> 01:17:47,903
+Technic
+
+1194
+01:17:49,439 --> 01:17:51,231
+That looks like something full
+
+1195
+01:17:51,487 --> 01:17:54,815
+Did not see distribution in Rat I think it looks more exciting
+
+1196
+01:17:55,071 --> 01:17:57,375
+And more incredible would it really what
+
+1197
+01:17:57,887 --> 01:17:59,679
+If we do it for a more
+
+1198
+01:18:01,215 --> 01:18:04,287
+Oakwood looking distribution that might look fly
+
+1199
+01:18:08,127 --> 01:18:10,687
+So there in red is it stalking distribution
+
+1200
+01:18:11,967 --> 01:18:14,015
+I let you slide something on it
+
+1201
+01:18:16,063 --> 01:18:17,343
+Right I forgot
+
+1202
+01:18:18,623 --> 01:18:20,159
+So that's how yellow thing
+
+1203
+01:18:22,463 --> 01:18:24,767
+Now are we done do we need
+
+1204
+01:18:25,023 --> 01:18:26,815
+On the left playlist
+
+1205
+01:18:27,839 --> 01:18:29,887
+But still under the right there on the right
+
+1206
+01:18:30,911 --> 01:18:33,983
+Okay we did. Greenpoint play the rest
+
+1207
+01:18:34,495 --> 01:18:35,775
+The respect that like that
+
+1208
+01:18:36,031 --> 01:18:39,359
+Now and we draw a point on the Green
+
+1209
+01:18:39,615 --> 01:18:40,127
+Blind
+
+1210
+01:18:40,639 --> 01:18:45,247
+Is any of the Rat
+
+1211
+01:18:45,503 --> 01:18:50,111
+Example is above the red light
+
+1212
+01:18:50,623 --> 01:18:52,671
+Drinking tour Seattle
+
+1213
+01:18:53,439 --> 01:18:55,743
+Now we make another girl from the green line
+
+1214
+01:18:57,535 --> 01:18:59,839
+So he stayed home in one piece
+
+1215
+01:19:00,863 --> 01:19:02,655
+Now
+
+1216
+01:19:03,423 --> 01:19:04,447
+Make a cross drop
+
+1217
+01:19:06,495 --> 01:19:09,567
+Dorothy from one place to another
+
+1218
+01:19:09,823 --> 01:19:13,919
+And we could have done that no matter how low the valley is
+
+1219
+01:19:14,175 --> 01:19:16,735
+Make lucky Leaf across very very
+
+1220
+01:19:18,015 --> 01:19:23,647
+Nasty valleys in Peoria Hills could be in the way
+
+1221
+01:19:23,903 --> 01:19:25,695
+And yet we can cuddle accustomed
+
+1222
+01:19:25,951 --> 01:19:28,255
+Locate those going from one place to another
+
+1223
+01:19:28,511 --> 01:19:34,143
+And now look where that yelling pointing it's really really like that was
+
+1224
+01:19:34,399 --> 01:19:38,751
+Tonight when do the rules green thing
+
+1225
+01:19:43,359 --> 01:19:44,127
+Dentacoin
+
+1226
+01:19:44,639 --> 01:19:47,711
+Small please thank you
+
+1227
+01:19:52,575 --> 01:19:53,599
+I would keep going
+
+1228
+01:19:54,623 --> 01:19:56,927
+Spypoint
+
+1229
+01:19:57,183 --> 01:19:58,463
+If you run it for longer
+
+1230
+01:20:00,767 --> 01:20:02,559
+Visiting all of the peeps
+
+1231
+01:20:09,471 --> 01:20:10,495
+So that's like something
+
+1232
+01:20:11,263 --> 01:20:15,104
+It's pretty cool idea rapid nailer
+
+1233
+01:20:15,360 --> 01:20:17,408
+Publix free software that implements
+
+1234
+01:20:17,664 --> 01:20:18,432
+This message
+
+1235
+01:20:18,688 --> 01:20:19,200
+And it's
+
+1236
+01:20:19,456 --> 01:20:23,552
+Very very gentle all you need is the ability to evaluate a function
+
+1237
+01:20:23,808 --> 01:20:24,576
+Where You Are
+
+1238
+01:20:25,600 --> 01:20:29,440
+A really nice thing to next events like something is it never
+
+1239
+01:20:29,696 --> 01:20:31,232
+Ends up rejecting
+
+1240
+01:20:31,488 --> 01:20:37,632
+The overall proposal
+
+1241
+01:20:38,656 --> 01:20:44,800
+Turn contrast standard Metropolis message where you want.
+
+1242
+01:20:48,896 --> 01:20:55,040
+I have made any progress if you always will move possibly a very small distance
+
+1243
+01:20:55,296 --> 01:20:58,368
+Maybe a typical set
+
+1244
+01:20:59,648 --> 01:21:02,976
+So it never attacked another beauty of
+
+1245
+01:21:03,232 --> 01:21:04,512
+It's like something is
+
+1246
+01:21:04,768 --> 01:21:07,840
+Step size W is not a crucial parameter
+
+1247
+01:21:08,096 --> 01:21:14,240
+If UW is accidentally 10 times as big as it needs to be
+
+1248
+01:21:14,496 --> 01:21:16,800
+Moore Lumber bluepoint to shrink down
+
+1249
+01:21:17,056 --> 01:21:18,336
+Shrinkage process
+
+1250
+01:21:20,640 --> 01:21:26,784
+And if your W-2 is too small
+
+1251
+01:21:27,040 --> 01:21:28,832
+Overly small green thing
+
+1252
+01:21:29,088 --> 01:21:32,160
+Only small number of us will be required
+
+1253
+01:21:32,416 --> 01:21:35,232
+To Encompass the width of the registration
+
+1254
+01:21:35,744 --> 01:21:36,256
+So
+
+1255
+01:21:36,512 --> 01:21:42,656
+W isn't crucial but you don't have a cow
+
+1256
+01:21:42,912 --> 01:21:44,192
+You too small to latch
+
+1257
+01:21:45,216 --> 01:21:50,080
+Play something. Type of property that typically you will make the steps
+
+1258
+01:21:50,848 --> 01:21:53,920
+That is as big as the width of the people you're dealing with
+
+1259
+01:21:55,712 --> 01:21:56,736
+Beat the final stats
+
+1260
+01:21:56,992 --> 01:22:00,064
+Is all broccoli the optimal size
+
+1261
+01:22:04,928 --> 01:22:05,952
+Okay
+
+1262
+01:22:07,488 --> 01:22:08,768
+That's why something
+
+1263
+01:22:11,328 --> 01:22:14,400
+And I would like to finish with today is talking about
+
+1264
+01:22:14,656 --> 01:22:15,680
+Exact sampling
+
+1265
+01:22:16,448 --> 01:22:20,288
+So how long do you need to run a Monte Carlo method for
+
+1266
+01:22:21,056 --> 01:22:22,848
+I'm going to tell you
+
+1267
+01:22:23,616 --> 01:22:29,760
+What feels to me like really quite amazing breakthrough of the month Tyler Community
+
+1268
+01:22:30,016 --> 01:22:30,528
+Question
+
+1269
+01:22:30,784 --> 01:22:36,928
+How long do I need to run it Forward well how long is he staying you don't really know you just to feel you
+
+1270
+01:22:37,184 --> 01:22:40,768
+Mason Diagnostic lab
+
+1271
+01:22:41,792 --> 01:22:42,816
+How long should I run at 4
+
+1272
+01:22:43,328 --> 01:22:44,608
+You always have this type of pie
+
+1273
+01:22:45,120 --> 01:22:49,984
+Well there was a breakthrough and it happened in approximately 1996
+
+1274
+01:22:50,240 --> 01:22:56,384
+With the invention of methods to talk to Michael and exact time
+
+1275
+01:22:57,152 --> 01:22:58,944
+Under the whole family of different
+
+1276
+01:22:59,200 --> 01:23:00,480
+Perfect sampling
+
+1277
+01:23:00,736 --> 01:23:06,880
+Method and I'm going to just drive to the easiest one to explain this probably
+
+1278
+01:23:07,136 --> 01:23:10,720
+Tens of papers on the maybe even hundreds
+
+1279
+01:23:13,792 --> 01:23:16,096
+How long should we run the simulations for
+
+1280
+01:23:18,144 --> 01:23:18,656
+Well
+
+1281
+01:23:20,192 --> 01:23:23,520
+Exact sampling is based on the idea that you should
+
+1282
+01:23:23,776 --> 01:23:26,336
+Run it for a long time because venue fun
+
+1283
+01:23:27,360 --> 01:23:28,640
+How long
+
+1284
+01:23:30,944 --> 01:23:32,992
+Infinitely law
+
+1285
+01:23:34,016 --> 01:23:34,784
+Adapter
+
+1286
+01:23:38,624 --> 01:23:39,648
+Young Mike Tyson
+
+1287
+01:23:39,904 --> 01:23:43,232
+Okay that sounds like a lot of computer
+
+1288
+01:23:43,744 --> 01:23:46,816
+You can establish the outcome of an infinitely long
+
+1289
+01:23:47,072 --> 01:23:48,352
+Computer simulation
+
+1290
+01:23:48,864 --> 01:23:50,912
+Finite
+
+1291
+01:23:52,960 --> 01:23:54,240
+I'm going to run
+
+1292
+01:23:54,496 --> 01:23:55,776
+The simulation
+
+1293
+01:23:56,032 --> 01:23:57,056
+From the past
+
+1294
+01:23:57,824 --> 01:23:59,360
+From infinitely long in the past
+
+1295
+01:24:03,712 --> 01:24:04,480
+The presence
+
+1296
+01:24:06,784 --> 01:24:08,064
+So how does that help
+
+1297
+01:24:09,344 --> 01:24:10,880
+Let me explain
+
+1298
+01:24:12,672 --> 01:24:15,232
+Let's imagine this is the state space
+
+1299
+01:24:16,256 --> 01:24:17,536
+Kissing license
+
+1300
+01:24:19,072 --> 01:24:25,216
+Simplicity let's imagine with talking about the Electra flipping the coin
+
+1301
+01:24:25,984 --> 01:24:29,824
+To determine whether he goes right or left in the Lexus IS250
+
+1302
+01:24:30,080 --> 01:24:30,592
+Paces
+
+1303
+01:24:30,848 --> 01:24:32,384
+Why the State Bank
+
+1304
+01:24:33,408 --> 01:24:34,688
+Guys like this
+
+1305
+01:24:35,968 --> 01:24:39,552
+I know what I'm asking you to imagine is it an infinite time ago
+
+1306
+01:24:39,808 --> 01:24:42,112
+A little army of 21
+
+1307
+01:24:45,952 --> 01:24:46,976
+Lecherous
+
+1308
+01:24:47,744 --> 01:24:48,768
+Ulta
+
+1309
+01:24:49,536 --> 01:24:51,328
+Infinity
+
+1310
+01:24:52,352 --> 01:24:53,120
+In
+
+1311
+01:24:53,632 --> 01:24:56,448
+Difference among different locations and every one of them
+
+1312
+01:24:56,704 --> 01:25:01,312
+Then started running the Monte Carlo simulation of the Metropolis alfredo
+
+1313
+01:25:02,848 --> 01:25:04,384
+Imagine that
+
+1314
+01:25:04,640 --> 01:25:08,224
+Imagine that they use the same random numbers
+
+1315
+01:25:09,504 --> 01:25:10,272
+So
+
+1316
+01:25:10,784 --> 01:25:12,064
+Random numbers
+
+1317
+01:25:14,112 --> 01:25:17,184
+All of them are showing hat and the first one
+
+1318
+01:25:17,440 --> 01:25:23,328
+Dial pad
+
+1319
+01:25:23,840 --> 01:25:29,984
+Anytime remodeling we can consult a little Encyclopedia of outcomes that we can stay at
+
+1320
+01:25:30,240 --> 01:25:36,384
+Hi - 1732 what was it
+
+1321
+01:25:36,640 --> 01:25:42,784
+Whenever you come back to this
+
+1322
+01:25:43,040 --> 01:25:44,576
+Something to it will tell you
+
+1323
+01:25:45,344 --> 01:25:47,904
+Write the all of them are getting along
+
+1324
+01:25:52,000 --> 01:25:53,024
+The head one of them
+
+1325
+01:25:59,424 --> 01:26:00,192
+Unisafe
+
+1326
+01:26:01,728 --> 01:26:03,520
+Is there anyway I can figure out
+
+1327
+01:26:04,032 --> 01:26:05,056
+Where
+
+1328
+01:26:05,312 --> 01:26:06,592
+One of these is
+
+1329
+01:26:07,104 --> 01:26:08,384
+At that time
+
+1330
+01:26:09,920 --> 01:26:12,992
+Without having to stop at time minus infinity
+
+1331
+01:26:14,016 --> 01:26:14,784
+Could you do that
+
+1332
+01:26:15,808 --> 01:26:17,600
+Well maybe you could because
+
+1333
+01:26:18,368 --> 01:26:20,416
+Looks like you don't know why
+
+1334
+01:26:21,184 --> 01:26:22,720
+Any of them got to
+
+1335
+01:26:22,976 --> 01:26:24,768
+What time - 172
+
+1336
+01:26:25,536 --> 01:26:27,584
+It's at that you do know that
+
+1337
+01:26:27,840 --> 01:26:33,984
+They must have been either in this table that take all this take
+
+1338
+01:26:36,288 --> 01:26:42,432
+I miss you without knowing which of those is true if you run all funky one of them forward
+
+1339
+01:26:42,688 --> 01:26:45,760
+In time it's excellent just see now what would happen
+
+1340
+01:26:46,016 --> 01:26:47,808
+3 to the 21 hypotheses
+
+1341
+01:26:48,576 --> 01:26:52,672
+So you can try all 21 of them and run them forward
+
+1342
+01:26:53,184 --> 01:26:54,720
+Just for this time
+
+1343
+01:26:55,488 --> 01:26:56,256
+Up to the present
+
+1344
+01:26:56,512 --> 01:27:01,376
+And it all of these end up
+
+1345
+01:27:01,888 --> 01:27:04,448
+Colliding with walls and that of the thing
+
+1346
+01:27:04,704 --> 01:27:07,008
+Such a way that oil 20 Wang
+
+1347
+01:27:09,056 --> 01:27:10,336
+End up repair
+
+1348
+01:27:11,872 --> 01:27:18,016
+Then it must be the case but opens one of these guys have ended up even though you don't know where they were
+
+1349
+01:27:19,552 --> 01:27:20,832
+So this is the trip
+
+1350
+01:27:21,600 --> 01:27:22,624
+The trick is
+
+1351
+01:27:24,928 --> 01:27:25,952
+Marketing
+
+1352
+01:27:26,464 --> 01:27:30,304
+Monte Carlo simulations have a property that they do coalesce in time
+
+1353
+01:27:30,560 --> 01:27:32,608
+So if you take all the
+
+1354
+01:27:32,864 --> 01:27:35,424
+State-based - 172
+
+1355
+01:27:36,192 --> 01:27:36,960
+Arundel Ford
+
+1356
+01:27:37,216 --> 01:27:42,336
+Maybe you'll find it all gazillion or 21
+
+1357
+01:27:42,592 --> 01:27:43,616
+A v state
+
+1358
+01:27:43,872 --> 01:27:45,920
+Will have coalesced into a single site
+
+1359
+01:27:46,688 --> 01:27:48,736
+We plan that
+
+1360
+01:27:48,992 --> 01:27:51,296
+If you had a different time
+
+1361
+01:27:52,064 --> 01:27:58,208
+You would have come somewhere in this point which that for is where you would have
+
+1362
+01:27:58,464 --> 01:28:00,768
+By running this thing
+
+1363
+01:28:02,816 --> 01:28:06,656
+So what's the exact time
+
+1364
+01:28:07,936 --> 01:28:09,728
+Pick a time into the past
+
+1365
+01:28:10,496 --> 01:28:13,568
+Whatever 100 * 500
+
+1366
+01:28:14,080 --> 01:28:15,872
+Pick whatever you want it doesn't matter
+
+1367
+01:28:16,128 --> 01:28:17,664
+There we go back a hundred steps
+
+1368
+01:28:18,176 --> 01:28:22,528
+Now send me like pulled in time every single initial condition
+
+1369
+01:28:23,040 --> 01:28:24,320
+That you could have been at
+
+1370
+01:28:25,088 --> 01:28:26,368
+100 * PepsiCo
+
+1371
+01:28:27,392 --> 01:28:32,512
+Or if you can get away with it stimulates you was in that because maybe you don't need to be like
+
+1372
+01:28:32,768 --> 01:28:34,560
+Stimulate the most forward in time
+
+1373
+01:28:36,096 --> 01:28:37,632
+If they reach
+
+1374
+01:28:37,888 --> 01:28:39,424
+Different Pointe
+
+1375
+01:28:40,704 --> 01:28:43,264
+Note that that oil using the same
+
+1376
+01:28:43,776 --> 01:28:46,592
+Random coin flip to the numbers
+
+1377
+01:28:47,872 --> 01:28:49,408
+But they're all using the same random numbers
+
+1378
+01:28:49,920 --> 01:28:56,064
+That means it's two of them dudes in the same state as he tell her some point they will remain in lockstep
+
+1379
+01:28:58,368 --> 01:29:00,416
+45 * 0
+
+1380
+01:29:01,184 --> 01:29:03,232
+Is that they are in several States
+
+1381
+01:29:03,488 --> 01:29:07,584
+Besides okay bummer but we're not done yet we go back
+
+1382
+01:29:08,608 --> 01:29:09,632
+Maybe
+
+1383
+01:29:11,936 --> 01:29:13,728
+And repeat the operation
+
+1384
+01:29:14,752 --> 01:29:16,544
+And see if these guys
+
+1385
+01:29:16,800 --> 01:29:18,336
+By the time you go for us
+
+1386
+01:29:19,872 --> 01:29:23,712
+How come I haven't you.
+
+1387
+01:29:24,224 --> 01:29:26,528
+Maybe the 400
+
+1388
+01:29:26,784 --> 01:29:27,552
+Until
+
+1389
+01:29:27,808 --> 01:29:29,344
+The hovel coalesced
+
+1390
+01:29:31,392 --> 01:29:34,464
+And then you follow them along and you see where they all ended
+
+1391
+01:29:34,720 --> 01:29:36,512
+And then you can declare this site
+
+1392
+01:29:37,024 --> 01:29:38,560
+Is where you would have got to
+
+1393
+01:29:41,888 --> 01:29:43,168
+That's the message
+
+1394
+01:29:43,424 --> 01:29:49,568
+That is very expensive in general because you have to stimulate 21 initial conditions or in general
+
+1395
+01:29:50,592 --> 01:29:51,616
+A big number
+
+1396
+01:29:53,152 --> 01:29:55,200
+If you're really really really coming
+
+1397
+01:29:55,456 --> 01:29:59,808
+You can establish that I have old
+
+1398
+01:30:00,320 --> 01:30:04,672
+But a special case of the 21 letters you actually only need to stimulate
+
+1399
+01:30:05,184 --> 01:30:07,744
+The rightmost Electra on the leftmost Electra
+
+1400
+01:30:08,000 --> 01:30:09,024
+Are you see if those
+
+1401
+01:30:09,280 --> 01:30:12,352
+End up sitting on top of each other
+
+1402
+01:30:12,608 --> 01:30:14,912
+Then only intermediate letras mustard
+
+1403
+01:30:17,216 --> 01:30:20,032
+That's the general idea of most exact
+
+1404
+01:30:20,288 --> 01:30:22,336
+They have some way of ordering
+
+1405
+01:30:22,592 --> 01:30:23,872
+The state space
+
+1406
+01:30:24,128 --> 01:30:28,736
+And then you have the highest state Valera station
+
+1407
+01:30:29,504 --> 01:30:31,040
+And then if they have coalesced
+
+1408
+01:30:31,808 --> 01:30:33,344
+Valentine's Arrow
+
+1409
+01:30:33,856 --> 01:30:35,392
+Ducati stop at Suffolk Temple
+
+1410
+01:30:35,648 --> 01:30:38,976
+Haven't you just go back to exactly the same
+
+1411
+01:30:39,488 --> 01:30:40,768
+They take the highest state
+
+1412
+01:30:42,048 --> 01:30:46,656
+It's been like that for you have to do to prove this is valid
+
+1413
+01:30:47,168 --> 01:30:51,008
+I'm going to show you some beautiful examples of the snow
+
+1414
+01:30:51,776 --> 01:30:53,824
+So that example
+
+1415
+01:30:54,336 --> 01:30:54,848
+Is
+
+1416
+01:30:55,104 --> 01:30:57,408
+To draw a random filing of a hexagon
+
+1417
+01:30:58,176 --> 01:31:01,248
+So here's a hexagon tiles with red
+
+1418
+01:31:01,760 --> 01:31:04,064
+Blue and green Los Angeles
+
+1419
+01:31:04,576 --> 01:31:08,160
+The Los Angeles Kings have three orientations and I started by the three different colors
+
+1420
+01:31:08,672 --> 01:31:14,816
+And you can think of it also is a piling of a hexagon with
+
+1421
+01:31:15,072 --> 01:31:18,400
+Feeling a Brickyard with cubicles
+
+1422
+01:31:18,912 --> 01:31:19,936
+Nataska is
+
+1423
+01:31:20,192 --> 01:31:24,800
+Please give me a random piling of asking a perfectly random piling
+
+1424
+01:31:25,056 --> 01:31:26,080
+Hexagon
+
+1425
+01:31:26,592 --> 01:31:29,664
+Until you invented Markov chain which is it
+
+1426
+01:31:30,432 --> 01:31:36,576
+Adding and removing Brick from The Brickyard how long do I need to add new baby
+
+1427
+01:31:36,832 --> 01:31:42,976
+The Brickyard lamp that can be well will do
+
+1428
+01:31:43,232 --> 01:31:45,536
+Established that completely full Brickyard
+
+1429
+01:31:45,792 --> 01:31:51,936
+Both have ended up in the same state
+
+1430
+01:31:52,960 --> 01:31:56,544
+Tell him the Lester have the empty Rick Ross and on the right we have the food Brickyard
+
+1431
+01:31:56,800 --> 01:31:59,360
+I support in time and it didn't work
+
+1432
+01:31:59,616 --> 01:32:03,200
+So we go back from 108 that 256 that
+
+1433
+01:32:03,456 --> 01:32:04,224
+In the past
+
+1434
+01:32:04,480 --> 01:32:06,016
+Botanica
+
+1435
+01:32:06,272 --> 01:32:09,856
+Keep going and there is a perfect timing of vacuum
+
+1436
+01:32:10,368 --> 01:32:16,512
+And so that's how long it took us 256 units of computer time to get the answer
+
+1437
+01:32:18,816 --> 01:32:19,584
+Find
+
+1438
+01:32:21,376 --> 01:32:22,144
+Do it again
+
+1439
+01:32:22,656 --> 01:32:23,936
+Ogden Clinic fax
+
+1440
+01:32:24,960 --> 01:32:27,520
+Go back to the 206
+
+1441
+01:32:29,312 --> 01:32:33,664
+That is using a different fresh set of random numbers that are defined
+
+1442
+01:32:34,176 --> 01:32:35,456
+How's it going
+
+1443
+01:32:40,576 --> 01:32:41,856
+Under $0.48
+
+1444
+01:32:42,880 --> 01:32:43,904
+How's it going
+
+1445
+01:32:45,184 --> 01:32:46,976
+Know or go back to
+
+1446
+01:32:47,744 --> 01:32:49,024
+50 Cent
+
+1447
+01:32:49,280 --> 01:32:50,304
+Stetsonville pass
+
+1448
+01:32:52,096 --> 01:32:58,240
+NB
+
+1449
+01:32:58,496 --> 01:33:04,640
+When they helped coalesce because coalescence of unusual sites like when two letrozole
+
+1450
+01:33:11,808 --> 01:33:17,952
+The answer isn't when Nicole
+
+1451
+01:33:18,464 --> 01:33:19,232
+Simulation
+
+1452
+01:33:19,744 --> 01:33:22,048
+All right you don't see any more of those I'll give you one more
+
+1453
+01:33:24,864 --> 01:33:26,144
+Occasionally it takes
+
+1454
+01:33:26,656 --> 01:33:30,496
+More than 256 Steps From the Past
+
+1455
+01:33:35,872 --> 01:33:39,200
+When I said that that's up for this particular size of hexagon
+
+1456
+01:33:40,992 --> 01:33:42,528
+Running this particular algorithm
+
+1457
+01:33:45,856 --> 01:33:47,648
+And that's another calling for free
+
+1458
+01:33:47,904 --> 01:33:53,536
+They might say who cares about filing well I'm not sure this is useful for
+
+1459
+01:33:53,792 --> 01:33:59,168
+But things are very beautiful things and through this work on exact sampling of Thailand
+
+1460
+01:34:00,704 --> 01:34:01,984
+Some discoveries will make
+
+1461
+01:34:03,008 --> 01:34:03,776
+So
+
+1462
+01:34:04,544 --> 01:34:06,080
+There is a perfect
+
+1463
+01:34:06,336 --> 01:34:09,920
+Piling using those three voltages
+
+1464
+01:34:10,688 --> 01:34:14,272
+I'm here is a perfect filing of an even bigger hexagon
+
+1465
+01:34:15,040 --> 01:34:16,064
+When you look at that
+
+1466
+01:34:16,320 --> 01:34:18,112
+You might start with a
+
+1467
+01:34:18,368 --> 01:34:19,392
+Is something happening
+
+1468
+01:34:20,160 --> 01:34:22,208
+Is there a perfect circle appearing
+
+1469
+01:34:22,976 --> 01:34:26,048
+I'm at Frozen all the tiles are red
+
+1470
+01:34:29,632 --> 01:34:34,496
+Arctic Circle
+
+1471
+01:34:34,752 --> 01:34:35,520
+Anaconda
+
+1472
+01:34:36,032 --> 01:34:39,104
+And they injected on the basis of this work on
+
+1473
+01:34:39,360 --> 01:34:41,152
+Randomly generate timing
+
+1474
+01:34:41,408 --> 01:34:44,736
+Maybe a random filing of a hexagon has the property
+
+1475
+01:34:46,528 --> 01:34:52,672
+Beyond which is Frozen
+
+1476
+01:34:52,928 --> 01:34:53,696
+It was discovered
+
+1477
+01:34:53,952 --> 01:34:55,488
+Thanks to exact template
+
+1478
+01:34:57,280 --> 01:34:59,328
+Fine example I want to show you
+
+1479
+01:34:59,584 --> 01:35:02,144
+Is atrovent achtung models
+
+1480
+01:35:02,400 --> 01:35:06,240
+Favorite toy weld of the
+
+1481
+01:35:08,544 --> 01:35:11,616
+If you went back before 1996
+
+1482
+01:35:12,128 --> 01:35:13,152
+Arrest people
+
+1483
+01:35:13,408 --> 01:35:19,552
+Oh goodness me this very interesting icing mobile that are cut about pay transitions it's a bit of a
+
+1484
+01:35:19,808 --> 01:35:25,184
+Middlesex that melting of ice and that sort of thing is so critical phenomena doesn't fluctuations
+
+1485
+01:35:25,440 --> 01:35:26,464
+When it melts
+
+1486
+01:35:27,744 --> 01:35:30,816
+Tell me I would stimulate game of the month
+
+1487
+01:35:31,072 --> 01:35:35,424
+What should I get for I want to make a really good sample
+
+1488
+01:35:35,680 --> 01:35:41,824
+People decide the Billabong time is it called
+
+1489
+01:35:42,080 --> 01:35:43,104
+Slowing down
+
+1490
+01:35:44,640 --> 01:35:50,016
+Very long time and no one really knows how long does it take for
+
+1491
+01:35:52,832 --> 01:35:56,416
+In 96 this exact time Glen community made a breakthrough
+
+1492
+01:35:56,672 --> 01:36:02,816
+Epic comparable to breakthrough in superconductivity When I Was An undergraduate in your warm like that
+
+1493
+01:36:07,168 --> 01:36:08,704
+And then two years later
+
+1494
+01:36:08,960 --> 01:36:15,104
+Turn back to the election
+
+1495
+01:36:15,360 --> 01:36:18,432
+I could do
+
+1496
+01:36:18,688 --> 01:36:22,784
+And a similar breakthrough Andrew lightning model
+
+1497
+01:36:23,040 --> 01:36:24,576
+Which means that
+
+1498
+01:36:25,088 --> 01:36:26,624
+It's not possible
+
+1499
+01:36:27,136 --> 01:36:28,672
+To show a sample
+
+1500
+01:36:29,184 --> 01:36:35,328
+Organizing model is a perfect sample the critical temperature
+
+1501
+01:36:35,584 --> 01:36:36,096
+What's the temperature
+
+1502
+01:36:36,352 --> 01:36:37,376
+Call VIP mobile
+
+1503
+01:36:38,400 --> 01:36:44,544
+Just Dance Juicy to ising model C I think model is a spin system for every
+
+1504
+01:36:44,800 --> 01:36:49,920
+Up or down a couple likes to be the same
+
+1505
+01:36:50,432 --> 01:36:51,456
+But on the other hand it
+
+1506
+01:36:51,712 --> 01:36:57,856
+Temperature so it has a tendency to
+
+1507
+01:36:58,112 --> 01:37:04,256
+Random what's it look like
+
+1508
+01:37:04,512 --> 01:37:08,352
+Heritage at low temperature
+
+1509
+01:37:08,608 --> 01:37:10,400
+Tiny bit of blue
+
+1510
+01:37:12,192 --> 01:37:12,960
+It could be
+
+1511
+01:37:13,984 --> 01:37:16,032
+All white with a tiny bit of blue
+
+1512
+01:37:17,312 --> 01:37:18,592
+Or it could be
+
+1513
+01:37:20,384 --> 01:37:26,272
+Dwight Oden doble
+
+1514
+01:37:26,784 --> 01:37:28,832
+The high temperature is it
+
+1515
+01:37:29,344 --> 01:37:30,880
+Low temperature
+
+1516
+01:37:31,136 --> 01:37:37,280
+Indonesia temperature
+
+1517
+01:37:38,304 --> 01:37:44,448
+Interesting phenomenon
+
+1518
+01:37:44,704 --> 01:37:45,472
+Sleeping stop
+
+1519
+01:37:45,728 --> 01:37:48,544
+So long
+
+1520
+01:37:49,312 --> 01:37:51,360
+Then below a certain temperature
+
+1521
+01:37:51,616 --> 01:37:57,760
+It all turns into a single, eventually
+
+1522
+01:37:58,016 --> 01:38:02,368
+The newspaper
+
+1523
+01:38:02,880 --> 01:38:07,744
+There are other Albertsons you can use with the much quicker missing between the old blue and they will why
+
+1524
+01:38:08,000 --> 01:38:08,512
+States
+
+1525
+01:38:10,816 --> 01:38:16,960
+This is a different Dupree 1996 States in someone's eye or how long I
+
+1526
+01:38:17,216 --> 01:38:20,288
+The temperature I'm really interested in them.
+
+1527
+01:38:20,544 --> 01:38:21,824
+Arrow Barber
+
+1528
+01:38:22,336 --> 01:38:28,480
+I want to get a perfect sample but I don't know how long
+
+1529
+01:38:28,736 --> 01:38:29,760
+Because
+
+1530
+01:38:30,016 --> 01:38:36,160
+74 really big things that I can measure how big
+
+1531
+01:38:37,184 --> 01:38:38,720
+So that's the challenge
+
+1532
+01:38:39,488 --> 01:38:40,000
+And
+
+1533
+01:38:40,256 --> 01:38:42,048
+The exact sampling community
+
+1534
+01:38:42,816 --> 01:38:48,960
+Came up with a method of solving this just a little bit more introductions I mentioned
+
+1535
+01:38:49,216 --> 01:38:49,728
+Temperature
+
+1536
+01:38:49,984 --> 01:38:51,264
+I do
+
+1537
+01:38:51,776 --> 01:38:54,336
+Crank which way did it go
+
+1538
+01:38:54,592 --> 01:38:58,432
+Temperature is going to the right
+
+1539
+01:38:58,688 --> 01:39:00,224
+The cranky up the temperature
+
+1540
+01:39:00,736 --> 01:39:04,832
+And what happens to the energy is going to make it with more energy
+
+1541
+01:39:05,088 --> 01:39:10,208
+Put the fluctuations in Odyssey the standard deviation of the
+
+1542
+01:39:10,464 --> 01:39:11,488
+Omelette
+
+1543
+01:39:12,000 --> 01:39:13,280
+I need to see
+
+1544
+01:39:13,536 --> 01:39:19,680
+At the temperature of 2.305
+
+1545
+01:39:21,728 --> 01:39:27,872
+There's something wacky going on at the temperature melting from the mainly or blue or white
+
+1546
+01:39:28,128 --> 01:39:31,456
+Into what three states
+
+1547
+01:39:31,968 --> 01:39:38,112
+The average magnetisation which is how much or blue or white the mean squared minus ization
+
+1548
+01:39:38,368 --> 01:39:40,928
+Right on Guam
+
+1549
+01:39:41,184 --> 01:39:45,024
+And that very low temperatures it's very very magnetized it's always
+
+1550
+01:39:45,280 --> 01:39:47,072
+In Pilot knitting Holly blue
+
+1551
+01:39:48,608 --> 01:39:52,448
+Then as you got to be suddenly become
+
+1552
+01:39:52,704 --> 01:39:53,728
+Certificate
+
+1553
+01:39:53,984 --> 01:39:56,032
+Very very lucky
+
+1554
+01:39:56,800 --> 01:39:57,312
+Okay
+
+1555
+01:39:57,568 --> 01:39:59,616
+So that's what I can bubbles look like
+
+1556
+01:40:02,432 --> 01:40:03,712
+There is
+
+1557
+01:40:03,968 --> 01:40:08,320
+A I forgot how big this thing is
+
+1558
+01:40:08,576 --> 01:40:10,112
+800 by 800
+
+1559
+01:40:10,368 --> 01:40:11,136
+Pixel
+
+1560
+01:40:11,392 --> 01:40:13,952
+Austin mobile asset critical temperature
+
+1561
+01:40:14,464 --> 01:40:15,232
+And I'm going to
+
+1562
+01:40:15,488 --> 01:40:20,864
+Show you a computer program that will make another of these perfect sample for you right now
+
+1563
+01:40:28,288 --> 01:40:31,616
+That is a piece of software written by
+
+1564
+01:40:32,384 --> 01:40:35,968
+Stop drop and Wilson do I choose the heroes of exact time playing
+
+1565
+01:40:36,224 --> 01:40:38,016
+And I'm going to start running now
+
+1566
+01:40:39,296 --> 01:40:45,440
+It's running from the past to the present and that little dog on top right
+
+1567
+01:40:45,696 --> 01:40:47,488
+The top most
+
+1568
+01:40:48,768 --> 01:40:54,912
+Say
+
+1569
+01:40:57,728 --> 01:41:03,872
+I'm what was visualizing hair is no mistake of the ising model but the state of ammo General system called
+
+1570
+01:41:04,128 --> 01:41:05,664
+The random cluster model
+
+1571
+01:41:05,920 --> 01:41:07,456
+Which is at 8
+
+1572
+01:41:07,712 --> 01:41:13,344
+Set appointment with edges that are either present or not present between adjacent
+
+1573
+01:41:13,600 --> 01:41:14,624
+Points
+
+1574
+01:41:16,416 --> 01:41:17,184
+We can then
+
+1575
+01:41:17,440 --> 01:41:22,560
+Take all of those edges and we could show which things are connected to each other and color them different colors
+
+1576
+01:41:23,072 --> 01:41:25,888
+Identified by the color
+
+1577
+01:41:26,144 --> 01:41:26,912
+And then we can
+
+1578
+01:41:27,424 --> 01:41:33,056
+Randomly taking custody to make it black or white not give us a sample
+
+1579
+01:41:33,824 --> 01:41:36,384
+So they want done it
+
+1580
+01:41:36,640 --> 01:41:40,224
+I'm in front of your eyes I have created a perfect sample on this
+
+1581
+01:41:40,480 --> 01:41:45,856
+Spring me Lodge it doesn't take very long
+
+1582
+01:41:46,112 --> 01:41:46,880
+This method
+
+1583
+01:41:47,648 --> 01:41:48,160
+So
+
+1584
+01:41:48,672 --> 01:41:54,816
+On the screen tab
+
+1585
+01:41:55,072 --> 01:41:57,632
+I'm doing it now in the top left-hand corner
+
+1586
+01:41:57,888 --> 01:42:03,776
+So you can see a bit more would look like if you were seeing this for resolution
+
+1587
+01:42:04,032 --> 01:42:05,568
+The full resolution version
+
+1588
+01:42:05,824 --> 01:42:06,848
+It's on the website
+
+1589
+01:42:10,432 --> 01:42:16,576
+Okay then summary what we done today we've talked a lot about running book Behavior as how we would love to get rid of it
+
+1590
+01:42:17,088 --> 01:42:23,232
+I'll show you some efficient methods for reducing run about Behavior I'll show you some methods for getting rid of the sensitivity to Chris
+
+1591
+01:42:23,488 --> 01:42:24,768
+Promises
+
+1592
+01:42:25,024 --> 01:42:26,304
+And I told you a little bit
+
+1593
+01:42:26,560 --> 01:42:28,096
+About exact sampling
+
+1594
+01:42:28,352 --> 01:42:32,704
+Throw some other issues respond to the last lecture someone said
+
+1595
+01:42:33,216 --> 01:42:39,360
+How do you find the normalizing, and that's the crucial question we would love to know that normalizing constant from any of these problems
+
+1596
+01:42:39,872 --> 01:42:46,016
+I'm the right illumise literature on very complicated and Counting methods to find cuz I like that
+
+1597
+01:42:46,528 --> 01:42:47,808
+These must color method
+
+1598
+01:42:48,064 --> 01:42:54,208
+So his words from literature
+
+1599
+01:42:55,488 --> 01:42:57,792
+The final Martin compston
+
+1600
+01:42:58,304 --> 01:43:02,912
+Bethel dump
+
+1601
+01:43:03,424 --> 01:43:08,288
+Temper transitions annealed importance sampling LinkedIn
+
+1602
+01:43:08,544 --> 01:43:09,568
+Radford Neal
+
+1603
+01:43:10,336 --> 01:43:13,408
+The reason so difficult to get the dome light in Compton
+
+1604
+01:43:13,664 --> 01:43:15,712
+Is visualized with a cartoon hat
+
+1605
+01:43:16,480 --> 01:43:18,016
+Imagine that you go to Lake
+
+1606
+01:43:18,272 --> 01:43:21,600
+And the Lakers going to that the Jacksonville Ikea poke stop
+
+1607
+01:43:21,856 --> 01:43:24,416
+Imagine you've got some capability
+
+1608
+01:43:24,928 --> 01:43:28,512
+To move your boat around on the lake and how deep the lake
+
+1609
+01:43:28,768 --> 01:43:33,632
+He might be trying to draw uniformly distributed python samples from the light
+
+1610
+01:43:34,400 --> 01:43:40,544
+Let's imagine that you have at least told that you've not got the capability to cool up a random point in the lake
+
+1611
+01:43:40,800 --> 01:43:46,944
+Random intense of uniformitarianism the whole volume of the light
+
+1612
+01:43:47,200 --> 01:43:48,992
+Tell me how deep the lake is
+
+1613
+01:43:49,760 --> 01:43:51,808
+If you keep on pulling on that capability
+
+1614
+01:43:52,064 --> 01:43:54,624
+And you'll complicated light completely
+
+1615
+01:43:54,880 --> 01:44:01,024
+You will be able to go to randomly chosen point in the volume of water I need to find out how deep for like it
+
+1616
+01:44:02,560 --> 01:44:06,144
+I just have to think about that capability if you go to all of those points
+
+1617
+01:44:06,400 --> 01:44:07,936
+I made it home depot like it
+
+1618
+01:44:08,448 --> 01:44:11,264
+Does that tell you, water is in Malay
+
+1619
+01:44:11,520 --> 01:44:12,800
+Tonight
+
+1620
+01:44:13,824 --> 01:44:16,640
+No because you could be in a lake
+
+1621
+01:44:16,896 --> 01:44:19,456
+Prices live in places like in both dimensions
+
+1622
+01:44:19,968 --> 01:44:21,504
+All about measurement
+
+1623
+01:44:21,760 --> 01:44:26,880
+Stretching the the map of the lake in Baton Rouge
+
+1624
+01:44:30,208 --> 01:44:33,024
+The ability to sample
+
+1625
+01:44:33,280 --> 01:44:34,816
+From the volume of the light
+
+1626
+01:44:35,072 --> 01:44:36,864
+Doesn't give you any information about
+
+1627
+01:44:37,120 --> 01:44:38,144
+Volume Excel
+
+1628
+01:44:38,400 --> 01:44:41,984
+Not quite so difficult that because that is the amount of water
+
+1629
+01:44:42,240 --> 01:44:45,056
+Dim the lights they have to use other methods
+
+1630
+01:44:45,312 --> 01:44:48,896
+Sequences of probability distributions
+
+1631
+01:44:49,664 --> 01:44:50,944
+Trying to type
+
+1632
+01:44:51,200 --> 01:44:52,224
+Fuel cell
+
+1633
+01:44:52,480 --> 01:44:55,808
+To a distribution that you understand the way you know the volume
+
+1634
+01:44:56,064 --> 01:45:00,160
+Then you go from that by seeking to stats for the real distribution of Interest
+
+1635
+01:45:00,416 --> 01:45:04,000
+I did not weigh
+
+1636
+01:45:07,072 --> 01:45:10,400
+That's all I wanted to say about Adventure
+
+1637
+01:45:10,656 --> 01:45:11,680
+Are there any questions
+
+1638
+01:45:19,872 --> 01:45:21,408
+Okay so the question is
+
+1639
+01:45:21,664 --> 01:45:24,480
+Is at the one-dimensional variable it's like Netflix
+
+1640
+01:45:24,736 --> 01:45:26,016
+Samantha is
+
+1641
+01:45:26,784 --> 01:45:29,856
+The problem that you are solving maybe many dimensional
+
+1642
+01:45:30,368 --> 01:45:33,440
+If you want to sell them any damage no problem with black something
+
+1643
+01:45:33,696 --> 01:45:34,976
+Then what you would do
+
+1644
+01:45:36,000 --> 01:45:36,512
+Is
+
+1645
+01:45:40,096 --> 01:45:41,888
+You take your current location
+
+1646
+01:45:42,400 --> 01:45:44,960
+How do you pick a direction to slice in
+
+1647
+01:45:45,472 --> 01:45:48,288
+It could be any any direction
+
+1648
+01:45:49,056 --> 01:45:53,152
+As long as your message using the direction doesn't depend on the current location
+
+1649
+01:45:53,664 --> 01:45:56,992
+Upickit erection and then you say hello
+
+1650
+01:45:57,248 --> 01:45:58,272
+To be
+
+1651
+01:45:58,784 --> 01:46:03,392
+The distance along the direction when you operate fly sampling along that line
+
+1652
+01:46:08,000 --> 01:46:09,792
+Pick a blue point
+
+1653
+01:46:10,304 --> 01:46:11,328
+This is your new podcast
+
+1654
+01:46:11,840 --> 01:46:15,168
+And then you pick another Direction at random Maybe
+
+1655
+01:46:15,424 --> 01:46:21,568
+I need you flight something along that
+
+1656
+01:46:24,384 --> 01:46:28,224
+So that's how you was used by something it's a lot like get something
+
+1657
+01:46:28,480 --> 01:46:32,064
+Which goes along the axes
+
+1658
+01:46:33,344 --> 01:46:36,416
+If you can use any Massachusetts directions
+
+1659
+01:46:42,560 --> 01:46:43,072
+Taken
+
+1660
+01:46:48,448 --> 01:46:49,216
+Okay
+
+1661
+01:46:50,240 --> 01:46:55,104
+The question is can you apply exact time playing to continuous value
+
+1662
+01:46:55,360 --> 01:46:56,896
+Braunfels Texas
+
+1663
+01:46:57,408 --> 01:46:59,200
+Unanswered yet
+
+1664
+01:46:59,456 --> 01:47:01,248
+You have to be very cunning
+
+1665
+01:47:01,504 --> 01:47:02,784
+But it is possible
+
+1666
+01:47:04,576 --> 01:47:05,088
+Soul
+
+1667
+01:47:05,856 --> 01:47:07,136
+Some continuous problems
+
+1668
+01:47:07,648 --> 01:47:09,184
+Disney exact something
+
+1669
+01:47:09,440 --> 01:47:15,584
+So the critical thing you need is some way of achieving coalescence even though you felt
+
+1670
+01:47:15,840 --> 01:47:17,888
+The number for True Value that one parameter
+
+1671
+01:47:18,144 --> 01:47:20,448
+Did it have a China at the properties at
+
+1672
+01:47:20,960 --> 01:47:22,752
+Sometimes all of those in
+
+1673
+01:47:23,008 --> 01:47:24,800
+All of the points in this continuum
+
+1674
+01:47:25,056 --> 01:47:31,200
+Kodak lens for single value
+
+1675
+01:47:36,832 --> 01:47:37,600
+It's not easy
+
+1676
+01:47:37,856 --> 01:47:43,232
+I bet there isn't a huge Liquors we can do Bayesian inference
+
+1677
+01:47:43,488 --> 01:47:46,560
+That's not being a chief
+
+1678
+01:47:47,584 --> 01:47:48,352
+Annabelle
+
+1679
+01:47:50,144 --> 01:47:51,680
+Hey thank you very much

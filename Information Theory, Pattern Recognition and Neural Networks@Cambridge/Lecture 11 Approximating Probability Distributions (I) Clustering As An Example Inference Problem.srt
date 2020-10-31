@@ -1,0 +1,2483 @@
+1
+00:00:05,376 --> 00:00:07,424
+Welcome to 11
+
+2
+00:00:09,216 --> 00:00:09,984
+Repeat
+
+3
+00:00:11,264 --> 00:00:12,800
+Information Theory
+
+4
+00:00:13,312 --> 00:00:19,456
+I'm interested in a moment different ways of doing
+
+5
+00:00:19,712 --> 00:00:20,736
+Modeling
+
+6
+00:00:22,528 --> 00:00:28,672
+I want to remind you where the website is on the website
+
+7
+00:00:28,928 --> 00:00:29,440
+Free
+
+8
+00:00:31,232 --> 00:00:34,304
+I'm just to tell you a little bit about
+
+9
+00:00:35,584 --> 00:00:40,448
+In the next stop talking about multicolor method is a little
+
+10
+00:00:40,704 --> 00:00:45,056
+Encyclopedia of interesting multicolor matters. We will go through
+
+11
+00:00:46,848 --> 00:00:50,688
+12
+
+12
+00:00:53,248 --> 00:00:53,760
+Plaza
+
+13
+00:00:54,016 --> 00:00:59,136
+Motivation interested in Calabasas
+
+14
+00:01:00,416 --> 00:01:01,184
+About
+
+15
+00:01:02,720 --> 00:01:05,024
+As an example of an inference
+
+16
+00:01:05,280 --> 00:01:11,424
+I'll give all the motivations about you have to have electron clustering
+
+17
+00:01:11,680 --> 00:01:17,312
+I just gave you an abstract concept
+
+18
+00:01:19,360 --> 00:01:25,504
+Problem
+
+19
+00:01:25,760 --> 00:01:26,528
+Reset
+
+20
+00:01:27,808 --> 00:01:33,952
+I want to know what the exponential
+
+21
+00:01:36,512 --> 00:01:42,656
+Asian cockroach
+
+22
+00:01:42,912 --> 00:01:49,056
+Mixture of two exponential
+
+23
+00:01:50,080 --> 00:01:50,848
+Exhausted
+
+24
+00:01:51,104 --> 00:01:52,128
+Enumeration
+
+25
+00:01:53,152 --> 00:01:56,224
+Hypotheses
+
+26
+00:01:56,736 --> 00:02:02,880
+Homemade pancakes
+
+27
+00:02:03,136 --> 00:02:07,744
+I'm over all the parts to the two
+
+28
+00:02:08,256 --> 00:02:10,048
+Credentials
+
+29
+00:02:11,072 --> 00:02:17,216
+Made a slip last time I mentioned that I did I have to change the rules
+
+30
+00:02:19,520 --> 00:02:25,664
+At the window
+
+31
+00:02:25,920 --> 00:02:28,224
+Freret Street
+
+32
+00:02:36,160 --> 00:02:41,792
+So now we're about to discuss clustering our kickoff with a little exercise which is
+
+33
+00:02:42,048 --> 00:02:45,120
+Information theory noisy Channel
+
+34
+00:02:45,632 --> 00:02:46,400
+Question
+
+35
+00:02:47,168 --> 00:02:49,728
+And it goes like this channel
+
+36
+00:02:51,008 --> 00:02:53,312
+Who won
+
+37
+00:02:54,080 --> 00:02:57,408
+And then what channel is a real number y
+
+38
+00:02:57,664 --> 00:03:02,272
+Why is Cassian around 1
+
+39
+00:03:02,528 --> 00:03:03,552
+Call me to
+
+40
+00:03:03,808 --> 00:03:04,576
+Depending
+
+41
+00:03:04,832 --> 00:03:07,904
+Channel
+
+42
+00:03:09,952 --> 00:03:16,096
+If you want to know about the capacity of the channel
+
+43
+00:03:16,352 --> 00:03:17,376
+Which is
+
+44
+00:03:17,632 --> 00:03:19,168
+You use this channel
+
+45
+00:03:20,192 --> 00:03:26,336
+The prior probabilities of the two possible values of a
+
+46
+00:03:26,592 --> 00:03:28,128
+Charlie's used once
+
+47
+00:03:28,384 --> 00:03:29,664
+Why
+
+48
+00:03:30,432 --> 00:03:32,992
+What is the posterior probability
+
+49
+00:03:35,552 --> 00:03:36,832
+Please
+
+50
+00:03:37,088 --> 00:03:40,416
+Look up
+
+51
+00:03:41,696 --> 00:03:47,840
+As a function of Y I'd like it in the form of a woman
+
+52
+00:03:48,096 --> 00:03:49,888
+Habitats United
+
+53
+00:04:05,504 --> 00:04:06,784
+Okay
+
+54
+00:04:07,296 --> 00:04:10,624
+We're right on Bayes Theorem
+
+55
+00:04:11,136 --> 00:04:12,160
+Russell
+
+56
+00:04:13,184 --> 00:04:19,071
+Why is
+
+57
+00:04:19,327 --> 00:04:24,191
+Like a Mac
+
+58
+00:04:24,447 --> 00:04:26,751
+Volume is on my rule
+
+59
+00:04:27,263 --> 00:04:30,335
+Possible values
+
+60
+00:04:42,111 --> 00:04:48,255
+When you rearrange that into 1/4 -
+
+61
+00:04:50,047 --> 00:04:51,583
+Where is my name for
+
+62
+00:04:55,167 --> 00:04:57,471
+Damn why
+
+63
+00:04:57,983 --> 00:05:04,127
+Is I can grind it out long time history longhand version
+
+64
+00:05:19,743 --> 00:05:21,535
+Taiwan
+
+65
+00:05:25,119 --> 00:05:25,887
+Lawgiver
+
+66
+00:05:26,143 --> 00:05:27,935
+Hi ratio
+
+67
+00:05:28,959 --> 00:05:35,103
+One of the √ 2 pi Sigma squaresville cancel out sodium
+
+68
+00:05:35,359 --> 00:05:36,895
+Where is it be interesting
+
+69
+00:05:37,151 --> 00:05:38,431
+Why didn't the fish
+
+70
+00:05:38,687 --> 00:05:43,295
+And if you want to be elegant you can remember
+
+71
+00:05:49,439 --> 00:05:51,231
+I like that you
+
+72
+00:05:51,999 --> 00:05:54,303
+Elegant way of writing this
+
+73
+00:06:08,895 --> 00:06:10,175
+Hey
+
+74
+00:06:12,223 --> 00:06:14,527
+As a function of Y
+
+75
+00:06:14,783 --> 00:06:16,575
+Is something linear function
+
+76
+00:06:16,831 --> 00:06:21,951
+Like this
+
+77
+00:06:25,791 --> 00:06:30,399
+M1 and M2
+
+78
+00:06:32,447 --> 00:06:33,983
+Why
+
+79
+00:06:35,007 --> 00:06:37,055
+Find a is a measure of
+
+80
+00:06:43,967 --> 00:06:48,063
+Winit
+
+81
+00:06:48,319 --> 00:06:53,183
+Remind me to
+
+82
+00:06:56,767 --> 00:07:00,351
+Probability that X is long why
+
+83
+00:07:00,607 --> 00:07:02,143
+Look something like this
+
+84
+00:07:08,799 --> 00:07:14,943
+Straight line
+
+85
+00:07:16,991 --> 00:07:21,087
+This is the place where the two products
+
+86
+00:07:23,135 --> 00:07:27,487
+Prosthetic little bit 75050 is here
+
+87
+00:07:31,327 --> 00:07:37,215
+Applied
+
+88
+00:07:39,775 --> 00:07:44,639
+Send it
+
+89
+00:07:50,271 --> 00:07:52,063
+Life estate
+
+90
+00:07:55,135 --> 00:07:57,183
+Okay any questions
+
+91
+00:07:57,695 --> 00:07:58,719
+Rabbit
+
+92
+00:07:59,743 --> 00:08:05,375
+So if I tell you I'm going to use this channel then the output of the channel
+
+93
+00:08:05,887 --> 00:08:12,031
+Why is a real number whose probability distribution is a mixture
+
+94
+00:08:12,287 --> 00:08:14,079
+Jesse Owens
+
+95
+00:08:17,407 --> 00:08:23,551
+Guy looks like it might look like
+
+96
+00:08:38,143 --> 00:08:41,471
+So why do you care about me so well
+
+97
+00:08:42,239 --> 00:08:46,335
+We might be
+
+98
+00:08:46,591 --> 00:08:47,871
+Grecian
+
+99
+00:08:48,127 --> 00:08:50,175
+You might be interested
+
+100
+00:08:56,063 --> 00:09:02,207
+Is Buddy Foster Street entrances
+
+101
+00:09:06,047 --> 00:09:10,399
+Play with now I'm going to show you some
+
+102
+00:09:11,167 --> 00:09:14,495
+And we'll see how that
+
+103
+00:09:16,031 --> 00:09:18,335
+Inferences to do with me
+
+104
+00:09:20,383 --> 00:09:26,527
+So it's a real data just to remind you what we might actually talk about if you're doing real clustering
+
+105
+00:09:28,575 --> 00:09:32,415
+Frequency of speech
+
+106
+00:09:37,535 --> 00:09:41,119
+Find Great Oaks
+
+107
+00:09:45,983 --> 00:09:50,079
+Volume
+
+108
+00:09:54,687 --> 00:09:59,295
+Rent A Streetcar the picture and then you want to recognize which get you guys
+
+109
+00:09:59,551 --> 00:10:05,695
+Which babies do in the language
+
+110
+00:10:06,463 --> 00:10:11,071
+Listening to these references coming out
+
+111
+00:10:11,327 --> 00:10:15,935
+I made it over and over
+
+112
+00:10:18,495 --> 00:10:21,567
+K means clustering
+
+113
+00:10:25,151 --> 00:10:26,175
+Hey
+
+114
+00:10:26,431 --> 00:10:32,575
+The number the number please
+
+115
+00:10:34,879 --> 00:10:37,951
+Differentiation
+
+116
+00:10:44,607 --> 00:10:46,143
+So let me show you
+
+117
+00:10:46,399 --> 00:10:47,935
+Hangman solver
+
+118
+00:11:03,551 --> 00:11:05,855
+Where is resume
+
+119
+00:11:06,879 --> 00:11:10,207
+Awesome date real values
+
+120
+00:11:16,351 --> 00:11:22,495
+As an example maybe when making an automatic vegetable sourcing
+
+121
+00:11:24,799 --> 00:11:30,943
+I'm not going to use text Walnut x-23
+
+122
+00:11:31,199 --> 00:11:32,479
+Real numbers
+
+123
+00:11:32,735 --> 00:11:34,527
+Change notation
+
+124
+00:11:35,807 --> 00:11:41,439
+So what we measure is X1 and X2 and maybe a whole bunch of other
+
+125
+00:11:41,951 --> 00:11:48,095
+These are measurements made by our automated vegetable measuring machinery
+
+126
+00:11:48,351 --> 00:11:51,679
+Maybe X1 is reflections
+
+127
+00:11:51,935 --> 00:11:55,519
+609
+
+128
+00:11:55,775 --> 00:12:01,919
+I may be a few is a vegetable
+
+129
+00:12:19,583 --> 00:12:24,703
+So his house memes
+
+130
+00:12:31,615 --> 00:12:34,943
+We take all the data we've seen so far
+
+131
+00:12:36,991 --> 00:12:41,599
+Search LinkedIn
+
+132
+00:12:41,855 --> 00:12:44,415
+Float down in this world
+
+133
+00:12:46,463 --> 00:12:49,279
+Texel hey hey object story
+
+134
+00:12:55,935 --> 00:12:57,471
+Red Lobster
+
+135
+00:12:57,727 --> 00:13:03,615
+How many police means I mean to initially
+
+136
+00:13:04,127 --> 00:13:06,431
+You just let me down anyway you like
+
+137
+00:13:07,967 --> 00:13:13,343
+Initialization set weather report on TV
+
+138
+00:13:15,903 --> 00:13:19,231
+Finish Line K means
+
+139
+00:13:23,071 --> 00:13:25,887
+Hey hey
+
+140
+00:13:26,399 --> 00:13:28,191
+Brenda
+
+141
+00:13:32,287 --> 00:13:33,567
+At step one
+
+142
+00:13:34,079 --> 00:13:36,639
+Step to it
+
+143
+00:13:38,175 --> 00:13:42,527
+We assign each of these datapoints
+
+144
+00:13:47,135 --> 00:13:49,439
+The nearest
+
+145
+00:13:53,535 --> 00:13:57,887
+Is
+
+146
+00:13:58,399 --> 00:14:02,239
+Find a distance to measures how close you are
+
+147
+00:14:02,751 --> 00:14:07,615
+Distance here is going to be
+
+148
+00:14:14,783 --> 00:14:20,927
+MK - x at
+
+149
+00:14:21,951 --> 00:14:26,559
+Not the distance
+
+150
+00:14:26,815 --> 00:14:30,399
+Young ball
+
+151
+00:14:35,519 --> 00:14:36,287
+So
+
+152
+00:14:36,799 --> 00:14:40,639
+We assign each point to the nearest
+
+153
+00:14:46,015 --> 00:14:52,159
+Ridiculous
+
+154
+00:14:55,487 --> 00:14:56,767
+Send
+
+155
+00:14:59,839 --> 00:15:04,703
+Call Lisa Lisa closest to
+
+156
+00:15:10,591 --> 00:15:16,735
+Another way of saying what happens when you sign them is we could introduce
+
+157
+00:15:16,991 --> 00:15:19,807
+Thinkful responsibility
+
+158
+00:15:21,599 --> 00:15:27,231
+Define how responsible he chased me is for the endpoint
+
+159
+00:15:27,999 --> 00:15:29,023
+By saying
+
+160
+00:15:29,279 --> 00:15:35,423
+Well it's on its places to me that I'm responsible for it I have walked
+
+161
+00:15:39,007 --> 00:15:43,615
+I'm just giving you a new piece of notation
+
+162
+00:15:43,871 --> 00:15:44,895
+Responsibility
+
+163
+00:15:45,151 --> 00:15:51,295
+Guam if NK is the closest
+
+164
+00:15:51,551 --> 00:15:54,879
+2
+
+165
+00:15:55,647 --> 00:15:57,439
+Extant
+
+166
+00:16:00,767 --> 00:16:01,791
+Otherwise
+
+167
+00:16:03,839 --> 00:16:05,631
+Another way
+
+168
+00:16:19,967 --> 00:16:21,503
+Responsibility is wrong
+
+169
+00:16:26,623 --> 00:16:32,767
+Hey minimizes with respects
+
+170
+00:16:44,543 --> 00:16:47,359
+All right
+
+171
+00:16:47,615 --> 00:16:51,199
+Let's go ahead and do this on the screen with an example
+
+172
+00:16:51,455 --> 00:16:52,479
+I'll grab some beta
+
+173
+00:16:52,991 --> 00:16:54,783
+Disappoint turning green
+
+174
+00:17:01,951 --> 00:17:07,071
+And now we slap in Maine have an issue we were all clapping to
+
+175
+00:17:07,327 --> 00:17:10,911
+Random Orange
+
+176
+00:17:11,167 --> 00:17:12,191
+Green
+
+177
+00:17:12,447 --> 00:17:15,775
+Navigate to say who you closest to
+
+178
+00:17:16,287 --> 00:17:22,431
+Culinary tastes like oranges
+
+179
+00:17:22,687 --> 00:17:24,991
+Agreed
+
+180
+00:17:26,015 --> 00:17:27,807
+Step 3
+
+181
+00:17:28,319 --> 00:17:33,439
+Update to me updates that works like this
+
+182
+00:17:34,463 --> 00:17:36,767
+The me number one
+
+183
+00:17:37,023 --> 00:17:39,583
+The meaning of the datapoint
+
+184
+00:17:42,655 --> 00:17:44,191
+Guam
+
+185
+00:17:44,447 --> 00:17:45,727
+Omca in general
+
+186
+00:17:46,239 --> 00:17:48,799
+That sets to the sum
+
+187
+00:17:53,151 --> 00:17:59,295
+Divided by the number of points that you can write that responsibility
+
+188
+00:18:04,927 --> 00:18:06,975
+Famous coming over
+
+189
+00:18:07,231 --> 00:18:09,535
+The end
+
+190
+00:18:14,399 --> 00:18:19,007
+Don't you mean
+
+191
+00:18:24,639 --> 00:18:26,687
+So like that again
+
+192
+00:18:27,199 --> 00:18:29,503
+And let's do it so we update
+
+193
+00:18:30,015 --> 00:18:30,783
+Tumi
+
+194
+00:18:31,039 --> 00:18:35,391
+In orange green to be the me
+
+195
+00:18:35,647 --> 00:18:41,535
+And then we repeat so you go back
+
+196
+00:18:43,583 --> 00:18:46,911
+Goshen 200-piece
+
+197
+00:18:47,167 --> 00:18:49,215
+Until nothing happens anymore
+
+198
+00:18:49,471 --> 00:18:51,519
+What do you do again
+
+199
+00:18:51,775 --> 00:18:53,055
+Is it sunset
+
+200
+00:18:56,127 --> 00:18:57,663
+Update to me
+
+201
+00:19:00,479 --> 00:19:01,503
+And I repeat
+
+202
+00:19:01,759 --> 00:19:02,527
+Reassign
+
+203
+00:19:04,319 --> 00:19:05,599
+And I will update
+
+204
+00:19:06,879 --> 00:19:07,903
+Naira sign
+
+205
+00:19:08,671 --> 00:19:09,695
+Play update
+
+206
+00:19:10,207 --> 00:19:10,975
+Westside
+
+207
+00:19:11,231 --> 00:19:12,255
+Update
+
+208
+00:19:12,511 --> 00:19:17,119
+Update nothing is happening anymore
+
+209
+00:19:17,375 --> 00:19:19,935
+Stable state
+
+210
+00:19:20,191 --> 00:19:23,263
+Change
+
+211
+00:19:26,335 --> 00:19:32,479
+Last minute random sign up date
+
+212
+00:19:33,503 --> 00:19:39,391
+Okay sign
+
+213
+00:19:41,183 --> 00:19:46,047
+If you want something for me
+
+214
+00:19:46,303 --> 00:19:49,631
+Update
+
+215
+00:19:53,983 --> 00:19:59,871
+I'm not sure if you could do whatever you want and something happens
+
+216
+00:20:00,383 --> 00:20:02,431
+Oregon
+
+217
+00:20:03,455 --> 00:20:04,735
+Sing for me
+
+218
+00:20:04,991 --> 00:20:06,783
+Sign up date
+
+219
+00:20:07,551 --> 00:20:09,343
+Alright fine
+
+220
+00:20:09,599 --> 00:20:11,391
+Update
+
+221
+00:20:11,647 --> 00:20:12,415
+Find the same
+
+222
+00:20:12,671 --> 00:20:14,719
+OLS
+
+223
+00:20:16,255 --> 00:20:17,535
+Strike War again
+
+224
+00:20:18,303 --> 00:20:19,583
+Listen to memes
+
+225
+00:20:20,351 --> 00:20:21,375
+Fish line
+
+226
+00:20:21,887 --> 00:20:25,983
+Update
+
+227
+00:20:30,335 --> 00:20:31,615
+Daylight
+
+228
+00:20:32,383 --> 00:20:33,151
+Do it again
+
+229
+00:20:35,711 --> 00:20:36,479
+Noches.
+
+230
+00:20:36,735 --> 00:20:38,271
+Grey orange
+
+231
+00:20:38,527 --> 00:20:41,599
+Boundary of that
+
+232
+00:20:42,111 --> 00:20:48,255
+Something you may be starting to feel already as I'm not sure like I mean
+
+233
+00:20:49,535 --> 00:20:51,071
+Assign
+
+234
+00:21:04,127 --> 00:21:05,407
+Call me
+
+235
+00:21:06,943 --> 00:21:09,247
+Another one
+
+236
+00:21:10,527 --> 00:21:16,672
+Lost messages coming through that you can run pay me to find some trusses for you it will give you a stable and say
+
+237
+00:21:17,184 --> 00:21:20,000
+The insider time call random initialisation
+
+238
+00:21:20,512 --> 00:21:26,400
+I may be some insight
+
+239
+00:21:28,192 --> 00:21:29,216
+I take
+
+240
+00:21:33,312 --> 00:21:37,408
+Let's take it that I'm seeing if you can makeup
+
+241
+00:21:37,920 --> 00:21:43,552
+Like scabies even less than we do at low-hanging is already quite
+
+242
+00:21:43,808 --> 00:21:47,136
+A widely used algorithm
+
+243
+00:21:49,184 --> 00:21:54,048
+So let's pick some different salads
+
+244
+00:21:55,840 --> 00:21:58,400
+Dataon made
+
+245
+00:21:58,656 --> 00:22:02,496
+Which if you ask a human they might say yes
+
+246
+00:22:03,008 --> 00:22:06,336
+They said haha we have a clustering algorithm
+
+247
+00:22:06,592 --> 00:22:12,480
+Talk to me at random
+
+248
+00:22:17,600 --> 00:22:19,648
+Like what we had in mind right
+
+249
+00:22:21,696 --> 00:22:26,560
+You mean
+
+250
+00:22:28,864 --> 00:22:32,192
+Green guys going grabbed a few guys if you really want
+
+251
+00:22:35,776 --> 00:22:41,920
+Really doing what
+
+252
+00:22:42,176 --> 00:22:48,320
+Try one more time
+
+253
+00:22:52,672 --> 00:22:55,232
+Okay that's not quite idealism
+
+254
+00:22:57,792 --> 00:23:00,096
+We can always try using bull
+
+255
+00:23:00,608 --> 00:23:06,752
+Me at all at 7 instead
+
+256
+00:23:09,312 --> 00:23:10,592
+This how I got wonderful
+
+257
+00:23:12,640 --> 00:23:15,200
+I don't know. Maybe the road is that
+
+258
+00:23:18,016 --> 00:23:24,160
+I still don't answer yellow cluster
+
+259
+00:23:25,184 --> 00:23:31,328
+Chinese food
+
+260
+00:23:31,584 --> 00:23:36,192
+I have to be
+
+261
+00:23:36,448 --> 00:23:41,824
+What should we look at next let's switch stages at one more time
+
+262
+00:23:44,640 --> 00:23:46,688
+And I'll show you
+
+263
+00:23:47,712 --> 00:23:48,992
+This song
+
+264
+00:23:54,112 --> 00:23:58,208
+So ask human how many classes are there in this time
+
+265
+00:24:08,192 --> 00:24:14,336
+Okay
+
+266
+00:24:15,872 --> 00:24:16,640
+Find
+
+267
+00:24:17,152 --> 00:24:18,688
+Update
+
+268
+00:24:19,200 --> 00:24:23,808
+Sign up date for sign up date
+
+269
+00:24:25,856 --> 00:24:26,368
+Beautiful
+
+270
+00:24:26,624 --> 00:24:28,160
+It's time.
+
+271
+00:24:29,696 --> 00:24:35,328
+Okay to do it again
+
+272
+00:24:38,656 --> 00:24:39,424
+Bygone
+
+273
+00:24:46,592 --> 00:24:47,104
+Okay
+
+274
+00:24:47,360 --> 00:24:53,504
+So it's not a million miles
+
+275
+00:24:53,760 --> 00:24:56,576
+Improve it
+
+276
+00:24:59,392 --> 00:25:03,232
+What if you normalize Checotah okay
+
+277
+00:25:03,744 --> 00:25:06,304
+What is normal life according to me
+
+278
+00:25:07,584 --> 00:25:11,680
+Take me to a certain before you get it to the stupid algorithm
+
+279
+00:25:12,448 --> 00:25:13,984
+All right
+
+280
+00:25:14,496 --> 00:25:16,288
+Imagine doing that
+
+281
+00:25:20,640 --> 00:25:26,272
+Play something relaxing
+
+282
+00:25:26,784 --> 00:25:27,808
+Instead of
+
+283
+00:25:28,320 --> 00:25:34,464
+Flying with you and giving you your normal eyesight today just at the one that looks like
+
+284
+00:25:34,720 --> 00:25:36,512
+Okay
+
+285
+00:25:41,888 --> 00:25:43,680
+Still got it right
+
+286
+00:25:43,936 --> 00:25:46,496
+Maybe not quite as badly as this one
+
+287
+00:25:46,752 --> 00:25:52,896
+Let's not let's have a different
+
+288
+00:25:53,152 --> 00:25:55,456
+Tree tree modify the algorithm
+
+289
+00:25:55,712 --> 00:26:01,856
+Let's give it an interpretation because actually it's too perfect
+
+290
+00:26:02,880 --> 00:26:04,672
+Hallowell Define probabilistic
+
+291
+00:26:06,208 --> 00:26:08,000
+Mainly if you think of this
+
+292
+00:26:08,256 --> 00:26:10,048
+Distance
+
+293
+00:26:11,328 --> 00:26:15,168
+The thing that is in the Easton lineup
+
+294
+00:26:19,008 --> 00:26:22,592
+Misting hat
+
+295
+00:26:24,640 --> 00:26:26,688
+What is algorithm
+
+296
+00:26:26,944 --> 00:26:28,480
+Is it corresponds to
+
+297
+00:26:28,992 --> 00:26:32,064
+Assuming that the data comes from
+
+298
+00:26:32,576 --> 00:26:35,648
+A mixture of pee costumes
+
+299
+00:26:36,928 --> 00:26:42,304
+They all have the same
+
+300
+00:26:42,816 --> 00:26:48,448
+Call with the same
+
+301
+00:26:50,240 --> 00:26:51,008
+Variance
+
+302
+00:26:51,520 --> 00:26:53,312
+Not the same in all directions
+
+303
+00:26:57,664 --> 00:26:59,968
+Historical
+
+304
+00:27:07,392 --> 00:27:08,416
+And then
+
+305
+00:27:08,672 --> 00:27:14,816
+The final assumption is it they all have the same privacy I want equal to
+
+306
+00:27:15,328 --> 00:27:18,144
+Hi hey
+
+307
+00:27:18,400 --> 00:27:22,496
+And then the algorithm we're running here is a a
+
+308
+00:27:23,264 --> 00:27:25,568
+Greedy algorithm that is
+
+309
+00:27:28,896 --> 00:27:35,040
+Define precisely what it's doing it's coming up with
+
+310
+00:27:37,088 --> 00:27:39,904
+The points
+
+311
+00:27:40,672 --> 00:27:46,816
+It's been doing Elvis thing with me which is finding us or mocha
+
+312
+00:27:48,352 --> 00:27:49,120
+Maximum
+
+313
+00:27:50,656 --> 00:27:52,448
+All right
+
+314
+00:27:52,704 --> 00:27:58,592
+Is roughly
+
+315
+00:27:59,104 --> 00:28:04,224
+Map maximum a posteriori
+
+316
+00:28:05,248 --> 00:28:06,784
+Algorithm
+
+317
+00:28:14,464 --> 00:28:15,488
+The
+
+318
+00:28:16,000 --> 00:28:17,536
+Science variables
+
+319
+00:28:17,792 --> 00:28:21,632
+Wish we could call Cayenne
+
+320
+00:28:25,216 --> 00:28:27,520
+Which pasta
+
+321
+00:28:34,176 --> 00:28:36,224
+So as to maximize
+
+322
+00:28:44,672 --> 00:28:45,440
+Call C
+
+323
+00:28:47,232 --> 00:28:48,000
+Science
+
+324
+00:28:50,304 --> 00:28:52,096
+Sebastian interpretational
+
+325
+00:28:53,888 --> 00:28:55,424
+Interpretation
+
+326
+00:28:55,936 --> 00:28:58,240
+I guess we can say
+
+327
+00:28:58,496 --> 00:29:03,616
+Oh my God
+
+328
+00:29:03,872 --> 00:29:09,504
+It will be tonight
+
+329
+00:29:10,272 --> 00:29:14,624
+I'm maybe we can also how many change these assumptions had one two three
+
+330
+00:29:15,136 --> 00:29:21,280
+Maybe we can change its algorithm if you want to know the most probable
+
+331
+00:29:24,352 --> 00:29:26,144
+Credible
+
+332
+00:29:29,472 --> 00:29:30,752
+Cuz even if
+
+333
+00:29:32,544 --> 00:29:36,640
+I really do come to identical Gaskins
+
+334
+00:29:37,152 --> 00:29:39,968
+Eco crossover
+
+335
+00:29:41,248 --> 00:29:45,344
+Try putting memes in the right places
+
+336
+00:29:46,368 --> 00:29:49,696
+I will put my long hair meet you halfway
+
+337
+00:29:49,952 --> 00:29:51,744
+Then put your divider in
+
+338
+00:29:52,256 --> 00:29:55,584
+Allocate all of these guys
+
+339
+00:29:56,608 --> 00:29:58,912
+Prostitute
+
+340
+00:29:59,424 --> 00:30:01,472
+That what happens when you run the updates.
+
+341
+00:30:02,240 --> 00:30:04,800
+What's the meaning of this shaded law
+
+342
+00:30:06,592 --> 00:30:08,640
+Didn't write license on me to
+
+343
+00:30:08,896 --> 00:30:14,016
+Lost it
+
+344
+00:30:15,552 --> 00:30:16,320
+Golytely
+
+345
+00:30:18,368 --> 00:30:22,720
+So even in the case where all these assumptions are true the Mac Alberta
+
+346
+00:30:23,232 --> 00:30:24,000
+Ends up
+
+347
+00:30:24,256 --> 00:30:28,864
+Allocation is ends up in the wrong place
+
+348
+00:30:29,376 --> 00:30:35,520
+It doesn't quite like this because I'm at Izzy
+
+349
+00:30:36,032 --> 00:30:39,360
+Modify the algorithm
+
+350
+00:30:42,688 --> 00:30:44,224
+The Next Step
+
+351
+00:30:44,736 --> 00:30:46,016
+Is School
+
+352
+00:30:47,040 --> 00:30:51,904
+K means algorithm
+
+353
+00:30:53,952 --> 00:30:58,304
+Stop in the same way by initializing a meeting at random
+
+354
+00:31:01,376 --> 00:31:07,520
+Reset a Surface Pro
+
+355
+00:31:09,568 --> 00:31:11,616
+Everybody
+
+356
+00:31:11,872 --> 00:31:13,408
+Rita's naagin-2
+
+357
+00:31:13,664 --> 00:31:15,968
+Come and change our assignment group
+
+358
+00:31:17,248 --> 00:31:20,576
+Miss Simon.
+
+359
+00:31:21,088 --> 00:31:24,160
+So we sign lunch
+
+360
+00:31:30,304 --> 00:31:33,632
+Going to say r&k responsibility
+
+361
+00:31:34,144 --> 00:31:35,168
+Is
+
+362
+00:31:43,360 --> 00:31:46,688
+So in contrast to setting case the minimum
+
+363
+00:31:47,968 --> 00:31:52,064
+Minimizes men
+
+364
+00:31:52,320 --> 00:31:54,112
+So we're going to do this
+
+365
+00:31:54,368 --> 00:32:00,512
+Eat reminder Pizza distance from MK
+
+366
+00:32:02,304 --> 00:32:05,120
+Raja bike price
+
+367
+00:32:06,144 --> 00:32:12,288
+2 - Pizza
+
+368
+00:32:16,128 --> 00:32:18,432
+Rifling through
+
+369
+00:32:19,200 --> 00:32:21,504
+Possible Hayes
+
+370
+00:32:21,760 --> 00:32:24,832
+How close do you feel
+
+371
+00:32:30,208 --> 00:32:36,352
+If you feel like you're the closest little means then you'll end up with a woman
+
+372
+00:32:36,608 --> 00:32:40,704
+Central AC 3%
+
+373
+00:32:42,496 --> 00:32:43,264
+But you would
+
+374
+00:32:43,520 --> 00:32:48,384
+The team10 only if you set pika
+
+375
+00:32:48,640 --> 00:32:51,968
+Can you reproduce the old
+
+376
+00:32:52,224 --> 00:32:54,016
+Hawkeye mean
+
+377
+00:32:54,528 --> 00:33:00,672
+The new definition of d
+
+378
+00:33:01,952 --> 00:33:03,744
+Minimizing
+
+379
+00:33:04,000 --> 00:33:06,048
+Saira doing is
+
+380
+00:33:06,304 --> 00:33:10,656
+Suck meme
+
+381
+00:33:11,424 --> 00:33:16,544
+And you might recognize that this
+
+382
+00:33:26,016 --> 00:33:27,808
+Yep they roll meme cake
+
+383
+00:33:30,112 --> 00:33:31,648
+No change
+
+384
+00:33:33,952 --> 00:33:34,720
+Wait
+
+385
+00:33:34,976 --> 00:33:36,000
+Beach point
+
+386
+00:33:36,256 --> 00:33:42,144
+By how responsible you feel
+
+387
+00:33:43,936 --> 00:33:49,312
+Say what
+
+388
+00:33:53,408 --> 00:33:56,224
+If we do that
+
+389
+00:33:59,040 --> 00:34:03,392
+We have to take advantage of pizza
+
+390
+00:34:05,184 --> 00:34:06,976
+You promised Pizza in
+
+391
+00:34:13,632 --> 00:34:16,192
+Just tried setting it to all the values
+
+392
+00:34:21,056 --> 00:34:25,920
+Let's get help with these old points that we have to call
+
+393
+00:34:26,176 --> 00:34:29,504
+How many meetings would you like to talk to him
+
+394
+00:34:30,016 --> 00:34:31,296
+Zaful
+
+395
+00:34:32,064 --> 00:34:36,160
+I can't we pick about you pizza and I'm representing Pizza
+
+396
+00:34:36,416 --> 00:34:41,024
+Find the radius of a circle because one thing you would
+
+397
+00:34:41,280 --> 00:34:42,816
+Miss Fisher
+
+398
+00:34:43,328 --> 00:34:44,096
+Is that
+
+399
+00:34:44,608 --> 00:34:49,984
+Cre8 pop.
+
+400
+00:34:50,752 --> 00:34:52,288
+Tasty tasty
+
+401
+00:34:52,544 --> 00:34:57,920
+And imagine putting a / 6
+
+402
+00:35:00,992 --> 00:35:02,272
+Lisa
+
+403
+00:35:02,784 --> 00:35:06,112
+Moana
+
+404
+00:35:06,880 --> 00:35:08,672
+Standard deviation
+
+405
+00:35:08,928 --> 00:35:15,072
+Meaning
+
+406
+00:35:15,328 --> 00:35:21,472
+And I'm telling you how big the Beast
+
+407
+00:35:21,728 --> 00:35:24,544
+I'm sorry runs.
+
+408
+00:35:24,800 --> 00:35:27,616
+Update my fine fine
+
+409
+00:35:28,896 --> 00:35:33,760
+I'm telling you the color if you Simon is very strongly in favor of one me
+
+410
+00:35:34,016 --> 00:35:37,600
+And if it shows a pale blue that means this point is really cool
+
+411
+00:35:50,656 --> 00:35:51,680
+Sign
+
+412
+00:35:51,936 --> 00:35:52,960
+Update
+
+413
+00:35:53,216 --> 00:35:53,984
+Define
+
+414
+00:35:59,616 --> 00:36:03,712
+It can be a bit like watching paint dry
+
+415
+00:36:10,624 --> 00:36:12,160
+Hey what's up
+
+416
+00:36:12,416 --> 00:36:15,744
+24 memes
+
+417
+00:36:22,656 --> 00:36:24,192
+I hope your pitbulls
+
+418
+00:36:24,704 --> 00:36:30,848
+It's just an algorithm is doing something on yet
+
+419
+00:36:34,176 --> 00:36:36,736
+Try again
+
+420
+00:36:40,576 --> 00:36:46,720
+The same again for that but it didn't have to do that because we didn't have to give it
+
+421
+00:36:53,376 --> 00:36:55,424
+9five glasses
+
+422
+00:37:18,720 --> 00:37:20,000
+Sintomi
+
+423
+00:37:20,256 --> 00:37:25,632
+Know what I'm going to do is run me out of different values of preacher
+
+424
+00:37:25,888 --> 00:37:27,680
+Call start with B
+
+425
+00:37:27,936 --> 00:37:31,008
+The number to settle down a bit I'll just change Pizza
+
+426
+00:37:31,264 --> 00:37:32,544
+Small volume
+
+427
+00:37:33,568 --> 00:37:34,848
+Call
+
+428
+00:37:35,104 --> 00:37:37,152
+That means I'm starting take me to
+
+429
+00:37:40,224 --> 00:37:44,064
+Starting a big standard deviation
+
+430
+00:37:44,320 --> 00:37:50,464
+Send me a pic some deviations then gradually reducing the standard deviation every other
+
+431
+00:37:54,048 --> 00:37:56,096
+Change the sun TV
+
+432
+00:37:56,352 --> 00:38:02,496
+Justin's endogenous to keep on running the algorithm and I'm not going to try anymore
+
+433
+00:38:04,288 --> 00:38:05,568
+Run itself
+
+434
+00:38:42,176 --> 00:38:45,248
+Cool beans
+
+435
+00:38:55,744 --> 00:38:56,512
+All right
+
+436
+00:38:56,768 --> 00:38:58,816
+So that was a very large standard deviation
+
+437
+00:38:59,072 --> 00:39:05,216
+And they're all converging on one place that's a nice vacation if you like I only want one
+
+438
+00:39:08,544 --> 00:39:09,312
+FBI
+
+439
+00:39:10,080 --> 00:39:13,152
+So now we're Jesus and deviation little bit
+
+440
+00:39:22,880 --> 00:39:23,904
+Nursing program
+
+441
+00:39:26,720 --> 00:39:30,048
+Molars
+
+442
+00:39:33,120 --> 00:39:34,912
+Do that again
+
+443
+00:39:59,232 --> 00:40:02,304
+So that we have some paintings
+
+444
+00:40:04,352 --> 00:40:06,144
+Notation
+
+445
+00:40:06,400 --> 00:40:08,960
+It's obsession is receiving that
+
+446
+00:40:09,216 --> 00:40:14,336
+Is a mixture of controlling that
+
+447
+00:40:15,360 --> 00:40:17,664
+Probabilities are all the same still
+
+448
+00:40:17,920 --> 00:40:23,296
+Wait
+
+449
+00:40:24,576 --> 00:40:30,720
+It's nothing that meteor them anymore because we're doing softer signed so we fix this problem
+
+450
+00:40:30,976 --> 00:40:34,816
+Davis auctions
+
+451
+00:40:35,328 --> 00:40:41,472
+It will at lineman I just get a signal right you have the correct value Sigma that it will sign
+
+452
+00:40:41,728 --> 00:40:46,592
+Just the right way
+
+453
+00:40:46,848 --> 00:40:52,992
+And then when you do need update to me black panther place
+
+454
+00:40:54,272 --> 00:40:57,344
+Nice Italy
+
+455
+00:40:59,904 --> 00:41:06,048
+What we can do as we very Sigma brushes long as you can run through
+
+456
+00:41:06,304 --> 00:41:12,448
+Then what
+
+457
+00:41:16,032 --> 00:41:22,176
+Mac algorithm anymore maximizing
+
+458
+00:41:22,432 --> 00:41:28,576
+Roberts maximum marginal
+
+459
+00:41:28,832 --> 00:41:29,600
+Optimizing
+
+460
+00:41:29,856 --> 00:41:30,880
+With me
+
+461
+00:41:31,648 --> 00:41:34,464
+Assuming that
+
+462
+00:41:36,256 --> 00:41:42,400
+So we making a bit of progress slightly modified the assumptions of course it's still not well
+
+463
+00:41:44,192 --> 00:41:45,216
+Problems
+
+464
+00:41:45,472 --> 00:41:46,240
+Call
+
+465
+00:41:53,663 --> 00:41:55,455
+Love is
+
+466
+00:41:57,503 --> 00:41:59,551
+Chinese
+
+467
+00:42:01,087 --> 00:42:02,879
+Listen to me
+
+468
+00:42:03,135 --> 00:42:03,647
+Well
+
+469
+00:42:05,695 --> 00:42:11,839
+Garage Elite
+
+470
+00:42:12,095 --> 00:42:15,167
+Change the assumption
+
+471
+00:42:15,423 --> 00:42:17,215
+You want to exchange
+
+472
+00:42:17,471 --> 00:42:19,775
+Mainly we want to believe that
+
+473
+00:42:20,543 --> 00:42:25,663
+Potassium
+
+474
+00:42:30,527 --> 00:42:33,087
+Progress to Chinese
+
+475
+00:42:37,439 --> 00:42:39,231
+Solar lights on again
+
+476
+00:42:41,023 --> 00:42:43,327
+Call Tammy love
+
+477
+00:42:44,095 --> 00:42:46,655
+Doesn't just update to me
+
+478
+00:42:46,911 --> 00:42:49,727
+It also update
+
+479
+00:42:50,495 --> 00:42:51,775
+Avaricious
+
+480
+00:42:52,031 --> 00:42:58,175
+And going to redefine what distance is so sensible
+
+481
+00:42:59,711 --> 00:43:01,503
+Dependence
+
+482
+00:43:02,527 --> 00:43:08,159
+So I'm going to have a stigma
+
+483
+00:43:09,183 --> 00:43:15,071
+Instead of having a stiffness will have every Quest
+
+484
+00:43:15,327 --> 00:43:18,143
+Sigma k
+
+485
+00:43:18,399 --> 00:43:22,751
+You'll have to reach at least I mention which I haven't even given a name to I
+
+486
+00:43:23,263 --> 00:43:26,335
+I got someone to the number so I mentioned so that again
+
+487
+00:43:28,383 --> 00:43:29,663
+Going to have
+
+488
+00:43:29,919 --> 00:43:36,063
+Sigma variables for each of those dimensions
+
+489
+00:43:36,319 --> 00:43:40,927
+Station Gaskins might look like
+
+490
+00:43:43,487 --> 00:43:49,631
+Alright so we talked to in sickness
+
+491
+00:43:52,703 --> 00:43:56,031
+So the update rule
+
+492
+00:43:56,287 --> 00:44:01,919
+It's going to say well let's look at the various
+
+493
+00:44:06,271 --> 00:44:07,807
+Using my me
+
+494
+00:44:11,135 --> 00:44:14,463
+I will do that just on the ice dimension
+
+495
+00:44:33,919 --> 00:44:35,967
+Okay so there's a variance update rule
+
+496
+00:44:36,479 --> 00:44:41,599
+And we just run the same algorithm with the assignment now being the
+
+497
+00:44:41,855 --> 00:44:47,999
+Appropriate modifications
+
+498
+00:44:48,255 --> 00:44:49,791
+Eastbay
+
+499
+00:44:51,071 --> 00:44:52,095
+Linus
+
+500
+00:44:55,935 --> 00:45:00,543
+Some mobile dimension
+
+501
+00:45:04,127 --> 00:45:07,967
+So that's okay memes version 2
+
+502
+00:45:17,183 --> 00:45:20,511
+Say what we're going to say if you want to Line Tattoo
+
+503
+00:45:20,767 --> 00:45:24,863
+And it eventually I'm going to have the size changing as well so
+
+504
+00:45:27,679 --> 00:45:33,823
+Will initialize the pies to some sort of I don't have a bunch of people Pike a
+
+505
+00:45:37,663 --> 00:45:43,807
+It's always going to be the same except will my Kay's in hat
+
+506
+00:45:45,087 --> 00:45:51,231
+Hide ending algorithm the update rule that you look at how many points
+
+507
+00:45:51,487 --> 00:45:52,511
+Assigned to you
+
+508
+00:45:52,767 --> 00:45:56,095
+So how many am I responsible for
+
+509
+00:45:58,399 --> 00:46:04,031
+You update your way to say you will
+
+510
+00:46:08,639 --> 00:46:11,711
+So let's do that let's do it first
+
+511
+00:46:22,207 --> 00:46:23,999
+You mean
+
+512
+00:46:25,535 --> 00:46:27,071
+You mean
+
+513
+00:46:27,327 --> 00:46:28,863
+You mean
+
+514
+00:46:37,055 --> 00:46:41,919
+Let's try another day let us fight for me
+
+515
+00:46:42,175 --> 00:46:44,991
+Can you get it for me and it goes and finds
+
+516
+00:46:46,783 --> 00:46:47,807
+7
+
+517
+00:46:59,327 --> 00:47:01,375
+Still bad things can happen
+
+518
+00:47:05,727 --> 00:47:11,871
+Call Virginia. You tell it you want for me it'll find you before me
+
+519
+00:47:12,127 --> 00:47:18,271
+Everything
+
+520
+00:47:18,527 --> 00:47:22,623
+Compare is actually a variational method
+
+521
+00:47:22,879 --> 00:47:23,647
+At 4
+
+522
+00:47:23,903 --> 00:47:26,719
+Fishing EML Griffin
+
+523
+00:47:26,975 --> 00:47:29,791
+Fishing
+
+524
+00:47:30,303 --> 00:47:33,375
+Hey I just like asking
+
+525
+00:47:33,631 --> 00:47:37,727
+Play preschool algorithm
+
+526
+00:47:37,983 --> 00:47:40,543
+So let's change that status
+
+527
+00:47:41,311 --> 00:47:43,359
+Change to Leland Lodge
+
+528
+00:47:49,503 --> 00:47:52,063
+How many memes would you like to
+
+529
+00:47:56,159 --> 00:47:57,695
+2 memes
+
+530
+00:48:11,775 --> 00:48:17,919
+Mr. oranges
+
+531
+00:48:18,175 --> 00:48:23,807
+Flying Taxi
+
+532
+00:48:25,599 --> 00:48:30,975
+You can imagine having dated that there was a good hypothesis explained it
+
+533
+00:48:31,231 --> 00:48:36,863
+Optimization and it might be difficult to find me
+
+534
+00:48:53,247 --> 00:48:56,063
+Fight me
+
+535
+00:48:56,319 --> 00:48:58,367
+And it comes up with
+
+536
+00:49:05,023 --> 00:49:08,351
+Call
+
+537
+00:49:10,911 --> 00:49:17,055
+It's still a Survivor tree algorithm at least
+
+538
+00:49:17,311 --> 00:49:20,383
+Automatically handle
+
+539
+00:49:21,919 --> 00:49:27,807
+I didn't mention America when the whole screen something went like blue happened in that case
+
+540
+00:49:28,063 --> 00:49:32,159
+Was that one of the datapoint
+
+541
+00:49:32,927 --> 00:49:35,743
+Taken over by a single me
+
+542
+00:49:36,255 --> 00:49:38,303
+Well
+
+543
+00:49:38,815 --> 00:49:41,375
+It's where you can get update rule hat
+
+544
+00:49:41,887 --> 00:49:45,215
+If you feel very responsible
+
+545
+00:49:45,727 --> 00:49:48,287
+Daniel keep on updating the variance
+
+546
+00:49:51,615 --> 00:49:53,919
+What is one punch timer Costco
+
+547
+00:49:54,175 --> 00:50:00,319
+And you're very close to your date
+
+548
+00:50:00,575 --> 00:50:06,719
+But no one else is
+
+549
+00:50:06,975 --> 00:50:13,119
+Lowe's up and then that's why this week
+
+550
+00:50:15,167 --> 00:50:16,703
+This isn't
+
+551
+00:50:17,215 --> 00:50:22,335
+The end of the story of it can do kind of all things
+
+552
+00:50:29,247 --> 00:50:34,879
+Green thing is wandering off the screen position because of the Titan fight last night
+
+553
+00:50:42,047 --> 00:50:48,191
+Given the DPAC I just described it as possible so long mean
+
+554
+00:50:48,447 --> 00:50:51,519
+Go to 0 lose up with
+
+555
+00:50:51,775 --> 00:50:55,615
+How to instantly
+
+556
+00:50:55,871 --> 00:51:00,735
+It's surprisingly a reverse algorithm defect
+
+557
+00:51:00,991 --> 00:51:07,135
+Very rarely under the
+
+558
+00:51:20,447 --> 00:51:21,471
+Automatically
+
+559
+00:51:21,727 --> 00:51:27,871
+What does an inclusion in January new discoveries
+
+560
+00:51:33,247 --> 00:51:34,015
+Okay
+
+561
+00:51:34,271 --> 00:51:35,295
+So
+
+562
+00:51:36,063 --> 00:51:38,623
+That's okay mean
+
+563
+00:51:49,375 --> 00:51:54,751
+So your question is in what sense is this an optimization of the question
+
+564
+00:51:55,007 --> 00:51:57,311
+Okay
+
+565
+00:51:57,567 --> 00:52:00,639
+When return the variational method
+
+566
+00:52:01,407 --> 00:52:02,943
+Then we'll be able to answer
+
+567
+00:52:03,199 --> 00:52:09,343
+Aveda
+
+568
+00:52:09,599 --> 00:52:15,743
+Why should it
+
+569
+00:52:15,999 --> 00:52:19,583
+It does actually
+
+570
+00:52:19,839 --> 00:52:21,631
+An objective function
+
+571
+00:52:21,887 --> 00:52:23,935
+Variational free energy
+
+572
+00:52:24,191 --> 00:52:30,335
+Function notation
+
+573
+00:52:32,639 --> 00:52:36,735
+Any other questions
+
+574
+00:52:46,975 --> 00:52:53,119
+Okay so the question is wafted a tire is on a ring or some other type of dates of it
+
+575
+00:52:53,375 --> 00:52:55,679
+Well Detroit
+
+576
+00:52:57,983 --> 00:53:04,127
+Did you say
+
+577
+00:53:04,383 --> 00:53:10,527
+Please cancel that for me well that what you have done and if you use soft Amy the interpretation of
+
+578
+00:53:10,783 --> 00:53:16,927
+Using haggai
+
+579
+00:53:17,183 --> 00:53:21,535
+But don't have the same sickness
+
+580
+00:53:21,791 --> 00:53:23,839
+Weights on each other anymore
+
+581
+00:53:24,351 --> 00:53:30,495
+But that the interpretation of what you're doing and it's not surprising if you give that doesn't look like
+
+582
+00:53:30,751 --> 00:53:36,895
+Something will happen and you might not be very satisfied.
+
+583
+00:53:37,151 --> 00:53:40,223
+Download
+
+584
+00:53:40,479 --> 00:53:41,503
+Call Lynette
+
+585
+00:53:41,759 --> 00:53:45,087
+What will happen with the dates that like this is
+
+586
+00:53:45,599 --> 00:53:46,623
+My cat
+
+587
+00:53:47,903 --> 00:53:51,999
+David seven clusters in my 12th and 7 gas engine
+
+588
+00:53:52,511 --> 00:53:55,327
+You will get an answer which is
+
+589
+00:53:55,839 --> 00:54:01,983
+Is sometimes the best way of explaining this Asia one of the best way to explain
+
+590
+00:54:02,239 --> 00:54:04,287
+Call 7 cast
+
+591
+00:54:10,943 --> 00:54:17,087
+Universal
+
+592
+00:54:25,791 --> 00:54:31,935
+Solution is really hot!
+
+593
+00:54:32,191 --> 00:54:38,335
+That's something we could get through this post Maybe
+
+594
+00:54:38,591 --> 00:54:43,455
+Dimensional
+
+595
+00:54:48,575 --> 00:54:51,903
+Right so the question is could you change the metric
+
+596
+00:54:52,415 --> 00:54:54,975
+So here we can use each of the Lions Hall
+
+597
+00:54:55,231 --> 00:55:01,375
+You think I'm not motivated the algorithm if you like
+
+598
+00:55:05,983 --> 00:55:07,519
+Any distribution you like
+
+599
+00:55:08,031 --> 00:55:09,823
+Starset Evita -
+
+600
+00:55:10,079 --> 00:55:13,919
+Invent your own
+
+601
+00:55:15,455 --> 00:55:21,599
+And then all you're going to need this is a promise right thing with something like IBEW looking around it and
+
+602
+00:55:21,855 --> 00:55:23,903
+Maybe something like a sick my left
+
+603
+00:55:24,671 --> 00:55:26,719
+You can use that as your assignments that
+
+604
+00:55:26,975 --> 00:55:28,511
+Nugget in hair
+
+605
+00:55:29,023 --> 00:55:31,583
+Then you go to need to get for yourself
+
+606
+00:55:32,351 --> 00:55:36,703
+A new update which tells you what to do with your parameters
+
+607
+00:55:36,959 --> 00:55:42,335
+Probably if you change this from being something Quest
+
+608
+00:55:42,847 --> 00:55:47,455
+Then
+
+609
+00:55:50,271 --> 00:55:51,039
+Yes you can
+
+610
+00:55:51,295 --> 00:55:53,599
+What people actually do
+
+611
+00:55:54,111 --> 00:56:00,255
+I'm not that up-to-date with you during communication
+
+612
+00:56:00,511 --> 00:56:02,303
+I like to use a t distribution
+
+613
+00:56:02,559 --> 00:56:08,191
+Instead of casting
+
+614
+00:56:08,447 --> 00:56:12,543
+And then you need feel like outside
+
+615
+00:56:13,055 --> 00:56:16,639
+Matthias self is a mixture cotton wool having the same day but different
+
+616
+00:56:22,015 --> 00:56:28,159
+If you read the variational interpretation of this whole thing that will give you a spray work and what you
+
+617
+00:56:28,415 --> 00:56:31,743
+And then figure out an hour
+
+618
+00:56:32,255 --> 00:56:35,583
+Optimizer variation free energy adjust the timer
+
+619
+00:56:37,631 --> 00:56:38,911
+Okay
+
+620
+00:56:39,423 --> 00:56:41,471
+In the next
+
+621
+00:56:41,727 --> 00:56:47,103
+Multicolor Matt let's using this and some other problems as motivation to why we want
